@@ -1,0 +1,6 @@
+En lille gennemgang af hvordan  HDMI signalet er bygget op:
+https://www.fpga4fun.com/HDMI.html
+
+HDMI og TMDS encoding
+https://docs.google.com/document/d/1v7AJK4cVG3uDJo_rn0X9vxMvBwXKBSL1VaJgiXgFo5A/edit?tab=t.0#heading=h.s7e6dqkpk197
+
