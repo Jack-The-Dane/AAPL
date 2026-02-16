@@ -1,0 +1,14 @@
+ToDos:
+
+Spørge Anders om vi kan QLINK udleveret nu.
+
+Implementer klasse for seriel kommunikation i Python: Jacob
+    - Read address
+    - Write address
+
+Implementer input af knapper på fpga: Kasper
+    - Output knap tilstande, adresse og write enable
+
+Implementere tetris logik: Søren
+
+Læse om HDMI, og komme med gode ideer til implementering.
