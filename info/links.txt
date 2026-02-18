@@ -6,3 +6,7 @@ https://docs.google.com/document/d/1v7AJK4cVG3uDJo_rn0X9vxMvBwXKBSL1VaJgiXgFo5A/
 
 VHDL implementering af HDMI:
 https://github.com/hdl-util/hdmi
+
+UART VHDL implementation
+https://www.hackster.io/fpgaps/uart-vhdl-implementation-on-fpga-with-host-data-exchange-743b1b
+
