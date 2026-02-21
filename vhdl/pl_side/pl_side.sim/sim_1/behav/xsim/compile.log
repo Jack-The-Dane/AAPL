@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kasper-ubuntu/Documents/AAPL_project/vhdl/pl_side/pl_side.ip_user_files/bd/button_LED/ip/button_LED_xlconstant_0_0/sim/button_LED_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button_LED_xlconstant_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kasper-ubuntu/Documents/AAPL_project/vhdl/pl_side/pl_side.ip_user_files/bd/button_LED/ip/button_LED_simple_button_fsm_0_0/sim/button_LED_simple_button_fsm_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button_LED_simple_button_fsm_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kasper-ubuntu/Documents/AAPL_project/vhdl/pl_side/pl_side.ip_user_files/bd/button_LED/ip/button_LED_simple_button_fsm_0_1/sim/button_LED_simple_button_fsm_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button_LED_simple_button_fsm_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kasper-ubuntu/Documents/AAPL_project/vhdl/pl_side/pl_side.ip_user_files/bd/button_LED/ip/button_LED_simple_button_fsm_1_0/sim/button_LED_simple_button_fsm_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button_LED_simple_button_fsm_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kasper-ubuntu/Documents/AAPL_project/vhdl/pl_side/pl_side.ip_user_files/bd/button_LED/sim/button_LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button_LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kasper-ubuntu/Documents/AAPL_project/vhdl/pl_side/pl_side.gen/sources_1/bd/button_LED/hdl/button_LED_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button_LED_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kasper-ubuntu/Documents/AAPL_project/vhdl/pl_side/pl_side.srcs/sources_1/new/simple_FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simple_button_fsm'

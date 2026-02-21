@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 21 14:06:39 2026" VIVADOVERSION="2025.2">
+
+  <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="button_LED" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="BB_05" SIGIS="undef" SIGNAME="simple_button_fsm_0_MSB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_0" PORT="MSB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="BB_06" SIGIS="undef" SIGNAME="simple_button_fsm_0_LSB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_0" PORT="LSB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="BB_09" SIGIS="undef" SIGNAME="simple_button_fsm_1_MSB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_1" PORT="MSB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="BB_10" SIGIS="undef" SIGNAME="simple_button_fsm_1_LSB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_1" PORT="LSB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="BB_12" SIGIS="undef" SIGNAME="simple_button_fsm_2_MSB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_2" PORT="MSB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="BB_13" SIGIS="undef" SIGNAME="simple_button_fsm_2_LSB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_2" PORT="LSB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BB_24" SIGIS="undef" SIGNAME="External_Ports_BB_24">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_1" PORT="button"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BB_27" SIGIS="undef" SIGNAME="External_Ports_BB_27">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_0" PORT="button"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BB_30" SIGIS="undef" SIGNAME="External_Ports_BB_30">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_2" PORT="button"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK12_I" SIGIS="clk" SIGNAME="External_Ports_CLK12_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_button_fsm_0" PORT="clk"/>
+        <CONNECTION INSTANCE="simple_button_fsm_1" PORT="clk"/>
+        <CONNECTION INSTANCE="simple_button_fsm_2" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="10" FULLNAME="/reset" HWVERSION="1.1" INSTANCE="reset" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="button_LED_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="reset_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="simple_button_fsm_0" PORT="reset"/>
+            <CONNECTION INSTANCE="simple_button_fsm_1" PORT="reset"/>
+            <CONNECTION INSTANCE="simple_button_fsm_2" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/simple_button_fsm_0" HWVERSION="1.0" INSTANCE="simple_button_fsm_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="simple_button_fsm" VLNV="xilinx.com:module_ref:simple_button_fsm:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="button_LED_simple_button_fsm_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="LSB" SIGIS="undef" SIGNAME="simple_button_fsm_0_LSB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_06"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MSB" SIGIS="undef" SIGNAME="simple_button_fsm_0_MSB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_05"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_BB_27">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_27"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="button_out" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK12_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/simple_button_fsm_1" HWVERSION="1.0" INSTANCE="simple_button_fsm_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="simple_button_fsm" VLNV="xilinx.com:module_ref:simple_button_fsm:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="button_LED_simple_button_fsm_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="LSB" SIGIS="undef" SIGNAME="simple_button_fsm_1_LSB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_10"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MSB" SIGIS="undef" SIGNAME="simple_button_fsm_1_MSB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_09"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_BB_24">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_24"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="button_out" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK12_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/simple_button_fsm_2" HWVERSION="1.0" INSTANCE="simple_button_fsm_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="simple_button_fsm" VLNV="xilinx.com:module_ref:simple_button_fsm:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="button_LED_simple_button_fsm_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="LSB" SIGIS="undef" SIGNAME="simple_button_fsm_2_LSB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_13"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MSB" SIGIS="undef" SIGNAME="simple_button_fsm_2_MSB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_12"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_BB_30">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_30"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="button_out" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK12_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

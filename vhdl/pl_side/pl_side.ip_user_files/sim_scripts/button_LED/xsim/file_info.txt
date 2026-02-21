@@ -1,0 +1,6 @@
+button_LED_xlconstant_0_0.v,verilog,xil_defaultlib,../../../bd/button_LED/ip/button_LED_xlconstant_0_0/sim/button_LED_xlconstant_0_0.v,incdir="../../../../../../../../Vivado/2025.2/data/rsb/busdef"
+button_LED_simple_button_fsm_0_0.v,verilog,xil_defaultlib,../../../bd/button_LED/ip/button_LED_simple_button_fsm_0_0/sim/button_LED_simple_button_fsm_0_0.v,incdir="../../../../../../../../Vivado/2025.2/data/rsb/busdef"
+button_LED_simple_button_fsm_0_1.v,verilog,xil_defaultlib,../../../bd/button_LED/ip/button_LED_simple_button_fsm_0_1/sim/button_LED_simple_button_fsm_0_1.v,incdir="../../../../../../../../Vivado/2025.2/data/rsb/busdef"
+button_LED_simple_button_fsm_1_0.v,verilog,xil_defaultlib,../../../bd/button_LED/ip/button_LED_simple_button_fsm_1_0/sim/button_LED_simple_button_fsm_1_0.v,incdir="../../../../../../../../Vivado/2025.2/data/rsb/busdef"
+button_LED.v,verilog,xil_defaultlib,../../../bd/button_LED/sim/button_LED.v,incdir="../../../../../../../../Vivado/2025.2/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

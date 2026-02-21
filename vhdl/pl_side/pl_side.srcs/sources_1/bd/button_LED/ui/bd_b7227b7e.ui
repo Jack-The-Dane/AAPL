@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-338,-21",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_CLK12_I -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_BB_24 -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_BB_30 -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace port port-id_BB_27 -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_BB_12 -pg 1 -lvl 3 -x 530 -y 360 -defaultsOSRD
+preplace port port-id_BB_06 -pg 1 -lvl 3 -x 530 -y 100 -defaultsOSRD
+preplace port port-id_BB_05 -pg 1 -lvl 3 -x 530 -y 80 -defaultsOSRD
+preplace port port-id_BB_10 -pg 1 -lvl 3 -x 530 -y 240 -defaultsOSRD
+preplace port port-id_BB_09 -pg 1 -lvl 3 -x 530 -y 220 -defaultsOSRD
+preplace port port-id_BB_13 -pg 1 -lvl 3 -x 530 -y 380 -defaultsOSRD
+preplace inst reset -pg 1 -lvl 1 -x 130 -y 300 -defaultsOSRD
+preplace inst simple_button_fsm_0 -pg 1 -lvl 2 -x 380 -y 80 -defaultsOSRD
+preplace inst simple_button_fsm_1 -pg 1 -lvl 2 -x 380 -y 220 -defaultsOSRD
+preplace inst simple_button_fsm_2 -pg 1 -lvl 2 -x 380 -y 360 -defaultsOSRD
+preplace netloc simple_button_fsm_0_MSB 1 2 1 NJ 80
+preplace netloc simple_button_fsm_0_LSB 1 2 1 NJ 100
+preplace netloc BB_27_1 1 0 2 NJ 100 NJ
+preplace netloc reset_dout 1 1 1 250 80n
+preplace netloc CLK12_I_1 1 0 2 NJ 120 240
+preplace netloc simple_button_fsm_1_MSB 1 2 1 NJ 220
+preplace netloc simple_button_fsm_1_LSB 1 2 1 NJ 240
+preplace netloc BB_24_1 1 0 2 NJ 240 NJ
+preplace netloc simple_button_fsm_2_MSB 1 2 1 NJ 360
+preplace netloc simple_button_fsm_2_LSB 1 2 1 NJ 380
+preplace netloc BB_30_1 1 0 2 NJ 380 NJ
+levelinfo -pg 1 0 130 380 530
+pagesize -pg 1 -db -bbox -sgen -110 0 630 440
+"
+}
+0

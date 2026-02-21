@@ -1,0 +1,25 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/kasper-ubuntu/Vivado/2025.2/Vivado/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xlconstant_v1_1_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot button_LED_wrapper_behav xil_defaultlib.button_LED_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling module xlconstant_v1_1_10.xlconstant_v1_1_10_xlconstant(CO...
+Compiling module xil_defaultlib.button_LED_xlconstant_0_0
+Compiling architecture rtl of entity xil_defaultlib.simple_button_fsm [simple_button_fsm_default]
+Compiling module xil_defaultlib.button_LED_simple_button_fsm_0_0
+Compiling module xil_defaultlib.button_LED_simple_button_fsm_0_1
+Compiling module xil_defaultlib.button_LED_simple_button_fsm_1_0
+Compiling module xil_defaultlib.button_LED
+Compiling module xil_defaultlib.button_LED_wrapper
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot button_LED_wrapper_behav

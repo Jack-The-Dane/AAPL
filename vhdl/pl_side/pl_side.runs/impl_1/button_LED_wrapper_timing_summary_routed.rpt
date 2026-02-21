@@ -1,0 +1,2196 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Sat Feb 21 14:08:45 2026
+| Host         : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file button_LED_wrapper_timing_summary_routed.rpt -pb button_LED_wrapper_timing_summary_routed.pb -rpx button_LED_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : button_LED_wrapper
+| Device       : 7s15-ftgb196
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                                                       Violations  
+---------  --------  ----------------------------------------------------------------  ----------  
+CKLD-2     Warning   Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  1           
+TIMING-18  Warning   Missing input or output delay                                     9           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (3)
+6. checking no_output_delay (6)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (3)
+------------------------------
+ There are 3 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (6)
+-------------------------------
+ There are 6 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     81.896        0.000                      0                    9        0.250        0.000                      0                    9       40.666        0.000                       0                     9  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock    Waveform(ns)       Period(ns)      Frequency(MHz)
+-----    ------------       ----------      --------------
+CLK12_I  {0.000 41.166}     83.333          12.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+CLK12_I            81.896        0.000                      0                    9        0.250        0.000                      0                    9       40.666        0.000                       0                     9  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)        CLK12_I                     
+(none)                      CLK12_I       
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  CLK12_I
+  To Clock:  CLK12_I
+
+Setup :            0  Failing Endpoints,  Worst Slack       81.896ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.250ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       40.666ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             81.896ns  (required time - arrival time)
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            83.333ns  (CLK12_I rise@83.333ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        1.431ns  (logic 0.715ns (49.977%)  route 0.716ns (50.023%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.487ns = ( 85.820 - 83.333 ) 
+    Source Clock Delay      (SCD):    2.741ns
+    Clock Pessimism Removal (CPR):    0.254ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.303     2.741    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.419     3.160 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           0.716     3.876    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]_0
+    SLICE_X0Y12          LUT4 (Prop_lut4_I3_O)        0.296     4.172 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     4.172    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)   83.333    83.333 r  
+    H11                                               0.000    83.333 r  CLK12_I (IN)
+                         net (fo=0)                   0.000    83.333    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368    84.701 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.119    85.820    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+                         clock pessimism              0.254    86.074    
+                         clock uncertainty           -0.035    86.039    
+    SLICE_X0Y12          FDRE (Setup_fdre_C_D)        0.029    86.068    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         86.068    
+                         arrival time                          -4.172    
+  -------------------------------------------------------------------
+                         slack                                 81.896    
+
+Slack (MET) :             81.905ns  (required time - arrival time)
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            83.333ns  (CLK12_I rise@83.333ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        1.423ns  (logic 0.715ns (50.231%)  route 0.708ns (49.769%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.487ns = ( 85.820 - 83.333 ) 
+    Source Clock Delay      (SCD):    2.741ns
+    Clock Pessimism Removal (CPR):    0.254ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.303     2.741    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.419     3.160 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           0.708     3.869    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]_0
+    SLICE_X0Y12          LUT4 (Prop_lut4_I3_O)        0.296     4.165 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     4.165    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)   83.333    83.333 r  
+    H11                                               0.000    83.333 r  CLK12_I (IN)
+                         net (fo=0)                   0.000    83.333    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368    84.701 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.119    85.820    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+                         clock pessimism              0.254    86.074    
+                         clock uncertainty           -0.035    86.039    
+    SLICE_X0Y12          FDRE (Setup_fdre_C_D)        0.031    86.070    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         86.070    
+                         arrival time                          -4.165    
+  -------------------------------------------------------------------
+                         slack                                 81.905    
+
+Slack (MET) :             81.921ns  (required time - arrival time)
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            83.333ns  (CLK12_I rise@83.333ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        1.451ns  (logic 0.743ns (51.191%)  route 0.708ns (48.809%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.487ns = ( 85.820 - 83.333 ) 
+    Source Clock Delay      (SCD):    2.741ns
+    Clock Pessimism Removal (CPR):    0.254ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.303     2.741    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.419     3.160 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           0.708     3.869    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]_0
+    SLICE_X0Y12          LUT4 (Prop_lut4_I3_O)        0.324     4.193 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     4.193    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)   83.333    83.333 r  
+    H11                                               0.000    83.333 r  CLK12_I (IN)
+                         net (fo=0)                   0.000    83.333    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368    84.701 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.119    85.820    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+                         clock pessimism              0.254    86.074    
+                         clock uncertainty           -0.035    86.039    
+    SLICE_X0Y12          FDRE (Setup_fdre_C_D)        0.075    86.114    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         86.114    
+                         arrival time                          -4.193    
+  -------------------------------------------------------------------
+                         slack                                 81.921    
+
+Slack (MET) :             82.071ns  (required time - arrival time)
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            83.333ns  (CLK12_I rise@83.333ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        1.257ns  (logic 0.580ns (46.125%)  route 0.677ns (53.875%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns = ( 85.941 - 83.333 ) 
+    Source Clock Delay      (SCD):    2.885ns
+    Clock Pessimism Removal (CPR):    0.277ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.456     3.341 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/Q
+                         net (fo=3, routed)           0.677     4.019    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg_n_0_[0]
+    SLICE_X0Y10          LUT4 (Prop_lut4_I2_O)        0.124     4.143 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     4.143    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)   83.333    83.333 r  
+    H11                                               0.000    83.333 r  CLK12_I (IN)
+                         net (fo=0)                   0.000    83.333    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368    84.701 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240    85.941    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+                         clock pessimism              0.277    86.218    
+                         clock uncertainty           -0.035    86.183    
+    SLICE_X0Y10          FDRE (Setup_fdre_C_D)        0.031    86.214    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         86.214    
+                         arrival time                          -4.143    
+  -------------------------------------------------------------------
+                         slack                                 82.071    
+
+Slack (MET) :             82.077ns  (required time - arrival time)
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            83.333ns  (CLK12_I rise@83.333ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        1.252ns  (logic 0.580ns (46.336%)  route 0.672ns (53.664%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns = ( 85.941 - 83.333 ) 
+    Source Clock Delay      (SCD):    2.885ns
+    Clock Pessimism Removal (CPR):    0.277ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.456     3.341 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/Q
+                         net (fo=3, routed)           0.672     4.013    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg_n_0_[0]
+    SLICE_X0Y10          LUT4 (Prop_lut4_I2_O)        0.124     4.137 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     4.137    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)   83.333    83.333 r  
+    H11                                               0.000    83.333 r  CLK12_I (IN)
+                         net (fo=0)                   0.000    83.333    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368    84.701 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240    85.941    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+                         clock pessimism              0.277    86.218    
+                         clock uncertainty           -0.035    86.183    
+    SLICE_X0Y10          FDRE (Setup_fdre_C_D)        0.031    86.214    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         86.214    
+                         arrival time                          -4.137    
+  -------------------------------------------------------------------
+                         slack                                 82.077    
+
+Slack (MET) :             82.078ns  (required time - arrival time)
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            83.333ns  (CLK12_I rise@83.333ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        1.252ns  (logic 0.580ns (46.324%)  route 0.672ns (53.676%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns = ( 85.941 - 83.333 ) 
+    Source Clock Delay      (SCD):    2.885ns
+    Clock Pessimism Removal (CPR):    0.277ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.456     3.341 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/Q
+                         net (fo=3, routed)           0.672     4.013    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg_n_0_[0]
+    SLICE_X0Y10          LUT4 (Prop_lut4_I2_O)        0.124     4.137 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     4.137    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)   83.333    83.333 r  
+    H11                                               0.000    83.333 r  CLK12_I (IN)
+                         net (fo=0)                   0.000    83.333    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368    84.701 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240    85.941    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+                         clock pessimism              0.277    86.218    
+                         clock uncertainty           -0.035    86.183    
+    SLICE_X0Y10          FDRE (Setup_fdre_C_D)        0.032    86.215    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         86.215    
+                         arrival time                          -4.137    
+  -------------------------------------------------------------------
+                         slack                                 82.078    
+
+Slack (MET) :             82.078ns  (required time - arrival time)
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            83.333ns  (CLK12_I rise@83.333ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        1.249ns  (logic 0.580ns (46.436%)  route 0.669ns (53.564%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns = ( 85.941 - 83.333 ) 
+    Source Clock Delay      (SCD):    2.885ns
+    Clock Pessimism Removal (CPR):    0.277ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.456     3.341 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/Q
+                         net (fo=3, routed)           0.669     4.010    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg_n_0_[0]
+    SLICE_X0Y10          LUT4 (Prop_lut4_I2_O)        0.124     4.134 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     4.134    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)   83.333    83.333 r  
+    H11                                               0.000    83.333 r  CLK12_I (IN)
+                         net (fo=0)                   0.000    83.333    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368    84.701 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240    85.941    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+                         clock pessimism              0.277    86.218    
+                         clock uncertainty           -0.035    86.183    
+    SLICE_X0Y10          FDRE (Setup_fdre_C_D)        0.029    86.212    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         86.212    
+                         arrival time                          -4.134    
+  -------------------------------------------------------------------
+                         slack                                 82.078    
+
+Slack (MET) :             82.095ns  (required time - arrival time)
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            83.333ns  (CLK12_I rise@83.333ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        1.278ns  (logic 0.606ns (47.416%)  route 0.672ns (52.584%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns = ( 85.941 - 83.333 ) 
+    Source Clock Delay      (SCD):    2.885ns
+    Clock Pessimism Removal (CPR):    0.277ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.456     3.341 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/Q
+                         net (fo=3, routed)           0.672     4.013    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg_n_0_[0]
+    SLICE_X0Y10          LUT4 (Prop_lut4_I2_O)        0.150     4.163 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     4.163    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)   83.333    83.333 r  
+    H11                                               0.000    83.333 r  CLK12_I (IN)
+                         net (fo=0)                   0.000    83.333    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368    84.701 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240    85.941    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/C
+                         clock pessimism              0.277    86.218    
+                         clock uncertainty           -0.035    86.183    
+    SLICE_X0Y10          FDRE (Setup_fdre_C_D)        0.075    86.258    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         86.258    
+                         arrival time                          -4.163    
+  -------------------------------------------------------------------
+                         slack                                 82.095    
+
+Slack (MET) :             82.096ns  (required time - arrival time)
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            83.333ns  (CLK12_I rise@83.333ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        1.277ns  (logic 0.608ns (47.610%)  route 0.669ns (52.390%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns = ( 85.941 - 83.333 ) 
+    Source Clock Delay      (SCD):    2.885ns
+    Clock Pessimism Removal (CPR):    0.277ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.456     3.341 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/Q
+                         net (fo=3, routed)           0.669     4.010    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg_n_0_[0]
+    SLICE_X0Y10          LUT4 (Prop_lut4_I2_O)        0.152     4.162 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     4.162    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)   83.333    83.333 r  
+    H11                                               0.000    83.333 r  CLK12_I (IN)
+                         net (fo=0)                   0.000    83.333    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368    84.701 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240    85.941    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+                         clock pessimism              0.277    86.218    
+                         clock uncertainty           -0.035    86.183    
+    SLICE_X0Y10          FDRE (Setup_fdre_C_D)        0.075    86.258    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         86.258    
+                         arrival time                          -4.162    
+  -------------------------------------------------------------------
+                         slack                                 82.096    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.250ns  (arrival time - required time)
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK12_I rise@0.000ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        0.357ns  (logic 0.184ns (51.572%)  route 0.173ns (48.428%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.030ns
+    Source Clock Delay      (SCD):    0.749ns
+    Clock Pessimism Removal (CPR):    0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.543     0.749    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.141     0.890 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/Q
+                         net (fo=3, routed)           0.173     1.063    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg_n_0_[0]
+    SLICE_X0Y12          LUT4 (Prop_lut4_I2_O)        0.043     1.106 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.106    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.636     1.030    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+                         clock pessimism             -0.280     0.749    
+    SLICE_X0Y12          FDRE (Hold_fdre_C_D)         0.107     0.856    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.856    
+                         arrival time                           1.106    
+  -------------------------------------------------------------------
+                         slack                                  0.250    
+
+Slack (MET) :             0.262ns  (arrival time - required time)
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK12_I rise@0.000ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        0.369ns  (logic 0.183ns (49.540%)  route 0.186ns (50.460%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.809ns
+    Clock Pessimism Removal (CPR):    0.290ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.141     0.950 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           0.186     1.137    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]_0
+    SLICE_X0Y10          LUT4 (Prop_lut4_I0_O)        0.042     1.179 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.179    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/C
+                         clock pessimism             -0.290     0.809    
+    SLICE_X0Y10          FDRE (Hold_fdre_C_D)         0.107     0.916    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.916    
+                         arrival time                           1.179    
+  -------------------------------------------------------------------
+                         slack                                  0.262    
+
+Slack (MET) :             0.267ns  (arrival time - required time)
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK12_I rise@0.000ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        0.359ns  (logic 0.186ns (51.842%)  route 0.173ns (48.158%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.030ns
+    Source Clock Delay      (SCD):    0.749ns
+    Clock Pessimism Removal (CPR):    0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.543     0.749    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.141     0.890 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/Q
+                         net (fo=3, routed)           0.173     1.063    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg_n_0_[0]
+    SLICE_X0Y12          LUT4 (Prop_lut4_I2_O)        0.045     1.108 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.108    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.636     1.030    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+                         clock pessimism             -0.280     0.749    
+    SLICE_X0Y12          FDRE (Hold_fdre_C_D)         0.092     0.841    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -0.841    
+                         arrival time                           1.108    
+  -------------------------------------------------------------------
+                         slack                                  0.267    
+
+Slack (MET) :             0.272ns  (arrival time - required time)
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK12_I rise@0.000ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        0.379ns  (logic 0.183ns (48.298%)  route 0.196ns (51.702%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.809ns
+    Clock Pessimism Removal (CPR):    0.290ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.141     0.950 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           0.196     1.146    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]_0
+    SLICE_X0Y10          LUT4 (Prop_lut4_I0_O)        0.042     1.188 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.188    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+                         clock pessimism             -0.290     0.809    
+    SLICE_X0Y10          FDRE (Hold_fdre_C_D)         0.107     0.916    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.916    
+                         arrival time                           1.188    
+  -------------------------------------------------------------------
+                         slack                                  0.272    
+
+Slack (MET) :             0.279ns  (arrival time - required time)
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK12_I rise@0.000ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        0.370ns  (logic 0.186ns (50.311%)  route 0.184ns (49.689%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.030ns
+    Source Clock Delay      (SCD):    0.749ns
+    Clock Pessimism Removal (CPR):    0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.543     0.749    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.141     0.890 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/Q
+                         net (fo=3, routed)           0.184     1.074    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg_n_0_[0]
+    SLICE_X0Y12          LUT4 (Prop_lut4_I2_O)        0.045     1.119 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.119    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.636     1.030    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+                         clock pessimism             -0.280     0.749    
+    SLICE_X0Y12          FDRE (Hold_fdre_C_D)         0.091     0.840    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.840    
+                         arrival time                           1.119    
+  -------------------------------------------------------------------
+                         slack                                  0.279    
+
+Slack (MET) :             0.279ns  (arrival time - required time)
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK12_I rise@0.000ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        0.371ns  (logic 0.186ns (50.137%)  route 0.185ns (49.863%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.809ns
+    Clock Pessimism Removal (CPR):    0.290ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.141     0.950 f  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           0.185     1.135    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]_0
+    SLICE_X0Y10          LUT4 (Prop_lut4_I0_O)        0.045     1.180 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.180    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+                         clock pessimism             -0.290     0.809    
+    SLICE_X0Y10          FDRE (Hold_fdre_C_D)         0.092     0.901    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.901    
+                         arrival time                           1.180    
+  -------------------------------------------------------------------
+                         slack                                  0.279    
+
+Slack (MET) :             0.280ns  (arrival time - required time)
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK12_I rise@0.000ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        0.372ns  (logic 0.186ns (49.946%)  route 0.186ns (50.054%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.809ns
+    Clock Pessimism Removal (CPR):    0.290ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.141     0.950 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           0.186     1.137    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]_0
+    SLICE_X0Y10          LUT4 (Prop_lut4_I0_O)        0.045     1.182 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.182    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+                         clock pessimism             -0.290     0.809    
+    SLICE_X0Y10          FDRE (Hold_fdre_C_D)         0.092     0.901    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -0.901    
+                         arrival time                           1.182    
+  -------------------------------------------------------------------
+                         slack                                  0.280    
+
+Slack (MET) :             0.283ns  (arrival time - required time)
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK12_I rise@0.000ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        0.375ns  (logic 0.186ns (49.567%)  route 0.189ns (50.433%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.809ns
+    Clock Pessimism Removal (CPR):    0.290ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.141     0.950 f  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           0.189     1.140    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]_0
+    SLICE_X0Y10          LUT4 (Prop_lut4_I0_O)        0.045     1.185 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.185    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+                         clock pessimism             -0.290     0.809    
+    SLICE_X0Y10          FDRE (Hold_fdre_C_D)         0.092     0.901    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.901    
+                         arrival time                           1.185    
+  -------------------------------------------------------------------
+                         slack                                  0.283    
+
+Slack (MET) :             0.291ns  (arrival time - required time)
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             CLK12_I
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (CLK12_I rise@0.000ns - CLK12_I rise@0.000ns)
+  Data Path Delay:        0.382ns  (logic 0.186ns (48.704%)  route 0.196ns (51.296%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.809ns
+    Clock Pessimism Removal (CPR):    0.290ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.141     0.950 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           0.196     1.146    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]_0
+    SLICE_X0Y10          LUT4 (Prop_lut4_I0_O)        0.045     1.191 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.191    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+                         clock pessimism             -0.290     0.809    
+    SLICE_X0Y10          FDRE (Hold_fdre_C_D)         0.091     0.900    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -0.900    
+                         arrival time                           1.191    
+  -------------------------------------------------------------------
+                         slack                                  0.291    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         CLK12_I
+Waveform(ns):       { 0.000 41.166 }
+Period(ns):         83.333
+Sources:            { CLK12_I }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location     Pin
+Min Period        n/a     FDRE/C   n/a            1.000         83.333      82.333     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         83.333      82.333     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         83.333      82.333     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         83.333      82.333     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         83.333      82.333     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         83.333      82.333     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         83.333      82.333     SLICE_X0Y10  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         83.333      82.333     SLICE_X0Y10  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         83.333      82.333     SLICE_X0Y10  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         42.167      41.667     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y10  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         41.166      40.666     SLICE_X0Y12  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  CLK12_I
+  To Clock:  
+
+Max Delay             6 Endpoints
+Min Delay             6 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_05
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.296ns  (logic 4.108ns (65.251%)  route 2.188ns (34.749%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.419     3.304 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           2.188     5.492    BB_05_OBUF
+    P11                  OBUF (Prop_obuf_I_O)         3.689     9.181 r  BB_05_OBUF_inst/O
+                         net (fo=0)                   0.000     9.181    BB_05
+    P11                                                               r  BB_05 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_12
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.265ns  (logic 4.136ns (66.022%)  route 2.129ns (33.978%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.419     3.304 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           2.129     5.433    BB_12_OBUF
+    N14                  OBUF (Prop_obuf_I_O)         3.717     9.150 r  BB_12_OBUF_inst/O
+                         net (fo=0)                   0.000     9.150    BB_12
+    N14                                                               r  BB_12 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_09
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.187ns  (logic 4.133ns (66.797%)  route 2.054ns (33.203%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.303     2.741    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.419     3.160 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           2.054     5.214    BB_09_OBUF
+    P13                  OBUF (Prop_obuf_I_O)         3.714     8.929 r  BB_09_OBUF_inst/O
+                         net (fo=0)                   0.000     8.929    BB_09
+    P13                                                               r  BB_09 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_13
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.847ns  (logic 3.954ns (67.624%)  route 1.893ns (32.376%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.456     3.341 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           1.893     5.234    BB_13_OBUF
+    J11                  OBUF (Prop_obuf_I_O)         3.498     8.732 r  BB_13_OBUF_inst/O
+                         net (fo=0)                   0.000     8.732    BB_13
+    J11                                                               r  BB_13 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_10
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.897ns  (logic 4.006ns (67.933%)  route 1.891ns (32.067%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.303     2.741    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.456     3.197 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           1.891     5.088    BB_10_OBUF
+    M13                  OBUF (Prop_obuf_I_O)         3.550     8.638 r  BB_10_OBUF_inst/O
+                         net (fo=0)                   0.000     8.638    BB_10
+    M13                                                               r  BB_10 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_06
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.653ns  (logic 3.955ns (69.965%)  route 1.698ns (30.035%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.438     1.438 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.447     2.885    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.456     3.341 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           1.698     5.039    BB_06_OBUF
+    K11                  OBUF (Prop_obuf_I_O)         3.499     8.538 r  BB_06_OBUF_inst/O
+                         net (fo=0)                   0.000     8.538    BB_06
+    K11                                                               r  BB_06 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_06
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.710ns  (logic 1.341ns (78.431%)  route 0.369ns (21.569%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.141     0.950 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           0.369     1.319    BB_06_OBUF
+    K11                  OBUF (Prop_obuf_I_O)         1.200     2.519 r  BB_06_OBUF_inst/O
+                         net (fo=0)                   0.000     2.519    BB_06
+    K11                                                               r  BB_06 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_10
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.841ns  (logic 1.392ns (75.607%)  route 0.449ns (24.393%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.543     0.749    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.141     0.890 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           0.449     1.339    BB_10_OBUF
+    M13                  OBUF (Prop_obuf_I_O)         1.251     2.590 r  BB_10_OBUF_inst/O
+                         net (fo=0)                   0.000     2.590    BB_10
+    M13                                                               r  BB_10 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_13
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.782ns  (logic 1.340ns (75.197%)  route 0.442ns (24.803%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.141     0.950 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/Q
+                         net (fo=4, routed)           0.442     1.392    BB_13_OBUF
+    J11                  OBUF (Prop_obuf_I_O)         1.199     2.592 r  BB_13_OBUF_inst/O
+                         net (fo=0)                   0.000     2.592    BB_13
+    J11                                                               r  BB_13 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_09
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.941ns  (logic 1.424ns (73.347%)  route 0.517ns (26.653%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.543     0.749    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDRE (Prop_fdre_C_Q)         0.128     0.877 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           0.517     1.395    BB_09_OBUF
+    P13                  OBUF (Prop_obuf_I_O)         1.296     2.691 r  BB_09_OBUF_inst/O
+                         net (fo=0)                   0.000     2.691    BB_09
+    P13                                                               r  BB_09 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_12
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.934ns  (logic 1.424ns (73.605%)  route 0.511ns (26.395%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.128     0.937 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           0.511     1.448    BB_12_OBUF
+    N14                  OBUF (Prop_obuf_I_O)         1.296     2.744 r  BB_12_OBUF_inst/O
+                         net (fo=0)                   0.000     2.744    BB_12
+    N14                                                               r  BB_12 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Destination:            BB_05
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.960ns  (logic 1.397ns (71.286%)  route 0.563ns (28.714%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.206     0.206 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.603     0.809    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y10          FDRE (Prop_fdre_C_Q)         0.128     0.937 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           0.563     1.500    BB_05_OBUF
+    P11                  OBUF (Prop_obuf_I_O)         1.269     2.769 r  BB_05_OBUF_inst/O
+                         net (fo=0)                   0.000     2.769    BB_05
+    P11                                                               r  BB_05 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  CLK12_I
+
+Max Delay             9 Endpoints
+Min Delay             9 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 BB_27
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        5.038ns  (logic 1.630ns (32.349%)  route 3.408ns (67.651%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        2.608ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A5                                                0.000     0.000 f  BB_27 (IN)
+                         net (fo=0)                   0.000     0.000    BB_27
+    A5                   IBUF (Prop_ibuf_I_O)         1.478     1.478 f  BB_27_IBUF_inst/O
+                         net (fo=3, routed)           3.408     4.886    button_LED_i/simple_button_fsm_0/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.152     5.038 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     5.038    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368     1.368 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240     2.608    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+
+Slack:                    inf
+  Source:                 BB_27
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        5.010ns  (logic 1.602ns (31.971%)  route 3.408ns (68.029%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        2.608ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A5                                                0.000     0.000 r  BB_27 (IN)
+                         net (fo=0)                   0.000     0.000    BB_27
+    A5                   IBUF (Prop_ibuf_I_O)         1.478     1.478 r  BB_27_IBUF_inst/O
+                         net (fo=3, routed)           3.408     4.886    button_LED_i/simple_button_fsm_0/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.124     5.010 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     5.010    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368     1.368 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240     2.608    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+
+Slack:                    inf
+  Source:                 BB_27
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        5.003ns  (logic 1.602ns (32.017%)  route 3.401ns (67.983%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        2.608ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A5                                                0.000     0.000 f  BB_27 (IN)
+                         net (fo=0)                   0.000     0.000    BB_27
+    A5                   IBUF (Prop_ibuf_I_O)         1.478     1.478 f  BB_27_IBUF_inst/O
+                         net (fo=3, routed)           3.401     4.879    button_LED_i/simple_button_fsm_0/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.124     5.003 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     5.003    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368     1.368 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240     2.608    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+
+Slack:                    inf
+  Source:                 BB_30
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        4.976ns  (logic 1.597ns (32.092%)  route 3.379ns (67.908%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        2.608ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D3                                                0.000     0.000 f  BB_30 (IN)
+                         net (fo=0)                   0.000     0.000    BB_30
+    D3                   IBUF (Prop_ibuf_I_O)         1.448     1.448 f  BB_30_IBUF_inst/O
+                         net (fo=3, routed)           3.379     4.827    button_LED_i/simple_button_fsm_2/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.149     4.976 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     4.976    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368     1.368 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240     2.608    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/C
+
+Slack:                    inf
+  Source:                 BB_30
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        4.956ns  (logic 1.572ns (31.722%)  route 3.384ns (68.278%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        2.608ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D3                                                0.000     0.000 f  BB_30 (IN)
+                         net (fo=0)                   0.000     0.000    BB_30
+    D3                   IBUF (Prop_ibuf_I_O)         1.448     1.448 f  BB_30_IBUF_inst/O
+                         net (fo=3, routed)           3.384     4.832    button_LED_i/simple_button_fsm_2/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.124     4.956 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     4.956    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368     1.368 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240     2.608    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+
+Slack:                    inf
+  Source:                 BB_30
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        4.951ns  (logic 1.572ns (31.750%)  route 3.379ns (68.250%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        2.608ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.608ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D3                                                0.000     0.000 r  BB_30 (IN)
+                         net (fo=0)                   0.000     0.000    BB_30
+    D3                   IBUF (Prop_ibuf_I_O)         1.448     1.448 r  BB_30_IBUF_inst/O
+                         net (fo=3, routed)           3.379     4.827    button_LED_i/simple_button_fsm_2/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.124     4.951 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     4.951    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368     1.368 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.240     2.608    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+
+Slack:                    inf
+  Source:                 BB_24
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.485ns  (logic 1.595ns (45.771%)  route 1.890ns (54.229%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        2.487ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.487ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A13                                               0.000     0.000 r  BB_24 (IN)
+                         net (fo=0)                   0.000     0.000    BB_24
+    A13                  IBUF (Prop_ibuf_I_O)         1.471     1.471 r  BB_24_IBUF_inst/O
+                         net (fo=3, routed)           1.890     3.361    button_LED_i/simple_button_fsm_1/inst/button
+    SLICE_X0Y12          LUT4 (Prop_lut4_I1_O)        0.124     3.485 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     3.485    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368     1.368 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.119     2.487    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+
+Slack:                    inf
+  Source:                 BB_24
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.481ns  (logic 1.595ns (45.823%)  route 1.886ns (54.177%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        2.487ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.487ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A13                                               0.000     0.000 f  BB_24 (IN)
+                         net (fo=0)                   0.000     0.000    BB_24
+    A13                  IBUF (Prop_ibuf_I_O)         1.471     1.471 f  BB_24_IBUF_inst/O
+                         net (fo=3, routed)           1.886     3.357    button_LED_i/simple_button_fsm_1/inst/button
+    SLICE_X0Y12          LUT4 (Prop_lut4_I1_O)        0.124     3.481 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     3.481    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368     1.368 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.119     2.487    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+
+Slack:                    inf
+  Source:                 BB_24
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.480ns  (logic 1.590ns (45.693%)  route 1.890ns (54.307%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        2.487ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.487ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A13                                               0.000     0.000 f  BB_24 (IN)
+                         net (fo=0)                   0.000     0.000    BB_24
+    A13                  IBUF (Prop_ibuf_I_O)         1.471     1.471 f  BB_24_IBUF_inst/O
+                         net (fo=3, routed)           1.890     3.361    button_LED_i/simple_button_fsm_1/inst/button
+    SLICE_X0Y12          LUT4 (Prop_lut4_I1_O)        0.119     3.480 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     3.480    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         1.368     1.368 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           1.119     2.487    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 BB_24
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.077ns  (logic 0.284ns (26.377%)  route 0.793ns (73.623%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        1.030ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.030ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A13                                               0.000     0.000 f  BB_24 (IN)
+                         net (fo=0)                   0.000     0.000    BB_24
+    A13                  IBUF (Prop_ibuf_I_O)         0.239     0.239 f  BB_24_IBUF_inst/O
+                         net (fo=3, routed)           0.793     1.032    button_LED_i/simple_button_fsm_1/inst/button
+    SLICE_X0Y12          LUT4 (Prop_lut4_I1_O)        0.045     1.077 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.077    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.636     1.030    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[0]/C
+
+Slack:                    inf
+  Source:                 BB_24
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.078ns  (logic 0.284ns (26.352%)  route 0.794ns (73.648%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        1.030ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.030ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A13                                               0.000     0.000 r  BB_24 (IN)
+                         net (fo=0)                   0.000     0.000    BB_24
+    A13                  IBUF (Prop_ibuf_I_O)         0.239     0.239 r  BB_24_IBUF_inst/O
+                         net (fo=3, routed)           0.794     1.033    button_LED_i/simple_button_fsm_1/inst/button
+    SLICE_X0Y12          LUT4 (Prop_lut4_I1_O)        0.045     1.078 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.078    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.636     1.030    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[1]/C
+
+Slack:                    inf
+  Source:                 BB_24
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.082ns  (logic 0.288ns (26.625%)  route 0.794ns (73.375%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        1.030ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.030ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A13                                               0.000     0.000 f  BB_24 (IN)
+                         net (fo=0)                   0.000     0.000    BB_24
+    A13                  IBUF (Prop_ibuf_I_O)         0.239     0.239 f  BB_24_IBUF_inst/O
+                         net (fo=3, routed)           0.794     1.033    button_LED_i/simple_button_fsm_1/inst/button
+    SLICE_X0Y12          LUT4 (Prop_lut4_I1_O)        0.049     1.082 r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.082    button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.636     1.030    button_LED_i/simple_button_fsm_1/inst/clk
+    SLICE_X0Y12          FDRE                                         r  button_LED_i/simple_button_fsm_1/inst/FSM_onehot_state_reg[2]/C
+
+Slack:                    inf
+  Source:                 BB_30
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.778ns  (logic 0.260ns (14.639%)  route 1.517ns (85.361%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        1.100ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D3                                                0.000     0.000 f  BB_30 (IN)
+                         net (fo=0)                   0.000     0.000    BB_30
+    D3                   IBUF (Prop_ibuf_I_O)         0.216     0.216 f  BB_30_IBUF_inst/O
+                         net (fo=3, routed)           1.517     1.734    button_LED_i/simple_button_fsm_2/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.044     1.778 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.778    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[2]/C
+
+Slack:                    inf
+  Source:                 BB_30
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.779ns  (logic 0.261ns (14.687%)  route 1.517ns (85.313%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        1.100ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D3                                                0.000     0.000 r  BB_30 (IN)
+                         net (fo=0)                   0.000     0.000    BB_30
+    D3                   IBUF (Prop_ibuf_I_O)         0.216     0.216 r  BB_30_IBUF_inst/O
+                         net (fo=3, routed)           1.517     1.734    button_LED_i/simple_button_fsm_2/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.045     1.779 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.779    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[1]/C
+
+Slack:                    inf
+  Source:                 BB_30
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.785ns  (logic 0.261ns (14.634%)  route 1.524ns (85.366%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        1.100ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D3                                                0.000     0.000 f  BB_30 (IN)
+                         net (fo=0)                   0.000     0.000    BB_30
+    D3                   IBUF (Prop_ibuf_I_O)         0.216     0.216 f  BB_30_IBUF_inst/O
+                         net (fo=3, routed)           1.524     1.740    button_LED_i/simple_button_fsm_2/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.045     1.785 r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.785    button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_2/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_2/inst/FSM_onehot_state_reg[0]/C
+
+Slack:                    inf
+  Source:                 BB_27
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.794ns  (logic 0.291ns (16.202%)  route 1.503ns (83.798%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        1.100ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A5                                                0.000     0.000 f  BB_27 (IN)
+                         net (fo=0)                   0.000     0.000    BB_27
+    A5                   IBUF (Prop_ibuf_I_O)         0.246     0.246 f  BB_27_IBUF_inst/O
+                         net (fo=3, routed)           1.503     1.749    button_LED_i/simple_button_fsm_0/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.045     1.794 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.794    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[0]/C
+
+Slack:                    inf
+  Source:                 BB_27
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.803ns  (logic 0.290ns (16.064%)  route 1.513ns (83.936%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        1.100ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A5                                                0.000     0.000 f  BB_27 (IN)
+                         net (fo=0)                   0.000     0.000    BB_27
+    A5                   IBUF (Prop_ibuf_I_O)         0.246     0.246 f  BB_27_IBUF_inst/O
+                         net (fo=3, routed)           1.513     1.759    button_LED_i/simple_button_fsm_0/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.044     1.803 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.803    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[2]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[2]/C
+
+Slack:                    inf
+  Source:                 BB_27
+                            (input port)
+  Destination:            button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK12_I  {rise@0.000ns fall@41.166ns period=83.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        1.804ns  (logic 0.291ns (16.110%)  route 1.513ns (83.890%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Clock Path Skew:        1.100ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.100ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       Asynchronous Clock Groups
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A5                                                0.000     0.000 r  BB_27 (IN)
+                         net (fo=0)                   0.000     0.000    BB_27
+    A5                   IBUF (Prop_ibuf_I_O)         0.246     0.246 r  BB_27_IBUF_inst/O
+                         net (fo=3, routed)           1.513     1.759    button_LED_i/simple_button_fsm_0/inst/button
+    SLICE_X0Y10          LUT4 (Prop_lut4_I1_O)        0.045     1.804 r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.804    button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state[1]_i_1_n_0
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK12_I rise edge)    0.000     0.000 r  
+    H11                                               0.000     0.000 r  CLK12_I (IN)
+                         net (fo=0)                   0.000     0.000    CLK12_I
+    H11                  IBUF (Prop_ibuf_I_O)         0.393     0.393 r  CLK12_I_IBUF_inst/O
+                         net (fo=9, routed)           0.706     1.100    button_LED_i/simple_button_fsm_0/inst/clk
+    SLICE_X0Y10          FDRE                                         r  button_LED_i/simple_button_fsm_0/inst/FSM_onehot_state_reg[1]/C
+
+
+
+
+
