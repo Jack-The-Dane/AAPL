@@ -1,6 +1,7 @@
 import numpy
 import pygame
 import random
+import collections
 
 # global variables
 
@@ -15,81 +16,140 @@ block_size = 30  # size of block
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height - 50
 
-
-
+#fandt en som havde lavet farver til dem
+class colors:
+    G = (138, 234, 40)
+    R = (207, 54, 22)
+    C = (0, 240, 240)
+    Y = (241, 239, 47)
+    B = (0, 0, 240)
+    P = (136, 44, 237)
+    O = (221, 164, 34)
 
 #shapes in matrix form, list with each shape and their chosen color
-I = [[1,1,1,1]]
-O = [[1,1], [1,1]]
-T = [[1,1,1], [0,1,0]]
-S = [[0,1,1], [1,1,0]]
-Z = [[1,1,0], [0,1,1]]
-J = [[1,1,1], [1,0,0]]
-L = [[0,0,1], [1,1,1]]
-SHAPES = [I, O, T, S, Z, J, L]
-#fandt en som havde lavet farver til dem
-shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
+Shape = collections.namedtuple("Shape", ["shape", "color"])
+
+#shape = (shape, color)
+shapes = {   
+    "I": Shape([[1,1,1,1]], colors.C),
+    "O":Shape([[1,1], [1,1]], colors.Y),
+    "T":Shape([[1,1,1], [0,1,0]], colors.P),
+    "S":Shape([[0,1,1], [1,1,0]], colors.G),
+    "Z":Shape([[1,1,0], [0,1,1]], colors.R),
+    "J":Shape([[1,1,1], [0,0,1]], colors.B),
+    "L":Shape([[0,0,1], [1,1,1]], colors.O)
+    }
 
 
+# I = [[1,1,1,1]]
+# O = [[1,1], [1,1]]
+# T = [[1,1,1], [0,1,0]]
+# S = [[0,1,1], [1,1,0]]
+# Z = [[1,1,0], [0,1,1]]
+# J = [[1,1,1], [1,0,0]]
+# L = [[0,0,1], [1,1,1]]
+#SHAPES = [I, O, T, S, Z, J, L]
+
+
+
+
+# shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
+
+BLOCK = 40
+WINDOW_SIZE_X = 800
+WINDOW_SIZE_Y = 600
+FRAME_RATE = 60
 class Piece:
-    def __init__(self, x, y, shapeID):
+    def __init__(self, x:int, y:int, shape: Shape):
         self.x = x
         self.y = y
-        self.shapeID = shapeID
-        self.color = shape_colors[shapeID]
+        self.shape: (list[list[int]]) = shape.shape
+        self.color = shape.color
         self.rotation = 0
+        self.block_size = BLOCK
+        self.counter = 0
+    
+    def get_left_edge_x(self):
+        return self.x
+    
+    def get_right_edge_x(self):
+        return self.x + self.block_size * len(self.shape[0])
+    
+    def get_bottom_edge_y(self):
+        return self.y + self.block_size * len(self.shape)
 
-    def rotate_cw(mat):
-        return [list(row) for row in zip(*mat[::-1])]
-
-
-    def matrix(self):
-        m = SHAPES[self.shapeID]
-        for _ in range(self.rotation):
-            m = Piece.rotate_cw(m)
-        return m
-
-    def rotate_piece(self):
+    def rotate_self(self):
+        self.shape = [list(row) for row in zip(*self.shape[::-1])]
         self.rotation = (self.rotation + 1) % 4
 
-test = Piece(3,2,0)
-print(test.matrix())
-test.rotate_piece()
-print(test.matrix())
+    def __repr__(self):
+        s = ""
+        for r in self.shape:
+            for c in r:
+                if c == 1:
+                    s += " 1 "
+                else:
+                    s += "   "
+            s += '\n'
+        return s
+    
+    def move_right(self):
+        self.x += self.block_size
+    
+    def move_left(self):
+        self.x -= self.block_size
+    
+    def move_down(self):
+        self.y += self.block_size
+
+    def move_up(self):
+        self.y -= self.block_size
+    
+class GameMat:
+    def __init__(self, size_x, size_y):
+        self.size_x = size_x
+        self.size_y = size_y
+        self.mat = numpy.zeros(((size_x, size_y)), dtype=colors)
+    
+    def place_piece(self, piece: Piece):
+        print(piece)
+        for i, r in enumerate(piece.shape):
+            for j, c in enumerate(r):
+                if c == 1:
+                    x = int(piece.x / piece.block_size) + i 
+                    y = int(piece.y / piece.block_size) + j -1
+                    
+                    print("x: ", x)
+                    print("y: ", y)
+                    self.mat[y,x] = piece.color
+        print(self.mat)
+    
+    def draw(self, surface):
+        for r, row in enumerate(self.mat):
+            for c, val in enumerate(row):
+                if val:
+                    x = c * BLOCK
+                    y = r * BLOCK
+                    pygame.draw.rect(surface, val, (x, y, BLOCK, BLOCK))
+                    pygame.draw.rect(surface, (0, 0, 0), (x, y, BLOCK, BLOCK), 2)  # outline
+    
+
+
+
+test = Piece(3,2,shapes["T"])
+print(test)
+test.rotate_self()
+print(test)
+test.rotate_self()
+print(test)
+test.rotate_self()
+print(test)
         
 
-    
 
-    # def valid_move(self, piece, x, y):
-
-    # def place_piece(self, piece):
-
-    # def remove_full_rows(self):
-
-    # def rotate_piece(self, piece):
-
-    # def draw(self):
-
-    # def run(self):
-    #     while not self.game_over:
-    #         for event in pygame.event.get():
-    #             if event.type == pygame.QUIT:
-    #                 return
-    #             if event.type == pygame.KEYDOWN:
-
-
-    #         self.handle_continous_movement()
-
-    #         self.draw()
-    
-
-
-
-
-BLOCK = 30
 
 def draw_piece(surface, piece: Piece):
-    mat = piece.matrix()
+    mat = piece.shape
     for r, row in enumerate(mat):
         for c, val in enumerate(row):
             if val:
@@ -101,11 +161,14 @@ def draw_piece(surface, piece: Piece):
 #game loop
 pygame.init()
 
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((WINDOW_SIZE_X, WINDOW_SIZE_Y))
 pygame.display.set_caption("test game")
 
 # Spawn one piece in the middle-ish
-piece = Piece(x=800 // 2 - BLOCK, y=120, shapeID=random.randrange(len(SHAPES)))
+letter_list = 'IOTSZJL'
+shape_letter = random.choice(letter_list)
+piece = Piece(x=(WINDOW_SIZE_X // 2)-BLOCK, y=120, shape=shapes[shape_letter])
+mat = GameMat(15,20)
 
 running = True
 clock = pygame.time.Clock()
@@ -117,11 +180,43 @@ while running:
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
-                piece.rotate_piece()
+                piece.rotate_self()
+                while piece.get_left_edge_x() < 0:
+                    piece.move_right()
+                while piece.get_right_edge_x() > WINDOW_SIZE_X:
+                    piece.move_left()
+                while piece.get_bottom_edge_y() > WINDOW_SIZE_Y:
+                        piece.move_up()
+
+            elif event.key == pygame.K_RIGHT:
+                if piece.get_right_edge_x() < WINDOW_SIZE_X:
+                    print("right edge: ",piece.get_right_edge_x())
+                    piece.move_right()
+            elif event.key == pygame.K_LEFT:
+                if piece.get_left_edge_x() > 0:
+                    print("left edge: ",piece.get_left_edge_x())
+                    piece.move_left()
+            elif event.key == pygame.K_r:
+                piece = Piece(x=piece.x, y=piece.y, shape=shapes[random.choice(letter_list)])
+            elif event.key == pygame.K_DOWN:
+                if piece.get_bottom_edge_y() < WINDOW_SIZE_Y:
+                    print("bottom edge: ",piece.get_bottom_edge_y())
+                    piece.move_down()
+        
+    if piece.get_bottom_edge_y() == WINDOW_SIZE_Y:
+        piece.counter += 1
+    if piece.counter > FRAME_RATE:
+        mat.place_piece(piece)
+        piece = Piece(x=(WINDOW_SIZE_X // 2)-BLOCK, y=120, shape=shapes[random.choice(letter_list)])
+
+                    
+                
+
 
     screen.fill((255, 255, 255))
     draw_piece(screen, piece)
+    mat.draw(screen)
     pygame.display.flip()
-    clock.tick(60)
+    clock.tick(FRAME_RATE)
 
 pygame.quit()
