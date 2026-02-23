@@ -116,8 +116,8 @@ class GameMat:
         for i, r in enumerate(piece.shape):
             for j, c in enumerate(r):
                 if c == 1:
-                    x = int(piece.x / piece.block_size) + i 
-                    y = int(piece.y / piece.block_size) + j -1
+                    x = int(piece.x / piece.block_size) + j
+                    y = int(piece.y / piece.block_size) + i
                     
                     print("x: ", x)
                     print("y: ", y)
@@ -132,6 +132,27 @@ class GameMat:
                     y = r * BLOCK
                     pygame.draw.rect(surface, val, (x, y, BLOCK, BLOCK))
                     pygame.draw.rect(surface, (0, 0, 0), (x, y, BLOCK, BLOCK), 2)  # outline
+
+    def check_collision(self, piece:Piece, event):
+        for i, r in enumerate(piece.shape):
+            for j, c in enumerate(r):
+                if c == 1:
+                    x = int(piece.x / piece.block_size) + j
+                    y = int(piece.y / piece.block_size) + i
+                    
+                    if event == pygame.K_DOWN and y == self.mat.shape[0]-1:
+                        return False
+                    if event == pygame.K_RIGHT and x == self.mat.shape[1]-1:
+                        return False
+                    if event == pygame.K_LEFT and x == 0:
+                        return False
+                    if event == pygame.K_LEFT and (self.mat[y, x-1] != 0):
+                        return False
+                    if event == pygame.K_RIGHT and (self.mat[y, x+1] != 0):
+                        return False
+        return True
+            
+                                                        
     
 
 
@@ -189,18 +210,15 @@ while running:
                         piece.move_up()
 
             elif event.key == pygame.K_RIGHT:
-                if piece.get_right_edge_x() < WINDOW_SIZE_X:
-                    print("right edge: ",piece.get_right_edge_x())
+                if mat.check_collision(piece, event.key):
                     piece.move_right()
             elif event.key == pygame.K_LEFT:
-                if piece.get_left_edge_x() > 0:
-                    print("left edge: ",piece.get_left_edge_x())
+                if mat.check_collision(piece, event.key):
                     piece.move_left()
             elif event.key == pygame.K_r:
                 piece = Piece(x=piece.x, y=piece.y, shape=shapes[random.choice(letter_list)])
             elif event.key == pygame.K_DOWN:
-                if piece.get_bottom_edge_y() < WINDOW_SIZE_Y:
-                    print("bottom edge: ",piece.get_bottom_edge_y())
+                if mat.check_collision(piece, event.key):
                     piece.move_down()
         
     if piece.get_bottom_edge_y() == WINDOW_SIZE_Y:
