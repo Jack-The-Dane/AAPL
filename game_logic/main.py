@@ -150,7 +150,23 @@ class GameMat:
                         return False
                     if event == pygame.K_RIGHT and (self.mat[y, x+1] != 0):
                         return False
+                    if event == pygame.K_DOWN and (self.mat[y+1, x] != 0):
+                        return False
         return True
+    
+
+    def check_collision_down(self, piece: Piece):
+        for i, row in enumerate(piece.shape):
+            for j, val in enumerate(row):
+                if val == 1:
+                    x = int(piece.x / piece.block_size) + j
+                    y = int(piece.y / piece.block_size) + i
+
+                 
+                    if self.mat[y + 1, x] != 0:
+                        return True 
+
+        return False 
             
                                                         
     
@@ -221,7 +237,7 @@ while running:
                 if mat.check_collision(piece, event.key):
                     piece.move_down()
         
-    if piece.get_bottom_edge_y() == WINDOW_SIZE_Y:
+    if piece.get_bottom_edge_y() == WINDOW_SIZE_Y or mat.check_collision_down(piece):
         piece.counter += 1
     if piece.counter > FRAME_RATE:
         mat.place_piece(piece)
