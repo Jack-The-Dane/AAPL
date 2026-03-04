@@ -1,0 +1,192 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x2949265B4F1419BD",
+      "device": "xc7s15ftgb196-1",
+      "gen_directory": "../../../../HDMI_example.gen/sources_1/bd/test1",
+      "name": "test1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "selectio_wiz_0": ""
+    },
+    "ports": {
+      "clk_div": {
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "test1_clk_in_0",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "20000000",
+            "value_src": "ip_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "test1_clk_in_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "data_in": {
+        "type": "data",
+        "direction": "I",
+        "left": "9",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "data_out_n": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "data_out_p": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      }
+    },
+    "components": {
+      "selectio_wiz_0": {
+        "vlnv": "xilinx.com:ip:selectio_wiz:5.1",
+        "ip_revision": "20",
+        "xci_name": "test1_selectio_wiz_0_0",
+        "xci_path": "ip/test1_selectio_wiz_0_0/test1_selectio_wiz_0_0.xci",
+        "inst_hier_path": "selectio_wiz_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "BUS_DIR": {
+            "value": "OUTPUTS"
+          },
+          "BUS_IO_STD": {
+            "value": "TMDS_33"
+          },
+          "BUS_SIG_TYPE": {
+            "value": "DIFF"
+          },
+          "CLK_FWD": {
+            "value": "false"
+          },
+          "CLK_FWD_IO_STD": {
+            "value": "TMDS_33"
+          },
+          "CLK_FWD_SIG_TYPE": {
+            "value": "DIFF"
+          },
+          "SELIO_ACTIVE_EDGE": {
+            "value": "DDR"
+          },
+          "SELIO_BUS_IN_DELAY": {
+            "value": "NONE"
+          },
+          "SELIO_CLK_BUF": {
+            "value": "MMCM"
+          },
+          "SELIO_CLK_IO_STD": {
+            "value": "TMDS_33"
+          },
+          "SELIO_CLK_SIG_TYPE": {
+            "value": "DIFF"
+          },
+          "SELIO_INTERFACE_TYPE": {
+            "value": "NETWORKING"
+          },
+          "SERIALIZATION_FACTOR": {
+            "value": "10"
+          },
+          "SYSTEM_DATA_WIDTH": {
+            "value": "1"
+          },
+          "USE_SERIALIZATION": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_div_in_0_1": {
+        "ports": [
+          "clk_div",
+          "selectio_wiz_0/clk_div_in"
+        ]
+      },
+      "clk_in_0_1": {
+        "ports": [
+          "clk",
+          "selectio_wiz_0/clk_in"
+        ]
+      },
+      "data_out_from_device_0_1": {
+        "ports": [
+          "data_in",
+          "selectio_wiz_0/data_out_from_device"
+        ]
+      },
+      "io_reset_0_1": {
+        "ports": [
+          "rst",
+          "selectio_wiz_0/io_reset"
+        ]
+      },
+      "selectio_wiz_0_data_out_to_pins_n": {
+        "ports": [
+          "selectio_wiz_0/data_out_to_pins_n",
+          "data_out_n"
+        ]
+      },
+      "selectio_wiz_0_data_out_to_pins_p": {
+        "ports": [
+          "selectio_wiz_0/data_out_to_pins_p",
+          "data_out_p"
+        ]
+      }
+    }
+  }
+}

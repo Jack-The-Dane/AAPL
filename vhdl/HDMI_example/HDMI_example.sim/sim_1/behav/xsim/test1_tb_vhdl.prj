@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../HDMI_example.ip_user_files/bd/test1/sim/test1.vhd" \
+"../../../../HDMI_example.gen/sources_1/bd/test1/hdl/test1_wrapper.vhd" \
+"../../../../HDMI_example.srcs/sim_1/new/test1_tb.vhd" \
+
+# Do not sort compile order
+nosort

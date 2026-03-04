@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../../../tools/Xilinx/2025.2/data/rsb/busdef" \
+"../../../../HDMI_example.ip_user_files/bd/test1/ip/test1_selectio_wiz_0_0/test1_selectio_wiz_0_0_selectio_wiz.v" \
+"../../../../HDMI_example.ip_user_files/bd/test1/ip/test1_selectio_wiz_0_0/test1_selectio_wiz_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

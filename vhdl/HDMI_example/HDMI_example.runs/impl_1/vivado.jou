@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Mar  4 12:24:46 2026
+# Process ID         : 41643
+# Current directory  : /home/jacob/shared/Semester8/AAPL/project/vhdl/HDMI_example/HDMI_example.runs/impl_1
+# Command line       : vivado -log OSERDES_10_to_1.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OSERDES_10_to_1.tcl -notrace
+# Log file           : /home/jacob/shared/Semester8/AAPL/project/vhdl/HDMI_example/HDMI_example.runs/impl_1/OSERDES_10_to_1.vdi
+# Journal file       : /home/jacob/shared/Semester8/AAPL/project/vhdl/HDMI_example/HDMI_example.runs/impl_1/vivado.jou
+# Running On         : Laptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 7 4700U with Radeon Graphics
+# CPU Frequency      : 2025.867 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16116 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18264 MB
+# Available Virtual  : 9145 MB
+#-----------------------------------------------------------
+source OSERDES_10_to_1.tcl -notrace

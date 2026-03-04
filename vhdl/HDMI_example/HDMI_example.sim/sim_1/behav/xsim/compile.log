@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jacob/shared/Semester8/AAPL/project/vhdl/HDMI_example/HDMI_example.ip_user_files/bd/test1/ip/test1_selectio_wiz_0_0/test1_selectio_wiz_0_0_selectio_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test1_selectio_wiz_0_0_selectio_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jacob/shared/Semester8/AAPL/project/vhdl/HDMI_example/HDMI_example.ip_user_files/bd/test1/ip/test1_selectio_wiz_0_0/test1_selectio_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test1_selectio_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jacob/shared/Semester8/AAPL/project/vhdl/HDMI_example/HDMI_example.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jacob/shared/Semester8/AAPL/project/vhdl/HDMI_example/HDMI_example.ip_user_files/bd/test1/sim/test1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test1'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jacob/shared/Semester8/AAPL/project/vhdl/HDMI_example/HDMI_example.gen/sources_1/bd/test1/hdl/test1_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test1_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jacob/shared/Semester8/AAPL/project/vhdl/HDMI_example/HDMI_example.srcs/sim_1/new/test1_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test1_tb'
