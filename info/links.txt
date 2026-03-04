@@ -10,3 +10,9 @@ https://github.com/hdl-util/hdmi
 UART VHDL implementation
 https://www.hackster.io/fpgaps/uart-vhdl-implementation-on-fpga-with-host-data-exchange-743b1b
 
+Keywords:
+    ODDR
+    ODIF
+    OSERDES
+    TMDS
+    counter-typer: normal, grey code, one-hot
