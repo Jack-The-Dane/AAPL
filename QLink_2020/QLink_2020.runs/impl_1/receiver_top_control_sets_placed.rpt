@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon Mar  9 11:09:02 2026
+| Date         : Mon Mar  9 11:21:24 2026
 | Host         : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_control_sets -verbose -file receiver_top_control_sets_placed.rpt
 | Design       : receiver_top
@@ -60,10 +60,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               9 |            6 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              50 |           16 |
+| No           | Yes                   | No                     |              50 |           15 |
 | Yes          | No                    | No                     |               7 |            3 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             137 |           46 |
+| Yes          | Yes                   | No                     |             137 |           48 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,31 +73,31 @@ Table of Contents
 +--------------+-------------------------------------------+------------------------------------+------------------+----------------+--------------+
 | Clock Signal |               Enable Signal               |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------+-------------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  clk48_BUFG  | QLINK1/U1/p_0_in_0[0]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
+|  clk48_BUFG  | QLINK1/U1/p_0_in_0[1]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
 |  clk48_BUFG  | QLINK1/U1/p_0_in_0[5]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
-|  clk48_BUFG  | QLINK1/U1/p_0_in_0[6]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
-|  clk48_BUFG  | QLINK1/U1/p_0_in_0[7]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
 |  clk48_BUFG  | QLINK1/U1/p_0_in_0[2]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
 |  clk48_BUFG  | QLINK1/U1/p_0_in_0[3]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
 |  clk48_BUFG  | QLINK1/U1/p_0_in_0[4]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
-|  clk48_BUFG  | QLINK1/U1/p_0_in_0[0]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
-|  clk48_BUFG  | QLINK1/U1/p_0_in_0[1]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
-|  clk48_BUFG  | QLINK1/U1/E[1]                            | QLINK1/sys_reset                   |                1 |              4 |         4.00 |
-|  clk48_BUFG  | QLINK1/U2/nxt_bitcnt[0]                   | QLINK1/U2/nxt_bitcnt[3]_i_1__0_n_0 |                1 |              4 |         4.00 |
-|  clk48_BUFG  | QLINK1/U1/E[0]                            | QLINK1/sys_reset                   |                1 |              4 |         4.00 |
-|  clk48_BUFG  | QLINK1/U1/E[7]                            | QLINK1/sys_reset                   |                1 |              4 |         4.00 |
-|  clk48_BUFG  | QLINK1/U1/E[6]                            | QLINK1/sys_reset                   |                2 |              4 |         2.00 |
-|  clk48_BUFG  | QLINK1/U1/E[4]                            | QLINK1/sys_reset                   |                2 |              4 |         2.00 |
-|  clk48_BUFG  | QLINK1/U1/E[2]                            | QLINK1/sys_reset                   |                2 |              4 |         2.00 |
-|  clk48_BUFG  | QLINK1/U1/E[3]                            | QLINK1/sys_reset                   |                2 |              4 |         2.00 |
-|  clk48_BUFG  | QLINK1/U1/E[5]                            | QLINK1/sys_reset                   |                1 |              4 |         4.00 |
-|  clk48_BUFG  | QLINK1/U2/sel                             | QLINK1/U2/subcnt[3]_i_1__0_n_0     |                1 |              4 |         4.00 |
-|  clk48_BUFG  | QLINK1/U1/nxt_bitcnt[3]_i_2__0_n_0        | QLINK1/U1/nxt_bitcnt[3]_i_1_n_0    |                1 |              4 |         4.00 |
-|  clk48_BUFG  |                                           | QLINK1/U1/subcnt[3]_i_1_n_0        |                2 |              4 |         2.00 |
+|  clk48_BUFG  | QLINK1/U1/p_0_in_0[6]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
+|  clk48_BUFG  | QLINK1/U1/p_0_in_0[7]                     | QLINK1/sys_reset                   |                1 |              1 |         1.00 |
+|  clk48_BUFG  |                                           | QLINK1/U1/subcnt[3]_i_1_n_0        |                1 |              4 |         4.00 |
 |  clk48_BUFG  | QLINK1/U1/FSM_onehot_rx_state_reg[3]_0[1] | QLINK1/sys_reset                   |                1 |              4 |         4.00 |
 |  clk48_BUFG  | QLINK1/U1/FSM_onehot_rx_state_reg[3]_0[0] | QLINK1/sys_reset                   |                1 |              4 |         4.00 |
+|  clk48_BUFG  | QLINK1/U1/E[1]                            | QLINK1/sys_reset                   |                1 |              4 |         4.00 |
+|  clk48_BUFG  | QLINK1/U2/sel                             | QLINK1/U2/subcnt[3]_i_1__0_n_0     |                1 |              4 |         4.00 |
+|  clk48_BUFG  | QLINK1/U2/nxt_bitcnt[0]                   | QLINK1/U2/nxt_bitcnt[3]_i_1__0_n_0 |                1 |              4 |         4.00 |
+|  clk48_BUFG  | QLINK1/U1/E[0]                            | QLINK1/sys_reset                   |                1 |              4 |         4.00 |
+|  clk48_BUFG  | QLINK1/U1/E[7]                            | QLINK1/sys_reset                   |                2 |              4 |         2.00 |
+|  clk48_BUFG  | QLINK1/U1/E[6]                            | QLINK1/sys_reset                   |                2 |              4 |         2.00 |
+|  clk48_BUFG  | QLINK1/U1/E[4]                            | QLINK1/sys_reset                   |                3 |              4 |         1.33 |
+|  clk48_BUFG  | QLINK1/U1/E[2]                            | QLINK1/sys_reset                   |                2 |              4 |         2.00 |
+|  clk48_BUFG  | QLINK1/U1/nxt_bitcnt[3]_i_2__0_n_0        | QLINK1/U1/nxt_bitcnt[3]_i_1_n_0    |                2 |              4 |         2.00 |
+|  clk48_BUFG  | QLINK1/U1/E[5]                            | QLINK1/sys_reset                   |                2 |              4 |         2.00 |
+|  clk48_BUFG  | QLINK1/U1/E[3]                            | QLINK1/sys_reset                   |                1 |              4 |         4.00 |
 |  clk48_BUFG  | QLINK1/U2/sendstring_reg[0]               | QLINK1/sys_reset                   |                1 |              5 |         5.00 |
 |  clk48_BUFG  | QLINK1/sel                                | QLINK1/sys_reset                   |                1 |              6 |         6.00 |
-|  clk48_BUFG  | QLINK1/enc_wr                             | QLINK1/sys_reset                   |                2 |              7 |         3.50 |
+|  clk48_BUFG  | QLINK1/enc_wr                             | QLINK1/sys_reset                   |                1 |              7 |         7.00 |
 |  clk48_BUFG  | QLINK1/U2/sys_reset_reg[0]                |                                    |                3 |              7 |         2.33 |
 |  clk48_BUFG  | QLINK1/E[0]                               | QLINK1/sys_reset                   |                2 |              8 |         4.00 |
 |  clk48_BUFG  |                                           |                                    |                6 |              9 |         1.50 |
