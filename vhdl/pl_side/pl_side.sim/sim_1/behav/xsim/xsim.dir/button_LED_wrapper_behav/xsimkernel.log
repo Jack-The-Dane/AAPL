@@ -2,3 +2,6 @@ Running: xsim.dir/button_LED_wrapper_behav/xsimk -simmode gui -wdb button_LED_wr
 Design successfully loaded
 Design Loading Memory Usage: 199544 KB (Peak: 199596 KB)
 Design Loading CPU Usage: 880 ms
+Simulation completed
+Simulation Memory Usage: 281280 KB (Peak: 338812 KB)
+Simulation CPU Usage: 940 ms

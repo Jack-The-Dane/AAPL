@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Sun Feb 22 11:14:15 2026
-# Process ID         : 6383
+# Start of session at: Sun Feb 22 11:11:44 2026
+# Process ID         : 5203
 # Current directory  : /home/kasper-ubuntu/Documents/AAPL_project/vhdl/pl_side/pl_side.runs/impl_1
 # Command line       : vivado -log button_LED_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source button_LED_wrapper.tcl -notrace
 # Log file           : /home/kasper-ubuntu/Documents/AAPL_project/vhdl/pl_side/pl_side.runs/impl_1/button_LED_wrapper.vdi
@@ -19,6 +19,6 @@
 # Host memory        : 16764 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 18911 MB
-# Available Virtual  : 16092 MB
+# Available Virtual  : 16109 MB
 #-----------------------------------------------------------
 source button_LED_wrapper.tcl -notrace

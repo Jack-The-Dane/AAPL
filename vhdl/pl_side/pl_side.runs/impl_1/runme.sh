@@ -38,7 +38,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log button_LED_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source button_LED_wrapper.tcl -notrace
 
 

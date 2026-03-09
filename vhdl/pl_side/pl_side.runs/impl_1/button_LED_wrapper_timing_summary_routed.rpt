@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Sat Feb 21 14:08:45 2026
+| Date         : Sun Feb 22 11:12:05 2026
 | Host         : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file button_LED_wrapper_timing_summary_routed.rpt -pb button_LED_wrapper_timing_summary_routed.pb -rpx button_LED_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : button_LED_wrapper
