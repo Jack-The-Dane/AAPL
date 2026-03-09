@@ -1,0 +1,541 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Mar  9 11:08:11 2026
+# Process ID         : 32299
+# Current directory  : /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/synth_1
+# Command line       : vivado -log receiver_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source receiver_top.tcl
+# Log file           : /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/synth_1/receiver_top.vds
+# Journal file       : /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/synth_1/vivado.jou
+# Running On         : kasper-ubuntu-pc
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : AMD Ryzen 7 PRO 5850U with Radeon Graphics
+# CPU Frequency      : 1896.445 MHz
+# CPU Physical cores : 3
+# CPU Logical cores  : 6
+# Host memory        : 16764 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18911 MB
+# Available Virtual  : 14248 MB
+#-----------------------------------------------------------
+source receiver_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.srcs/utils_1/imports/synth_1/receiver_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.srcs/utils_1/imports/synth_1/receiver_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top receiver_top -part xc7s15ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 32326
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2159.074 ; gain = 482.188 ; free physical = 6111 ; free virtual = 12177
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'receiver_top' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/receiver_top.vhd:16]
+	Parameter CLK_I_PERIOD bound to: 4.000000e+01 - type: double 
+INFO: [Synth 8-3491] module 'QLinkMaster' declared at '/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:54' bound to instance 'QLINK1' of component 'QLinkMaster' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/receiver_top.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'QLinkMaster' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:72]
+	Parameter CLK_I_PERIOD bound to: 4.000000e+01 - type: double 
+	Parameter CLK_I_PERIOD bound to: 4.000000e+01 - type: double 
+INFO: [Synth 8-3491] module 'mmcm48' declared at '/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/mmcm48.vhd:17' bound to instance 'MMCM48_INST' of component 'mmcm48' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:211]
+INFO: [Synth 8-638] synthesizing module 'mmcm48' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/mmcm48.vhd:26]
+	Parameter CLK_I_PERIOD bound to: 4.000000e+01 - type: double 
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 4.000000e+01 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 4.000000e+01 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 6.250000e+01 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 5.000000e-01 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'MMCME2_BASE_inst' to cell 'MMCME2_BASE' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/mmcm48.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'mmcm48' (0#1) [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/mmcm48.vhd:26]
+INFO: [Synth 8-3491] module 'decode_serial' declared at '/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/decode_serial.vhd:18' bound to instance 'U1' of component 'decode_serial' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:231]
+INFO: [Synth 8-638] synthesizing module 'decode_serial' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/decode_serial.vhd:26]
+WARNING: [Synth 8-614] signal 'bitcnt' is read in the process but is not in the sensitivity list [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/decode_serial.vhd:66]
+WARNING: [Synth 8-614] signal 'subcnt' is read in the process but is not in the sensitivity list [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/decode_serial.vhd:66]
+WARNING: [Synth 8-614] signal 'data' is read in the process but is not in the sensitivity list [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/decode_serial.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'decode_serial' (0#1) [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/decode_serial.vhd:26]
+INFO: [Synth 8-3491] module 'encode_serial' declared at '/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/encode_serial.vhd:19' bound to instance 'U2' of component 'encode_serial' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'encode_serial' [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/encode_serial.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'encode_serial' (0#1) [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/encode_serial.vhd:29]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:125]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:125]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:125]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:125]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:125]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:125]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:125]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'QLinkMaster' (0#1) [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'receiver_top' (0#1) [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/receiver_top.vhd:16]
+WARNING: [Synth 8-6014] Unused sequential element data_reg was removed.  [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/decode_serial.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element bitcnt_reg was removed.  [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/decode_serial.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element bitcnt_reg was removed.  [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/encode_serial.vhd:96]
+WARNING: [Synth 8-6014] Unused sequential element enc_data_reg was removed.  [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:242]
+WARNING: [Synth 8-6014] Unused sequential element char_cnt_reg was removed.  [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/QLINK/qlinkmaster.vhd:451]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2249.043 ; gain = 572.156 ; free physical = 6023 ; free virtual = 12090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2263.887 ; gain = 587.000 ; free physical = 6023 ; free virtual = 12089
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2263.887 ; gain = 587.000 ; free physical = 6023 ; free virtual = 12089
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2269.824 ; gain = 0.000 ; free physical = 6016 ; free virtual = 12083
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/constraints_copy.xdc]
+WARNING: [Vivado 12-507] No nets matched 'CLK100_I_IBUF'. [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/constraints_copy.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/constraints_copy.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/constraints_copy.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020/constraints_copy.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/receiver_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/receiver_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'nBUTTON_I'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'nBUTTON_I'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_O[0]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_O[0]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_O[1]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_O[1]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_O[2]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_O[2]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_O[3]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED_O[3]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK12_I'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK12_I'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK12_I'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:59]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK12_I]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:59]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+INFO: [Timing 38-2] Deriving generated clocks [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:60]
+WARNING: [Vivado 12-627] No clocks matched 'CLK12_I'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:60]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:60]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks CLK12_I]'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:60]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:60]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Constraints 18-4644] set_clock_groups: All clock groups specified are empty. Please specify atleast one clock group which is not empty. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:60]
+WARNING: [Constraints 18-619] A clock with name 'CLK100_I' already exists, overwriting the previous clock with the same name. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'BB_05'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_05'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_06'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_06'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_07'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_07'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_08'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_08'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_09'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_09'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_10'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_10'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_11'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_11'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_12'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_12'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_13'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_13'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_14'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_14'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_15'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_15'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_17'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_17'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_18'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_18'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_19'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_19'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_20'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_20'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_21'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_21'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_22'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_22'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_23'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_23'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_24'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_24'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_25'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_25'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:157]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:157]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_26'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:160]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:160]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_26'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_27'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_27'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_28'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_28'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_29'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_29'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:173]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:173]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_30'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:176]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:176]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BB_30'. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:177]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc:177]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kasper-ubuntu/Documents/AAPL_project/vhdl/sindri_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/receiver_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/receiver_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.625 ; gain = 0.000 ; free physical = 6016 ; free virtual = 12083
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2372.660 ; gain = 0.000 ; free physical = 6016 ; free virtual = 12083
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2372.660 ; gain = 695.773 ; free physical = 6095 ; free virtual = 12161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2380.629 ; gain = 703.742 ; free physical = 6095 ; free virtual = 12161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2380.629 ; gain = 703.742 ; free physical = 6095 ; free virtual = 12161
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'QLinkMaster'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 hashtag |              0000000000000000001 |                            00000
+                     cmd |              0000000000000000010 |                            00001
+             write_colon |              0000000000000000100 |                            00111
+             write_addr0 |              0000000000000001000 |                            01000
+             write_addr1 |              0000000000000010000 |                            01001
+             write_data0 |              0000000000000100000 |                            01010
+             write_data1 |              0000000000001000000 |                            01011
+             write_data2 |              0000000000010000000 |                            01100
+             write_data3 |              0000000000100000000 |                            01101
+             write_data4 |              0000000001000000000 |                            01110
+             write_data5 |              0000000010000000000 |                            01111
+             write_data6 |              0000000100000000000 |                            10000
+             write_data7 |              0000001000000000000 |                            10001
+            write_commit |              0000010000000000000 |                            10010
+              read_colon |              0000100000000000000 |                            00010
+              read_addr0 |              0001000000000000000 |                            00011
+              read_addr1 |              0010000000000000000 |                            00100
+               read_bus0 |              0100000000000000000 |                            00101
+               read_bus1 |              1000000000000000000 |                            00110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'one-hot' in module 'QLinkMaster'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2380.629 ; gain = 703.742 ; free physical = 6095 ; free virtual = 12163
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 5     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 5     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	  19 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 1     
+	  19 Input   19 Bit        Muxes := 1     
+	   2 Input   19 Bit        Muxes := 16    
+	   5 Input   19 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	  19 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 18    
+	   3 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 2     
+	  19 Input    1 Bit        Muxes := 3     
+	  23 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2380.629 ; gain = 703.742 ; free physical = 6118 ; free virtual = 12191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'CLK100_I'
+WARNING: [Synth 8-565] redefining clock 'clk48'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2444.629 ; gain = 767.742 ; free physical = 6063 ; free virtual = 12136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2483.676 ; gain = 806.789 ; free physical = 6033 ; free virtual = 12106
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2491.684 ; gain = 814.797 ; free physical = 6026 ; free virtual = 12099
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2646.496 ; gain = 969.609 ; free physical = 5916 ; free virtual = 11989
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2646.496 ; gain = 969.609 ; free physical = 5916 ; free virtual = 11989
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2646.496 ; gain = 969.609 ; free physical = 5916 ; free virtual = 11989
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2646.496 ; gain = 969.609 ; free physical = 5916 ; free virtual = 11989
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2646.496 ; gain = 969.609 ; free physical = 5916 ; free virtual = 11989
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2646.496 ; gain = 969.609 ; free physical = 5916 ; free virtual = 11989
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     1|
+|2     |CARRY4      |     8|
+|3     |LUT1        |     7|
+|4     |LUT2        |    39|
+|5     |LUT3        |    71|
+|6     |LUT4        |    36|
+|7     |LUT5        |    62|
+|8     |LUT6        |    99|
+|9     |MMCME2_BASE |     1|
+|10    |FDRE        |   194|
+|11    |FDSE        |     9|
+|12    |IBUF        |     2|
+|13    |OBUF        |    10|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2646.496 ; gain = 969.609 ; free physical = 5916 ; free virtual = 11989
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2646.496 ; gain = 860.836 ; free physical = 5919 ; free virtual = 11992
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2646.504 ; gain = 969.609 ; free physical = 5919 ; free virtual = 11992
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2646.504 ; gain = 0.000 ; free physical = 5922 ; free virtual = 11995
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2686.516 ; gain = 0.000 ; free physical = 6096 ; free virtual = 12169
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: 5bca3e45
+INFO: [Common 17-83] Releasing license: Synthesis
+52 Infos, 76 Warnings, 67 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 2686.551 ; gain = 1125.805 ; free physical = 6096 ; free virtual = 12169
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1866.115; main = 1778.613; forked = 281.760
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3486.605; main = 2686.520; forked = 994.918
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2710.527 ; gain = 0.000 ; free physical = 6096 ; free virtual = 12169
+INFO: [Common 17-1381] The checkpoint '/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/synth_1/receiver_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file receiver_top_utilization_synth.rpt -pb receiver_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  9 11:08:44 2026...
