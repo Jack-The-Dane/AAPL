@@ -60,6 +60,12 @@ create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CL
 set_clock_groups -name XCLK -asynchronous -group [get_clocks CLK12_I]
 
 
+# 25MHz external clock                    IOBANK14-IOB13-positive (MRCC-T2)
+# --- The following define the 12MHz clk input pin/type/period/waveform and group
+set_property PACKAGE_PIN G11     [get_ports CLK100_I]
+set_property IOSTANDARD LVCMOS33 [get_ports CLK100_I]
+create_clock -period 40.0 -name CLK100_I -waveform {0.000 20.000} [get_ports CLK100_I]
+
 #######################
 # Breadboard connections
 # Using the outer row of pads on J4
@@ -113,9 +119,6 @@ set_property IOSTANDARD LVCMOS33  [get_ports BB_14]
 set_property PACKAGE_PIN G14      [get_ports BB_15]   
 set_property IOSTANDARD LVCMOS33  [get_ports BB_15]
 
-# Breadboard pincount 16 => J4 pad 32
-set_property PACKAGE_PIN G11      [get_ports BB_16]   
-set_property IOSTANDARD LVCMOS33  [get_ports BB_16]
 
 # Breadboard pincount 17 => J4 pad 34
 set_property PACKAGE_PIN H13      [get_ports BB_17]   
