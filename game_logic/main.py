@@ -112,17 +112,23 @@ class GameMat:
         self.mat = numpy.zeros(((size_x, size_y)), dtype=colors)
     
     def place_piece(self, piece: Piece):
+        affected_cols = []
         print(piece)
         for i, r in enumerate(piece.shape):
             for j, c in enumerate(r):
                 if c == 1:
                     x = int(piece.x / piece.block_size) + j
                     y = int(piece.y / piece.block_size) + i
-                    
+                    affected_cols.append(y)
+
+
                     print("x: ", x)
                     print("y: ", y)
                     self.mat[y,x] = piece.color
+        
+        print(list(dict.fromkeys(affected_cols)), "no dubs cols")
         print(self.mat)
+        return list(dict.fromkeys(affected_cols))
     
     def draw(self, surface):
         for r, row in enumerate(self.mat):
@@ -167,7 +173,37 @@ class GameMat:
                         return True 
 
         return False 
-            
+    
+    def clear_row(self, row_list):
+        rows_to_clear = []
+
+        # hvilke rows er full
+        for row in row_list:
+            if numpy.all(self.mat[row] != 0):
+                rows_to_clear.append(row)
+
+        # clear rows og move alt ned
+        for row in rows_to_clear:
+            self.mat[1:row+1] = self.mat[0:row]
+            self.mat[0] = 0
+
+        return len(rows_to_clear)
+    
+    def check_rotation_collision(self, piece: Piece):
+        for i, r in enumerate(piece.shape):
+            for j, c in enumerate(r):
+                if c == 1:
+                    x = int(piece.x / piece.block_size) + j
+                    y = int(piece.y / piece.block_size) + i
+
+                    if x < 0 or x >= self.mat.shape[1]:
+                        return False
+                    if y < 0 or y >= self.mat.shape[0]:
+                        return False
+                    if self.mat[y, x] != 0:
+                        return False
+
+        return True
                                                         
     
 
@@ -210,6 +246,9 @@ mat = GameMat(15,20)
 running = True
 clock = pygame.time.Clock()
 
+side_move_counter = 0
+side_move_delay = 6
+
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -218,34 +257,67 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
                 piece.rotate_self()
+                if not mat.check_rotation_collision(piece):
+                    piece.rotate_self()
+                    piece.rotate_self()
+                    piece.rotate_self()
+
                 while piece.get_left_edge_x() < 0:
                     piece.move_right()
                 while piece.get_right_edge_x() > WINDOW_SIZE_X:
                     piece.move_left()
                 while piece.get_bottom_edge_y() > WINDOW_SIZE_Y:
-                        piece.move_up()
+                    piece.move_up()
 
-            elif event.key == pygame.K_RIGHT:
-                if mat.check_collision(piece, event.key):
-                    piece.move_right()
-            elif event.key == pygame.K_LEFT:
-                if mat.check_collision(piece, event.key):
-                    piece.move_left()
+                    
+            #logik for at trykke 1 gang
             elif event.key == pygame.K_r:
                 piece = Piece(x=piece.x, y=piece.y, shape=shapes[random.choice(letter_list)])
+
+            elif event.key == pygame.K_RIGHT:
+                if mat.check_collision(piece, pygame.K_RIGHT):
+                    piece.move_right()
+                side_move_counter = 0
+
+            elif event.key == pygame.K_LEFT:
+                if mat.check_collision(piece, pygame.K_LEFT):
+                    piece.move_left()
+                side_move_counter = 0
+
             elif event.key == pygame.K_DOWN:
-                if mat.check_collision(piece, event.key):
+                if mat.check_collision(piece, pygame.K_DOWN):
                     piece.move_down()
-        
+                side_move_counter = 0
+
+
+    #Logik for at holde i bund
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_RIGHT] or keys[pygame.K_LEFT] or keys[pygame.K_DOWN]:
+        side_move_counter += 1
+    else:
+        side_move_counter = 0
+
+    if side_move_counter >= side_move_delay:
+        if keys[pygame.K_RIGHT]:
+            if mat.check_collision(piece, pygame.K_RIGHT):
+                piece.move_right()
+
+        elif keys[pygame.K_LEFT]:
+            if mat.check_collision(piece, pygame.K_LEFT):
+                piece.move_left()
+
+        elif keys[pygame.K_DOWN]:
+            if mat.check_collision(piece, pygame.K_DOWN):
+                piece.move_down()
+
+        side_move_counter = 0
+
     if piece.get_bottom_edge_y() == WINDOW_SIZE_Y or mat.check_collision_down(piece):
         piece.counter += 1
     if piece.counter > FRAME_RATE:
-        mat.place_piece(piece)
+        rows_affected = mat.place_piece(piece)
+        mat.clear_row(rows_affected)
         piece = Piece(x=(WINDOW_SIZE_X // 2)-BLOCK, y=120, shape=shapes[random.choice(letter_list)])
-
-                    
-                
-
 
     screen.fill((255, 255, 255))
     draw_piece(screen, piece)
