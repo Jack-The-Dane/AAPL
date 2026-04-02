@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1775118907">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="Sindri_QLink_top_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="Sindri_QLink_top_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="Sindri_QLink_top.vdi"/>
+  <File Type="BG-DRC" Name="Sindri_QLink_top.drc"/>
+  <File Type="BG-BGN" Name="Sindri_QLink_top.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="Sindri_QLink_top.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Sindri_QLink_top.ltx"/>
+  <File Type="PL-LTX-FILE" Name="Sindri_QLink_top_pld.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="Sindri_QLink_top_boot.ltx"/>
+  <File Type="LTX-FILE" Name="Sindri_QLink_top.ltx"/>
+  <File Type="PL-BIF-FILE" Name="Sindri_QLink_top_pld.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="Sindri_QLink_top_boot.bif"/>
+  <File Type="BIF-FILE" Name="Sindri_QLink_top.bif"/>
+  <File Type="MMI-FILE" Name="Sindri_QLink_top.mmi"/>
+  <File Type="RBD_FILE" Name="Sindri_QLink_top.rbd"/>
+  <File Type="NPI_FILE" Name="Sindri_QLink_top.npi"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="Sindri_QLink_top_pld_unmask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="Sindri_QLink_top_pld_unmask_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="Sindri_QLink_top_pld_mask.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="Sindri_QLink_top_pld_markers.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="Sindri_QLink_top_pld_clear.rcdo"/>
+  <File Type="PL-RCDO-FILE" Name="Sindri_QLink_top_pld.rcdo"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="Sindri_QLink_top_pld_unmask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="Sindri_QLink_top_pld_shutdown.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="Sindri_QLink_top_pld_mask.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="Sindri_QLink_top_pld_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="Sindri_QLink_top_pld.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="Sindri_QLink_top_boot_markers.rnpi"/>
+  <File Type="BOOT_RNPI_FILE" Name="Sindri_QLink_top_boot.rnpi"/>
+  <File Type="MARKER-RCDO-FILE" Name="Sindri_QLink_top_markers.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="Sindri_QLink_top_markers.rnpi"/>
+  <File Type="RCDO-FILE" Name="Sindri_QLink_top.rcdo"/>
+  <File Type="RNPI_FILE" Name="Sindri_QLink_top.rnpi"/>
+  <File Type="CFI_FILE" Name="Sindri_QLink_top.cfi"/>
+  <File Type="RCFI_FILE" Name="Sindri_QLink_top.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="Sindri_QLink_top_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="Sindri_QLink_top_boot.pdi"/>
+  <File Type="PDI-FILE" Name="Sindri_QLink_top.pdi"/>
+  <File Type="BITSTR-MMI" Name="Sindri_QLink_top.mmi"/>
+  <File Type="BITSTR-BMM" Name="Sindri_QLink_top_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="Sindri_QLink_top.nky"/>
+  <File Type="BITSTR-RBT" Name="Sindri_QLink_top.rbt"/>
+  <File Type="BITSTR-MSK" Name="Sindri_QLink_top.msk"/>
+  <File Type="BG-BIN" Name="Sindri_QLink_top.bin"/>
+  <File Type="BG-BIT" Name="Sindri_QLink_top.bit"/>
+  <File Type="NOC_SOLUTION_FILE" Name="Sindri_QLink_top.ncr"/>
+  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="Sindri_QLink_top.nts"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="receiver_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="receiver_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="receiver_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="receiver_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="receiver_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="receiver_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Sindri_QLink_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Sindri_QLink_top_postroute_physopt.dcp"/>
+  <File Type="ROUTE-RQS-PB" Name="Sindri_QLink_top_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Sindri_QLink_top_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Sindri_QLink_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Sindri_QLink_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Sindri_QLink_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="Sindri_QLink_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Sindri_QLink_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="Sindri_QLink_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Sindri_QLink_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Sindri_QLink_top_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="Sindri_QLink_top_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="Sindri_QLink_top_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="Sindri_QLink_top_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="Sindri_QLink_top_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Sindri_QLink_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Sindri_QLink_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Sindri_QLink_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="Sindri_QLink_top_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="Sindri_QLink_top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="Sindri_QLink_top_drc_routed.rpt"/>
+  <File Type="ROUTE-UTIL-PB" Name="Sindri_QLink_top_utilization_routed.pb"/>
+  <File Type="ROUTE-UTIL" Name="Sindri_QLink_top_utilization_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Sindri_QLink_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="Sindri_QLink_top_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Sindri_QLink_top_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="Sindri_QLink_top_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="Sindri_QLink_top_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Sindri_QLink_top_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Sindri_QLink_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Sindri_QLink_top_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="Sindri_QLink_top_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="Sindri_QLink_top_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Sindri_QLink_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Sindri_QLink_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="Sindri_QLink_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Sindri_QLink_top_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="Sindri_QLink_top_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Sindri_QLink_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="Sindri_QLink_top_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="Sindri_QLink_top_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="Sindri_QLink_top_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="Sindri_QLink_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="Sindri_QLink_top_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="Sindri_QLink_top_rqa_opted.pb"/>
+  <File Type="OPT-TIMING" Name="Sindri_QLink_top_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Sindri_QLink_top.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Sindri_QLink_top_methodology_drc_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="Sindri_QLink_top_utilization_opted.pb"/>
+  <File Type="OPT-UTIL" Name="Sindri_QLink_top_utilization_opted.rpt"/>
+  <File Type="OPT-DRC" Name="Sindri_QLink_top_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Sindri_QLink_top_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="Sindri_QLink_top_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="Sindri_QLink_top_reports.tcl"/>
+  <File Type="PA-TCL" Name="Sindri_QLink_top.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/test_receiver.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/test_receiver.vhd"/>
+        <Attr Name="ImportTime" Val="1585039505"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/decode_serial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/decode_serial.vhd"/>
+        <Attr Name="ImportTime" Val="1585039505"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/encode_serial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/encode_serial.vhd"/>
+        <Attr Name="ImportTime" Val="1585039505"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/mmcm48.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/mmcm48.vhd"/>
+        <Attr Name="ImportTime" Val="1774340671"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/qlinkmaster.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/qlinkmaster.vhd"/>
+        <Attr Name="ImportTime" Val="1774343224"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/sindri_qlink_top.vhd"/>
+        <Attr Name="ImportTime" Val="1774349235"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Sindri_QLink_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../vhdl/sindri_constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../vhdl/sindri_constraints.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/receiver_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

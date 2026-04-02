@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1775118907" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/receiver_top.dcp">
+  <File Type="VDS-TIMING-PB" Name="Sindri_QLink_top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Sindri_QLink_top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="Sindri_QLink_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Sindri_QLink_top_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Sindri_QLink_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Sindri_QLink_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Sindri_QLink_top.vds"/>
+  <File Type="REPORTS-TCL" Name="Sindri_QLink_top_reports.tcl"/>
+  <File Type="PA-TCL" Name="Sindri_QLink_top.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/test_receiver.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/test_receiver.vhd"/>
+        <Attr Name="ImportTime" Val="1585039505"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/decode_serial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/decode_serial.vhd"/>
+        <Attr Name="ImportTime" Val="1585039505"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/encode_serial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/encode_serial.vhd"/>
+        <Attr Name="ImportTime" Val="1585039505"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/mmcm48.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/mmcm48.vhd"/>
+        <Attr Name="ImportTime" Val="1774340671"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/qlinkmaster.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/qlinkmaster.vhd"/>
+        <Attr Name="ImportTime" Val="1774343224"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/sindri_qlink_top.vhd"/>
+        <Attr Name="ImportTime" Val="1774349235"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Sindri_QLink_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../vhdl/sindri_constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../vhdl/sindri_constraints.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/receiver_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
