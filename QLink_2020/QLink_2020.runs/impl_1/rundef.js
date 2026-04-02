@@ -30,7 +30,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log Sindri_QLink_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Sindri_QLink_top.tcl -notrace" );
+         "-log block_test_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source block_test_wrapper.tcl -notrace" );
 
 
 

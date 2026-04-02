@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log Sindri_QLink_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Sindri_QLink_top.tcl" );
+         "-log block_test_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_test_wrapper.tcl" );
 
 
 

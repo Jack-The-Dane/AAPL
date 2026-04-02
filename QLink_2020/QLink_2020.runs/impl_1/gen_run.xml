@@ -1,118 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1775118907">
+<GenRun Id="impl_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1775129018">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="Sindri_QLink_top_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS" Name="Sindri_QLink_top_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="block_test_wrapper_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="block_test_wrapper_routed.rqs"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="RDI-RDI" Name="Sindri_QLink_top.vdi"/>
-  <File Type="BG-DRC" Name="Sindri_QLink_top.drc"/>
-  <File Type="BG-BGN" Name="Sindri_QLink_top.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="Sindri_QLink_top.sysdef"/>
+  <File Type="RDI-RDI" Name="block_test_wrapper.vdi"/>
+  <File Type="BG-DRC" Name="block_test_wrapper.drc"/>
+  <File Type="BG-BGN" Name="block_test_wrapper.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="block_test_wrapper.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="Sindri_QLink_top.ltx"/>
-  <File Type="PL-LTX-FILE" Name="Sindri_QLink_top_pld.ltx"/>
-  <File Type="BOOT-LTX-FILE" Name="Sindri_QLink_top_boot.ltx"/>
-  <File Type="LTX-FILE" Name="Sindri_QLink_top.ltx"/>
-  <File Type="PL-BIF-FILE" Name="Sindri_QLink_top_pld.bif"/>
-  <File Type="BOOT-BIF-FILE" Name="Sindri_QLink_top_boot.bif"/>
-  <File Type="BIF-FILE" Name="Sindri_QLink_top.bif"/>
-  <File Type="MMI-FILE" Name="Sindri_QLink_top.mmi"/>
-  <File Type="RBD_FILE" Name="Sindri_QLink_top.rbd"/>
-  <File Type="NPI_FILE" Name="Sindri_QLink_top.npi"/>
-  <File Type="PL_UNMASK_RCDO_FILE" Name="Sindri_QLink_top_pld_unmask.rcdo"/>
-  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="Sindri_QLink_top_pld_unmask_markers.rcdo"/>
-  <File Type="PL_MASK_RCDO_FILE" Name="Sindri_QLink_top_pld_mask.rcdo"/>
-  <File Type="PL_MARKER_RCDO_FILE" Name="Sindri_QLink_top_pld_markers.rcdo"/>
-  <File Type="PL-CLEAR-RCDO-FILE" Name="Sindri_QLink_top_pld_clear.rcdo"/>
-  <File Type="PL-RCDO-FILE" Name="Sindri_QLink_top_pld.rcdo"/>
-  <File Type="PL_UNMASK_RNPI_FILE" Name="Sindri_QLink_top_pld_unmask.rnpi"/>
-  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="Sindri_QLink_top_pld_shutdown.rnpi"/>
-  <File Type="PL_MASK_RNPI_FILE" Name="Sindri_QLink_top_pld_mask.rnpi"/>
-  <File Type="PL_MARKER_RNPI_FILE" Name="Sindri_QLink_top_pld_markers.rnpi"/>
-  <File Type="PL_RNPI_FILE" Name="Sindri_QLink_top_pld.rnpi"/>
-  <File Type="BOOT_MARKER_RNPI_FILE" Name="Sindri_QLink_top_boot_markers.rnpi"/>
-  <File Type="BOOT_RNPI_FILE" Name="Sindri_QLink_top_boot.rnpi"/>
-  <File Type="MARKER-RCDO-FILE" Name="Sindri_QLink_top_markers.rcdo"/>
-  <File Type="MARKER-RNPI-FILE" Name="Sindri_QLink_top_markers.rnpi"/>
-  <File Type="RCDO-FILE" Name="Sindri_QLink_top.rcdo"/>
-  <File Type="RNPI_FILE" Name="Sindri_QLink_top.rnpi"/>
-  <File Type="CFI_FILE" Name="Sindri_QLink_top.cfi"/>
-  <File Type="RCFI_FILE" Name="Sindri_QLink_top.rcfi"/>
-  <File Type="PL-PDI-FILE" Name="Sindri_QLink_top_pld.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="Sindri_QLink_top_boot.pdi"/>
-  <File Type="PDI-FILE" Name="Sindri_QLink_top.pdi"/>
-  <File Type="BITSTR-MMI" Name="Sindri_QLink_top.mmi"/>
-  <File Type="BITSTR-BMM" Name="Sindri_QLink_top_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="Sindri_QLink_top.nky"/>
-  <File Type="BITSTR-RBT" Name="Sindri_QLink_top.rbt"/>
-  <File Type="BITSTR-MSK" Name="Sindri_QLink_top.msk"/>
-  <File Type="BG-BIN" Name="Sindri_QLink_top.bin"/>
-  <File Type="BG-BIT" Name="Sindri_QLink_top.bit"/>
-  <File Type="NOC_SOLUTION_FILE" Name="Sindri_QLink_top.ncr"/>
-  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="Sindri_QLink_top.nts"/>
+  <File Type="BITSTR-LTX" Name="block_test_wrapper.ltx"/>
+  <File Type="PL-LTX-FILE" Name="block_test_wrapper_pld.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="block_test_wrapper_boot.ltx"/>
+  <File Type="LTX-FILE" Name="block_test_wrapper.ltx"/>
+  <File Type="PL-BIF-FILE" Name="block_test_wrapper_pld.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="block_test_wrapper_boot.bif"/>
+  <File Type="BIF-FILE" Name="block_test_wrapper.bif"/>
+  <File Type="MMI-FILE" Name="block_test_wrapper.mmi"/>
+  <File Type="RBD_FILE" Name="block_test_wrapper.rbd"/>
+  <File Type="NPI_FILE" Name="block_test_wrapper.npi"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="block_test_wrapper_pld_unmask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="block_test_wrapper_pld_unmask_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="block_test_wrapper_pld_mask.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="block_test_wrapper_pld_markers.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="block_test_wrapper_pld_clear.rcdo"/>
+  <File Type="PL-RCDO-FILE" Name="block_test_wrapper_pld.rcdo"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="block_test_wrapper_pld_unmask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="block_test_wrapper_pld_shutdown.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="block_test_wrapper_pld_mask.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="block_test_wrapper_pld_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="block_test_wrapper_pld.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="block_test_wrapper_boot_markers.rnpi"/>
+  <File Type="BOOT_RNPI_FILE" Name="block_test_wrapper_boot.rnpi"/>
+  <File Type="MARKER-RCDO-FILE" Name="block_test_wrapper_markers.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="block_test_wrapper_markers.rnpi"/>
+  <File Type="RCDO-FILE" Name="block_test_wrapper.rcdo"/>
+  <File Type="RNPI_FILE" Name="block_test_wrapper.rnpi"/>
+  <File Type="CFI_FILE" Name="block_test_wrapper.cfi"/>
+  <File Type="RCFI_FILE" Name="block_test_wrapper.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="block_test_wrapper_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="block_test_wrapper_boot.pdi"/>
+  <File Type="PDI-FILE" Name="block_test_wrapper.pdi"/>
+  <File Type="BITSTR-MMI" Name="block_test_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="block_test_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="block_test_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="block_test_wrapper.rbt"/>
+  <File Type="BITSTR-MSK" Name="block_test_wrapper.msk"/>
+  <File Type="BG-BIN" Name="block_test_wrapper.bin"/>
+  <File Type="BG-BIT" Name="block_test_wrapper.bit"/>
+  <File Type="NOC_SOLUTION_FILE" Name="block_test_wrapper.ncr"/>
+  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="block_test_wrapper.nts"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="receiver_top_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="receiver_top_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="receiver_top_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="receiver_top_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="receiver_top_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="receiver_top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Sindri_QLink_top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Sindri_QLink_top_postroute_physopt.dcp"/>
-  <File Type="ROUTE-RQS-PB" Name="Sindri_QLink_top_rqs_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="Sindri_QLink_top_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="Sindri_QLink_top_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Sindri_QLink_top_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="Sindri_QLink_top_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="Sindri_QLink_top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="Sindri_QLink_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="Sindri_QLink_top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="Sindri_QLink_top_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="Sindri_QLink_top_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="Sindri_QLink_top_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="Sindri_QLink_top_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="Sindri_QLink_top_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="Sindri_QLink_top_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Sindri_QLink_top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Sindri_QLink_top_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Sindri_QLink_top_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="Sindri_QLink_top_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="Sindri_QLink_top_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="Sindri_QLink_top_drc_routed.rpt"/>
-  <File Type="ROUTE-UTIL-PB" Name="Sindri_QLink_top_utilization_routed.pb"/>
-  <File Type="ROUTE-UTIL" Name="Sindri_QLink_top_utilization_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Sindri_QLink_top_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="Sindri_QLink_top_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Sindri_QLink_top_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="Sindri_QLink_top_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="Sindri_QLink_top_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="Sindri_QLink_top_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="Sindri_QLink_top_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Sindri_QLink_top_postplace_pwropt.dcp"/>
-  <File Type="PLACE-RQA-PB" Name="Sindri_QLink_top_rqa_placed.pb"/>
-  <File Type="PLACE-TIMING" Name="Sindri_QLink_top_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="Sindri_QLink_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="Sindri_QLink_top_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="Sindri_QLink_top_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="Sindri_QLink_top_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="Sindri_QLink_top_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="Sindri_QLink_top_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="Sindri_QLink_top_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="Sindri_QLink_top_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="Sindri_QLink_top_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="Sindri_QLink_top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="Sindri_QLink_top_pwropt.dcp"/>
-  <File Type="OPT-RQA-PB" Name="Sindri_QLink_top_rqa_opted.pb"/>
-  <File Type="OPT-TIMING" Name="Sindri_QLink_top_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="Sindri_QLink_top.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="Sindri_QLink_top_methodology_drc_opted.rpt"/>
-  <File Type="OPT-UTIL-PB" Name="Sindri_QLink_top_utilization_opted.pb"/>
-  <File Type="OPT-UTIL" Name="Sindri_QLink_top_utilization_opted.rpt"/>
-  <File Type="OPT-DRC" Name="Sindri_QLink_top_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="Sindri_QLink_top_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="Sindri_QLink_top_timing_summary_init.rpt"/>
-  <File Type="REPORTS-TCL" Name="Sindri_QLink_top_reports.tcl"/>
-  <File Type="PA-TCL" Name="Sindri_QLink_top.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="block_test_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="block_test_wrapper_postroute_physopt.dcp"/>
+  <File Type="ROUTE-RQS-PB" Name="block_test_wrapper_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="block_test_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="block_test_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="block_test_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="block_test_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="block_test_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="block_test_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="block_test_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="block_test_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="block_test_wrapper_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="block_test_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="block_test_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="block_test_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="block_test_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="block_test_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="block_test_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="block_test_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="block_test_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="block_test_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="block_test_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-UTIL-PB" Name="block_test_wrapper_utilization_routed.pb"/>
+  <File Type="ROUTE-UTIL" Name="block_test_wrapper_utilization_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="block_test_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="block_test_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="block_test_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="block_test_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="block_test_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="block_test_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="block_test_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="block_test_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="block_test_wrapper_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="block_test_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="block_test_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="block_test_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="block_test_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="block_test_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="block_test_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="block_test_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="block_test_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="block_test_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="block_test_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="block_test_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="block_test_wrapper_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="block_test_wrapper_rqa_opted.pb"/>
+  <File Type="OPT-TIMING" Name="block_test_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="block_test_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="block_test_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="block_test_wrapper_utilization_opted.pb"/>
+  <File Type="OPT-UTIL" Name="block_test_wrapper_utilization_opted.rpt"/>
+  <File Type="OPT-DRC" Name="block_test_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="block_test_wrapper_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="block_test_wrapper_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="block_test_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="block_test_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/test_receiver.vhd">
@@ -164,10 +164,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/block_test/block_test.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/block_test/hdl/block_test_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Sindri_QLink_top"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="block_test_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

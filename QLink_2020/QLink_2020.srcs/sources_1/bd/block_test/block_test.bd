@@ -1,0 +1,187 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6321CF8E6321CF8E",
+      "device": "xc7s15ftgb196-1",
+      "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/block_test",
+      "name": "block_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Sindri_QLink_top_0": "",
+      "blk_mem_gen_0": "",
+      "enable_0": "",
+      "reset_0": ""
+    },
+    "ports": {
+      "CLK12_I": {
+        "direction": "I"
+      },
+      "LED_O": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "RX_I": {
+        "direction": "I"
+      },
+      "TX_O": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "Sindri_QLink_top_0": {
+        "vlnv": "xilinx.com:module_ref:Sindri_QLink_top:1.0",
+        "ip_revision": "1",
+        "xci_name": "block_test_Sindri_QLink_top_0_0",
+        "xci_path": "ip/block_test_Sindri_QLink_top_0_0/block_test_Sindri_QLink_top_0_0.xci",
+        "inst_hier_path": "Sindri_QLink_top_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Sindri_QLink_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK12_I": {
+            "direction": "I"
+          },
+          "TX_O": {
+            "direction": "O"
+          },
+          "RX_I": {
+            "direction": "I"
+          },
+          "LED_O": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "DATA_O": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "DATA_I": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WEA_O": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "CLK_O": {
+            "direction": "O"
+          },
+          "ADDR_O": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "12",
+        "xci_name": "block_test_blk_mem_gen_0_0",
+        "xci_path": "ip/block_test_blk_mem_gen_0_0/block_test_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "has_run_ip_tcl": "true"
+      },
+      "enable_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "block_test_xlconstant_0_0",
+        "xci_path": "ip/block_test_xlconstant_0_0/block_test_xlconstant_0_0.xci",
+        "inst_hier_path": "enable_0",
+        "has_run_ip_tcl": "true"
+      },
+      "reset_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "block_test_enable_0_0",
+        "xci_path": "ip/block_test_enable_0_0/block_test_enable_0_0.xci",
+        "inst_hier_path": "reset_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "CLK12_I_1": {
+        "ports": [
+          "CLK12_I",
+          "Sindri_QLink_top_0/CLK12_I"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "Sindri_QLink_top_0/ADDR_O",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "RX_I_0_1": {
+        "ports": [
+          "RX_I",
+          "Sindri_QLink_top_0/RX_I"
+        ]
+      },
+      "Sindri_QLink_top_0_CLK_O": {
+        "ports": [
+          "Sindri_QLink_top_0/CLK_O",
+          "blk_mem_gen_0/clka"
+        ]
+      },
+      "Sindri_QLink_top_0_DATA_O": {
+        "ports": [
+          "Sindri_QLink_top_0/DATA_O",
+          "blk_mem_gen_0/dina"
+        ]
+      },
+      "Sindri_QLink_top_0_LED_O": {
+        "ports": [
+          "Sindri_QLink_top_0/LED_O",
+          "LED_O"
+        ]
+      },
+      "Sindri_QLink_top_0_TX_O": {
+        "ports": [
+          "Sindri_QLink_top_0/TX_O",
+          "TX_O"
+        ]
+      },
+      "Sindri_QLink_top_0_WEA_O": {
+        "ports": [
+          "Sindri_QLink_top_0/WEA_O",
+          "blk_mem_gen_0/wea"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "Sindri_QLink_top_0/DATA_I"
+        ]
+      },
+      "enable_1_dout": {
+        "ports": [
+          "reset_0/dout",
+          "blk_mem_gen_0/rsta"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "enable_0/dout",
+          "blk_mem_gen_0/ena"
+        ]
+      }
+    }
+  }
+}

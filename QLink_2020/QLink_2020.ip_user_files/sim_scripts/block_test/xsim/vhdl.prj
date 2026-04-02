@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/block_test/ip/block_test_Sindri_QLink_top_0_0/sim/block_test_Sindri_QLink_top_0_0.vhd" \
+"../../../bd/block_test/sim/block_test.vhd" \
+
+# Do not sort compile order
+nosort

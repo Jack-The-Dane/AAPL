@@ -39,6 +39,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log Sindri_QLink_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Sindri_QLink_top.tcl -notrace
+EAStep vivado -log block_test_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source block_test_wrapper.tcl -notrace
 
 

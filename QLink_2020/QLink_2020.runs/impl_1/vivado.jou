@@ -3,11 +3,11 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Apr  2 10:35:48 2026
-# Process ID         : 10906
+# Start of session at: Thu Apr  2 13:24:43 2026
+# Process ID         : 35087
 # Current directory  : /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/impl_1
-# Command line       : vivado -log Sindri_QLink_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Sindri_QLink_top.tcl -notrace
-# Log file           : /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/impl_1/Sindri_QLink_top.vdi
+# Command line       : vivado -log block_test_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source block_test_wrapper.tcl -notrace
+# Log file           : /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/impl_1/block_test_wrapper.vdi
 # Journal file       : /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/impl_1/vivado.jou
 # Running On         : kasper-ubuntu-pc
 # Platform           : Ubuntu
@@ -19,6 +19,6 @@
 # Host memory        : 16764 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 18911 MB
-# Available Virtual  : 15670 MB
+# Available Virtual  : 15120 MB
 #-----------------------------------------------------------
-source Sindri_QLink_top.tcl -notrace
+source block_test_wrapper.tcl -notrace
