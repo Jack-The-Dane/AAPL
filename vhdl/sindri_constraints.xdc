@@ -62,7 +62,7 @@ set_clock_groups -name XCLK -asynchronous -group [get_clocks CLK12_I]
 
 # 25MHz external clock                    IOBANK14-IOB13-positive (MRCC-T2)
 # --- The following define the 12MHz clk input pin/type/period/waveform and group
-set_property PACKAGE_PIN G11     [get_ports CLK100_I]
+set_property PACKAGE_PIN G11     [get_ports CLK1\00_I]
 set_property IOSTANDARD LVCMOS33 [get_ports CLK100_I]
 create_clock -period 40.0 -name CLK100_I -waveform {0.000 20.000} [get_ports CLK100_I]
 
