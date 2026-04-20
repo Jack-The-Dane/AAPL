@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-271,-83",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_CLK12_I -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port port-id_RX_I -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace port port-id_TX_O -pg 1 -lvl 3 -x 650 -y 60 -defaultsOSRD
+preplace portBus LED_1 -pg 1 -lvl 3 -x 650 -y 80 -defaultsOSRD
+preplace portBus addrb_0 -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace portBus doutb_0 -pg 1 -lvl 3 -x 650 -y 520 -defaultsOSRD
+preplace inst Sindri_QLink_top_0 -pg 1 -lvl 1 -x 170 -y 110 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 500 -y 310 -defaultsOSRD
+preplace inst enable_0 -pg 1 -lvl 1 -x 170 -y 280 -defaultsOSRD
+preplace inst enable_1 -pg 1 -lvl 1 -x 170 -y 580 -defaultsOSRD
+preplace inst reset_0 -pg 1 -lvl 1 -x 170 -y 380 -defaultsOSRD
+preplace netloc CLK12_I_1 1 0 1 NJ 90
+preplace netloc Net 1 1 1 360 160n
+preplace netloc RX_I_0_1 1 0 1 NJ 110
+preplace netloc Sindri_QLink_top_0_CLK_O 1 1 1 330 140n
+preplace netloc Sindri_QLink_top_0_DATA_O 1 1 1 370 100n
+preplace netloc Sindri_QLink_top_0_LED_O 1 1 2 NJ 80 NJ
+preplace netloc Sindri_QLink_top_0_TX_O 1 1 2 NJ 60 NJ
+preplace netloc Sindri_QLink_top_0_WEA_O 1 1 1 340 120n
+preplace netloc blk_mem_gen_0_douta 1 0 2 20 220 320
+preplace netloc enable_1_dout 1 1 1 360 280n
+preplace netloc enable_1_dout2 1 1 1 320J 460n
+preplace netloc xlconstant_0_dout 1 1 1 350 260n
+preplace netloc addrb_0_1 1 0 2 NJ 440 340J
+preplace netloc blk_mem_gen_0_doutb 1 1 2 370 520 NJ
+levelinfo -pg 1 0 170 500 650
+pagesize -pg 1 -db -bbox -sgen -150 0 800 640
+"
+}
+
