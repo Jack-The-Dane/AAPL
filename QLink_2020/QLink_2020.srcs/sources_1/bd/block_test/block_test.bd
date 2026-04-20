@@ -7,8 +7,7 @@
       "name": "block_test",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2025.2",
-      "validated": "true"
+      "tool_version": "2025.2"
     },
     "design_tree": {
       "Sindri_QLink_top_0": "",
@@ -91,7 +90,12 @@
         "xci_name": "block_test_blk_mem_gen_0_0",
         "xci_path": "ip/block_test_blk_mem_gen_0_0/block_test_blk_mem_gen_0_0.xci",
         "inst_hier_path": "blk_mem_gen_0",
-        "has_run_ip_tcl": "true"
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          }
+        }
       },
       "enable_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
@@ -137,7 +141,8 @@
       "Sindri_QLink_top_0_CLK_O": {
         "ports": [
           "Sindri_QLink_top_0/CLK_O",
-          "blk_mem_gen_0/clka"
+          "blk_mem_gen_0/clka",
+          "blk_mem_gen_0/clkb"
         ]
       },
       "Sindri_QLink_top_0_DATA_O": {
@@ -173,13 +178,15 @@
       "enable_1_dout": {
         "ports": [
           "reset_0/dout",
-          "blk_mem_gen_0/rsta"
+          "blk_mem_gen_0/rsta",
+          "blk_mem_gen_0/rstb"
         ]
       },
       "xlconstant_0_dout": {
         "ports": [
           "enable_0/dout",
-          "blk_mem_gen_0/ena"
+          "blk_mem_gen_0/ena",
+          "blk_mem_gen_0/enb"
         ]
       }
     }
