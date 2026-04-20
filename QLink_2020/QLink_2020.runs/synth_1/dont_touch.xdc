@@ -18,6 +18,15 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_
 # IP: bd/block_test/ip/block_test_enable_0_0/block_test_enable_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_enable_0_0 || ORIG_REF_NAME==block_test_enable_0_0} -quiet] -quiet
 
+# IP: bd/block_test/ip/block_test_enable_0_1/block_test_enable_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_enable_0_1 || ORIG_REF_NAME==block_test_enable_0_1} -quiet] -quiet
+
+# IP: bd/block_test/ip/block_test_xlslice_0_0/block_test_xlslice_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_xlslice_0_0 || ORIG_REF_NAME==block_test_xlslice_0_0} -quiet] -quiet
+
+# IP: bd/block_test/ip/block_test_enable_0_2/block_test_enable_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_enable_0_2 || ORIG_REF_NAME==block_test_enable_0_2} -quiet] -quiet
+
 # XDC: /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.gen/sources_1/bd/block_test/ip/block_test_blk_mem_gen_0_0/block_test_blk_mem_gen_0_0_ooc.xdc
 
 # XDC: /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.gen/sources_1/bd/block_test/block_test_ooc.xdc

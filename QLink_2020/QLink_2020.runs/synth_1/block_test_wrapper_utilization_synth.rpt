@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Thu Apr  2 13:24:40 2026
+| Date         : Mon Apr 20 13:01:19 2026
 | Host         : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file block_test_wrapper_utilization_synth.rpt -pb block_test_wrapper_utilization_synth.pb
 | Design       : block_test_wrapper
@@ -98,7 +98,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    7 |     0 |          0 |       100 |  7.00 |
+| Bonded IOB                  |   11 |     0 |          0 |       100 | 11.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         2 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         2 |  0.00 |
 | OUT_FIFO                    |    0 |     0 |          0 |         8 |  0.00 |
@@ -158,10 +158,10 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | LUT3       |   47 |                 LUT |
 | LUT2       |   27 |                 LUT |
 | FDSE       |   19 |        Flop & Latch |
+| OBUF       |    9 |                  IO |
 | MUXF7      |    9 |               MuxFx |
 | CARRY4     |    8 |          CarryLogic |
 | LUT1       |    6 |                 LUT |
-| OBUF       |    5 |                  IO |
 | RAMB36E1   |    2 |        Block Memory |
 | IBUF       |    2 |                  IO |
 | SRL16E     |    1 |  Distributed Memory |

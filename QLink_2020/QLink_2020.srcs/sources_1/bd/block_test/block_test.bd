@@ -1,19 +1,23 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6321CF8E6321CF8E",
+      "boundary_crc": "0x54B4383B54B4383B",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/block_test",
       "name": "block_test",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2025.2"
+      "tool_version": "2025.2",
+      "validated": "true"
     },
     "design_tree": {
       "Sindri_QLink_top_0": "",
       "blk_mem_gen_0": "",
       "enable_0": "",
-      "reset_0": ""
+      "reset_0": "",
+      "address": "",
+      "xlslice_0": "",
+      "enable_1": ""
     },
     "ports": {
       "CLK12_I": {
@@ -29,6 +33,11 @@
       },
       "TX_O": {
         "direction": "O"
+      },
+      "LED_1": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
@@ -117,6 +126,57 @@
             "value": "0"
           }
         }
+      },
+      "address": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "block_test_enable_0_1",
+        "xci_path": "ip/block_test_enable_0_1/block_test_enable_0_1.xci",
+        "inst_hier_path": "address",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0x01"
+          },
+          "CONST_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "5",
+        "xci_name": "block_test_xlslice_0_0",
+        "xci_path": "ip/block_test_xlslice_0_0/block_test_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "31"
+          },
+          "DIN_TO": {
+            "value": "28"
+          },
+          "DOUT_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "enable_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "block_test_enable_0_2",
+        "xci_path": "ip/block_test_enable_0_2/block_test_enable_0_2.xci",
+        "inst_hier_path": "enable_1",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0000"
+          },
+          "CONST_WIDTH": {
+            "value": "4"
+          }
+        }
       }
     },
     "nets": {
@@ -154,7 +214,7 @@
       "Sindri_QLink_top_0_LED_O": {
         "ports": [
           "Sindri_QLink_top_0/LED_O",
-          "LED_O"
+          "LED_1"
         ]
       },
       "Sindri_QLink_top_0_TX_O": {
@@ -175,6 +235,12 @@
           "Sindri_QLink_top_0/DATA_I"
         ]
       },
+      "blk_mem_gen_0_doutb": {
+        "ports": [
+          "blk_mem_gen_0/doutb",
+          "xlslice_0/Din"
+        ]
+      },
       "enable_1_dout": {
         "ports": [
           "reset_0/dout",
@@ -182,11 +248,29 @@
           "blk_mem_gen_0/rstb"
         ]
       },
+      "enable_1_dout1": {
+        "ports": [
+          "address/dout",
+          "blk_mem_gen_0/addrb"
+        ]
+      },
+      "enable_1_dout2": {
+        "ports": [
+          "enable_1/dout",
+          "blk_mem_gen_0/web"
+        ]
+      },
       "xlconstant_0_dout": {
         "ports": [
           "enable_0/dout",
           "blk_mem_gen_0/ena",
           "blk_mem_gen_0/enb"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "LED_O"
         ]
       }
     }

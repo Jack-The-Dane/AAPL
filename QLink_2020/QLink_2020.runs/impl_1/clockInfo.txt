@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.2
-| Date         : Thu Apr  2 13:25:08 2026
+| Date         : Mon Apr 20 13:01:50 2026
 | Host         : kasper-ubuntu-pc
 | Design       : design_1
 | Device       : xc7s15-ftgb196-1--

@@ -45,6 +45,16 @@ set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[2]}]
 set_property PACKAGE_PIN M12     [get_ports {LED_O[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[3]}]
 
+# -- The 4 LEDs                  IOBANK14
+set_property PACKAGE_PIN P11     [get_ports {LED_1[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[0]}]
+set_property PACKAGE_PIN K11     [get_ports {LED_1[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[1]}]
+set_property PACKAGE_PIN J13     [get_ports {LED_1[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[2]}]
+set_property PACKAGE_PIN L13     [get_ports {LED_1[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[3]}]
+
 # The FTDI USB/UART pins          IOBANK14
 set_property PACKAGE_PIN N10      [get_ports RX_I]   
 set_property IOSTANDARD LVCMOS33  [get_ports RX_I]

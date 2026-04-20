@@ -60,14 +60,17 @@ module block_test_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   input wire RX_I,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire TX_O
+  output wire TX_O,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [3:0] LED_1
 );
 
   block_test inst (
     .CLK12_I(CLK12_I),
     .LED_O(LED_O),
     .RX_I(RX_I),
-    .TX_O(TX_O)
+    .TX_O(TX_O),
+    .LED_1(LED_1)
   );
 
 endmodule

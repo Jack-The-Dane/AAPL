@@ -56,7 +56,8 @@ COMPONENT block_test
     CLK12_I : IN STD_LOGIC;
     LED_O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     RX_I : IN STD_LOGIC;
-    TX_O : OUT STD_LOGIC
+    TX_O : OUT STD_LOGIC;
+    LED_1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -70,7 +71,8 @@ your_instance_name : block_test
     CLK12_I => CLK12_I,
     LED_O => LED_O,
     RX_I => RX_I,
-    TX_O => TX_O
+    TX_O => TX_O,
+    LED_1 => LED_1
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

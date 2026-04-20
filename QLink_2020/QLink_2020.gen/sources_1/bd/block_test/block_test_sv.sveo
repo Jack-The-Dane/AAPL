@@ -69,7 +69,8 @@ block_test_sv your_instance_name (
   .CLK12_I(CLK12_I), // input wire CLK12_I
   .LED_O(LED_O), // output wire [3:0] LED_O
   .RX_I(RX_I), // input wire RX_I
-  .TX_O(TX_O) // output wire TX_O
+  .TX_O(TX_O), // output wire TX_O
+  .LED_1(LED_1) // output wire [3:0] LED_1
 );
 // INST_TAG_END ------  End cut for WRAPPER INSTANTIATION Template  ------
 
