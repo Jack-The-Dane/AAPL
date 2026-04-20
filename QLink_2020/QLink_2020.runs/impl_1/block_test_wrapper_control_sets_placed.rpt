@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon Apr 20 13:01:52 2026
+| Date         : Mon Apr 20 13:27:19 2026
 | Host         : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_control_sets -verbose -file block_test_wrapper_control_sets_placed.rpt
 | Design       : block_test_wrapper
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              13 |            8 |
+| No           | No                    | No                     |              13 |            9 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              74 |           21 |
-| Yes          | No                    | No                     |              39 |           13 |
+| Yes          | No                    | No                     |              39 |           11 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             132 |           52 |
+| Yes          | Yes                   | No                     |             132 |           50 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,37 +73,37 @@ Table of Contents
 +----------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+--------------+
 |              Clock Signal              |                             Enable Signal                             |                            Set/Reset Signal                           | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+--------------+
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[5]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[3]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[5]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[7]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[2]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[0]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[1]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[4]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[1]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[0]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[2]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/p_0_in_0[6]              | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              1 |         1.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/E[0]                        | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              3 |         1.50 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U2/sel                      | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U2/subcnt[3]_i_1__0_n_0     |                1 |              4 |         4.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/strobe_reg_0[1]          | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              4 |         2.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[6]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              4 |         4.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/strobe_reg_0[1]          | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              4 |         2.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[2]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              4 |         4.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[5]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              4 |         2.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[0]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              4 |         4.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[1]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              4 |         4.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[3]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              4 |         4.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[4]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              4 |         2.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[7]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              4 |         2.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/nxt_bitcnt[3]_i_2__0_n_0 | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/nxt_bitcnt[3]_i_1_n_0    |                1 |              4 |         4.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[1]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              4 |         2.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[3]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              4 |         2.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[4]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              4 |         4.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/E[7]                     | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              4 |         4.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/nxt_bitcnt[3]_i_2__0_n_0 | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/nxt_bitcnt[3]_i_1_n_0    |                2 |              4 |         2.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/strobe_reg_0[0]          | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              4 |         2.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U2/sel                      | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U2/subcnt[3]_i_1__0_n_0     |                1 |              4 |         4.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U2/nxt_bitcnt[0]            | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U2/nxt_bitcnt[3]_i_1__0_n_0 |                1 |              4 |         4.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/strobe_reg_0[0]          | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              4 |         4.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O |                                                                       | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/subcnt[3]_i_1_n_0        |                1 |              4 |         4.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U2/nxt_char_cnt_reg[4][0]   | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              5 |         5.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U2/nxt_char_cnt_reg[4][0]   | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              5 |         2.50 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sel                         | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                1 |              6 |         6.00 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/enc_wr                      | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              7 |         3.50 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U2/sys_reset_reg[0]         |                                                                       |                3 |              7 |         2.33 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O |                                                                       |                                                                       |                8 |             14 |         1.75 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/strobe_reg_1[0]          | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |               11 |             19 |         1.73 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/nxt_timestamp[0]            | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |               10 |             32 |         3.20 |
-|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/wr_reg_0[0]                 |                                                                       |               10 |             32 |         3.20 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/enc_wr                      | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                2 |              7 |         3.50 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O |                                                                       |                                                                       |                9 |             14 |         1.56 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/U1/strobe_reg_1[0]          | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                8 |             19 |         2.38 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/nxt_timestamp[0]            | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |                8 |             32 |         4.00 |
+|  block_test_i/Sindri_QLink_top_0/CLK_O | block_test_i/Sindri_QLink_top_0/U0/QLINK1/wr_reg_0[0]                 |                                                                       |                8 |             32 |         4.00 |
 |  block_test_i/Sindri_QLink_top_0/CLK_O |                                                                       | block_test_i/Sindri_QLink_top_0/U0/QLINK1/sys_reset                   |               20 |             70 |         3.50 |
 +----------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+--------------+
 

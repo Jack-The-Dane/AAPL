@@ -152,10 +152,10 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "DIN_FROM": {
-            "value": "31"
+            "value": "3"
           },
           "DIN_TO": {
-            "value": "28"
+            "value": "0"
           },
           "DOUT_WIDTH": {
             "value": "4"

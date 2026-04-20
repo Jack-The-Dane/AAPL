@@ -62,8 +62,8 @@ block_test_xlslice_0_0_sc::block_test_xlslice_0_0_sc(const sc_core::sc_module_na
   // initialize module
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("DIN_WIDTH", "32");
-    model_param_props.addLong("DIN_FROM", "31");
-    model_param_props.addLong("DIN_TO", "28");
+    model_param_props.addLong("DIN_FROM", "3");
+    model_param_props.addLong("DIN_TO", "0");
     model_param_props.addString("COMPONENT_NAME", "block_test_xlslice_0_0");
 
   mp_impl = new block_test_xlslice_0_0_core("inst", model_param_props);

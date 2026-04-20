@@ -18,20 +18,20 @@ preplace inst address -pg 1 -lvl 1 -x 170 -y 480 -defaultsOSRD
 preplace inst xlslice_0 -pg 1 -lvl 2 -x 500 -y 540 -defaultsOSRD
 preplace inst enable_1 -pg 1 -lvl 1 -x 170 -y 580 -defaultsOSRD
 preplace netloc CLK12_I_1 1 0 1 NJ 90
-preplace netloc Net 1 1 1 N 160
+preplace netloc Net 1 1 1 360 160n
 preplace netloc RX_I_0_1 1 0 1 NJ 110
-preplace netloc Sindri_QLink_top_0_CLK_O 1 1 1 320 140n
-preplace netloc Sindri_QLink_top_0_DATA_O 1 1 1 360 100n
-preplace netloc Sindri_QLink_top_0_TX_O 1 1 2 NJ 60 NJ
-preplace netloc Sindri_QLink_top_0_WEA_O 1 1 1 350 120n
-preplace netloc blk_mem_gen_0_douta 1 0 2 20 220 N
-preplace netloc enable_1_dout 1 1 1 360 260n
-preplace netloc xlconstant_0_dout 1 1 1 340 240n
-preplace netloc enable_1_dout1 1 1 1 330J 320n
-preplace netloc blk_mem_gen_0_doutb 1 1 1 370 380n
-preplace netloc xlslice_0_Dout 1 2 1 NJ 540
+preplace netloc Sindri_QLink_top_0_CLK_O 1 1 1 330 140n
+preplace netloc Sindri_QLink_top_0_DATA_O 1 1 1 370 100n
 preplace netloc Sindri_QLink_top_0_LED_O 1 1 2 NJ 80 NJ
-preplace netloc enable_1_dout2 1 1 1 350J 440n
+preplace netloc Sindri_QLink_top_0_TX_O 1 1 2 NJ 60 NJ
+preplace netloc Sindri_QLink_top_0_WEA_O 1 1 1 340 120n
+preplace netloc blk_mem_gen_0_douta 1 0 2 20 220 320
+preplace netloc blk_mem_gen_0_doutb 1 1 1 370 370n
+preplace netloc enable_1_dout 1 1 1 360 270n
+preplace netloc enable_1_dout1 1 1 1 340J 330n
+preplace netloc enable_1_dout2 1 1 1 360J 430n
+preplace netloc xlconstant_0_dout 1 1 1 350 250n
+preplace netloc xlslice_0_Dout 1 2 1 NJ 540
 levelinfo -pg 1 0 170 500 650
 pagesize -pg 1 -db -bbox -sgen -110 0 780 640
 "

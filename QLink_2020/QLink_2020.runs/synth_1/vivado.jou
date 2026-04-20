@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Apr 20 13:00:19 2026
-# Process ID         : 34935
+# Start of session at: Mon Apr 20 13:26:01 2026
+# Process ID         : 43945
 # Current directory  : /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/synth_1
 # Command line       : vivado -log block_test_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_test_wrapper.tcl
 # Log file           : /home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/synth_1/block_test_wrapper.vds
@@ -19,6 +19,6 @@
 # Host memory        : 16764 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 18911 MB
-# Available Virtual  : 15413 MB
+# Available Virtual  : 15802 MB
 #-----------------------------------------------------------
 source block_test_wrapper.tcl -notrace
