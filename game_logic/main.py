@@ -5,13 +5,15 @@ import collections
 
 # global variables
 
-col = 10  # 10 columns
-row = 20  # 20 rows
-s_width = 800  # window width
-s_height = 750  # window height
-play_width = 300  # play window width; 300/10 = 30 width per block
-play_height = 600  # play window height; 600/20 = 20 height per block
-block_size = 30  # size of block
+col = 10
+row = 20
+
+s_width = 1920
+s_height = 1080
+
+block_size = 40
+play_width = col * block_size      # 10 columns
+play_height = row * block_size     # 20 rows
 
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height - 50
@@ -41,24 +43,27 @@ shapes = {
     }
 
 
-# I = [[1,1,1,1]]
-# O = [[1,1], [1,1]]
-# T = [[1,1,1], [0,1,0]]
-# S = [[0,1,1], [1,1,0]]
-# Z = [[1,1,0], [0,1,1]]
-# J = [[1,1,1], [1,0,0]]
-# L = [[0,0,1], [1,1,1]]
-#SHAPES = [I, O, T, S, Z, J, L]
+
 
 
 
 
 # shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
 
-BLOCK = 40
-WINDOW_SIZE_X = 800
-WINDOW_SIZE_Y = 600
+BLOCK = block_size
+WINDOW_SIZE_X = s_width
+WINDOW_SIZE_Y = s_height
 FRAME_RATE = 60
+
+board_x = (WINDOW_SIZE_X - play_width) // 2
+board_y = (WINDOW_SIZE_Y - play_height) // 2
+
+sidebar_x = board_x + play_width + 60
+sidebar_y = board_y
+sidebar_width = 250
+box_height = 120
+box_gap = 30
+
 class Piece:
     def __init__(self, x:int, y:int, shape: Shape):
         self.x = x
@@ -109,7 +114,7 @@ class GameMat:
     def __init__(self, size_x, size_y):
         self.size_x = size_x
         self.size_y = size_y
-        self.mat = numpy.zeros(((size_x, size_y)), dtype=colors)
+        self.mat = numpy.zeros((size_x, size_y), dtype=object)
     
     def place_piece(self, piece: Piece):
         affected_cols = []
@@ -117,8 +122,8 @@ class GameMat:
         for i, r in enumerate(piece.shape):
             for j, c in enumerate(r):
                 if c == 1:
-                    x = int(piece.x / piece.block_size) + j
-                    y = int(piece.y / piece.block_size) + i
+                    x = int((piece.x - board_x) / piece.block_size) + j
+                    y = int((piece.y - board_y) / piece.block_size) + i
                     affected_cols.append(y)
 
 
@@ -134,17 +139,19 @@ class GameMat:
         for r, row in enumerate(self.mat):
             for c, val in enumerate(row):
                 if val:
-                    x = c * BLOCK
-                    y = r * BLOCK
+                    x = board_x + c * BLOCK
+                    y = board_y + r * BLOCK
                     pygame.draw.rect(surface, val, (x, y, BLOCK, BLOCK))
-                    pygame.draw.rect(surface, (0, 0, 0), (x, y, BLOCK, BLOCK), 2)  # outline
+                    pygame.draw.rect(surface, (0, 0, 0), (x, y, BLOCK, BLOCK), 2)
+
+
 
     def check_collision(self, piece:Piece, event):
         for i, r in enumerate(piece.shape):
             for j, c in enumerate(r):
                 if c == 1:
-                    x = int(piece.x / piece.block_size) + j
-                    y = int(piece.y / piece.block_size) + i
+                    x = int((piece.x - board_x) / piece.block_size) + j
+                    y = int((piece.y - board_y) / piece.block_size) + i
                     
                     if event == pygame.K_DOWN and y == self.mat.shape[0]-1:
                         return False
@@ -165,8 +172,8 @@ class GameMat:
         for i, row in enumerate(piece.shape):
             for j, val in enumerate(row):
                 if val == 1:
-                    x = int(piece.x / piece.block_size) + j
-                    y = int(piece.y / piece.block_size) + i
+                    x = int((piece.x - board_x) / piece.block_size) + j
+                    y = int((piece.y - board_y) / piece.block_size) + i
 
                  
                     if self.mat[y + 1, x] != 0:
@@ -193,8 +200,8 @@ class GameMat:
         for i, r in enumerate(piece.shape):
             for j, c in enumerate(r):
                 if c == 1:
-                    x = int(piece.x / piece.block_size) + j
-                    y = int(piece.y / piece.block_size) + i
+                    x = int((piece.x - board_x) / piece.block_size) + j
+                    y = int((piece.y - board_y) / piece.block_size) + i
 
                     if x < 0 or x >= self.mat.shape[1]:
                         return False
@@ -231,6 +238,72 @@ def draw_piece(surface, piece: Piece):
                 pygame.draw.rect(surface, piece.color, (x, y, BLOCK, BLOCK))
                 pygame.draw.rect(surface, (0, 0, 0), (x, y, BLOCK, BLOCK), 2)  # outline
 
+def draw_border(surface):
+    border_color = (50, 50, 50)   # dark gray
+    border_thickness = 4
+
+    pygame.draw.rect(
+        surface,
+        border_color,
+        (board_x, board_y, play_width, play_height),
+        border_thickness
+    )
+
+def draw_board_background(surface):
+    pygame.draw.rect(
+        surface,
+        (220, 220, 220),  # light gray
+        (board_x, board_y, play_width, play_height)
+    )
+
+def draw_info_box(surface, x, y, width, height, title, value):
+    box_color = (230, 230, 230)
+    border_color = (50, 50, 50)
+    text_color = (20, 20, 20)
+
+    pygame.draw.rect(surface, box_color, (x, y, width, height))
+    pygame.draw.rect(surface, border_color, (x, y, width, height), 3)
+
+    title_font = pygame.font.SysFont("arial", 28, bold=True)
+    value_font = pygame.font.SysFont("arial", 24)
+
+    title_surf = title_font.render(title, True, text_color)
+    value_surf = value_font.render(str(value), True, text_color)
+
+    surface.blit(title_surf, (x + 15, y + 15))
+    surface.blit(value_surf, (x + 15, y + 60))
+
+def draw_sidebar(surface, high_score, current_score, next_piece_name):
+    draw_info_box(
+        surface,
+        sidebar_x,
+        sidebar_y,
+        sidebar_width,
+        box_height,
+        "High Score",
+        high_score
+    )
+
+    draw_info_box(
+        surface,
+        sidebar_x,
+        sidebar_y + box_height + box_gap,
+        sidebar_width,
+        box_height,
+        "Score",
+        current_score
+    )
+
+    draw_info_box(
+        surface,
+        sidebar_x,
+        sidebar_y + 2 * (box_height + box_gap),
+        sidebar_width,
+        box_height,
+        "Next Piece",
+        next_piece_name
+    )
+
 #game loop
 pygame.init()
 
@@ -240,11 +313,15 @@ pygame.display.set_caption("test game")
 # Spawn one piece in the middle-ish
 letter_list = 'IOTSZJL'
 shape_letter = random.choice(letter_list)
-piece = Piece(x=(WINDOW_SIZE_X // 2)-BLOCK, y=120, shape=shapes[shape_letter])
-mat = GameMat(15,20)
+piece = Piece(x=board_x + 4 * BLOCK, y=board_y, shape=shapes[shape_letter])
+mat = GameMat(row, col)
 
 running = True
 clock = pygame.time.Clock()
+
+high_score = 0
+current_score = 0
+next_piece_name = "T"
 
 side_move_counter = 0
 side_move_delay = 6
@@ -262,17 +339,17 @@ while running:
                     piece.rotate_self()
                     piece.rotate_self()
 
-                while piece.get_left_edge_x() < 0:
+                while piece.get_left_edge_x() < board_x:
                     piece.move_right()
-                while piece.get_right_edge_x() > WINDOW_SIZE_X:
+                while piece.get_right_edge_x() > board_x + play_width:
                     piece.move_left()
-                while piece.get_bottom_edge_y() > WINDOW_SIZE_Y:
+                while piece.get_bottom_edge_y() > board_y + play_height:
                     piece.move_up()
 
-                    
+
             #logik for at trykke 1 gang
             elif event.key == pygame.K_r:
-                piece = Piece(x=piece.x, y=piece.y, shape=shapes[random.choice(letter_list)])
+                piece = Piece(x=board_x + 4 * BLOCK, y=board_y, shape=shapes[random.choice(letter_list)])
 
             elif event.key == pygame.K_RIGHT:
                 if mat.check_collision(piece, pygame.K_RIGHT):
@@ -312,16 +389,19 @@ while running:
 
         side_move_counter = 0
 
-    if piece.get_bottom_edge_y() == WINDOW_SIZE_Y or mat.check_collision_down(piece):
+    if piece.get_bottom_edge_y() >= board_y + play_height or mat.check_collision_down(piece):
         piece.counter += 1
     if piece.counter > FRAME_RATE:
         rows_affected = mat.place_piece(piece)
         mat.clear_row(rows_affected)
-        piece = Piece(x=(WINDOW_SIZE_X // 2)-BLOCK, y=120, shape=shapes[random.choice(letter_list)])
+        piece = Piece(x=board_x + 4 * BLOCK, y=board_y, shape=shapes[random.choice(letter_list)])
 
     screen.fill((255, 255, 255))
+    draw_board_background(screen)
     draw_piece(screen, piece)
     mat.draw(screen)
+    draw_border(screen)
+    draw_sidebar(screen, high_score, current_score, next_piece_name)
     pygame.display.flip()
     clock.tick(FRAME_RATE)
 
