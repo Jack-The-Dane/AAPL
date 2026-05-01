@@ -1,39 +1,60 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-259,-84",
+   "Default View_ScaleFactor":"0.614116",
+   "Default View_TopLeft":"-410,-109",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_CLK12_I -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
-preplace port port-id_RX_I -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
-preplace port port-id_TX_O -pg 1 -lvl 3 -x 650 -y 60 -defaultsOSRD
-preplace portBus LED_O -pg 1 -lvl 3 -x 650 -y 540 -defaultsOSRD
-preplace portBus LED_1 -pg 1 -lvl 3 -x 650 -y 80 -defaultsOSRD
-preplace inst Sindri_QLink_top_0 -pg 1 -lvl 1 -x 170 -y 110 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 500 -y 290 -defaultsOSRD
-preplace inst enable_0 -pg 1 -lvl 1 -x 170 -y 280 -defaultsOSRD
-preplace inst reset_0 -pg 1 -lvl 1 -x 170 -y 380 -defaultsOSRD
-preplace inst address -pg 1 -lvl 1 -x 170 -y 480 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 2 -x 500 -y 540 -defaultsOSRD
-preplace inst enable_1 -pg 1 -lvl 1 -x 170 -y 580 -defaultsOSRD
-preplace netloc CLK12_I_1 1 0 1 NJ 90
-preplace netloc Net 1 1 1 360 160n
-preplace netloc RX_I_0_1 1 0 1 NJ 110
-preplace netloc Sindri_QLink_top_0_CLK_O 1 1 1 330 140n
-preplace netloc Sindri_QLink_top_0_DATA_O 1 1 1 370 100n
-preplace netloc Sindri_QLink_top_0_LED_O 1 1 2 NJ 80 NJ
-preplace netloc Sindri_QLink_top_0_TX_O 1 1 2 NJ 60 NJ
-preplace netloc Sindri_QLink_top_0_WEA_O 1 1 1 340 120n
-preplace netloc blk_mem_gen_0_douta 1 0 2 20 220 320
-preplace netloc blk_mem_gen_0_doutb 1 1 1 370 370n
-preplace netloc enable_1_dout 1 1 1 360 270n
-preplace netloc enable_1_dout1 1 1 1 340J 330n
-preplace netloc enable_1_dout2 1 1 1 360J 430n
-preplace netloc xlconstant_0_dout 1 1 1 350 250n
-preplace netloc xlslice_0_Dout 1 2 1 NJ 540
-levelinfo -pg 1 0 170 500 650
-pagesize -pg 1 -db -bbox -sgen -110 0 780 640
+preplace port port-id_CLK12_I -pg 1 -lvl 0 -x -200 -y 90 -defaultsOSRD
+preplace port port-id_RX_I -pg 1 -lvl 0 -x -200 -y 110 -defaultsOSRD
+preplace port port-id_TX_O -pg 1 -lvl 6 -x 1380 -y 120 -defaultsOSRD
+preplace port port-id_button_0 -pg 1 -lvl 0 -x -200 -y 570 -defaultsOSRD
+preplace port port-id_button_1 -pg 1 -lvl 0 -x -200 -y 590 -defaultsOSRD
+preplace port port-id_button_2 -pg 1 -lvl 0 -x -200 -y 630 -defaultsOSRD
+preplace port port-id_button_3 -pg 1 -lvl 0 -x -200 -y 610 -defaultsOSRD
+preplace port port-id_cs_in_0 -pg 1 -lvl 0 -x -200 -y 260 -defaultsOSRD
+preplace portBus LED_1 -pg 1 -lvl 6 -x 1380 -y 160 -defaultsOSRD
+preplace portBus doutb_0 -pg 1 -lvl 6 -x 1380 -y 410 -defaultsOSRD
+preplace portBus address_write_0 -pg 1 -lvl 0 -x -200 -y 240 -defaultsOSRD
+preplace portBus address_read_0 -pg 1 -lvl 0 -x -200 -y 220 -defaultsOSRD
+preplace inst Sindri_QLink_top_0 -pg 1 -lvl 2 -x 350 -y 180 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 5 -x 1230 -y 350 -defaultsOSRD
+preplace inst enable_0 -pg 1 -lvl 4 -x 920 -y 400 -defaultsOSRD
+preplace inst reset_0 -pg 1 -lvl 4 -x 920 -y 500 -defaultsOSRD
+preplace inst simple_button_fsm_0 -pg 1 -lvl 3 -x 660 -y 550 -defaultsOSRD
+preplace inst simple_button_fsm_1 -pg 1 -lvl 3 -x 660 -y 690 -defaultsOSRD
+preplace inst simple_button_fsm_2 -pg 1 -lvl 3 -x 660 -y 830 -defaultsOSRD
+preplace inst simple_button_fsm_3 -pg 1 -lvl 3 -x 660 -y 970 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 920 -y 730 -defaultsOSRD
+preplace inst read_write_selector_0 -pg 1 -lvl 1 -x 0 -y 250 -defaultsOSRD
+preplace netloc CLK12_I_1 1 0 3 -180 90 200 70 520
+preplace netloc Net 1 2 3 500 220 N 220 N
+preplace netloc RX_I_0_1 1 0 2 NJ 110 180
+preplace netloc Sindri_QLink_top_0_CLK_O 1 2 3 510 230 N 230 1080
+preplace netloc Sindri_QLink_top_0_DATA_O 1 2 3 N 170 N 170 1100
+preplace netloc Sindri_QLink_top_0_LED_O 1 2 4 NJ 150 NJ 150 1090 140 1360
+preplace netloc Sindri_QLink_top_0_TX_O 1 2 4 NJ 130 NJ 130 N 130 1360
+preplace netloc Sindri_QLink_top_0_WEA_O 1 2 3 N 190 N 190 1090
+preplace netloc blk_mem_gen_0_douta 1 1 4 200 290 N 290 N 290 1030
+preplace netloc blk_mem_gen_0_doutb 1 4 2 1100 560 1360J
+preplace netloc button_0_1 1 0 3 NJ 570 N 570 NJ
+preplace netloc button_1_1 1 0 3 NJ 590 200 710 NJ
+preplace netloc button_2_1 1 0 3 NJ 630 180 850 NJ
+preplace netloc button_3_1 1 0 3 NJ 610 190 840 500J
+preplace netloc enable_1_dout 1 2 3 530 470 810 560 1030
+preplace netloc simple_button_fsm_0_button_out 1 3 1 800 530n
+preplace netloc simple_button_fsm_1_button_out 1 3 1 790 670n
+preplace netloc simple_button_fsm_2_button_out 1 3 1 790 740n
+preplace netloc simple_button_fsm_3_button_out 1 3 1 810 760n
+preplace netloc xlconcat_0_dout 1 4 1 1090 420n
+preplace netloc xlconstant_0_dout 1 4 1 1070 300n
+preplace netloc address_write_0_1 1 0 1 NJ 240
+preplace netloc address_read_0_1 1 0 1 NJ 220
+preplace netloc cs_in_0_1 1 0 1 N 260
+preplace netloc read_write_selector_0_address_out 1 1 4 190J 300 NJ 300 NJ 300 1050
+preplace netloc read_write_selector_0_web_out 1 1 4 180J 310 NJ 310 NJ 310 1040
+levelinfo -pg 1 -200 0 350 660 920 1230 1380
+pagesize -pg 1 -db -bbox -sgen -410 -360 1570 1050
 "
 }
 0
