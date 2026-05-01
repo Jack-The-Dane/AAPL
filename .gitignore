@@ -43,3 +43,7 @@ build/
 # debug information files
 *.dwo
 .vscode
+
+hdmi_1080/*
+!hdmi_1080/hdmi_1080.srcs/
+!hdmi_1080.xpr

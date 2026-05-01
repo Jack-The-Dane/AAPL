@@ -36,24 +36,14 @@ set_property PACKAGE_PIN L5      [get_ports nBUTTON_I]
 set_property IOSTANDARD LVCMOS33 [get_ports nBUTTON_I]
 
 # -- The 4 LEDs                  IOBANK14
-set_property PACKAGE_PIN P10     [get_ports {LED_O[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[0]}]
-set_property PACKAGE_PIN M11     [get_ports {LED_O[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[1]}]
-set_property PACKAGE_PIN N11     [get_ports {LED_O[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[2]}]
-set_property PACKAGE_PIN M12     [get_ports {LED_O[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[3]}]
-
-# -- The 4 LEDs                  IOBANK14
-set_property PACKAGE_PIN P11     [get_ports {LED_1[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[0]}]
-set_property PACKAGE_PIN K11     [get_ports {LED_1[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[1]}]
-set_property PACKAGE_PIN J13     [get_ports {LED_1[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[2]}]
-set_property PACKAGE_PIN L13     [get_ports {LED_1[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[3]}]
+set_property PACKAGE_PIN P10     [get_ports {LED_O0}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_O0}]
+set_property PACKAGE_PIN M11     [get_ports {LED_O1}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_O1}]
+set_property PACKAGE_PIN N11     [get_ports {LED_O2}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_O2}]
+set_property PACKAGE_PIN M12     [get_ports {LED_O3}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_O3}]
 
 # The FTDI USB/UART pins          IOBANK14
 set_property PACKAGE_PIN N10      [get_ports RX_I]   
@@ -192,35 +182,35 @@ set_property IOSTANDARD LVCMOS33  [get_ports BB_30]
 ### HDMI Pins
 ## Blue pins
 # D2+
-set_property PACKAGE_PIN B3       [get_ports HDMI_11]   
-set_property IOSTANDARD TMDS_33  [get_ports HDMI_11]
+set_property PACKAGE_PIN B3       [get_ports hdmi_out_p[0]]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_out_p[0]]
 # D2-
-set_property PACKAGE_PIN A2       [get_ports HDMI_12]   
-set_property IOSTANDARD TMDS_33  [get_ports HDMI_12]
+set_property PACKAGE_PIN A2       [get_ports hdmi_out_n[0]]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_out_n[0]]
 
 ## Red pins
 # D1+
-set_property PACKAGE_PIN G1       [get_ports HDMI_21]   
-set_property IOSTANDARD TMDS_33  [get_ports HDMI_21]
+set_property PACKAGE_PIN G1       [get_ports hdmi_out_p[2]]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_out_p[2]]
 # D1-
-set_property PACKAGE_PIN F1       [get_ports HDMI_22]   
-set_property IOSTANDARD TMDS_33  [get_ports HDMI_22]
+set_property PACKAGE_PIN F1       [get_ports hdmi_out_n[2]]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_out_n[2]]
 
 ## Green pins
 # D0+
-set_property PACKAGE_PIN F3       [get_ports HDMI_31]   
-set_property IOSTANDARD TMDS_33  [get_ports HDMI_31]
+set_property PACKAGE_PIN F3       [get_ports hdmi_out_p[1]]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_out_p[1]]
 # D0-
-set_property PACKAGE_PIN F2       [get_ports HDMI_32]   
-set_property IOSTANDARD TMDS_33  [get_ports HDMI_32]
+set_property PACKAGE_PIN F2       [get_ports hdmi_out_n[1]]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_out_n[1]]
 
 ## CLK pins
 # CK+
-set_property PACKAGE_PIN E2       [get_ports HDMI_41]   
-set_property IOSTANDARD TMDS_33  [get_ports HDMI_41]
+set_property PACKAGE_PIN E2       [get_ports hdmi_out_p[3]]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_out_p[3]]
 # CK-
-set_property PACKAGE_PIN D2       [get_ports HDMI_42]   
-set_property IOSTANDARD TMDS_33  [get_ports HDMI_42]
+set_property PACKAGE_PIN D2       [get_ports hdmi_out_n[3]]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_out_n[3]]
 
 #################################################
 # Attributes that are only relevant for some applications

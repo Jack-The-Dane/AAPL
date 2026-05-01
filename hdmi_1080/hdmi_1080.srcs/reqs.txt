@@ -1,0 +1,5 @@
+pixel clock
+ - module to generate frame(s)
+ - module to generate map
+ - module to generate falling blocks
+ - module to generate ui

@@ -10,6 +10,8 @@ https://github.com/hdl-util/hdmi
 UART VHDL implementation
 https://www.hackster.io/fpgaps/uart-vhdl-implementation-on-fpga-with-host-data-exchange-743b1b
 
+https://docs.amd.com/v/u/en-US/xapp495_S6TMDS_Video_Interface
+
 Keywords:
     ODDR
     ODIF
