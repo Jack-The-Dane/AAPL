@@ -36,14 +36,24 @@ set_property PACKAGE_PIN L5      [get_ports nBUTTON_I]
 set_property IOSTANDARD LVCMOS33 [get_ports nBUTTON_I]
 
 # -- The 4 LEDs                  IOBANK14
-set_property PACKAGE_PIN P10     [get_ports {LED_O0}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_O0}]
-set_property PACKAGE_PIN M11     [get_ports {LED_O1}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_O1}]
-set_property PACKAGE_PIN N11     [get_ports {LED_O2}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_O2}]
-set_property PACKAGE_PIN M12     [get_ports {LED_O3}]
-set_property IOSTANDARD LVCMOS33 [get_ports {LED_O3}]
+set_property PACKAGE_PIN P10     [get_ports {LED_O[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[0]}]
+set_property PACKAGE_PIN M11     [get_ports {LED_O[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[1]}]
+set_property PACKAGE_PIN N11     [get_ports {LED_O[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[2]}]
+set_property PACKAGE_PIN M12     [get_ports {LED_O[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_O[3]}]
+
+# -- The 4 LEDs                  IOBANK14
+set_property PACKAGE_PIN P11     [get_ports {LED_1[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[0]}]
+set_property PACKAGE_PIN K11     [get_ports {LED_1[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[1]}]
+set_property PACKAGE_PIN J13     [get_ports {LED_1[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[2]}]
+set_property PACKAGE_PIN L13     [get_ports {LED_1[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_1[3]}]
 
 # The FTDI USB/UART pins          IOBANK14
 set_property PACKAGE_PIN N10      [get_ports RX_I]   
@@ -180,29 +190,29 @@ set_property PACKAGE_PIN D3       [get_ports BB_30]
 set_property IOSTANDARD LVCMOS33  [get_ports BB_30]
 
 ### HDMI Pins
-## Blue pins
-# D2+
-set_property PACKAGE_PIN B3       [get_ports hdmi_blue_p]   
-set_property IOSTANDARD TMDS_33   [get_ports hdmi_blue_p]
-# D2-
-set_property PACKAGE_PIN A2       [get_ports hdmi_blue_n]   
-set_property IOSTANDARD TMDS_33   [get_ports hdmi_blue_n]
-
 ## Red pins
-# D1+
-set_property PACKAGE_PIN G1       [get_ports hdmi_red_p]   
+# D2+
+set_property PACKAGE_PIN B3       [get_ports hdmi_red_p]   
 set_property IOSTANDARD TMDS_33   [get_ports hdmi_red_p]
-# D1-
-set_property PACKAGE_PIN F1       [get_ports hdmi_red_n]   
+# D2-
+set_property PACKAGE_PIN A2       [get_ports hdmi_red_n]   
 set_property IOSTANDARD TMDS_33   [get_ports hdmi_red_n]
 
 ## Green pins
-# D0+
-set_property PACKAGE_PIN F3       [get_ports hdmi_green_p]   
+# D1+
+set_property PACKAGE_PIN G1       [get_ports hdmi_green_p]   
 set_property IOSTANDARD TMDS_33   [get_ports hdmi_green_p]
-# D0-
-set_property PACKAGE_PIN F2       [get_ports hdmi_green_n]   
+# D1-
+set_property PACKAGE_PIN F1       [get_ports hdmi_green_n]   
 set_property IOSTANDARD TMDS_33   [get_ports hdmi_green_n]
+
+## Blue pins
+# D0+
+set_property PACKAGE_PIN F3       [get_ports hdmi_blue_p]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_blue_p]
+# D0-
+set_property PACKAGE_PIN F2       [get_ports hdmi_blue_n]   
+set_property IOSTANDARD TMDS_33   [get_ports hdmi_blue_n]
 
 ## CLK pins
 # CK+

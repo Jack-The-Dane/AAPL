@@ -39,6 +39,7 @@ entity top is
         LED_O1 : out STD_LOGIC;
         LED_O2 : out STD_LOGIC;
         LED_O3 : out STD_LOGIC;
+        
         hdmi_out_p : out STD_LOGIC_VECTOR(3 downto 0);
         hdmi_out_n : out STD_LOGIC_VECTOR(3 downto 0)
     );
@@ -206,6 +207,7 @@ begin
         vsync        => vsync
     );
     
+
     -- Colour pattern generation based on horiz/vert location
     red_ram_p <= std_logic_vector(signed( count(28 downto 21)) + signed( pixel_h(7 downto 0)));  
     green_ram_p <= std_logic_vector(signed( count(28 downto 21)) + signed( pixel_v(7 downto 0)));  
@@ -233,6 +235,7 @@ begin
     );
     
     -- Differential output buffers
+    -- Could use SERDES instead
     OBUFDS_blue  : OBUFDS port map ( O  => hdmi_out_p(0), OB => hdmi_out_n(0), I  => blue_s );
     OBUFDS_green   : OBUFDS port map ( O  => hdmi_out_p(1), OB => hdmi_out_n(1), I  => green_s );
     OBUFDS_red : OBUFDS port map ( O  => hdmi_out_p(2), OB => hdmi_out_n(2), I  => red_s );

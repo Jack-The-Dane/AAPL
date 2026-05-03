@@ -47,3 +47,7 @@ build/
 hdmi_1080/*
 !hdmi_1080/hdmi_1080.srcs/
 !hdmi_1080.xpr
+
+frame_gen/*
+!frame_gen.srcs/
+!frame_gen.xpr
