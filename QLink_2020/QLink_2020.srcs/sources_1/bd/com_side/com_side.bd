@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3A0AA7A5E58C124A",
+      "boundary_crc": "0x4C167E3167E348B9",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/com_side",
       "name": "com_side",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.2"
+      "tool_version": "2025.2",
+      "validated": "true"
     },
     "design_tree": {
       "simple_button_fsm_0": "",
@@ -32,7 +33,17 @@
       },
       "rst": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "CLK12_I": {
         "direction": "I"
@@ -51,15 +62,19 @@
       "cs_i": {
         "direction": "I"
       },
-      "add_read": {
-        "direction": "I"
-      },
-      "add_write": {
-        "direction": "I"
-      },
       "dout_o": {
         "direction": "O",
         "left": "31",
+        "right": "0"
+      },
+      "q_data_o_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "q_addr_o_0": {
+        "direction": "O",
+        "left": "7",
         "right": "0"
       }
     },
@@ -268,6 +283,10 @@
           },
           "LOCK_PROPAGATE": {
             "value": "0"
+          },
+          "TRAINING_MODULE": {
+            "value": "block_test.bd",
+            "value_src": "auto"
           }
         },
         "ports": {
@@ -285,15 +304,6 @@
             "left": "3",
             "right": "0"
           },
-          "add_read": {
-            "direction": "I"
-          },
-          "add_write": {
-            "direction": "I"
-          },
-          "cs_i": {
-            "direction": "I"
-          },
           "dout_o": {
             "direction": "O",
             "left": "31",
@@ -301,6 +311,27 @@
           },
           "button_in": {
             "direction": "I",
+            "left": "7",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "8",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "addrb_0": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "q_addr_o": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "q_data_o": {
+            "direction": "O",
             "left": "31",
             "right": "0"
           }
@@ -310,7 +341,7 @@
         "variant_info": {
           "block_test.bd": {
             "scoped_diagram": "block_test_inst_0.bd",
-            "design_checksum": "0x461BED1FFE2A3FAD",
+            "design_checksum": "0xA6ED70766B6231A4",
             "ref_name": "block_test",
             "ref_subinst_path": "com_side_block_test_0",
             "ref_type": "Block Design",
@@ -337,18 +368,6 @@
           "block_test_0/RX_I"
         ]
       },
-      "add_read_0_1": {
-        "ports": [
-          "add_read",
-          "block_test_0/add_read"
-        ]
-      },
-      "add_write_0_1": {
-        "ports": [
-          "add_write",
-          "block_test_0/add_write"
-        ]
-      },
       "block_test_0_LED_1": {
         "ports": [
           "block_test_0/LED_1",
@@ -365,6 +384,18 @@
         "ports": [
           "block_test_0/dout_o",
           "dout_o"
+        ]
+      },
+      "block_test_0_q_addr_o": {
+        "ports": [
+          "block_test_0/q_addr_o",
+          "q_addr_o_0"
+        ]
+      },
+      "block_test_0_q_data_o": {
+        "ports": [
+          "block_test_0/q_data_o",
+          "q_data_o_0"
         ]
       },
       "button_0_1": {
@@ -393,8 +424,7 @@
       },
       "cs_i_0_1": {
         "ports": [
-          "cs_i",
-          "block_test_0/cs_i"
+          "cs_i"
         ]
       },
       "reset_0_1": {

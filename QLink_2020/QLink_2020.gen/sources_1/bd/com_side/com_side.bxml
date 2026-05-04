@@ -9,7 +9,7 @@
     <Generation Name="INSTANTIATION_TEMPLATE" State="STALE" Timestamp="1777636509"/>
     <FileCollection Name="SOURCES" Type="SOURCES"/>
     <BlockContainerCollection>
-      <BlockContainer InstPath="/block_test_0" IsPR="false" State="Stale">
+      <BlockContainer InstPath="/block_test_0" IsPR="false" State="Validated">
         <ActiveVariantSynth FileName="bd/block_test_inst_0/block_test_inst_0.bd"/>
         <ActiveVariantSim FileName="bd/block_test_inst_0/block_test_inst_0.bd"/>
         <VariantsCollection>
@@ -26,7 +26,6 @@
           <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd"/>
           <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd"/>
           <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd"/>
-          <File Name="../../../../QLink_2020.srcs/sources_1/new/read_write_selector.vhd"/>
           <File Name="../../../../QLink_2020.srcs/sources_1/bd/block_test/block_test.bd"/>
         </FileCollection>
       </ModuleReference>

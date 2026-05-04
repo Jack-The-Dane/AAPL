@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xFE2A3FADB3A1671E",
+      "boundary_crc": "0x6B6231A46B6231A4",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/block_test",
       "name": "block_test",
@@ -15,7 +15,7 @@
       "blk_mem_gen_0": "",
       "enable_0": "",
       "reset_0": "",
-      "read_write_selector_0": ""
+      "write_enable": ""
     },
     "ports": {
       "CLK12": {
@@ -32,15 +32,6 @@
         "left": "3",
         "right": "0"
       },
-      "add_read": {
-        "direction": "I"
-      },
-      "add_write": {
-        "direction": "I"
-      },
-      "cs_i": {
-        "direction": "I"
-      },
       "dout_o": {
         "direction": "O",
         "left": "31",
@@ -48,6 +39,21 @@
       },
       "button_in": {
         "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "addrb_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "q_addr_o": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "q_data_o": {
+        "direction": "O",
         "left": "31",
         "right": "0"
       }
@@ -139,45 +145,19 @@
           }
         }
       },
-      "read_write_selector_0": {
-        "vlnv": "xilinx.com:module_ref:read_write_selector:1.0",
-        "ip_revision": "1",
-        "xci_name": "block_test_read_write_selector_0_0",
-        "xci_path": "ip/block_test_read_write_selector_0_0/block_test_read_write_selector_0_0.xci",
-        "inst_hier_path": "read_write_selector_0",
+      "write_enable": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "block_test_reset_0_0",
+        "xci_path": "ip/block_test_reset_0_0/block_test_reset_0_0.xci",
+        "inst_hier_path": "write_enable",
         "has_run_ip_tcl": "true",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "read_write_selector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "address_read": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
+        "parameters": {
+          "CONST_VAL": {
+            "value": "8"
           },
-          "address_write": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "cs_in": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "address_out": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "web_out": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
+          "CONST_WIDTH": {
+            "value": "4"
           }
         }
       }
@@ -186,20 +166,14 @@
       "CLK12_I_1": {
         "ports": [
           "CLK12",
-          "Sindri_QLink_top_0/CLK12_I",
-          "read_write_selector_0/clk"
+          "Sindri_QLink_top_0/CLK12_I"
         ]
       },
       "Net": {
         "ports": [
           "Sindri_QLink_top_0/ADDR_O",
-          "blk_mem_gen_0/addra"
-        ]
-      },
-      "RX_I3_1": {
-        "ports": [
-          "cs_i",
-          "read_write_selector_0/cs_in"
+          "blk_mem_gen_0/addra",
+          "q_addr_o"
         ]
       },
       "RX_I_0_1": {
@@ -218,7 +192,8 @@
       "Sindri_QLink_top_0_DATA_O": {
         "ports": [
           "Sindri_QLink_top_0/DATA_O",
-          "blk_mem_gen_0/dina"
+          "blk_mem_gen_0/dina",
+          "q_data_o"
         ]
       },
       "Sindri_QLink_top_0_LED_O": {
@@ -239,16 +214,10 @@
           "blk_mem_gen_0/wea"
         ]
       },
-      "add_read_1": {
+      "addrb_0_1": {
         "ports": [
-          "add_read",
-          "read_write_selector_0/address_read"
-        ]
-      },
-      "add_write_1": {
-        "ports": [
-          "add_write",
-          "read_write_selector_0/address_write"
+          "addrb_0",
+          "blk_mem_gen_0/addrb"
         ]
       },
       "blk_mem_gen_0_douta": {
@@ -276,15 +245,9 @@
           "blk_mem_gen_0/rstb"
         ]
       },
-      "read_write_selector_0_address_out": {
+      "reset_1_dout": {
         "ports": [
-          "read_write_selector_0/address_out",
-          "blk_mem_gen_0/addrb"
-        ]
-      },
-      "read_write_selector_0_web_out": {
-        "ports": [
-          "read_write_selector_0/web_out",
+          "write_enable/dout",
           "blk_mem_gen_0/web"
         ]
       },
