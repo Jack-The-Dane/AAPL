@@ -2,6 +2,11 @@ import numpy
 import pygame
 import random
 import collections
+import serial
+import time
+
+
+
 
 # global variables
 
@@ -18,6 +23,9 @@ play_height = row * block_size     # 20 rows
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height - 50
 
+SERIAL_PORT = "/def/ttyACM0"
+BAUDRATE = 115200
+
 #fandt en som havde lavet farver til dem
 class colors:
     G = (138, 234, 40)
@@ -27,6 +35,19 @@ class colors:
     B = (0, 0, 240)
     P = (136, 44, 237)
     O = (221, 164, 34)
+
+
+COLOR_TO_ID = {
+    0: 0,
+    colors.C: 1,
+    colors.Y: 2,
+    colors.P: 3,
+    colors.G: 4,
+    colors.R: 5,
+    colors.B: 6,
+    colors.O: 7,
+}
+
 
 #shapes in matrix form, list with each shape and their chosen color
 Shape = collections.namedtuple("Shape", ["shape", "color"])
@@ -118,7 +139,6 @@ class GameMat:
     
     def place_piece(self, piece: Piece):
         affected_cols = []
-        print(piece)
         for i, r in enumerate(piece.shape):
             for j, c in enumerate(r):
                 if c == 1:
@@ -131,8 +151,6 @@ class GameMat:
                     print("y: ", y)
                     self.mat[y,x] = piece.color
         
-        print(list(dict.fromkeys(affected_cols)), "no dubs cols")
-        print(self.mat)
         return list(dict.fromkeys(affected_cols))
     
     def draw(self, surface):
@@ -212,7 +230,25 @@ class GameMat:
 
         return True
                                                         
-    
+def get_board_for_fpga(mat, piece):
+    fpga_board = numpy.zeros((row, col), dtype=numpy.uint8)
+
+    # Add placed blocks
+    for y in range(row):
+        for x in range(col):
+            fpga_board[y, x] = COLOR_TO_ID.get(mat.mat[y, x], 0)
+
+    # Add falling piece
+    for i, r in enumerate(piece.shape):
+        for j, c in enumerate(r):
+            if c == 1:
+                x = int((piece.x - board_x) / piece.block_size) + j
+                y = int((piece.y - board_y) / piece.block_size) + i
+
+                if 0 <= x < col and 0 <= y < row:
+                    fpga_board[y, x] = COLOR_TO_ID[piece.color]
+
+    return fpga_board.flatten()
 
 
 
@@ -245,9 +281,7 @@ def draw_border(surface):
     pygame.draw.rect(
         surface,
         border_color,
-        (board_x, board_y, play_width, play_height),
-        border_thickness
-    )
+        (board_x, board_y, play_width, play_height), border_thickness)
 
 def draw_board_background(surface):
     pygame.draw.rect(
@@ -304,6 +338,29 @@ def draw_sidebar(surface, high_score, current_score, next_piece_name):
         next_piece_name
     )
 
+
+class QlinkSerial:
+    def __init__(self, port=SERIAL_PORT, baud=BAUDRATE):
+        self.ser = serial.Serial(port, baudrate=baud, timeout=1)
+        self.ser.dtr = True
+        time.sleep(0.1)
+
+    def send_board(self, board_bytes):
+        # T = tetris frame start
+        # then 200 bytes
+        # \r = end
+        self.ser.write(b"T" + bytes(board_bytes) + b"\r")
+        self.ser.flush()
+
+    def close(self):
+        self.ser.close()
+
+
+
+
+
+
+
 #game loop
 pygame.init()
 
@@ -315,6 +372,8 @@ letter_list = 'IOTSZJL'
 shape_letter = random.choice(letter_list)
 piece = Piece(x=board_x + 4 * BLOCK, y=board_y, shape=shapes[shape_letter])
 mat = GameMat(row, col)
+
+qlink = QlinkSerial()
 
 running = True
 clock = pygame.time.Clock()
@@ -402,7 +461,12 @@ while running:
     mat.draw(screen)
     draw_border(screen)
     draw_sidebar(screen, high_score, current_score, next_piece_name)
+
+    fpga_data = get_board_for_fpga(mat, piece)
+    qlink.send_board(fpga_data)
+
     pygame.display.flip()
     clock.tick(FRAME_RATE)
 
 pygame.quit()
+qlink.close()   
