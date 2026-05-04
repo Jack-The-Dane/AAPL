@@ -56,17 +56,17 @@ module main_top_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   input wire RX_I,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire button_3,
+  input wire BB_08,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire button_0,
+  input wire BB_05,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire button_2,
+  input wire BB_07,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire button_1,
+  input wire BB_06,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire CLK12_I,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire rst,
+  input wire BB_09,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire CLK25_I,
   (* X_INTERFACE_IGNORE = "true" *)
@@ -91,12 +91,12 @@ module main_top_sv (
 
   main_top inst (
     .RX_I(RX_I),
-    .button_3(button_3),
-    .button_0(button_0),
-    .button_2(button_2),
-    .button_1(button_1),
+    .BB_08(BB_08),
+    .BB_05(BB_05),
+    .BB_07(BB_07),
+    .BB_06(BB_06),
     .CLK12_I(CLK12_I),
-    .rst(rst),
+    .BB_09(BB_09),
     .CLK25_I(CLK25_I),
     .TX_O(TX_O),
     .hdmi_clk_p(hdmi_clk_p),

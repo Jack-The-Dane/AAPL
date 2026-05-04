@@ -1,0 +1,134 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Mon May  4 12:32:30 2026
+| Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_methodology -file main_top_wrapper_methodology_drc_routed.rpt -pb main_top_wrapper_methodology_drc_routed.pb -rpx main_top_wrapper_methodology_drc_routed.rpx
+| Design       : main_top_wrapper
+| Device       : xc7s15ftgb196-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 17
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+| Rule      | Severity | Description                                                                                           | Checks |
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+| CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads                                      | 1      |
+| TIMING-9  | Warning  | Unknown CDC Logic                                                                                     | 1      |
+| TIMING-16 | Warning  | Large setup violation                                                                                 | 4      |
+| TIMING-18 | Warning  | Missing input or output delay                                                                         | 5      |
+| TIMING-47 | Warning  | False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks | 2      |
+| XDCC-4    | Warning  | User Clock constraint overwritten with the same name                                                  | 2      |
+| XDCC-8    | Warning  | User Clock constraint overwritten on the same source                                                  | 2      |
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net CLK12_I_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): CLK12_I_IBUF_inst/O, main_top_i/CLK12_I
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.070 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[5]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.070 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[6]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.070 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[7]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.070 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[8]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on BB_05 relative to the rising and/or falling clock edge(s) of CLK12_I.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on BB_06 relative to the rising and/or falling clock edge(s) of CLK12_I.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on BB_07 relative to the rising and/or falling clock edge(s) of CLK12_I.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on BB_08 relative to the rising and/or falling clock edge(s) of CLK12_I.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on BB_09 relative to the rising and/or falling clock edge(s) of CLK12_I.
+Related violations: <none>
+
+TIMING-47#1 Warning
+False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks CLK25_I and clock_pixel_unbuffered (see constraint position 8 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+Related violations: <none>
+
+TIMING-47#2 Warning
+False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks clock_pixel_unbuffered and CLK25_I (see constraint position 8 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+Related violations: <none>
+
+XDCC-4#1 Warning
+User Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous user clock constraint with the same name.
+New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
+Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 76))
+Related violations: <none>
+
+XDCC-4#2 Warning
+User Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous user clock constraint with the same name.
+New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
+Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 69))
+Related violations: <none>
+
+XDCC-8#1 Warning
+User Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous user clock constraint defined on the same source.
+New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
+Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 76))
+Related violations: <none>
+
+XDCC-8#2 Warning
+User Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous user clock constraint defined on the same source.
+New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
+Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 69))
+Related violations: <none>
+
+

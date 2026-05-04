@@ -2,8 +2,8 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Mon May  4 11:45:24 2026
---Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+--Date        : Mon May  4 12:31:07 2026
+--Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 --Command     : generate_target main_top.bd
 --Design      : main_top
 --Purpose     : IP block netlist
@@ -14,14 +14,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity main_top is
   port (
+    BB_05 : in STD_LOGIC;
+    BB_06 : in STD_LOGIC;
+    BB_07 : in STD_LOGIC;
+    BB_08 : in STD_LOGIC;
+    BB_09 : in STD_LOGIC;
     CLK12_I : in STD_LOGIC;
     CLK25_I : in STD_LOGIC;
     RX_I : in STD_LOGIC;
     TX_O : out STD_LOGIC;
-    button_0 : in STD_LOGIC;
-    button_1 : in STD_LOGIC;
-    button_2 : in STD_LOGIC;
-    button_3 : in STD_LOGIC;
     hdmi_blue_n : out STD_LOGIC;
     hdmi_blue_p : out STD_LOGIC;
     hdmi_clk_n : out STD_LOGIC;
@@ -29,8 +30,7 @@ entity main_top is
     hdmi_green_n : out STD_LOGIC;
     hdmi_green_p : out STD_LOGIC;
     hdmi_red_n : out STD_LOGIC;
-    hdmi_red_p : out STD_LOGIC;
-    rst : in STD_LOGIC
+    hdmi_red_p : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
   attribute CORE_GENERATION_INFO of main_top : entity is "main_top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_top,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=3,numReposBlks=3,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=1,bdsource=USER,synth_mode=Hierarchical}";
@@ -61,7 +61,7 @@ architecture STRUCTURE of main_top is
     dout : out STD_LOGIC_VECTOR ( 30 downto 0 )
   );
   end component main_top_xlconstant_0_0;
-  component main_top_top_level_0_0 is
+  component main_top_top_level_0_1 is
   port (
     CLK25_I : in STD_LOGIC;
     LED_O : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -77,7 +77,7 @@ architecture STRUCTURE of main_top is
     hdmi_red_n : out STD_LOGIC;
     hdmi_red_p : out STD_LOGIC
   );
-  end component main_top_top_level_0_0;
+  end component main_top_top_level_0_1;
   signal com_side_wrapper_0_q_addr_o_0 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal com_side_wrapper_0_q_data_o_0 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal com_side_wrapper_0_qlink_clk_o : STD_LOGIC;
@@ -85,13 +85,13 @@ architecture STRUCTURE of main_top is
   signal NLW_com_side_wrapper_0_LED_1_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_top_level_0_LED_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of hdmi_clk_n : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_CLK_N CLK";
+  attribute X_INTERFACE_INFO of BB_09 : signal is "xilinx.com:signal:reset:1.0 RST.BB_09 RST";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of hdmi_clk_n : signal is "XIL_INTERFACENAME CLK.HDMI_CLK_N, CLK_DOMAIN main_top_top_level_wrapper_0_0_hdmi_clk_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of BB_09 : signal is "XIL_INTERFACENAME RST.BB_09, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_INFO of hdmi_clk_n : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_CLK_N CLK";
+  attribute X_INTERFACE_PARAMETER of hdmi_clk_n : signal is "XIL_INTERFACENAME CLK.HDMI_CLK_N, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of hdmi_clk_p : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_CLK_P CLK";
-  attribute X_INTERFACE_PARAMETER of hdmi_clk_p : signal is "XIL_INTERFACENAME CLK.HDMI_CLK_P, CLK_DOMAIN main_top_top_level_wrapper_0_0_hdmi_clk_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 RST.RST RST";
-  attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of hdmi_clk_p : signal is "XIL_INTERFACENAME CLK.HDMI_CLK_P, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
 begin
 com_side_wrapper_0: component main_top_com_side_wrapper_0_0
      port map (
@@ -101,16 +101,16 @@ com_side_wrapper_0: component main_top_com_side_wrapper_0_0
       TX_O => TX_O,
       addrb_i(31) => '0',
       addrb_i(30 downto 0) => xlconstant_0_dout(30 downto 0),
-      button_0 => button_0,
-      button_1 => button_1,
-      button_2 => button_2,
-      button_3 => button_3,
+      button_0 => BB_05,
+      button_1 => BB_06,
+      button_2 => BB_07,
+      button_3 => BB_08,
       q_addr_o_0(7 downto 0) => com_side_wrapper_0_q_addr_o_0(7 downto 0),
       q_data_o_0(31 downto 0) => com_side_wrapper_0_q_data_o_0(31 downto 0),
       qlink_clk_o => com_side_wrapper_0_qlink_clk_o,
-      rst => rst
+      rst => BB_09
     );
-top_level_0: component main_top_top_level_0_0
+top_level_0: component main_top_top_level_0_1
      port map (
       CLK25_I => CLK25_I,
       LED_O(3 downto 0) => NLW_top_level_0_LED_O_UNCONNECTED(3 downto 0),

@@ -1,9 +1,34 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May  4 11:45:26 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May  4 12:31:08 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="main_top" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="I" NAME="BB_05" SIGIS="undef" SIGNAME="External_Ports_BB_05">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BB_06" SIGIS="undef" SIGNAME="External_Ports_BB_06">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BB_07" SIGIS="undef" SIGNAME="External_Ports_BB_07">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BB_08" SIGIS="undef" SIGNAME="External_Ports_BB_08">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BB_09" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_BB_09">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="CLK12_I" SIGIS="undef" SIGNAME="External_Ports_CLK12_I">
       <CONNECTIONS>
         <CONNECTION INSTANCE="com_side_wrapper_0" PORT="CLK12_I"/>
@@ -22,26 +47,6 @@
     <PORT DIR="O" NAME="TX_O" SIGIS="undef" SIGNAME="com_side_wrapper_0_TX_O">
       <CONNECTIONS>
         <CONNECTION INSTANCE="com_side_wrapper_0" PORT="TX_O"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="button_0" SIGIS="undef" SIGNAME="External_Ports_button_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="button_1" SIGIS="undef" SIGNAME="External_Ports_button_1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="button_2" SIGIS="undef" SIGNAME="External_Ports_button_2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_2"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="button_3" SIGIS="undef" SIGNAME="External_Ports_button_3">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_3"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="hdmi_blue_n" SIGIS="undef" SIGNAME="top_level_0_hdmi_blue_n">
@@ -84,11 +89,6 @@
         <CONNECTION INSTANCE="top_level_0" PORT="hdmi_red_p"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="rst"/>
-      </CONNECTIONS>
-    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
@@ -122,24 +122,24 @@
             <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_0" SIGIS="undef" SIGNAME="External_Ports_button_0">
+        <PORT DIR="I" NAME="button_0" SIGIS="undef" SIGNAME="External_Ports_BB_05">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_05"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_1" SIGIS="undef" SIGNAME="External_Ports_button_1">
+        <PORT DIR="I" NAME="button_1" SIGIS="undef" SIGNAME="External_Ports_BB_06">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button_1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_06"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_2" SIGIS="undef" SIGNAME="External_Ports_button_2">
+        <PORT DIR="I" NAME="button_2" SIGIS="undef" SIGNAME="External_Ports_BB_07">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button_2"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_07"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_3" SIGIS="undef" SIGNAME="External_Ports_button_3">
+        <PORT DIR="I" NAME="button_3" SIGIS="undef" SIGNAME="External_Ports_BB_08">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button_3"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_08"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="q_addr_o_0" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_addr_o_0">
@@ -157,9 +157,9 @@
             <CONNECTION INSTANCE="top_level_0" PORT="clk_qlink"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_BB_09">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_09"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -168,7 +168,7 @@
     <MODULE COREREVISION="2" FULLNAME="/top_level_0" HWVERSION="1.0" INSTANCE="top_level_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_level" VLNV="user.org:user:top_level:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="main_top_top_level_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_top_top_level_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>

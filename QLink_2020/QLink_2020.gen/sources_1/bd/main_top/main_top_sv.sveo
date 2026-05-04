@@ -67,12 +67,12 @@
 // INST_TAG     ------ Begin cut for WRAPPER INSTANTIATION Template ------
 main_top_sv your_instance_name (
   .RX_I(RX_I), // input wire RX_I
-  .button_3(button_3), // input wire button_3
-  .button_0(button_0), // input wire button_0
-  .button_2(button_2), // input wire button_2
-  .button_1(button_1), // input wire button_1
+  .BB_08(BB_08), // input wire BB_08
+  .BB_05(BB_05), // input wire BB_05
+  .BB_07(BB_07), // input wire BB_07
+  .BB_06(BB_06), // input wire BB_06
   .CLK12_I(CLK12_I), // input wire CLK12_I
-  .rst(rst), // input wire rst
+  .BB_09(BB_09), // input wire BB_09
   .CLK25_I(CLK25_I), // input wire CLK25_I
   .TX_O(TX_O), // output wire TX_O
   .hdmi_clk_p(hdmi_clk_p), // output wire hdmi_clk_p

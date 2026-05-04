@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1/top_level_clocking_0_0.tcl"
+  variable script "/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1/top_level_clocking_0_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,30 +56,29 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "top_level_clocking_0_0_synth_1" START { ROLLUP_AUTO }
-set_param bd.open.in_stealth_mode 1
 set_param general.usePosixSpawnForFork 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
-set_param ips.modRefOverrideMrefDirPath /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/mref
+set_param ips.modRefOverrideMrefDirPath /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/mref
 create_project -in_memory -part xc7s15ftgb196-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.cache/wt [current_project]
-set_property parent.project_path /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.xpr [current_project]
+set_property webtalk.parent_dir /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.cache/wt [current_project]
+set_property parent.project_path /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_repo_paths /home/kasper-ubuntu/Documents/APPL_project_tetris/IPs [current_project]
+set_property ip_repo_paths /home/jacob/shared/Semester8/AAPL/project/IPs [current_project]
 update_ip_catalog
-set_property ip_output_repo /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.cache/ip [current_project]
+set_property ip_output_repo /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd
-read_ip -quiet /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0.xci
+read_vhdl -library xil_defaultlib /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd
+read_ip -quiet /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -112,45 +111,45 @@ generate_parallel_reports -reports { "report_utilization -file top_level_clockin
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1/top_level_clocking_0_0.dcp /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0.dcp
+  file copy -force /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1/top_level_clocking_0_0.dcp /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_stub.v
+  write_verilog -force -mode synth_stub /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
-if {[file isdir /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.ip_user_files/ip/top_level_clocking_0_0]} {
+if {[file isdir /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.ip_user_files/ip/top_level_clocking_0_0]} {
   catch { 
-    file copy -force /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_stub.v /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.ip_user_files/ip/top_level_clocking_0_0
+    file copy -force /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_stub.v /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.ip_user_files/ip/top_level_clocking_0_0
   }
 }
 
-if {[file isdir /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.ip_user_files/ip/top_level_clocking_0_0]} {
+if {[file isdir /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.ip_user_files/ip/top_level_clocking_0_0]} {
   catch { 
-    file copy -force /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_stub.vhdl /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.ip_user_files/ip/top_level_clocking_0_0
+    file copy -force /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/top_level_clocking_0_0_stub.vhdl /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.ip_user_files/ip/top_level_clocking_0_0
   }
 }
 file delete __synthesis_is_running__

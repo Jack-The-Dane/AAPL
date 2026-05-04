@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon May  4 11:33:48 2026
-| Host         : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+| Date         : Mon May  4 12:24:09 2026
+| Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
 | Command      : report_utilization -file main_top_com_side_wrapper_0_0_utilization_synth.rpt -pb main_top_com_side_wrapper_0_0_utilization_synth.pb
 | Design       : main_top_com_side_wrapper_0_0
 | Device       : xc7s15ftgb196-1

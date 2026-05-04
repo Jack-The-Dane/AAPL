@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x85A1B677F7750AB8",
+      "boundary_crc": "0x18354074FEA4AF83",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/main_top",
       "name": "main_top",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.2"
+      "tool_version": "2025.2",
+      "validated": "true"
     },
     "design_tree": {
       "com_side_wrapper_0": "",
@@ -18,24 +19,34 @@
       "RX_I": {
         "direction": "I"
       },
-      "bb_30": {
+      "BB_08": {
         "direction": "I"
       },
-      "bb_21": {
+      "BB_05": {
         "direction": "I"
       },
-      "bb_27": {
+      "BB_07": {
         "direction": "I"
       },
-      "bb_24": {
+      "BB_06": {
         "direction": "I"
       },
       "CLK12_I": {
         "direction": "I"
       },
-      "rst": {
+      "BB_09": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "CLK25_I": {
         "direction": "I"
@@ -45,7 +56,25 @@
       },
       "hdmi_clk_p": {
         "type": "clk",
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "hdmi_green_n": {
         "direction": "O"
@@ -64,7 +93,25 @@
       },
       "hdmi_clk_n": {
         "type": "clk",
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "hdmi_red_p": {
         "direction": "O"
@@ -150,8 +197,8 @@
       "top_level_0": {
         "vlnv": "user.org:user:top_level:1.0",
         "ip_revision": "2",
-        "xci_name": "main_top_top_level_0_0",
-        "xci_path": "ip/main_top_top_level_0_0/main_top_top_level_0_0.xci",
+        "xci_name": "main_top_top_level_0_1",
+        "xci_path": "ip/main_top_top_level_0_1/main_top_top_level_0_1.xci",
         "inst_hier_path": "top_level_0",
         "has_run_ip_tcl": "true"
       }
@@ -177,25 +224,25 @@
       },
       "button_0_0_1": {
         "ports": [
-          "bb_21",
+          "BB_05",
           "com_side_wrapper_0/button_0"
         ]
       },
       "button_1_0_1": {
         "ports": [
-          "bb_24",
+          "BB_06",
           "com_side_wrapper_0/button_1"
         ]
       },
       "button_2_0_1": {
         "ports": [
-          "bb_27",
+          "BB_07",
           "com_side_wrapper_0/button_2"
         ]
       },
       "button_3_0_1": {
         "ports": [
-          "bb_30",
+          "BB_08",
           "com_side_wrapper_0/button_3"
         ]
       },
@@ -225,7 +272,7 @@
       },
       "rst_0_1": {
         "ports": [
-          "rst",
+          "BB_09",
           "com_side_wrapper_0/rst"
         ]
       },

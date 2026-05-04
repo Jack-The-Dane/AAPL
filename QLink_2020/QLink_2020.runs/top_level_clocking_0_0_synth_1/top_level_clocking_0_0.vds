@@ -3,29 +3,29 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon May  4 11:51:23 2026
-# Process ID         : 31784
-# Current directory  : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1
+# Start of session at: Mon May  4 12:06:52 2026
+# Process ID         : 71951
+# Current directory  : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1
 # Command line       : vivado -log top_level_clocking_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_clocking_0_0.tcl
-# Log file           : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1/top_level_clocking_0_0.vds
-# Journal file       : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1/vivado.jou
-# Running On         : kasper-ubuntu-pc
+# Log file           : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1/top_level_clocking_0_0.vds
+# Journal file       : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1/vivado.jou
+# Running On         : Laptop
 # Platform           : Ubuntu
-# Operating System   : Ubuntu 22.04.5 LTS
-# Processor Detail   : AMD Ryzen 7 PRO 5850U with Radeon Graphics
-# CPU Frequency      : 1896.434 MHz
-# CPU Physical cores : 3
-# CPU Logical cores  : 6
-# Host memory        : 16764 MB
-# Swap memory        : 2147 MB
-# Total Virtual      : 18911 MB
-# Available Virtual  : 11790 MB
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 7 4700U with Radeon Graphics
+# CPU Frequency      : 4074.051 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16116 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 33296 MB
+# Available Virtual  : 25611 MB
 #-----------------------------------------------------------
+ERROR: [Common 17-1257] Failed to create directory '/home/jacob/.Xilinx/Vivado/tclapp'.
 source top_level_clocking_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 1613.848 ; gain = 64.055 ; free physical = 10208 ; free virtual = 12518
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/kasper-ubuntu/Documents/APPL_project_tetris/IPs'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/kasper-ubuntu/Vivado/2025.2/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jacob/shared/Semester8/AAPL/project/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
 Command: synth_design -top top_level_clocking_0_0 -part xc7s15ftgb196-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
@@ -33,30 +33,206 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
 INFO: [Device 21-403] Loading part xc7s15ftgb196-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32108
+INFO: [Synth 8-7075] Helper process launched with PID 72167
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2164.363 ; gain = 484.188 ; free physical = 7106 ; free virtual = 9417
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2158.086 ; gain = 483.594 ; free physical = 173 ; free virtual = 22119
 ---------------------------------------------------------------------------------
-ERROR: [Synth 8-2716] syntax error near ';' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:71]
-ERROR: [Synth 8-10610] constant 'o_buff_clkpixel' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:77]
-ERROR: [Synth 8-10610] constant 'o_buff_clk5xpixel' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:78]
-ERROR: [Synth 8-10610] constant 'o_buff_clk5xpixelinv' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:79]
-ERROR: [Synth 8-10610] constant 'o_buff_clk' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:80]
-ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:101]
-ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:102]
-ERROR: [Synth 8-2716] syntax error near ')' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:104]
-INFO: [Synth 8-11252] unit 'top_level_clocking_0_0_arch' is ignored due to previous errors [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:112]
-INFO: [Synth 8-10443] VHDL file '/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd' is ignored due to errors
-ERROR: [Synth 8-12189] Failed to read vhdl '/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd'
+INFO: [Synth 8-638] synthesizing module 'top_level_clocking_0_0' [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:66]
+	Parameter in_mul bound to: 30 - type: integer 
+	Parameter pix_div bound to: 5 - type: integer 
+	Parameter pix5x_div bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'clocking' declared at '/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd:12' bound to instance 'U0' of component 'clocking' [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'clocking' [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd:27]
+	Parameter CLKFBOUT_MULT bound to: 30 - type: integer 
+	Parameter CLKIN_PERIOD bound to: 1.000000e+01 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 5 - type: integer 
+	Parameter CLKOUT0_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_PHASE bound to: 1.800000e+02 - type: double 
+	Parameter CLK_FEEDBACK bound to: CLKFBOUT - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'PLL_BASE_inst' to cell 'PLL_BASE' [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd:39]
+INFO: [Synth 8-113] binding component instance 'BUFG_clk' to cell 'BUFG' [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd:70]
+INFO: [Synth 8-113] binding component instance 'BUFG_pclock' to cell 'BUFG' [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd:76]
+INFO: [Synth 8-113] binding component instance 'BUFG_pclockx5' to cell 'BUFG' [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd:82]
+INFO: [Synth 8-113] binding component instance 'BUFG_pclockx5_180' to cell 'BUFG' [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (0#1) [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/sources_1/imports/sources_1/clocking.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'top_level_clocking_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:66]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 566.156 ; free physical = 8018 ; free virtual = 10329
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2246.055 ; gain = 571.562 ; free physical = 146 ; free virtual = 22002
 ---------------------------------------------------------------------------------
-RTL Elaboration failed
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2260.898 ; gain = 586.406 ; free physical = 144 ; free virtual = 22000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2260.898 ; gain = 586.406 ; free physical = 144 ; free virtual = 22000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2266.836 ; gain = 0.000 ; free physical = 170 ; free virtual = 22007
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2309.824 ; gain = 0.000 ; free physical = 148 ; free virtual = 21984
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  PLL_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2309.859 ; gain = 0.000 ; free physical = 147 ; free virtual = 21984
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2309.859 ; gain = 635.367 ; free physical = 315 ; free virtual = 22032
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2317.828 ; gain = 643.336 ; free physical = 315 ; free virtual = 22031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2317.828 ; gain = 643.336 ; free physical = 315 ; free virtual = 22031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2317.828 ; gain = 643.336 ; free physical = 298 ; free virtual = 22018
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2317.828 ; gain = 643.336 ; free physical = 268 ; free virtual = 21990
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2317.828 ; gain = 643.336 ; free physical = 268 ; free virtual = 21990
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2317.828 ; gain = 643.336 ; free physical = 266 ; free virtual = 21988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2449.641 ; gain = 775.148 ; free physical = 387 ; free virtual = 21810
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2449.641 ; gain = 775.148 ; free physical = 387 ; free virtual = 21810
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2449.641 ; gain = 775.148 ; free physical = 387 ; free virtual = 21810
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2449.641 ; gain = 775.148 ; free physical = 387 ; free virtual = 21810
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2449.641 ; gain = 775.148 ; free physical = 387 ; free virtual = 21810
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2449.641 ; gain = 775.148 ; free physical = 387 ; free virtual = 21810
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     4|
+|2     |PLL_BASE |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2449.641 ; gain = 775.148 ; free physical = 387 ; free virtual = 21810
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2449.641 ; gain = 726.188 ; free physical = 387 ; free virtual = 21810
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2449.648 ; gain = 775.148 ; free physical = 387 ; free virtual = 21810
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2449.648 ; gain = 0.000 ; free physical = 379 ; free virtual = 21802
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2554.109 ; gain = 0.000 ; free physical = 368 ; free virtual = 21792
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  PLL_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: 11901ff9
 INFO: [Common 17-83] Releasing license: Synthesis
-11 Infos, 0 Warnings, 0 Critical Warnings and 10 Errors encountered.
-synth_design failed
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2246.340 ; gain = 632.492 ; free physical = 8018 ; free virtual = 10329
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1496.185; main = 1271.509; forked = 224.676
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3241.242; main = 2246.336; forked = 994.922
-ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Mon May  4 11:52:02 2026...
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 2554.145 ; gain = 999.762 ; free physical = 361 ; free virtual = 21786
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1580.587; main = 1580.587; forked = 236.444
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3304.969; main = 2554.113; forked = 995.141
+INFO: [Common 17-1381] The checkpoint '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/top_level_clocking_0_0_synth_1/top_level_clocking_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_level_clocking_0_0_utilization_synth.rpt -pb top_level_clocking_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 12:07:22 2026...

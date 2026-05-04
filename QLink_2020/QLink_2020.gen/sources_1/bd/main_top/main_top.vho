@@ -54,12 +54,12 @@
 COMPONENT main_top
   PORT (
     RX_I : IN STD_LOGIC;
-    button_3 : IN STD_LOGIC;
-    button_0 : IN STD_LOGIC;
-    button_2 : IN STD_LOGIC;
-    button_1 : IN STD_LOGIC;
+    BB_08 : IN STD_LOGIC;
+    BB_05 : IN STD_LOGIC;
+    BB_07 : IN STD_LOGIC;
+    BB_06 : IN STD_LOGIC;
     CLK12_I : IN STD_LOGIC;
-    rst : IN STD_LOGIC;
+    BB_09 : IN STD_LOGIC;
     CLK25_I : IN STD_LOGIC;
     TX_O : OUT STD_LOGIC;
     hdmi_clk_p : OUT STD_LOGIC;
@@ -81,12 +81,12 @@ END COMPONENT;
 your_instance_name : main_top
   PORT MAP (
     RX_I => RX_I,
-    button_3 => button_3,
-    button_0 => button_0,
-    button_2 => button_2,
-    button_1 => button_1,
+    BB_08 => BB_08,
+    BB_05 => BB_05,
+    BB_07 => BB_07,
+    BB_06 => BB_06,
     CLK12_I => CLK12_I,
-    rst => rst,
+    BB_09 => BB_09,
     CLK25_I => CLK25_I,
     TX_O => TX_O,
     hdmi_clk_p => hdmi_clk_p,

@@ -13,9 +13,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "/home/kasper-ubuntu/Vivado/2025.2/Vitis/bin:/home/kasper-ubuntu/Vivado/2025.2/Vivado/ids_lite/ISE/bin/lin64;/home/kasper-ubuntu/Vivado/2025.2/Vivado/bin;";
+  PathVal = "/tools/Xilinx/2025.2/Vitis/bin:/tools/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64;/tools/Xilinx/2025.2/Vivado/bin;";
 } else {
-  PathVal = "/home/kasper-ubuntu/Vivado/2025.2/Vitis/bin:/home/kasper-ubuntu/Vivado/2025.2/Vivado/ids_lite/ISE/bin/lin64;/home/kasper-ubuntu/Vivado/2025.2/Vivado/bin;" + PathVal;
+  PathVal = "/tools/Xilinx/2025.2/Vitis/bin:/tools/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64;/tools/Xilinx/2025.2/Vivado/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log top_level_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_wrapper.tcl" );
+         "-log main_top_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_top_wrapper.tcl" );
 
 
 
