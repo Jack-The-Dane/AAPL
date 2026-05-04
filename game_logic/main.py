@@ -23,7 +23,7 @@ play_height = row * block_size     # 20 rows
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height - 50
 
-SERIAL_PORT = "/def/ttyACM0"
+SERIAL_PORT = "/dev/ttyACM0"
 BAUDRATE = 115200
 
 #fandt en som havde lavet farver til dem
@@ -337,20 +337,49 @@ def draw_sidebar(surface, high_score, current_score, next_piece_name):
         "Next Piece",
         next_piece_name
     )
-
-
 class QlinkSerial:
     def __init__(self, port=SERIAL_PORT, baud=BAUDRATE):
         self.ser = serial.Serial(port, baudrate=baud, timeout=1)
         self.ser.dtr = True
         time.sleep(0.1)
 
-    def send_board(self, board_bytes):
-        # T = tetris frame start
-        # then 200 bytes
-        # \r = end
-        self.ser.write(b"T" + bytes(board_bytes) + b"\r")
+    def write_word(self, address, data):
+        """
+        Format:
+        #w:AADDDDDDDD
+
+        AA       = 2 hex digit address
+        DDDDDDDD = 8 hex digit data word
+        """
+        cmd = f"#w:{address:02X}{data:08X}"
+        self.ser.write(cmd.encode("ascii"))
         self.ser.flush()
+
+    def send_cell(self, cell_index, cell_value):
+        """
+        Send one Tetris cell to the FPGA.
+
+        cell_index:
+            0 to 199
+
+        cell_value:
+            0 to 7
+        """
+        self.write_word(cell_index, cell_value)
+
+    def send_board(self, board_bytes):
+        """
+        Sends the board one cell at a time.
+
+        Address 00 = cell 0
+        Address 01 = cell 1
+        ...
+        Address C7 = cell 199
+        """
+        board_bytes = list(board_bytes)
+
+        for cell_index, cell_value in enumerate(board_bytes):
+            self.send_cell(cell_index, int(cell_value))
 
     def close(self):
         self.ser.close()
@@ -468,5 +497,5 @@ while running:
     pygame.display.flip()
     clock.tick(FRAME_RATE)
 
-pygame.quit()
 qlink.close()   
+pygame.quit()
