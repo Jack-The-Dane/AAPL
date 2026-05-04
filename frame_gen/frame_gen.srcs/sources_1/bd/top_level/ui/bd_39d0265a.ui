@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.22302",
-   "Default View_TopLeft":"840,171",
+   "Default View_ScaleFactor":"0.551455",
+   "Default View_TopLeft":"-138,-317",
    "ExpandedHierarchyInLayout":"",
    "HierExpandStatus_comment_0":"false",
    "comment_0":"Input clock: 25 MHz
@@ -12,85 +12,88 @@ buff_clk: 25 MHz",
    "font_comment_0":"12",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_CLK25_I -pg 1 -lvl 0 -x -140 -y 750 -defaultsOSRD
-preplace port port-id_hdmi_clk_p -pg 1 -lvl 12 -x 3000 -y 510 -defaultsOSRD
-preplace port port-id_hdmi_clk_n -pg 1 -lvl 12 -x 3000 -y 540 -defaultsOSRD
-preplace port port-id_hdmi_red_n -pg 1 -lvl 12 -x 3000 -y 430 -defaultsOSRD
-preplace port port-id_hdmi_blue_p -pg 1 -lvl 12 -x 3000 -y 210 -defaultsOSRD
-preplace port port-id_hdmi_red_p -pg 1 -lvl 12 -x 3000 -y 400 -defaultsOSRD
-preplace port port-id_hdmi_green_n -pg 1 -lvl 12 -x 3000 -y 90 -defaultsOSRD
-preplace port port-id_hdmi_blue_n -pg 1 -lvl 12 -x 3000 -y 240 -defaultsOSRD
-preplace port port-id_hdmi_green_p -pg 1 -lvl 12 -x 3000 -y 60 -defaultsOSRD
-preplace portBus LED_O -pg 1 -lvl 12 -x 3000 -y 300 -defaultsOSRD
-preplace inst vga_gen_0 -pg 1 -lvl 7 -x 1720 -y 480 -defaultsOSRD
-preplace inst clocking_0 -pg 1 -lvl 6 -x 1350 -y 620 -defaultsOSRD
-preplace inst serialiser_RED -pg 1 -lvl 10 -x 2670 -y 410 -defaultsOSRD
-preplace inst serialiser_GREEN -pg 1 -lvl 10 -x 2670 -y 70 -defaultsOSRD
-preplace inst serialiser_BLUE -pg 1 -lvl 10 -x 2670 -y 230 -defaultsOSRD
-preplace inst TMDS_RED -pg 1 -lvl 9 -x 2400 -y 430 -defaultsOSRD
-preplace inst TMDS_GREEN -pg 1 -lvl 9 -x 2400 -y 90 -defaultsOSRD
-preplace inst TMDS_BLUE -pg 1 -lvl 9 -x 2400 -y 250 -defaultsOSRD
-preplace inst ilconcat_0 -pg 1 -lvl 8 -x 2060 -y 520 -defaultsOSRD
-preplace inst ilconstant_0 -pg 1 -lvl 8 -x 2060 -y 390 -defaultsOSRD
-preplace inst output_RED -pg 1 -lvl 11 -x 2880 -y 410 -defaultsOSRD
-preplace inst output_GREEN -pg 1 -lvl 11 -x 2880 -y 70 -defaultsOSRD
-preplace inst output_BLUE -pg 1 -lvl 11 -x 2880 -y 230 -defaultsOSRD
-preplace inst output_PIX_CLK -pg 1 -lvl 11 -x 2880 -y 530 -defaultsOSRD
-preplace inst draw_box_0 -pg 1 -lvl 8 -x 2060 -y 220 -defaultsOSRD
-preplace inst color_lookup_0 -pg 1 -lvl 7 -x 1720 -y 250 -defaultsOSRD
-preplace inst row_fetcher_0 -pg 1 -lvl 5 -x 920 -y 280 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 630 -y 510 -defaultsOSRD
-preplace inst ilconstant_1 -pg 1 -lvl 3 -x 370 -y 550 -defaultsOSRD
-preplace inst ilconstant_2 -pg 1 -lvl 3 -x 370 -y 650 -defaultsOSRD
-preplace inst color_fetcher_0 -pg 1 -lvl 6 -x 1350 -y 310 -defaultsOSRD
-preplace inst color_writer_0 -pg 1 -lvl 1 -x 0 -y 320 -defaultsOSRD
-preplace inst ilconstant_3 -pg 1 -lvl 2 -x 210 -y 450 -defaultsOSRD
-preplace inst ilconstant_4 -pg 1 -lvl 2 -x 210 -y 660 -defaultsOSRD
-preplace netloc I_unbuff_clk_0_1 1 0 6 N 750 N 750 N 750 N 750 760 620 N
-preplace netloc TMDS_BLUE_encoded 1 9 1 N 250
-preplace netloc TMDS_GREEN_encoded 1 9 1 N 90
-preplace netloc TMDS_RED_encoded 1 9 1 N 430
-preplace netloc blk_mem_gen_0_doutb 1 3 2 490 300 NJ
-preplace netloc clocking_0_O_buff_clk 1 3 4 500 280 760 190 NJ 190 1510
-preplace netloc clocking_0_O_buff_clk5xpixel 1 6 4 1540J -10 NJ -10 NJ -10 2550
-preplace netloc clocking_0_O_buff_clkpixel 1 0 11 -120 390 N 390 N 390 480 320 750 370 1190 400 1560 350 1890 110 2240 0 2530 530 NJ
-preplace netloc color_fetcher_0_color_code 1 6 1 1520 250n
-preplace netloc color_lookup_0_blue_channel 1 7 1 N 270
-preplace netloc color_lookup_0_green_channel 1 7 1 N 250
-preplace netloc color_lookup_0_red_channel 1 7 1 N 230
-preplace netloc color_writer_0_addr 1 1 3 NJ 310 N 310 460
-preplace netloc color_writer_0_color_val 1 1 3 NJ 330 N 330 450
-preplace netloc draw_box_0_blue_out 1 8 1 N 240
-preplace netloc draw_box_0_green_out 1 8 1 2210 80n
-preplace netloc draw_box_0_red_out 1 8 1 2220 200n
-preplace netloc ilconcat_0_dout 1 8 1 2270 260n
-preplace netloc ilconstant_0_dout 1 8 1 2250 100n
-preplace netloc ilconstant_1_dout 1 3 1 480 460n
-preplace netloc ilconstant_2_dout 1 3 1 470 480n
-preplace netloc ilconstant_3_dout 1 2 2 NJ 450 460
-preplace netloc ilconstant_4_dout 1 2 2 290J 490 450
-preplace netloc output_PIX_CLK_O 1 11 1 2970J 510n
-preplace netloc output_PIX_CLK_OB 1 11 1 NJ 540
-preplace netloc row_fetcher_0_LED 1 5 7 1080J 390 1550J 340 1910J 330 2230J 340 2540J 310 2790J 300 NJ
-preplace netloc row_fetcher_0_read_addr 1 3 3 510 310 760J 360 1070
-preplace netloc row_fetcher_0_row_data 1 5 1 1080 280n
-preplace netloc serialiser_BLUE_data_out 1 10 1 N 230
-preplace netloc serialiser_GREEN_data_out 1 10 1 N 70
-preplace netloc serialiser_RED_data_out 1 10 1 N 410
-preplace netloc vga_gen_0_blank 1 7 2 1880 450 2260
-preplace netloc vga_gen_0_hsync 1 7 1 N 530
-preplace netloc vga_gen_0_pixel_h 1 5 3 1190 170 N 170 1880
-preplace netloc vga_gen_0_pixel_v 1 4 4 770 200 N 200 1530 330 1900
-preplace netloc vga_gen_0_vsync 1 7 1 1910 510n
-preplace netloc output_RED_OB 1 11 1 2970J 420n
-preplace netloc output_BLUE_O 1 11 1 2970J 210n
-preplace netloc output_RED_O 1 11 1 NJ 400
-preplace netloc output_GREEN_OB 1 11 1 2970J 80n
-preplace netloc output_BLUE_OB 1 11 1 NJ 240
-preplace netloc output_GREEN_O 1 11 1 NJ 60
-preplace cgraphic comment_0 place left 1421 447 textcolor 4 linecolor 3 linewidth 2
-levelinfo -pg 1 -140 0 210 370 630 920 1350 1720 2060 2400 2670 2880 3000
-pagesize -pg 1 -db -bbox -sgen -250 -80 3150 900
+preplace port port-id_CLK25_I -pg 1 -lvl 0 -x 0 -y 800 -defaultsOSRD
+preplace port port-id_hdmi_clk_p -pg 1 -lvl 11 -x 3050 -y 590 -defaultsOSRD
+preplace port port-id_hdmi_clk_n -pg 1 -lvl 11 -x 3050 -y 620 -defaultsOSRD
+preplace port port-id_hdmi_red_n -pg 1 -lvl 11 -x 3050 -y 320 -defaultsOSRD
+preplace port port-id_hdmi_blue_p -pg 1 -lvl 11 -x 3050 -y 470 -defaultsOSRD
+preplace port port-id_hdmi_red_p -pg 1 -lvl 11 -x 3050 -y 290 -defaultsOSRD
+preplace port port-id_hdmi_green_n -pg 1 -lvl 11 -x 3050 -y 180 -defaultsOSRD
+preplace port port-id_hdmi_blue_n -pg 1 -lvl 11 -x 3050 -y 500 -defaultsOSRD
+preplace port port-id_hdmi_green_p -pg 1 -lvl 11 -x 3050 -y 150 -defaultsOSRD
+preplace port port-id_clk_qlink -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace portBus LED_O -pg 1 -lvl 11 -x 3050 -y 410 -defaultsOSRD
+preplace portBus addra_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus dina_i -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace inst vga_gen_0 -pg 1 -lvl 2 -x 500 -y 690 -defaultsOSRD
+preplace inst clocking_0 -pg 1 -lvl 1 -x 180 -y 800 -defaultsOSRD
+preplace inst serialiser_RED -pg 1 -lvl 9 -x 2730 -y 300 -defaultsOSRD
+preplace inst serialiser_GREEN -pg 1 -lvl 9 -x 2730 -y 160 -defaultsOSRD
+preplace inst serialiser_BLUE -pg 1 -lvl 9 -x 2730 -y 490 -defaultsOSRD
+preplace inst TMDS_RED -pg 1 -lvl 8 -x 2460 -y 320 -defaultsOSRD
+preplace inst TMDS_GREEN -pg 1 -lvl 8 -x 2460 -y 140 -defaultsOSRD
+preplace inst TMDS_BLUE -pg 1 -lvl 8 -x 2460 -y 510 -defaultsOSRD
+preplace inst ilconcat_0 -pg 1 -lvl 7 -x 2140 -y 770 -defaultsOSRD
+preplace inst ilconstant_0 -pg 1 -lvl 7 -x 2140 -y 140 -defaultsOSRD
+preplace inst output_RED -pg 1 -lvl 10 -x 2940 -y 300 -defaultsOSRD
+preplace inst output_GREEN -pg 1 -lvl 10 -x 2940 -y 160 -defaultsOSRD
+preplace inst output_BLUE -pg 1 -lvl 10 -x 2940 -y 490 -defaultsOSRD
+preplace inst output_PIX_CLK -pg 1 -lvl 10 -x 2940 -y 610 -defaultsOSRD
+preplace inst draw_box_0 -pg 1 -lvl 7 -x 2140 -y 290 -defaultsOSRD
+preplace inst color_lookup_0 -pg 1 -lvl 6 -x 1820 -y 320 -defaultsOSRD
+preplace inst row_fetcher_0 -pg 1 -lvl 3 -x 840 -y 340 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 1200 -y 200 -defaultsOSRD
+preplace inst ilconstant_1 -pg 1 -lvl 3 -x 840 -y 190 -defaultsOSRD
+preplace inst ilconstant_2 -pg 1 -lvl 3 -x 840 -y 460 -defaultsOSRD
+preplace inst color_fetcher_0 -pg 1 -lvl 5 -x 1500 -y 490 -defaultsOSRD
+preplace inst ilconstant_3 -pg 1 -lvl 3 -x 840 -y 560 -defaultsOSRD
+preplace inst ilconstant_4 -pg 1 -lvl 3 -x 840 -y 660 -defaultsOSRD
+preplace netloc I_unbuff_clk_0_1 1 0 1 NJ 800
+preplace netloc TMDS_BLUE_encoded 1 8 1 N 510
+preplace netloc TMDS_GREEN_encoded 1 8 1 2590 140n
+preplace netloc TMDS_RED_encoded 1 8 1 N 320
+preplace netloc blk_mem_gen_0_doutb 1 2 2 690 250 1060J
+preplace netloc clocking_0_O_buff_clk 1 1 3 NJ 830 680 720 1070
+preplace netloc clocking_0_O_buff_clk5xpixel 1 1 8 340J 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 2600
+preplace netloc clocking_0_O_buff_clkpixel 1 1 9 350 820 NJ 820 NJ 820 1340 400 NJ 400 1990 400 2330 230 2610 610 NJ
+preplace netloc color_fetcher_0_color_code 1 5 1 1660 320n
+preplace netloc color_lookup_0_blue_channel 1 6 1 N 340
+preplace netloc color_lookup_0_green_channel 1 6 1 N 320
+preplace netloc color_lookup_0_red_channel 1 6 1 N 300
+preplace netloc draw_box_0_blue_out 1 7 1 2290 310n
+preplace netloc draw_box_0_green_out 1 7 1 2290 130n
+preplace netloc draw_box_0_red_out 1 7 1 2310 270n
+preplace netloc ilconcat_0_dout 1 7 1 2330 520n
+preplace netloc ilconstant_0_dout 1 7 1 2320 140n
+preplace netloc ilconstant_1_dout 1 3 1 1020 150n
+preplace netloc ilconstant_2_dout 1 3 1 1010 170n
+preplace netloc ilconstant_3_dout 1 3 1 1050J 190n
+preplace netloc ilconstant_4_dout 1 3 1 1080J 330n
+preplace netloc output_BLUE_O 1 10 1 3030J 470n
+preplace netloc output_BLUE_OB 1 10 1 NJ 500
+preplace netloc output_GREEN_O 1 10 1 NJ 150
+preplace netloc output_GREEN_OB 1 10 1 3030J 170n
+preplace netloc output_PIX_CLK_O 1 10 1 3030J 590n
+preplace netloc output_PIX_CLK_OB 1 10 1 NJ 620
+preplace netloc output_RED_O 1 10 1 NJ 290
+preplace netloc output_RED_OB 1 10 1 3030J 310n
+preplace netloc row_fetcher_0_LED 1 3 8 990J 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ
+preplace netloc row_fetcher_0_read_addr 1 3 1 1030 230n
+preplace netloc row_fetcher_0_row_data 1 3 2 1000J 400 1320
+preplace netloc serialiser_BLUE_data_out 1 9 1 N 490
+preplace netloc serialiser_GREEN_data_out 1 9 1 N 160
+preplace netloc serialiser_RED_data_out 1 9 1 N 300
+preplace netloc vga_gen_0_blank 1 2 6 650J 730 NJ 730 NJ 730 NJ 730 1980J 700 2300
+preplace netloc vga_gen_0_hsync 1 2 5 NJ 740 NJ 740 NJ 740 NJ 740 1990
+preplace netloc vga_gen_0_pixel_h 1 2 5 670 260 1040J 390 1330 570 NJ 570 1980J
+preplace netloc vga_gen_0_pixel_v 1 2 5 660 10 NJ 10 NJ 10 NJ 10 1990J
+preplace netloc vga_gen_0_vsync 1 2 5 NJ 760 NJ 760 NJ 760 NJ 760 N
+preplace netloc addra_0_1 1 0 4 NJ 80 NJ 80 NJ 80 1070J
+preplace netloc dina_0_1 1 0 4 NJ 140 NJ 140 650J 130 NJ
+preplace netloc clka_0_1 1 0 4 NJ 110 NJ 110 NJ 110 NJ
+preplace cgraphic comment_0 place left 245 589 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 0 180 500 840 1200 1500 1820 2140 2460 2730 2940 3050
+pagesize -pg 1 -db -bbox -sgen -140 0 3200 890
 "
 }
 0
