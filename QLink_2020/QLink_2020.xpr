@@ -114,6 +114,23 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/simple_FSM.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl/pl_side/pl_side.srcs/sources_1/new/simple_FSM.vhd"/>
+          <Attr Name="ImportTime" Val="1771679434"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/com_side/com_side.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/decode_serial.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/decode_serial.vhd"/>
@@ -150,14 +167,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Qlink_SRC_2026_03_24/Qlink_SRC/sindri_qlink_top.vhd"/>
           <Attr Name="ImportTime" Val="1774349235"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/simple_FSM.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl/pl_side/pl_side.srcs/sources_1/new/simple_FSM.vhd"/>
-          <Attr Name="ImportTime" Val="1771679434"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -243,6 +252,33 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
+    <FileSet Name="Qlink_dual_port_inst_0" Type="BlockSrcs" RelSrcDir="$PGENDIR/sources_1/bd/com_side/bd/Qlink_dual_port_inst_0" RelGenDir="$PGENDIR/sources_1/bd/com_side/bd/Qlink_dual_port_inst_0">
+      <File Path="$PGENDIR/sources_1/bd/com_side/bd/Qlink_dual_port_inst_0/Qlink_dual_port_inst_0.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="Qlink_dual_port_inst_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="block_test_inst_0" Type="BlockSrcs" RelSrcDir="$PGENDIR/sources_1/bd/com_side/bd/block_test_inst_0" RelGenDir="$PGENDIR/sources_1/bd/com_side/bd/block_test_inst_0">
+      <File Path="$PGENDIR/sources_1/bd/com_side/bd/block_test_inst_0/block_test_inst_0.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="block_test_inst_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -285,7 +321,7 @@
         <ReportConfig DisplayName="synthesis_report" Name="synth_1_copy_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="block_test_wrapper.vds">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig DisplayName="Utilization - Synth Design" Name="synth_1_copy_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="block_test_wrapper_utilization_synth_1.rpt" Version="1" Minor="0">
+        <ReportConfig DisplayName="Utilization - Synth Design" Name="synth_1_copy_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="block_test_wrapper_utilization_synth.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
         </ReportConfig>

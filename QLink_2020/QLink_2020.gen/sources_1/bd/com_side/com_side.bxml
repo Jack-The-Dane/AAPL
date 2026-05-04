@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="43">
+  <CompositeFile CompositeFileTopName="com_side" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1777635755"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1777635755"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1777635755"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1777635755"/>
+    <Generation Name="INSTANTIATION_TEMPLATE" State="STALE" Timestamp="1777636509"/>
+    <FileCollection Name="SOURCES" Type="SOURCES"/>
+    <BlockContainerCollection>
+      <BlockContainer InstPath="/block_test_0" IsPR="false" State="Stale">
+        <ActiveVariantSynth FileName="bd/block_test_inst_0/block_test_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd/block_test_inst_0/block_test_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd/block_test_inst_0/block_test_inst_0.bd" BDFileset="block_test_inst_0" BDSourceFile="../../../../QLink_2020.srcs/sources_1/bd/block_test/block_test.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+    </BlockContainerCollection>
+    <ReferenceCollection>
+      <ModuleReference TargetName="block_test" Type="Block Design" SubInstancePath="com_side_block_test_0">
+        <TopFile Name="../../../../QLink_2020.srcs/sources_1/bd/block_test/block_test.bd"/>
+        <FileCollection>
+          <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd"/>
+          <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd"/>
+          <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd"/>
+          <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd"/>
+          <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd"/>
+          <File Name="../../../../QLink_2020.srcs/sources_1/new/read_write_selector.vhd"/>
+          <File Name="../../../../QLink_2020.srcs/sources_1/bd/block_test/block_test.bd"/>
+        </FileCollection>
+      </ModuleReference>
+    </ReferenceCollection>
+  </CompositeFile>
+</Root>

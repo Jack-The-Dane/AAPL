@@ -1,25 +1,31 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xFE2A3FADB3A1671E",
+      "boundary_crc": "0x6BA223B66BA223B6",
+      "design_src": "/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.srcs/sources_1/bd/Qlink_dual_port/Qlink_dual_port.bd",
       "device": "xc7s15ftgb196-1",
-      "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/block_test",
-      "name": "block_test",
+      "name": "Qlink_dual_port_inst_0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "None",
+      "synth_flow_mode": "Hierarchical",
       "tool_version": "2025.2",
-      "validated": "true"
+      "validated": "true",
+      "variant": "true"
     },
     "design_tree": {
       "Sindri_QLink_top_0": "",
       "blk_mem_gen_0": "",
       "enable_0": "",
-      "reset_0": "",
-      "read_write_selector_0": ""
+      "enable_1": "",
+      "reset_0": ""
     },
     "ports": {
-      "CLK12": {
+      "CLK12_I": {
         "direction": "I"
+      },
+      "LED_1": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
       },
       "RX_I": {
         "direction": "I"
@@ -27,27 +33,13 @@
       "TX_O": {
         "direction": "O"
       },
-      "LED_1": {
-        "direction": "O",
-        "left": "3",
-        "right": "0"
-      },
-      "add_read": {
-        "direction": "I"
-      },
-      "add_write": {
-        "direction": "I"
-      },
-      "cs_i": {
-        "direction": "I"
-      },
-      "dout_o": {
-        "direction": "O",
+      "addrb_0": {
+        "direction": "I",
         "left": "31",
         "right": "0"
       },
-      "button_in": {
-        "direction": "I",
+      "doutb_0": {
+        "direction": "O",
         "left": "31",
         "right": "0"
       }
@@ -56,8 +48,8 @@
       "Sindri_QLink_top_0": {
         "vlnv": "xilinx.com:module_ref:Sindri_QLink_top:1.0",
         "ip_revision": "1",
-        "xci_name": "block_test_Sindri_QLink_top_0_0",
-        "xci_path": "ip/block_test_Sindri_QLink_top_0_0/block_test_Sindri_QLink_top_0_0.xci",
+        "xci_name": "Qlink_dual_port_inst_0_Sindri_QLink_top_0_0",
+        "xci_path": "ip/Qlink_dual_port_inst_0_Sindri_QLink_top_0_0/Qlink_dual_port_inst_0_Sindri_QLink_top_0_0.xci",
         "inst_hier_path": "Sindri_QLink_top_0",
         "has_run_ip_tcl": "true",
         "reference_info": {
@@ -108,8 +100,8 @@
       "blk_mem_gen_0": {
         "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
         "ip_revision": "12",
-        "xci_name": "block_test_blk_mem_gen_0_0",
-        "xci_path": "ip/block_test_blk_mem_gen_0_0/block_test_blk_mem_gen_0_0.xci",
+        "xci_name": "Qlink_dual_port_inst_0_blk_mem_gen_0_0",
+        "xci_path": "ip/Qlink_dual_port_inst_0_blk_mem_gen_0_0/Qlink_dual_port_inst_0_blk_mem_gen_0_0.xci",
         "inst_hier_path": "blk_mem_gen_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -121,16 +113,32 @@
       "enable_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "10",
-        "xci_name": "block_test_xlconstant_0_0",
-        "xci_path": "ip/block_test_xlconstant_0_0/block_test_xlconstant_0_0.xci",
+        "xci_name": "Qlink_dual_port_inst_0_enable_0_0",
+        "xci_path": "ip/Qlink_dual_port_inst_0_enable_0_0/Qlink_dual_port_inst_0_enable_0_0.xci",
         "inst_hier_path": "enable_0",
         "has_run_ip_tcl": "true"
+      },
+      "enable_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "Qlink_dual_port_inst_0_enable_1_0",
+        "xci_path": "ip/Qlink_dual_port_inst_0_enable_1_0/Qlink_dual_port_inst_0_enable_1_0.xci",
+        "inst_hier_path": "enable_1",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0000"
+          },
+          "CONST_WIDTH": {
+            "value": "4"
+          }
+        }
       },
       "reset_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "10",
-        "xci_name": "block_test_enable_0_0",
-        "xci_path": "ip/block_test_enable_0_0/block_test_enable_0_0.xci",
+        "xci_name": "Qlink_dual_port_inst_0_reset_0_0",
+        "xci_path": "ip/Qlink_dual_port_inst_0_reset_0_0/Qlink_dual_port_inst_0_reset_0_0.xci",
         "inst_hier_path": "reset_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -138,68 +146,19 @@
             "value": "0"
           }
         }
-      },
-      "read_write_selector_0": {
-        "vlnv": "xilinx.com:module_ref:read_write_selector:1.0",
-        "ip_revision": "1",
-        "xci_name": "block_test_read_write_selector_0_0",
-        "xci_path": "ip/block_test_read_write_selector_0_0/block_test_read_write_selector_0_0.xci",
-        "inst_hier_path": "read_write_selector_0",
-        "has_run_ip_tcl": "true",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "read_write_selector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "address_read": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "address_write": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "cs_in": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "address_out": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "web_out": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          }
-        }
       }
     },
     "nets": {
       "CLK12_I_1": {
         "ports": [
-          "CLK12",
-          "Sindri_QLink_top_0/CLK12_I",
-          "read_write_selector_0/clk"
+          "CLK12_I",
+          "Sindri_QLink_top_0/CLK12_I"
         ]
       },
       "Net": {
         "ports": [
           "Sindri_QLink_top_0/ADDR_O",
           "blk_mem_gen_0/addra"
-        ]
-      },
-      "RX_I3_1": {
-        "ports": [
-          "cs_i",
-          "read_write_selector_0/cs_in"
         ]
       },
       "RX_I_0_1": {
@@ -239,16 +198,10 @@
           "blk_mem_gen_0/wea"
         ]
       },
-      "add_read_1": {
+      "addrb_0_1": {
         "ports": [
-          "add_read",
-          "read_write_selector_0/address_read"
-        ]
-      },
-      "add_write_1": {
-        "ports": [
-          "add_write",
-          "read_write_selector_0/address_write"
+          "addrb_0",
+          "blk_mem_gen_0/addrb"
         ]
       },
       "blk_mem_gen_0_douta": {
@@ -260,13 +213,7 @@
       "blk_mem_gen_0_doutb": {
         "ports": [
           "blk_mem_gen_0/doutb",
-          "dout_o"
-        ]
-      },
-      "dinb_0_1": {
-        "ports": [
-          "button_in",
-          "blk_mem_gen_0/dinb"
+          "doutb_0"
         ]
       },
       "enable_1_dout": {
@@ -276,15 +223,9 @@
           "blk_mem_gen_0/rstb"
         ]
       },
-      "read_write_selector_0_address_out": {
+      "enable_1_dout2": {
         "ports": [
-          "read_write_selector_0/address_out",
-          "blk_mem_gen_0/addrb"
-        ]
-      },
-      "read_write_selector_0_web_out": {
-        "ports": [
-          "read_write_selector_0/web_out",
+          "enable_1/dout",
           "blk_mem_gen_0/web"
         ]
       },

@@ -1,0 +1,441 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x3A0AA7A5E58C124A",
+      "device": "xc7s15ftgb196-1",
+      "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/com_side",
+      "name": "com_side",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2"
+    },
+    "design_tree": {
+      "simple_button_fsm_0": "",
+      "simple_button_fsm_1": "",
+      "simple_button_fsm_2": "",
+      "simple_button_fsm_3": "",
+      "xlconcat_0": "",
+      "block_test_0": ""
+    },
+    "ports": {
+      "button_0": {
+        "direction": "I"
+      },
+      "button_1": {
+        "direction": "I"
+      },
+      "button_2": {
+        "direction": "I"
+      },
+      "button_3": {
+        "direction": "I"
+      },
+      "rst": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "CLK12_I": {
+        "direction": "I"
+      },
+      "RX_I": {
+        "direction": "I"
+      },
+      "TX_O": {
+        "direction": "O"
+      },
+      "LED_1": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "cs_i": {
+        "direction": "I"
+      },
+      "add_read": {
+        "direction": "I"
+      },
+      "add_write": {
+        "direction": "I"
+      },
+      "dout_o": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      }
+    },
+    "components": {
+      "simple_button_fsm_0": {
+        "vlnv": "xilinx.com:module_ref:simple_button_fsm:1.0",
+        "ip_revision": "1",
+        "xci_name": "com_side_simple_button_fsm_0_0",
+        "xci_path": "ip/com_side_simple_button_fsm_0_0/com_side_simple_button_fsm_0_0.xci",
+        "inst_hier_path": "simple_button_fsm_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "simple_button_fsm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "button": {
+            "direction": "I"
+          },
+          "button_out": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "MSB": {
+            "direction": "O"
+          },
+          "LSB": {
+            "direction": "O"
+          }
+        }
+      },
+      "simple_button_fsm_1": {
+        "vlnv": "xilinx.com:module_ref:simple_button_fsm:1.0",
+        "ip_revision": "1",
+        "xci_name": "com_side_simple_button_fsm_0_1",
+        "xci_path": "ip/com_side_simple_button_fsm_0_1/com_side_simple_button_fsm_0_1.xci",
+        "inst_hier_path": "simple_button_fsm_1",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "simple_button_fsm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "button": {
+            "direction": "I"
+          },
+          "button_out": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "MSB": {
+            "direction": "O"
+          },
+          "LSB": {
+            "direction": "O"
+          }
+        }
+      },
+      "simple_button_fsm_2": {
+        "vlnv": "xilinx.com:module_ref:simple_button_fsm:1.0",
+        "ip_revision": "1",
+        "xci_name": "com_side_simple_button_fsm_0_2",
+        "xci_path": "ip/com_side_simple_button_fsm_0_2/com_side_simple_button_fsm_0_2.xci",
+        "inst_hier_path": "simple_button_fsm_2",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "simple_button_fsm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "button": {
+            "direction": "I"
+          },
+          "button_out": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "MSB": {
+            "direction": "O"
+          },
+          "LSB": {
+            "direction": "O"
+          }
+        }
+      },
+      "simple_button_fsm_3": {
+        "vlnv": "xilinx.com:module_ref:simple_button_fsm:1.0",
+        "ip_revision": "1",
+        "xci_name": "com_side_simple_button_fsm_2_0",
+        "xci_path": "ip/com_side_simple_button_fsm_2_0/com_side_simple_button_fsm_2_0.xci",
+        "inst_hier_path": "simple_button_fsm_3",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "simple_button_fsm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "button": {
+            "direction": "I"
+          },
+          "button_out": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "MSB": {
+            "direction": "O"
+          },
+          "LSB": {
+            "direction": "O"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "7",
+        "xci_name": "com_side_xlconcat_0_0",
+        "xci_path": "ip/com_side_xlconcat_0_0/com_side_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "block_test_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "block_test.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "block_test.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "block_test.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "block_test.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "CLK12": {
+            "direction": "I"
+          },
+          "RX_I": {
+            "direction": "I"
+          },
+          "TX_O": {
+            "direction": "O"
+          },
+          "LED_1": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "add_read": {
+            "direction": "I"
+          },
+          "add_write": {
+            "direction": "I"
+          },
+          "cs_i": {
+            "direction": "I"
+          },
+          "dout_o": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "button_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        },
+        "post_compiled_compname": "block_test_inst_0",
+        "architecture": "spartan7",
+        "variant_info": {
+          "block_test.bd": {
+            "scoped_diagram": "block_test_inst_0.bd",
+            "design_checksum": "0x461BED1FFE2A3FAD",
+            "ref_name": "block_test",
+            "ref_subinst_path": "com_side_block_test_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      }
+    },
+    "nets": {
+      "CLK12_I_0_1": {
+        "ports": [
+          "CLK12_I",
+          "simple_button_fsm_0/clk",
+          "simple_button_fsm_1/clk",
+          "simple_button_fsm_3/clk",
+          "simple_button_fsm_2/clk",
+          "block_test_0/CLK12"
+        ]
+      },
+      "RX_I_0_1": {
+        "ports": [
+          "RX_I",
+          "block_test_0/RX_I"
+        ]
+      },
+      "add_read_0_1": {
+        "ports": [
+          "add_read",
+          "block_test_0/add_read"
+        ]
+      },
+      "add_write_0_1": {
+        "ports": [
+          "add_write",
+          "block_test_0/add_write"
+        ]
+      },
+      "block_test_0_LED_1": {
+        "ports": [
+          "block_test_0/LED_1",
+          "LED_1"
+        ]
+      },
+      "block_test_0_TX_O": {
+        "ports": [
+          "block_test_0/TX_O",
+          "TX_O"
+        ]
+      },
+      "block_test_0_dout_o": {
+        "ports": [
+          "block_test_0/dout_o",
+          "dout_o"
+        ]
+      },
+      "button_0_1": {
+        "ports": [
+          "button_0",
+          "simple_button_fsm_1/button"
+        ]
+      },
+      "button_1_1": {
+        "ports": [
+          "button_1",
+          "simple_button_fsm_0/button"
+        ]
+      },
+      "button_2_1": {
+        "ports": [
+          "button_2",
+          "simple_button_fsm_3/button"
+        ]
+      },
+      "button_3_1": {
+        "ports": [
+          "button_3",
+          "simple_button_fsm_2/button"
+        ]
+      },
+      "cs_i_0_1": {
+        "ports": [
+          "cs_i",
+          "block_test_0/cs_i"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "rst",
+          "simple_button_fsm_2/reset",
+          "simple_button_fsm_1/reset",
+          "simple_button_fsm_3/reset",
+          "simple_button_fsm_0/reset"
+        ]
+      },
+      "simple_button_fsm_0_button_out": {
+        "ports": [
+          "simple_button_fsm_0/button_out",
+          "xlconcat_0/In0"
+        ]
+      },
+      "simple_button_fsm_1_button_out": {
+        "ports": [
+          "simple_button_fsm_1/button_out",
+          "xlconcat_0/In1"
+        ]
+      },
+      "simple_button_fsm_2_button_out": {
+        "ports": [
+          "simple_button_fsm_2/button_out",
+          "xlconcat_0/In3"
+        ]
+      },
+      "simple_button_fsm_3_button_out": {
+        "ports": [
+          "simple_button_fsm_3/button_out",
+          "xlconcat_0/In2"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "block_test_0/button_in"
+        ]
+      }
+    }
+  }
+}
