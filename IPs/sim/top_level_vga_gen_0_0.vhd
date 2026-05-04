@@ -72,17 +72,17 @@ ARCHITECTURE top_level_vga_gen_0_0_arch OF top_level_vga_gen_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF top_level_vga_gen_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT vga_gen IS
     GENERIC (
-      hRez : ;
-      hStartSync : ;
-      hEndSync : ;
-      hMaxCount : ;
-      hsyncActive : ;
-      vRez : ;
-      vStartSync : ;
-      vEndSync : ;
-      vMaxCount : ;
-      vsyncActive : ;
-      prefetch_idx : 
+      hRez : INTEGER;
+      hStartSync : INTEGER;
+      hEndSync : INTEGER;
+      hMaxCount : INTEGER;
+      hsyncActive : STD_LOGIC;
+      vRez : INTEGER;
+      vStartSync : INTEGER;
+      vEndSync : INTEGER;
+      vMaxCount : INTEGER;
+      vsyncActive : STD_LOGIC;
+      prefetch_idx : INTEGER
     );
     PORT (
       pixel_clock : IN STD_LOGIC;
@@ -105,17 +105,17 @@ ARCHITECTURE top_level_vga_gen_0_0_arch OF top_level_vga_gen_0_0 IS
 BEGIN
   U0 : vga_gen
     GENERIC MAP (
-      hRez => ,
-      hStartSync => ,
-      hEndSync => ,
-      hMaxCount => ,
-      hsyncActive => ,
-      vRez => ,
-      vStartSync => ,
-      vEndSync => ,
-      vMaxCount => ,
-      vsyncActive => ,
-      prefetch_idx => 
+      hRez => 1920,
+      hStartSync => 2008,
+      hEndSync => 2052,
+      hMaxCount => 2200,
+      hsyncActive => '0',
+      vRez => 1080,
+      vStartSync => 1084,
+      vEndSync => 1089,
+      vMaxCount => 1125,
+      vsyncActive => '1',
+      prefetch_idx => 8
     )
     PORT MAP (
       pixel_clock => pixel_clock,

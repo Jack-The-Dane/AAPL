@@ -68,9 +68,9 @@ ARCHITECTURE top_level_clocking_0_0_arch OF top_level_clocking_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF top_level_clocking_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT clocking IS
     GENERIC (
-      in_mul : ;
-      pix_div : ;
-      pix5x_div : 
+      in_mul : INTEGER;
+      pix_div : INTEGER;
+      pix5x_div : INTEGER
     );
     PORT (
       I_unbuff_clk : IN STD_LOGIC;
@@ -92,9 +92,9 @@ ARCHITECTURE top_level_clocking_0_0_arch OF top_level_clocking_0_0 IS
 BEGIN
   U0 : clocking
     GENERIC MAP (
-      in_mul => ,
-      pix_div => ,
-      pix5x_div => 
+      in_mul => 30,
+      pix_div => 5,
+      pix5x_div => 1
     )
     PORT MAP (
       I_unbuff_clk => I_unbuff_clk,

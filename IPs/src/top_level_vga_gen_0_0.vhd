@@ -72,17 +72,17 @@ ARCHITECTURE top_level_vga_gen_0_0_arch OF top_level_vga_gen_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF top_level_vga_gen_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT vga_gen IS
     GENERIC (
-      hRez : ;
-      hStartSync : ;
-      hEndSync : ;
-      hMaxCount : ;
-      hsyncActive : ;
-      vRez : ;
-      vStartSync : ;
-      vEndSync : ;
-      vMaxCount : ;
-      vsyncActive : ;
-      prefetch_idx : 
+      hRez : INTEGER;
+      hStartSync : INTEGER;
+      hEndSync : INTEGER;
+      hMaxCount : INTEGER;
+      hsyncActive : STD_LOGIC;
+      vRez : INTEGER;
+      vStartSync : INTEGER;
+      vEndSync : INTEGER;
+      vMaxCount : INTEGER;
+      vsyncActive : STD_LOGIC;
+      prefetch_idx : INTEGER
     );
     PORT (
       pixel_clock : IN STD_LOGIC;
@@ -102,6 +102,8 @@ ARCHITECTURE top_level_vga_gen_0_0_arch OF top_level_vga_gen_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE OF top_level_vga_gen_0_0_arch : ARCHITECTURE IS "top_level_vga_gen_0_0,vga_gen,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
   ATTRIBUTE CORE_GENERATION_INFO OF top_level_vga_gen_0_0_arch: ARCHITECTURE IS "top_level_vga_gen_0_0,vga_gen,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=vga_gen,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,hRez=1920,hStartSync=2008,hEndSync=2052,hMaxCount=2200,hsyncActive=0,vRez=1080,vStartSync=1084,vEndSync=1089,vMaxCount=1125,vsyncActive=1,prefetch_idx=8}";
+  ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
+  ATTRIBUTE IP_DEFINITION_SOURCE OF top_level_vga_gen_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_MODE : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
@@ -111,17 +113,17 @@ ARCHITECTURE top_level_vga_gen_0_0_arch OF top_level_vga_gen_0_0 IS
 BEGIN
   U0 : vga_gen
     GENERIC MAP (
-      hRez => ,
-      hStartSync => ,
-      hEndSync => ,
-      hMaxCount => ,
-      hsyncActive => ,
-      vRez => ,
-      vStartSync => ,
-      vEndSync => ,
-      vMaxCount => ,
-      vsyncActive => ,
-      prefetch_idx => 
+      hRez => 1920,
+      hStartSync => 2008,
+      hEndSync => 2052,
+      hMaxCount => 2200,
+      hsyncActive => '0',
+      vRez => 1080,
+      vStartSync => 1084,
+      vEndSync => 1089,
+      vMaxCount => 1125,
+      vsyncActive => '1',
+      prefetch_idx => 8
     )
     PORT MAP (
       pixel_clock => pixel_clock,

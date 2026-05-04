@@ -68,9 +68,9 @@ ARCHITECTURE top_level_clocking_0_0_arch OF top_level_clocking_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF top_level_clocking_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT clocking IS
     GENERIC (
-      in_mul : ;
-      pix_div : ;
-      pix5x_div : 
+      in_mul : INTEGER;
+      pix_div : INTEGER;
+      pix5x_div : INTEGER
     );
     PORT (
       I_unbuff_clk : IN STD_LOGIC;
@@ -86,6 +86,8 @@ ARCHITECTURE top_level_clocking_0_0_arch OF top_level_clocking_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE OF top_level_clocking_0_0_arch : ARCHITECTURE IS "top_level_clocking_0_0,clocking,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
   ATTRIBUTE CORE_GENERATION_INFO OF top_level_clocking_0_0_arch: ARCHITECTURE IS "top_level_clocking_0_0,clocking,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=clocking,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,in_mul=30,pix_div=5,pix5x_div=1}";
+  ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
+  ATTRIBUTE IP_DEFINITION_SOURCE OF top_level_clocking_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_MODE : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
@@ -98,9 +100,9 @@ ARCHITECTURE top_level_clocking_0_0_arch OF top_level_clocking_0_0 IS
 BEGIN
   U0 : clocking
     GENERIC MAP (
-      in_mul => ,
-      pix_div => ,
-      pix5x_div => 
+      in_mul => 30,
+      pix_div => 5,
+      pix5x_div => 1
     )
     PORT MAP (
       I_unbuff_clk => I_unbuff_clk,

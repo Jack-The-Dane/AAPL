@@ -83,7 +83,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b2950ed1</spirit:value>
+            <spirit:value>ecb7f9da</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -102,7 +102,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3bc7985a</spirit:value>
+            <spirit:value>16728d38</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -427,7 +427,6 @@
         <spirit:name>src/top_level_blk_mem_gen_0_0/top_level_blk_mem_gen_0_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_blk_mem_gen_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/color_fetcher.vhd</spirit:name>
@@ -449,7 +448,7 @@
       <spirit:file>
         <spirit:name>src/top_level.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e369fafe</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_0d8f5762</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -584,7 +583,6 @@
         <spirit:name>src/top_level_blk_mem_gen_0_0/top_level_blk_mem_gen_0_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_blk_mem_gen_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/color_fetcher.vhd</spirit:name>
@@ -640,7 +638,7 @@
       <xilinx:displayName>top_level_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-05-04T09:40:17Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2026-05-04T10:19:57Z</xilinx:coreCreationDateTime>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK25_I.FREQ_HZ" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
@@ -648,7 +646,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2025.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="85867464"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c601d6b5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0ec0822d"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b1c4ecc0"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="fa7776a5"/>
     </xilinx:packagingInfo>

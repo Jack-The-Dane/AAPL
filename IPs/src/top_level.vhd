@@ -2,8 +2,8 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Mon May  4 11:35:39 2026
---Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+--Date        : Mon May  4 12:18:49 2026
+--Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 --Command     : generate_target top_level.bd
 --Design      : top_level
 --Purpose     : IP block netlist
