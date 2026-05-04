@@ -1,0 +1,11 @@
+vhdl xil_defaultlib  \
+"../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/sim/block_test_inst_0_Sindri_QLink_top_0_0.vhd" \
+"../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/sim/block_test_inst_0.vhd" \
+"../../../bd/com_side/ip/com_side_simple_button_fsm_0_0/sim/com_side_simple_button_fsm_0_0.vhd" \
+"../../../bd/com_side/ip/com_side_simple_button_fsm_0_1/sim/com_side_simple_button_fsm_0_1.vhd" \
+"../../../bd/com_side/ip/com_side_simple_button_fsm_0_2/sim/com_side_simple_button_fsm_0_2.vhd" \
+"../../../bd/com_side/ip/com_side_simple_button_fsm_2_0/sim/com_side_simple_button_fsm_2_0.vhd" \
+"../../../bd/com_side/sim/com_side.vhd" \
+
+# Do not sort compile order
+nosort

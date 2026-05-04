@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4C167E3167E348B9",
+      "boundary_crc": "0x611EB77B0C2604AD",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/com_side",
       "name": "com_side",
@@ -59,14 +59,6 @@
         "left": "3",
         "right": "0"
       },
-      "cs_i": {
-        "direction": "I"
-      },
-      "dout_o": {
-        "direction": "O",
-        "left": "31",
-        "right": "0"
-      },
       "q_data_o_0": {
         "direction": "O",
         "left": "31",
@@ -76,6 +68,14 @@
         "direction": "O",
         "left": "7",
         "right": "0"
+      },
+      "addrb_i": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "qlink_clk_o": {
+        "direction": "O"
       }
     },
     "components": {
@@ -304,11 +304,6 @@
             "left": "3",
             "right": "0"
           },
-          "dout_o": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
           "button_in": {
             "direction": "I",
             "left": "7",
@@ -330,10 +325,8 @@
             "left": "7",
             "right": "0"
           },
-          "q_data_o": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
+          "qlink_clk_o": {
+            "direction": "O"
           }
         },
         "post_compiled_compname": "block_test_inst_0",
@@ -341,7 +334,7 @@
         "variant_info": {
           "block_test.bd": {
             "scoped_diagram": "block_test_inst_0.bd",
-            "design_checksum": "0xA6ED70766B6231A4",
+            "design_checksum": "0x124CB0372EFA45D2",
             "ref_name": "block_test",
             "ref_subinst_path": "com_side_block_test_0",
             "ref_type": "Block Design",
@@ -368,6 +361,12 @@
           "block_test_0/RX_I"
         ]
       },
+      "addrb_0_0_1": {
+        "ports": [
+          "addrb_i",
+          "block_test_0/addrb_0"
+        ]
+      },
       "block_test_0_LED_1": {
         "ports": [
           "block_test_0/LED_1",
@@ -380,12 +379,6 @@
           "TX_O"
         ]
       },
-      "block_test_0_dout_o": {
-        "ports": [
-          "block_test_0/dout_o",
-          "dout_o"
-        ]
-      },
       "block_test_0_q_addr_o": {
         "ports": [
           "block_test_0/q_addr_o",
@@ -394,8 +387,13 @@
       },
       "block_test_0_q_data_o": {
         "ports": [
-          "block_test_0/q_data_o",
           "q_data_o_0"
+        ]
+      },
+      "block_test_0_qlink_clk_o": {
+        "ports": [
+          "block_test_0/qlink_clk_o",
+          "qlink_clk_o"
         ]
       },
       "button_0_1": {
@@ -420,11 +418,6 @@
         "ports": [
           "button_3",
           "simple_button_fsm_2/button"
-        ]
-      },
-      "cs_i_0_1": {
-        "ports": [
-          "cs_i"
         ]
       },
       "reset_0_1": {

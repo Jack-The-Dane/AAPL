@@ -1,0 +1,60 @@
+
+*** Running vivado
+    with args -log main_top_top_level_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_top_top_level_0_0.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon May  4 11:45:32 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source main_top_top_level_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/kasper-ubuntu/Documents/APPL_project_tetris/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/kasper-ubuntu/Vivado/2025.2/data/ip'.
+Command: synth_design -top main_top_top_level_0_0 -part xc7s15ftgb196-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28681
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2164.391 ; gain = 481.562 ; free physical = 11172 ; free virtual = 13353
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2716] syntax error near ';' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:75]
+ERROR: [Synth 8-10610] constant 'pixel_h' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:89]
+ERROR: [Synth 8-10610] constant 'pixel_v' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:90]
+ERROR: [Synth 8-10610] constant 'pixel_h_pref' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:91]
+ERROR: [Synth 8-10610] constant 'pixel_v_pref' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:92]
+ERROR: [Synth 8-10610] constant 'blank_pref' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:93]
+ERROR: [Synth 8-10610] constant 'blank' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:94]
+ERROR: [Synth 8-10610] constant 'hsync' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:95]
+ERROR: [Synth 8-10610] constant 'vsync' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:96]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:114]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:115]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:116]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:117]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:118]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:119]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:120]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:121]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:122]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd:123]
+ERROR: [Synth 8-12189] Failed to read vhdl '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/ee30/src/top_level_vga_gen_0_0.vhd'
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2333.328 ; gain = 650.500 ; free physical = 11093 ; free virtual = 13274
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+9 Infos, 0 Warnings, 0 Critical Warnings and 21 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2333.336 ; gain = 770.617 ; free physical = 11093 ; free virtual = 13274
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1841.611; main = 1537.021; forked = 304.591
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3328.238; main = 2333.332; forked = 994.922
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 11:45:54 2026...

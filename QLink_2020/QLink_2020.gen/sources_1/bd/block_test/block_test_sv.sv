@@ -54,23 +54,35 @@
 
 module block_test_sv (
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire CLK12_I,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [3:0] LED_O,
+  input wire CLK12,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire RX_I,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire TX_O,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [3:0] LED_1
+  output wire [3:0] LED_1,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [31:0] dout_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [31:0] button_in,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [31:0] addrb_0,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [7:0] q_addr_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [31:0] q_data_o
 );
 
   block_test inst (
-    .CLK12_I(CLK12_I),
-    .LED_O(LED_O),
+    .CLK12(CLK12),
     .RX_I(RX_I),
     .TX_O(TX_O),
-    .LED_1(LED_1)
+    .LED_1(LED_1),
+    .dout_o(dout_o),
+    .button_in(button_in),
+    .addrb_0(addrb_0),
+    .q_addr_o(q_addr_o),
+    .q_data_o(q_data_o)
   );
 
 endmodule

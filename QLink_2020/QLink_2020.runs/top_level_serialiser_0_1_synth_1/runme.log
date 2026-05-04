@@ -1,0 +1,228 @@
+
+*** Running vivado
+    with args -log top_level_serialiser_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_serialiser_0_1.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon May  4 11:50:14 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_level_serialiser_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1613.793 ; gain = 64.055 ; free physical = 6599 ; free virtual = 8908
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/kasper-ubuntu/Documents/APPL_project_tetris/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/kasper-ubuntu/Vivado/2025.2/data/ip'.
+Command: synth_design -top top_level_serialiser_0_1 -part xc7s15ftgb196-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31317
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2164.277 ; gain = 482.156 ; free physical = 4302 ; free virtual = 6614
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level_serialiser_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_serialiser_0_1/synth/top_level_serialiser_0_1.vhd:65]
+INFO: [Synth 8-3491] module 'serialiser' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/sources_1/new/serialiser.vhd:34' bound to instance 'U0' of component 'serialiser' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_serialiser_0_1/synth/top_level_serialiser_0_1.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'serialiser' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/sources_1/new/serialiser.vhd:41]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'OSERDESE2_master' to cell 'OSERDESE2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/sources_1/new/serialiser.vhd:53]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'OSERDESE2_slave' to cell 'OSERDESE2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/sources_1/new/serialiser.vhd:104]
+INFO: [Synth 8-256] done synthesizing module 'serialiser' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/sources_1/new/serialiser.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'top_level_serialiser_0_1' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_serialiser_0_1/synth/top_level_serialiser_0_1.vhd:65]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2252.246 ; gain = 570.125 ; free physical = 4255 ; free virtual = 6569
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2264.121 ; gain = 582.000 ; free physical = 4253 ; free virtual = 6569
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2264.121 ; gain = 582.000 ; free physical = 4253 ; free virtual = 6569
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2267.090 ; gain = 0.000 ; free physical = 4252 ; free virtual = 6567
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2313.047 ; gain = 0.000 ; free physical = 4261 ; free virtual = 6577
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2313.082 ; gain = 0.000 ; free physical = 4261 ; free virtual = 6577
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2313.082 ; gain = 630.961 ; free physical = 3966 ; free virtual = 6283
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2321.051 ; gain = 638.930 ; free physical = 3965 ; free virtual = 6283
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2321.051 ; gain = 638.930 ; free physical = 3962 ; free virtual = 6280
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 2321.051 ; gain = 638.930 ; free physical = 3933 ; free virtual = 6252
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 2321.051 ; gain = 638.930 ; free physical = 6559 ; free virtual = 8875
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 2321.051 ; gain = 638.930 ; free physical = 6559 ; free virtual = 8875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 2321.051 ; gain = 638.930 ; free physical = 6559 ; free virtual = 8875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 2454.863 ; gain = 772.742 ; free physical = 9563 ; free virtual = 11874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 2454.863 ; gain = 772.742 ; free physical = 9563 ; free virtual = 11874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 2454.863 ; gain = 772.742 ; free physical = 9563 ; free virtual = 11874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 2454.863 ; gain = 772.742 ; free physical = 9563 ; free virtual = 11874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 2454.863 ; gain = 772.742 ; free physical = 9563 ; free virtual = 11874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 2454.863 ; gain = 772.742 ; free physical = 9563 ; free virtual = 11874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |OSERDESE2 |     2|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 2454.863 ; gain = 772.742 ; free physical = 9563 ; free virtual = 11874
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2454.863 ; gain = 723.781 ; free physical = 9563 ; free virtual = 11874
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 2454.871 ; gain = 772.742 ; free physical = 9563 ; free virtual = 11874
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2454.871 ; gain = 0.000 ; free physical = 9563 ; free virtual = 11874
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2559.363 ; gain = 0.000 ; free physical = 9058 ; free virtual = 11369
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d5685eb8
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:05 . Memory (MB): peak = 2559.398 ; gain = 945.605 ; free physical = 9023 ; free virtual = 11335
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1678.050; main = 1520.333; forked = 236.565
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3449.773; main = 2559.367; forked = 994.922
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2583.375 ; gain = 0.000 ; free physical = 9010 ; free virtual = 11322
+INFO: [Common 17-1381] The checkpoint '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/top_level_serialiser_0_1_synth_1/top_level_serialiser_0_1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_level_serialiser_0_1_utilization_synth.rpt -pb top_level_serialiser_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 11:51:40 2026...

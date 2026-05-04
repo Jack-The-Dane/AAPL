@@ -1,0 +1,288 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x85A1B677F7750AB8",
+      "device": "xc7s15ftgb196-1",
+      "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/main_top",
+      "name": "main_top",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2"
+    },
+    "design_tree": {
+      "com_side_wrapper_0": "",
+      "xlconstant_0": "",
+      "top_level_0": ""
+    },
+    "ports": {
+      "RX_I": {
+        "direction": "I"
+      },
+      "bb_30": {
+        "direction": "I"
+      },
+      "bb_21": {
+        "direction": "I"
+      },
+      "bb_27": {
+        "direction": "I"
+      },
+      "bb_24": {
+        "direction": "I"
+      },
+      "CLK12_I": {
+        "direction": "I"
+      },
+      "rst": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "CLK25_I": {
+        "direction": "I"
+      },
+      "TX_O": {
+        "direction": "O"
+      },
+      "hdmi_clk_p": {
+        "type": "clk",
+        "direction": "O"
+      },
+      "hdmi_green_n": {
+        "direction": "O"
+      },
+      "hdmi_blue_n": {
+        "direction": "O"
+      },
+      "hdmi_green_p": {
+        "direction": "O"
+      },
+      "hdmi_red_n": {
+        "direction": "O"
+      },
+      "hdmi_blue_p": {
+        "direction": "O"
+      },
+      "hdmi_clk_n": {
+        "type": "clk",
+        "direction": "O"
+      },
+      "hdmi_red_p": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "com_side_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:com_side_wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "main_top_com_side_wrapper_0_0",
+        "xci_path": "ip/main_top_com_side_wrapper_0_0/main_top_com_side_wrapper_0_0.xci",
+        "inst_hier_path": "com_side_wrapper_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "com_side_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK12_I": {
+            "direction": "I"
+          },
+          "LED_1": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "RX_I": {
+            "direction": "I"
+          },
+          "TX_O": {
+            "direction": "O"
+          },
+          "addrb_i": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "button_0": {
+            "direction": "I"
+          },
+          "button_1": {
+            "direction": "I"
+          },
+          "button_2": {
+            "direction": "I"
+          },
+          "button_3": {
+            "direction": "I"
+          },
+          "q_addr_o_0": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "q_data_o_0": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "qlink_clk_o": {
+            "direction": "O"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "main_top_xlconstant_0_0",
+        "xci_path": "ip/main_top_xlconstant_0_0/main_top_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CONST_WIDTH": {
+            "value": "31"
+          }
+        }
+      },
+      "top_level_0": {
+        "vlnv": "user.org:user:top_level:1.0",
+        "ip_revision": "2",
+        "xci_name": "main_top_top_level_0_0",
+        "xci_path": "ip/main_top_top_level_0_0/main_top_top_level_0_0.xci",
+        "inst_hier_path": "top_level_0",
+        "has_run_ip_tcl": "true"
+      }
+    },
+    "nets": {
+      "CLK12_I_0_1": {
+        "ports": [
+          "CLK12_I",
+          "com_side_wrapper_0/CLK12_I"
+        ]
+      },
+      "CLK25_I_1": {
+        "ports": [
+          "CLK25_I",
+          "top_level_0/CLK25_I"
+        ]
+      },
+      "RX_I_0_1": {
+        "ports": [
+          "RX_I",
+          "com_side_wrapper_0/RX_I"
+        ]
+      },
+      "button_0_0_1": {
+        "ports": [
+          "bb_21",
+          "com_side_wrapper_0/button_0"
+        ]
+      },
+      "button_1_0_1": {
+        "ports": [
+          "bb_24",
+          "com_side_wrapper_0/button_1"
+        ]
+      },
+      "button_2_0_1": {
+        "ports": [
+          "bb_27",
+          "com_side_wrapper_0/button_2"
+        ]
+      },
+      "button_3_0_1": {
+        "ports": [
+          "bb_30",
+          "com_side_wrapper_0/button_3"
+        ]
+      },
+      "com_side_wrapper_0_TX_O": {
+        "ports": [
+          "com_side_wrapper_0/TX_O",
+          "TX_O"
+        ]
+      },
+      "com_side_wrapper_0_q_addr_o_0": {
+        "ports": [
+          "com_side_wrapper_0/q_addr_o_0",
+          "top_level_0/addra_i"
+        ]
+      },
+      "com_side_wrapper_0_q_data_o_0": {
+        "ports": [
+          "com_side_wrapper_0/q_data_o_0",
+          "top_level_0/dina_i"
+        ]
+      },
+      "com_side_wrapper_0_qlink_clk_o": {
+        "ports": [
+          "com_side_wrapper_0/qlink_clk_o",
+          "top_level_0/clk_qlink"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst",
+          "com_side_wrapper_0/rst"
+        ]
+      },
+      "top_level_0_hdmi_blue_n": {
+        "ports": [
+          "top_level_0/hdmi_blue_n",
+          "hdmi_blue_n"
+        ]
+      },
+      "top_level_0_hdmi_blue_p": {
+        "ports": [
+          "top_level_0/hdmi_blue_p",
+          "hdmi_blue_p"
+        ]
+      },
+      "top_level_0_hdmi_clk_n": {
+        "ports": [
+          "top_level_0/hdmi_clk_n",
+          "hdmi_clk_n"
+        ]
+      },
+      "top_level_0_hdmi_clk_p": {
+        "ports": [
+          "top_level_0/hdmi_clk_p",
+          "hdmi_clk_p"
+        ]
+      },
+      "top_level_0_hdmi_green_n": {
+        "ports": [
+          "top_level_0/hdmi_green_n",
+          "hdmi_green_n"
+        ]
+      },
+      "top_level_0_hdmi_green_p": {
+        "ports": [
+          "top_level_0/hdmi_green_p",
+          "hdmi_green_p"
+        ]
+      },
+      "top_level_0_hdmi_red_n": {
+        "ports": [
+          "top_level_0/hdmi_red_n",
+          "hdmi_red_n"
+        ]
+      },
+      "top_level_0_hdmi_red_p": {
+        "ports": [
+          "top_level_0/hdmi_red_p",
+          "hdmi_red_p"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "com_side_wrapper_0/addrb_i"
+        ]
+      }
+    }
+  }
+}

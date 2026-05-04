@@ -1,0 +1,13 @@
+block_test_inst_0_Sindri_QLink_top_0_0.vhd,vhdl,xil_defaultlib,../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/sim/block_test_inst_0_Sindri_QLink_top_0_0.vhd,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+block_test_inst_0_blk_mem_gen_0_0.v,verilog,xil_defaultlib,../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_blk_mem_gen_0_0/sim/block_test_inst_0_blk_mem_gen_0_0.v,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+block_test_inst_0_enable_0_0.v,verilog,xil_defaultlib,../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_enable_0_0/sim/block_test_inst_0_enable_0_0.v,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+block_test_inst_0_reset_0_0.v,verilog,xil_defaultlib,../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_reset_0_0/sim/block_test_inst_0_reset_0_0.v,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+block_test_inst_0_write_enable_0.v,verilog,xil_defaultlib,../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_write_enable_0/sim/block_test_inst_0_write_enable_0.v,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+block_test_inst_0.vhd,vhdl,xil_defaultlib,../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/sim/block_test_inst_0.vhd,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+com_side_simple_button_fsm_0_0.vhd,vhdl,xil_defaultlib,../../../bd/com_side/ip/com_side_simple_button_fsm_0_0/sim/com_side_simple_button_fsm_0_0.vhd,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+com_side_simple_button_fsm_0_1.vhd,vhdl,xil_defaultlib,../../../bd/com_side/ip/com_side_simple_button_fsm_0_1/sim/com_side_simple_button_fsm_0_1.vhd,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+com_side_simple_button_fsm_0_2.vhd,vhdl,xil_defaultlib,../../../bd/com_side/ip/com_side_simple_button_fsm_0_2/sim/com_side_simple_button_fsm_0_2.vhd,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+com_side_simple_button_fsm_2_0.vhd,vhdl,xil_defaultlib,../../../bd/com_side/ip/com_side_simple_button_fsm_2_0/sim/com_side_simple_button_fsm_2_0.vhd,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+com_side_xlconcat_0_0.v,verilog,xil_defaultlib,../../../bd/com_side/ip/com_side_xlconcat_0_0/sim/com_side_xlconcat_0_0.v,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+com_side.vhd,vhdl,xil_defaultlib,../../../bd/com_side/sim/com_side.vhd,incdir="../../../../../../../Vivado/2025.2/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

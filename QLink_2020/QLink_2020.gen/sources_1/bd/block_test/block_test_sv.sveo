@@ -66,11 +66,15 @@
 
 // INST_TAG     ------ Begin cut for WRAPPER INSTANTIATION Template ------
 block_test_sv your_instance_name (
-  .CLK12_I(CLK12_I), // input wire CLK12_I
-  .LED_O(LED_O), // output wire [3:0] LED_O
+  .CLK12(CLK12), // input wire CLK12
   .RX_I(RX_I), // input wire RX_I
   .TX_O(TX_O), // output wire TX_O
-  .LED_1(LED_1) // output wire [3:0] LED_1
+  .LED_1(LED_1), // output wire [3:0] LED_1
+  .dout_o(dout_o), // output wire [31:0] dout_o
+  .button_in(button_in), // input wire [31:0] button_in
+  .addrb_0(addrb_0), // input wire [31:0] addrb_0
+  .q_addr_o(q_addr_o), // output wire [7:0] q_addr_o
+  .q_data_o(q_data_o) // output wire [31:0] q_data_o
 );
 // INST_TAG_END ------  End cut for WRAPPER INSTANTIATION Template  ------
 

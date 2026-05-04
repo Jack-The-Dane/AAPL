@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May  4 11:45:26 2026" VIVADOVERSION="2025.2">
+
+  <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="main_top" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="CLK12_I" SIGIS="undef" SIGNAME="External_Ports_CLK12_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="CLK12_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="CLK25_I" SIGIS="undef" SIGNAME="External_Ports_CLK25_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="CLK25_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="RX_I" SIGIS="undef" SIGNAME="External_Ports_RX_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="RX_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="TX_O" SIGIS="undef" SIGNAME="com_side_wrapper_0_TX_O">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="TX_O"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="button_0" SIGIS="undef" SIGNAME="External_Ports_button_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="button_1" SIGIS="undef" SIGNAME="External_Ports_button_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="button_2" SIGIS="undef" SIGNAME="External_Ports_button_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="button_3" SIGIS="undef" SIGNAME="External_Ports_button_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hdmi_blue_n" SIGIS="undef" SIGNAME="top_level_0_hdmi_blue_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="hdmi_blue_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hdmi_blue_p" SIGIS="undef" SIGNAME="top_level_0_hdmi_blue_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="hdmi_blue_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_clk_n" SIGIS="clk" SIGNAME="top_level_0_hdmi_clk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="hdmi_clk_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_clk_p" SIGIS="clk" SIGNAME="top_level_0_hdmi_clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="hdmi_clk_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hdmi_green_n" SIGIS="undef" SIGNAME="top_level_0_hdmi_green_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="hdmi_green_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hdmi_green_p" SIGIS="undef" SIGNAME="top_level_0_hdmi_green_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="hdmi_green_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hdmi_red_n" SIGIS="undef" SIGNAME="top_level_0_hdmi_red_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="hdmi_red_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hdmi_red_p" SIGIS="undef" SIGNAME="top_level_0_hdmi_red_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="hdmi_red_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/com_side_wrapper_0" HWVERSION="1.0" INSTANCE="com_side_wrapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="com_side_wrapper" VLNV="xilinx.com:module_ref:com_side_wrapper:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="main_top_com_side_wrapper_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK12_I" SIGIS="undef" SIGNAME="External_Ports_CLK12_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="LED_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="RX_I" SIGIS="undef" SIGNAME="External_Ports_RX_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RX_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="TX_O" SIGIS="undef" SIGNAME="com_side_wrapper_0_TX_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="TX_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="addrb_i" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button_0" SIGIS="undef" SIGNAME="External_Ports_button_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button_1" SIGIS="undef" SIGNAME="External_Ports_button_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button_2" SIGIS="undef" SIGNAME="External_Ports_button_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button_3" SIGIS="undef" SIGNAME="External_Ports_button_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="q_addr_o_0" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_addr_o_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_level_0" PORT="addra_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="q_data_o_0" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_data_o_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_level_0" PORT="dina_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="qlink_clk_o" SIGIS="undef" SIGNAME="com_side_wrapper_0_qlink_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_level_0" PORT="clk_qlink"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/top_level_0" HWVERSION="1.0" INSTANCE="top_level_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_level" VLNV="user.org:user:top_level:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="main_top_top_level_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="25000000" DIR="I" NAME="CLK25_I" SIGIS="clk" SIGNAME="External_Ports_CLK25_I">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK25_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="addra_i" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_addr_o_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_wrapper_0" PORT="q_addr_o_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_qlink" SIGIS="clk" SIGNAME="com_side_wrapper_0_qlink_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_wrapper_0" PORT="qlink_clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="dina_i" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_data_o_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_wrapper_0" PORT="q_data_o_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hdmi_blue_n" SIGIS="undef" SIGNAME="top_level_0_hdmi_blue_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_blue_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hdmi_blue_p" SIGIS="undef" SIGNAME="top_level_0_hdmi_blue_p">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_blue_p"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hdmi_clk_n" SIGIS="undef" SIGNAME="top_level_0_hdmi_clk_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_clk_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hdmi_clk_p" SIGIS="undef" SIGNAME="top_level_0_hdmi_clk_p">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_clk_p"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hdmi_green_n" SIGIS="undef" SIGNAME="top_level_0_hdmi_green_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_green_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hdmi_green_p" SIGIS="undef" SIGNAME="top_level_0_hdmi_green_p">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_green_p"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hdmi_red_n" SIGIS="undef" SIGNAME="top_level_0_hdmi_red_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_red_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hdmi_red_p" SIGIS="undef" SIGNAME="top_level_0_hdmi_red_p">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_red_p"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="10" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x00000001"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="31"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_top_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="30" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_wrapper_0" PORT="addrb_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

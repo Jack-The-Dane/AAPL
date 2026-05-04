@@ -53,11 +53,15 @@
 -- COMP_TAG     ------ Begin cut for COMPONENT Declaration ------
 COMPONENT block_test
   PORT (
-    CLK12_I : IN STD_LOGIC;
-    LED_O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    CLK12 : IN STD_LOGIC;
     RX_I : IN STD_LOGIC;
     TX_O : OUT STD_LOGIC;
-    LED_1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    LED_1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    dout_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    button_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addrb_0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    q_addr_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    q_data_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -68,11 +72,15 @@ END COMPONENT;
 -- INST_TAG     ------ Begin cut for INSTANTIATION Template ------
 your_instance_name : block_test
   PORT MAP (
-    CLK12_I => CLK12_I,
-    LED_O => LED_O,
+    CLK12 => CLK12,
     RX_I => RX_I,
     TX_O => TX_O,
-    LED_1 => LED_1
+    LED_1 => LED_1,
+    dout_o => dout_o,
+    button_in => button_in,
+    addrb_0 => addrb_0,
+    q_addr_o => q_addr_o,
+    q_data_o => q_data_o
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

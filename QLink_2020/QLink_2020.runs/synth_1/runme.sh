@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.runs/synth_1'
+HD_PWD='/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log block_test_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_test_wrapper.tcl
+EAStep vivado -log top_level_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_wrapper.tcl

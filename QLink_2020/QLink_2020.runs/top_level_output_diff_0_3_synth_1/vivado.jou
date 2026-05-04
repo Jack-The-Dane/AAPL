@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon May  4 11:48:25 2026
+# Process ID         : 29668
+# Current directory  : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/top_level_output_diff_0_3_synth_1
+# Command line       : vivado -log top_level_output_diff_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_output_diff_0_3.tcl
+# Log file           : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/top_level_output_diff_0_3_synth_1/top_level_output_diff_0_3.vds
+# Journal file       : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/top_level_output_diff_0_3_synth_1/vivado.jou
+# Running On         : kasper-ubuntu-pc
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : AMD Ryzen 7 PRO 5850U with Radeon Graphics
+# CPU Frequency      : 1896.434 MHz
+# CPU Physical cores : 3
+# CPU Logical cores  : 6
+# Host memory        : 16764 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18911 MB
+# Available Virtual  : 14834 MB
+#-----------------------------------------------------------
+source top_level_output_diff_0_3.tcl -notrace

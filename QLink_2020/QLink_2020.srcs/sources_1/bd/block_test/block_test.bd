@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6B6231A46B6231A4",
+      "boundary_crc": "0x2EFA45D22EFA45D2",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/block_test",
       "name": "block_test",
@@ -32,11 +32,6 @@
         "left": "3",
         "right": "0"
       },
-      "dout_o": {
-        "direction": "O",
-        "left": "31",
-        "right": "0"
-      },
       "button_in": {
         "direction": "I",
         "left": "31",
@@ -52,10 +47,8 @@
         "left": "7",
         "right": "0"
       },
-      "q_data_o": {
-        "direction": "O",
-        "left": "31",
-        "right": "0"
+      "qlink_clk_o": {
+        "direction": "O"
       }
     },
     "components": {
@@ -186,14 +179,14 @@
         "ports": [
           "Sindri_QLink_top_0/CLK_O",
           "blk_mem_gen_0/clka",
-          "blk_mem_gen_0/clkb"
+          "blk_mem_gen_0/clkb",
+          "qlink_clk_o"
         ]
       },
       "Sindri_QLink_top_0_DATA_O": {
         "ports": [
           "Sindri_QLink_top_0/DATA_O",
-          "blk_mem_gen_0/dina",
-          "q_data_o"
+          "blk_mem_gen_0/dina"
         ]
       },
       "Sindri_QLink_top_0_LED_O": {
@@ -224,12 +217,6 @@
         "ports": [
           "blk_mem_gen_0/douta",
           "Sindri_QLink_top_0/DATA_I"
-        ]
-      },
-      "blk_mem_gen_0_doutb": {
-        "ports": [
-          "blk_mem_gen_0/doutb",
-          "dout_o"
         ]
       },
       "dinb_0_1": {

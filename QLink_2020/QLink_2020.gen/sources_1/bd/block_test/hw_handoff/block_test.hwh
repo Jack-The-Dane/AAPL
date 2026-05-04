@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 20 13:25:57 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May  4 11:18:13 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="block_test" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="CLK12_I" SIGIS="undef" SIGNAME="External_Ports_CLK12_I">
+    <PORT DIR="I" NAME="CLK12" SIGIS="undef" SIGNAME="External_Ports_CLK12">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="CLK12_I"/>
       </CONNECTIONS>
@@ -12,11 +12,6 @@
     <PORT DIR="O" LEFT="3" NAME="LED_1" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_LED_O">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="LED_O"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="RX_I" SIGIS="undef" SIGNAME="External_Ports_RX_I">
@@ -27,6 +22,31 @@
     <PORT DIR="O" NAME="TX_O" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_TX_O">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="TX_O"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="addrb_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addrb_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addrb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="button_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_button_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dinb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="dout_o" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="doutb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="q_addr_o" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_ADDR_O">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="ADDR_O"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="q_data_o" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_DATA_O">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="DATA_O"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -44,11 +64,12 @@
         <PORT DIR="O" LEFT="7" NAME="ADDR_O" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_ADDR_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="q_addr_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="CLK12_I" SIGIS="undef" SIGNAME="External_Ports_CLK12_I">
+        <PORT DIR="I" NAME="CLK12_I" SIGIS="undef" SIGNAME="External_Ports_CLK12">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK12"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="CLK_O" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_CLK_O">
@@ -65,6 +86,7 @@
         <PORT DIR="O" LEFT="31" NAME="DATA_O" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_DATA_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dina"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="q_data_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_LED_O">
@@ -85,23 +107,6 @@
         <PORT DIR="O" LEFT="3" NAME="WEA_O" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_WEA_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="wea"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="10" FULLNAME="/address" HWVERSION="1.1" INSTANCE="address" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x00000001"/>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="block_test_enable_0_1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="address_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addrb"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -267,9 +272,9 @@
             <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="ADDR_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="address_dout">
+        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addrb_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="address" PORT="dout"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="addrb_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="Sindri_QLink_top_0_CLK_O">
@@ -287,7 +292,11 @@
             <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="DATA_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_button_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_in"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="DATA_I"/>
@@ -295,7 +304,7 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="dout_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="enable_0_dout">
@@ -325,9 +334,9 @@
             <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="WEA_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="enable_1_dout">
+        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="write_enable_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_1" PORT="dout"/>
+            <CONNECTION INSTANCE="write_enable" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -388,23 +397,6 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="10" FULLNAME="/enable_1" HWVERSION="1.1" INSTANCE="enable_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="block_test_enable_0_2"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="enable_1_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="web"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE COREREVISION="10" FULLNAME="/reset_0" HWVERSION="1.1" INSTANCE="reset_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -423,25 +415,18 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+    <MODULE COREREVISION="10" FULLNAME="/write_enable" HWVERSION="1.1" INSTANCE="write_enable" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DIN_FROM" VALUE="3"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="block_test_xlslice_0_0"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x8"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="block_test_reset_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="31" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
+        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="write_enable_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="doutb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="LED_O"/>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="web"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

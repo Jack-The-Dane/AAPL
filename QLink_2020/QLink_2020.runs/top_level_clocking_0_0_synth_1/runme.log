@@ -1,0 +1,52 @@
+
+*** Running vivado
+    with args -log top_level_clocking_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_clocking_0_0.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon May  4 11:51:23 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_level_clocking_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 1613.848 ; gain = 64.055 ; free physical = 10208 ; free virtual = 12518
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/kasper-ubuntu/Documents/APPL_project_tetris/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/kasper-ubuntu/Vivado/2025.2/data/ip'.
+Command: synth_design -top top_level_clocking_0_0 -part xc7s15ftgb196-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 32108
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2164.363 ; gain = 484.188 ; free physical = 7106 ; free virtual = 9417
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2716] syntax error near ';' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:71]
+ERROR: [Synth 8-10610] constant 'o_buff_clkpixel' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:77]
+ERROR: [Synth 8-10610] constant 'o_buff_clk5xpixel' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:78]
+ERROR: [Synth 8-10610] constant 'o_buff_clk5xpixelinv' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:79]
+ERROR: [Synth 8-10610] constant 'o_buff_clk' can only be of mode 'in' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:80]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:101]
+ERROR: [Synth 8-2716] syntax error near ',' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:102]
+ERROR: [Synth 8-2716] syntax error near ')' [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:104]
+INFO: [Synth 8-11252] unit 'top_level_clocking_0_0_arch' is ignored due to previous errors [/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd:112]
+INFO: [Synth 8-10443] VHDL file '/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd' is ignored due to errors
+ERROR: [Synth 8-12189] Failed to read vhdl '/home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.gen/sources_1/bd/top_level/ip/top_level_clocking_0_0/synth/top_level_clocking_0_0.vhd'
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 566.156 ; free physical = 8018 ; free virtual = 10329
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 0 Warnings, 0 Critical Warnings and 10 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2246.340 ; gain = 632.492 ; free physical = 8018 ; free virtual = 10329
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1496.185; main = 1271.509; forked = 224.676
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3241.242; main = 2246.336; forked = 994.922
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 11:52:02 2026...
