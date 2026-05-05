@@ -75,10 +75,10 @@ com_side_sv your_instance_name (
   .RX_I(RX_I), // input wire RX_I
   .TX_O(TX_O), // output wire TX_O
   .LED_1(LED_1), // output wire [3:0] LED_1
-  .q_data_o_0(q_data_o_0), // output wire [31:0] q_data_o_0
-  .q_addr_o_0(q_addr_o_0), // output wire [7:0] q_addr_o_0
   .addrb_i(addrb_i), // input wire [31:0] addrb_i
-  .qlink_clk_o(qlink_clk_o) // output wire qlink_clk_o
+  .qlink_clk_o(qlink_clk_o), // output wire qlink_clk_o
+  .q_addr_o_1(q_addr_o_1), // output wire [31:0] q_addr_o_1
+  .q_data_o_1(q_data_o_1) // output wire [31:0] q_data_o_1
 );
 // INST_TAG_END ------  End cut for WRAPPER INSTANTIATION Template  ------
 

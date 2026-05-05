@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon May  4 12:31:12 2026
-# Process ID         : 99203
+# Start of session at: Tue May  5 15:02:19 2026
+# Process ID         : 49726
 # Current directory  : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1
 # Command line       : vivado -log main_top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_top_wrapper.tcl
 # Log file           : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/main_top_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.4 LTS
 # Processor Detail   : AMD Ryzen 7 4700U with Radeon Graphics
-# CPU Frequency      : 4066.744 MHz
+# CPU Frequency      : 1533.409 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 8
 # Host memory        : 16116 MB
 # Swap memory        : 17179 MB
 # Total Virtual      : 33296 MB
-# Available Virtual  : 25251 MB
+# Available Virtual  : 24803 MB
 #-----------------------------------------------------------
 source main_top_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -42,56 +42,48 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 99458
+INFO: [Synth 8-7075] Helper process launched with PID 49828
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2161.141 ; gain = 485.125 ; free physical = 1759 ; free virtual = 22820
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2161.203 ; gain = 485.156 ; free physical = 526 ; free virtual = 22424
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'main_top_wrapper' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd:37]
-INFO: [Synth 8-3491] module 'main_top' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:15' bound to instance 'main_top_i' of component 'main_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd:60]
-INFO: [Synth 8-638] synthesizing module 'main_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:41]
-INFO: [Synth 8-3491] module 'main_top_com_side_wrapper_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-99203-Laptop/realtime/main_top_com_side_wrapper_0_0_stub.vhdl:6' bound to instance 'com_side_wrapper_0' of component 'main_top_com_side_wrapper_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:96]
-INFO: [Synth 8-638] synthesizing module 'main_top_com_side_wrapper_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-99203-Laptop/realtime/main_top_com_side_wrapper_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'main_top_top_level_0_1' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-99203-Laptop/realtime/main_top_top_level_0_1_stub.vhdl:6' bound to instance 'top_level_0' of component 'main_top_top_level_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:113]
-INFO: [Synth 8-638] synthesizing module 'main_top_top_level_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-99203-Laptop/realtime/main_top_top_level_0_1_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'main_top_xlconstant_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_0_0/synth/main_top_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'main_top_xlconstant_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'main_top_wrapper' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd:38]
+INFO: [Synth 8-3491] module 'main_top' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:15' bound to instance 'main_top_i' of component 'main_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'main_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:42]
+INFO: [Synth 8-3491] module 'main_top_com_side_wrapper_0_2' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-49726-Laptop/realtime/main_top_com_side_wrapper_0_2_stub.vhdl:6' bound to instance 'com_side_wrapper_0' of component 'main_top_com_side_wrapper_0_2' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'main_top_com_side_wrapper_0_2' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-49726-Laptop/realtime/main_top_com_side_wrapper_0_2_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'main_top_top_level_0_1' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-49726-Laptop/realtime/main_top_top_level_0_1_stub.vhdl:6' bound to instance 'top_level_0' of component 'main_top_top_level_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'main_top_top_level_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-49726-Laptop/realtime/main_top_top_level_0_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'main_top_xlconstant_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_0_0/synth/main_top_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'main_top_xlconstant_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:128]
 INFO: [Synth 8-6157] synthesizing module 'main_top_xlconstant_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_0_0/synth/main_top_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'main_top_xlconstant_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_0_0/synth/main_top_xlconstant_0_0.v:53]
-INFO: [Synth 8-256] done synthesizing module 'main_top' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'main_top_wrapper' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'main_top' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'main_top_wrapper' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd:38]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2249.109 ; gain = 573.094 ; free physical = 1741 ; free virtual = 22805
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2249.172 ; gain = 573.125 ; free physical = 442 ; free virtual = 22344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2260.984 ; gain = 584.969 ; free physical = 1742 ; free virtual = 22806
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2264.016 ; gain = 587.969 ; free physical = 440 ; free virtual = 22342
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2260.984 ; gain = 584.969 ; free physical = 1742 ; free virtual = 22806
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2264.016 ; gain = 587.969 ; free physical = 440 ; free virtual = 22342
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2260.984 ; gain = 0.000 ; free physical = 1742 ; free virtual = 22806
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2264.016 ; gain = 0.000 ; free physical = 438 ; free virtual = 22340
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_0/main_top_com_side_wrapper_0_0/main_top_com_side_wrapper_0_0_in_context.xdc] for cell 'main_top_i/com_side_wrapper_0'
-Finished Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_0/main_top_com_side_wrapper_0_0/main_top_com_side_wrapper_0_0_in_context.xdc] for cell 'main_top_i/com_side_wrapper_0'
 Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/main_top_top_level_0_1/main_top_top_level_0_1_in_context.xdc] for cell 'main_top_i/top_level_0'
 Finished Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/main_top_top_level_0_1/main_top_top_level_0_1_in_context.xdc] for cell 'main_top_i/top_level_0'
+Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_in_context.xdc] for cell 'main_top_i/com_side_wrapper_0'
+Finished Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_in_context.xdc] for cell 'main_top_i/com_side_wrapper_0'
 Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc]
 WARNING: [Vivado 12-584] No ports matched 'nBUTTON_I'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:35]
 WARNING: [Vivado 12-584] No ports matched 'nBUTTON_I'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:36]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[0]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:39]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[0]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:40]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[1]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:41]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[1]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:42]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[2]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:43]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[2]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:44]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[3]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:45]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[3]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:46]
 WARNING: [Vivado 12-584] No ports matched 'LED_1[0]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:49]
 WARNING: [Vivado 12-584] No ports matched 'LED_1[0]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:50]
 WARNING: [Vivado 12-584] No ports matched 'LED_1[1]'. [/home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc:51]
@@ -164,14 +156,6 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/main_top_wra
 Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc]
 WARNING: [Vivado 12-584] No ports matched 'nBUTTON_I'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:35]
 WARNING: [Vivado 12-584] No ports matched 'nBUTTON_I'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:36]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[0]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:39]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[0]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:40]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[1]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:41]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[1]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:42]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[2]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:43]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[2]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:44]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[3]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:45]
-WARNING: [Vivado 12-584] No ports matched 'LED_O[3]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:46]
 WARNING: [Vivado 12-584] No ports matched 'LED_1[0]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:49]
 WARNING: [Vivado 12-584] No ports matched 'LED_1[0]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:50]
 WARNING: [Vivado 12-584] No ports matched 'LED_1[1]'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:51]
@@ -192,7 +176,23 @@ WARNING: [Vivado 12-584] No ports matched 'BB_12'. [/home/jacob/shared/Semester8
 WARNING: [Vivado 12-584] No ports matched 'BB_12'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:118]
 WARNING: [Vivado 12-584] No ports matched 'BB_13'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:121]
 WARNING: [Vivado 12-584] No ports matched 'BB_13'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:122]
-INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'BB_14'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'BB_14'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'BB_15'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:129]
+WARNING: [Vivado 12-584] No ports matched 'BB_15'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'BB_17'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'BB_17'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'BB_18'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:141]
+WARNING: [Vivado 12-584] No ports matched 'BB_18'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:142]
+WARNING: [Vivado 12-584] No ports matched 'BB_19'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:145]
+WARNING: [Vivado 12-584] No ports matched 'BB_19'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'BB_20'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:149]
+WARNING: [Vivado 12-584] No ports matched 'BB_20'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:150]
+WARNING: [Vivado 12-584] No ports matched 'BB_21'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:153]
+WARNING: [Vivado 12-584] No ports matched 'BB_21'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:154]
+WARNING: [Vivado 12-584] No ports matched 'BB_22'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:157]
+WARNING: [Vivado 12-584] No ports matched 'BB_22'. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:158]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc:158]
 Finished Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/main_top_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_top_wrapper_propImpl.xdc].
@@ -201,31 +201,31 @@ Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_202
 Finished Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2309.910 ; gain = 0.000 ; free physical = 1739 ; free virtual = 22803
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2312.941 ; gain = 0.000 ; free physical = 438 ; free virtual = 22342
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2309.945 ; gain = 0.000 ; free physical = 1739 ; free virtual = 22803
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2312.977 ; gain = 0.000 ; free physical = 440 ; free virtual = 22344
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2309.945 ; gain = 633.930 ; free physical = 1763 ; free virtual = 22828
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2312.977 ; gain = 636.930 ; free physical = 464 ; free virtual = 22369
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s15ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2317.914 ; gain = 641.898 ; free physical = 1763 ; free virtual = 22828
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2320.945 ; gain = 644.898 ; free physical = 464 ; free virtual = 22369
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2317.914 ; gain = 641.898 ; free physical = 1763 ; free virtual = 22828
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2320.945 ; gain = 644.898 ; free physical = 464 ; free virtual = 22369
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2317.914 ; gain = 641.898 ; free physical = 1761 ; free virtual = 22830
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2320.945 ; gain = 644.898 ; free physical = 456 ; free virtual = 22365
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -247,7 +247,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2317.914 ; gain = 641.898 ; free physical = 1759 ; free virtual = 22836
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2320.945 ; gain = 644.898 ; free physical = 460 ; free virtual = 22378
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -255,19 +255,19 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-565] redefining clock 'CLK12_I'
 WARNING: [Synth 8-565] redefining clock 'CLK25_I'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2411.914 ; gain = 735.898 ; free physical = 1661 ; free virtual = 22739
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2412.945 ; gain = 736.898 ; free physical = 368 ; free virtual = 22286
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2411.914 ; gain = 735.898 ; free physical = 1661 ; free virtual = 22739
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2412.945 ; gain = 736.898 ; free physical = 368 ; free virtual = 22286
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2420.930 ; gain = 744.914 ; free physical = 1646 ; free virtual = 22724
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2421.961 ; gain = 745.914 ; free physical = 361 ; free virtual = 22279
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -285,37 +285,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2607.742 ; gain = 931.727 ; free physical = 1452 ; free virtual = 22533
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2608.773 ; gain = 932.727 ; free physical = 180 ; free virtual = 22098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2607.742 ; gain = 931.727 ; free physical = 1452 ; free virtual = 22533
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2608.773 ; gain = 932.727 ; free physical = 180 ; free virtual = 22098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2607.742 ; gain = 931.727 ; free physical = 1452 ; free virtual = 22533
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2608.773 ; gain = 932.727 ; free physical = 180 ; free virtual = 22098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2607.742 ; gain = 931.727 ; free physical = 1452 ; free virtual = 22533
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2608.773 ; gain = 932.727 ; free physical = 180 ; free virtual = 22098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2607.742 ; gain = 931.727 ; free physical = 1452 ; free virtual = 22533
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2608.773 ; gain = 932.727 ; free physical = 180 ; free virtual = 22098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2607.742 ; gain = 931.727 ; free physical = 1452 ; free virtual = 22533
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2608.773 ; gain = 932.727 ; free physical = 180 ; free virtual = 22098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -325,7 +325,7 @@ Report BlackBoxes:
 +------+------------------------------+----------+
 |      |BlackBox name                 |Instances |
 +------+------------------------------+----------+
-|1     |main_top_com_side_wrapper_0_0 |         1|
+|1     |main_top_com_side_wrapper_0_2 |         1|
 |2     |main_top_top_level_0_1        |         1|
 +------+------------------------------+----------+
 
@@ -333,33 +333,33 @@ Report Cell Usage:
 +------+-----------------------------------+------+
 |      |Cell                               |Count |
 +------+-----------------------------------+------+
-|1     |main_top_com_side_wrapper_0_0_bbox |     1|
+|1     |main_top_com_side_wrapper_0_2_bbox |     1|
 |2     |main_top_top_level_0_1_bbox        |     1|
 |3     |IBUF                               |     8|
-|4     |OBUF                               |     1|
+|4     |OBUF                               |     5|
 +------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2607.742 ; gain = 931.727 ; free physical = 1452 ; free virtual = 22533
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2608.773 ; gain = 932.727 ; free physical = 180 ; free virtual = 22098
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2607.742 ; gain = 882.766 ; free physical = 1452 ; free virtual = 22533
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2607.750 ; gain = 931.727 ; free physical = 1452 ; free virtual = 22533
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2608.773 ; gain = 883.766 ; free physical = 180 ; free virtual = 22098
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2608.781 ; gain = 932.727 ; free physical = 180 ; free virtual = 22098
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2607.750 ; gain = 0.000 ; free physical = 1452 ; free virtual = 22533
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2608.781 ; gain = 0.000 ; free physical = 180 ; free virtual = 22098
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2607.750 ; gain = 0.000 ; free physical = 1625 ; free virtual = 22706
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2608.781 ; gain = 0.000 ; free physical = 355 ; free virtual = 22273
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 66065480
+Synth Design complete | Checksum: b62cb0e8
 INFO: [Common 17-83] Releasing license: Synthesis
 39 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 2607.777 ; gain = 1052.840 ; free physical = 1624 ; free virtual = 22705
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1809.430; main = 1740.388; forked = 281.992
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3426.074; main = 2607.746; forked = 995.141
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2631.754 ; gain = 0.000 ; free physical = 1627 ; free virtual = 22708
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 2608.809 ; gain = 1052.871 ; free physical = 355 ; free virtual = 22273
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1901.006; main = 1743.039; forked = 283.098
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3516.105; main = 2608.777; forked = 995.141
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2632.785 ; gain = 0.000 ; free physical = 355 ; free virtual = 22273
 INFO: [Common 17-1381] The checkpoint '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/main_top_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file main_top_wrapper_utilization_synth.rpt -pb main_top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May  4 12:31:47 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue May  5 15:02:52 2026...

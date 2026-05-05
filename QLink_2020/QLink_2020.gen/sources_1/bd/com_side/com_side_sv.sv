@@ -72,13 +72,13 @@ module com_side_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [3:0] LED_1,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [31:0] q_data_o_0,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire [7:0] q_addr_o_0,
-  (* X_INTERFACE_IGNORE = "true" *)
   input wire [31:0] addrb_i,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire qlink_clk_o
+  output wire qlink_clk_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [31:0] q_addr_o_1,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [31:0] q_data_o_1
 );
 
   com_side inst (
@@ -91,10 +91,10 @@ module com_side_sv (
     .RX_I(RX_I),
     .TX_O(TX_O),
     .LED_1(LED_1),
-    .q_data_o_0(q_data_o_0),
-    .q_addr_o_0(q_addr_o_0),
     .addrb_i(addrb_i),
-    .qlink_clk_o(qlink_clk_o)
+    .qlink_clk_o(qlink_clk_o),
+    .q_addr_o_1(q_addr_o_1),
+    .q_data_o_1(q_data_o_1)
   );
 
 endmodule

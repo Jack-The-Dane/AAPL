@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Mon May  4 12:24:18 2026
+-- Date        : Mon May  4 12:24:17 2026
 -- Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/main_top_top_level_0_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top main_top_top_level_0_1 -prefix
+--               main_top_top_level_0_1_ main_top_top_level_0_1_stub.vhdl
 -- Design      : main_top_top_level_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s15ftgb196-1

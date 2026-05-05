@@ -63,7 +63,7 @@ ENTITY block_test_inst_0_Sindri_QLink_top_0_0 IS
     DATA_I : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     WEA_O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     CLK_O : OUT STD_LOGIC;
-    ADDR_O : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+    ADDR_O : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END block_test_inst_0_Sindri_QLink_top_0_0;
 
@@ -80,7 +80,7 @@ ARCHITECTURE block_test_inst_0_Sindri_QLink_top_0_0_arch OF block_test_inst_0_Si
       DATA_I : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       WEA_O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       CLK_O : OUT STD_LOGIC;
-      ADDR_O : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+      ADDR_O : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT Sindri_QLink_top;
 BEGIN

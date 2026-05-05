@@ -70,7 +70,8 @@ main_top your_instance_name (
   .hdmi_red_n(hdmi_red_n), // output wire hdmi_red_n
   .hdmi_blue_p(hdmi_blue_p), // output wire hdmi_blue_p
   .hdmi_clk_n(hdmi_clk_n), // output wire hdmi_clk_n
-  .hdmi_red_p(hdmi_red_p) // output wire hdmi_red_p
+  .hdmi_red_p(hdmi_red_p), // output wire hdmi_red_p
+  .LED_O(LED_O) // output wire [3:0] LED_O
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

@@ -7,9 +7,7 @@
       "name": "Qlink_dual_port_inst_0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.2",
-      "validated": "true",
-      "variant": "true"
+      "tool_version": "2025.2"
     },
     "design_tree": {
       "Sindri_QLink_top_0": "",
@@ -92,7 +90,7 @@
           },
           "ADDR_O": {
             "direction": "O",
-            "left": "7",
+            "left": "31",
             "right": "0"
           }
         }

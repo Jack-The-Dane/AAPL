@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x2EFA45D22EFA45D2",
+      "boundary_crc": "0x104AD3F5104AD3F5",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/block_test",
       "name": "block_test",
@@ -44,11 +44,16 @@
       },
       "q_addr_o": {
         "direction": "O",
-        "left": "7",
+        "left": "31",
         "right": "0"
       },
       "qlink_clk_o": {
         "direction": "O"
+      },
+      "q_data_o": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
       }
     },
     "components": {
@@ -99,7 +104,7 @@
           },
           "ADDR_O": {
             "direction": "O",
-            "left": "7",
+            "left": "31",
             "right": "0"
           }
         }
@@ -186,7 +191,8 @@
       "Sindri_QLink_top_0_DATA_O": {
         "ports": [
           "Sindri_QLink_top_0/DATA_O",
-          "blk_mem_gen_0/dina"
+          "blk_mem_gen_0/dina",
+          "q_data_o"
         ]
       },
       "Sindri_QLink_top_0_LED_O": {

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon May  4 12:31:47 2026
+| Date         : Tue May  5 15:02:52 2026
 | Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
 | Command      : report_utilization -file main_top_wrapper_utilization_synth.rpt -pb main_top_wrapper_utilization_synth.pb
 | Design       : main_top_wrapper
@@ -95,7 +95,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    9 |     0 |          0 |       100 |  9.00 |
+| Bonded IOB                  |   13 |     0 |          0 |       100 | 13.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         2 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         2 |  0.00 |
 | OUT_FIFO                    |    0 |     0 |          0 |         8 |  0.00 |
@@ -149,7 +149,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | IBUF     |    8 |                  IO |
-| OBUF     |    1 |                  IO |
+| OBUF     |    5 |                  IO |
 +----------+------+---------------------+
 
 
@@ -160,7 +160,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 |            Ref Name           | Used |
 +-------------------------------+------+
 | main_top_top_level_0_1        |    1 |
-| main_top_com_side_wrapper_0_0 |    1 |
+| main_top_com_side_wrapper_0_2 |    1 |
 +-------------------------------+------+
 
 

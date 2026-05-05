@@ -69,7 +69,8 @@ COMPONENT main_top
     hdmi_red_n : OUT STD_LOGIC;
     hdmi_blue_p : OUT STD_LOGIC;
     hdmi_clk_n : OUT STD_LOGIC;
-    hdmi_red_p : OUT STD_LOGIC
+    hdmi_red_p : OUT STD_LOGIC;
+    LED_O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -96,7 +97,8 @@ your_instance_name : main_top
     hdmi_red_n => hdmi_red_n,
     hdmi_blue_p => hdmi_blue_p,
     hdmi_clk_n => hdmi_clk_n,
-    hdmi_red_p => hdmi_red_p
+    hdmi_red_p => hdmi_red_p,
+    LED_O => LED_O
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

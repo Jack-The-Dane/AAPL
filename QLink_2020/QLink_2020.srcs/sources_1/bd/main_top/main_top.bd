@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x18354074FEA4AF83",
+      "boundary_crc": "0x54B9CB5C3827B7E2",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/main_top",
       "name": "main_top",
@@ -11,9 +11,9 @@
       "validated": "true"
     },
     "design_tree": {
-      "com_side_wrapper_0": "",
       "xlconstant_0": "",
-      "top_level_0": ""
+      "top_level_0": "",
+      "com_side_wrapper_0": ""
     },
     "ports": {
       "RX_I": {
@@ -115,14 +115,40 @@
       },
       "hdmi_red_p": {
         "direction": "O"
+      },
+      "LED_O": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "main_top_xlconstant_0_0",
+        "xci_path": "ip/main_top_xlconstant_0_0/main_top_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CONST_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "top_level_0": {
+        "vlnv": "user.org:user:top_level:1.0",
+        "ip_revision": "2",
+        "xci_name": "main_top_top_level_0_1",
+        "xci_path": "ip/main_top_top_level_0_1/main_top_top_level_0_1.xci",
+        "inst_hier_path": "top_level_0",
+        "has_run_ip_tcl": "true"
+      },
       "com_side_wrapper_0": {
         "vlnv": "xilinx.com:module_ref:com_side_wrapper:1.0",
         "ip_revision": "1",
-        "xci_name": "main_top_com_side_wrapper_0_0",
-        "xci_path": "ip/main_top_com_side_wrapper_0_0/main_top_com_side_wrapper_0_0.xci",
+        "xci_name": "main_top_com_side_wrapper_0_2",
+        "xci_path": "ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2.xci",
         "inst_hier_path": "com_side_wrapper_0",
         "has_run_ip_tcl": "true",
         "reference_info": {
@@ -162,12 +188,12 @@
           "button_3": {
             "direction": "I"
           },
-          "q_addr_o_0": {
+          "q_addr_o_1": {
             "direction": "O",
-            "left": "7",
+            "left": "31",
             "right": "0"
           },
-          "q_data_o_0": {
+          "q_data_o_1": {
             "direction": "O",
             "left": "31",
             "right": "0"
@@ -180,31 +206,40 @@
             "direction": "I"
           }
         }
-      },
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "ip_revision": "10",
-        "xci_name": "main_top_xlconstant_0_0",
-        "xci_path": "ip/main_top_xlconstant_0_0/main_top_xlconstant_0_0.xci",
-        "inst_hier_path": "xlconstant_0",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "CONST_WIDTH": {
-            "value": "31"
-          }
-        }
-      },
-      "top_level_0": {
-        "vlnv": "user.org:user:top_level:1.0",
-        "ip_revision": "2",
-        "xci_name": "main_top_top_level_0_1",
-        "xci_path": "ip/main_top_top_level_0_1/main_top_top_level_0_1.xci",
-        "inst_hier_path": "top_level_0",
-        "has_run_ip_tcl": "true"
       }
     },
     "nets": {
-      "CLK12_I_0_1": {
+      "BB_05_1": {
+        "ports": [
+          "BB_05",
+          "com_side_wrapper_0/button_0"
+        ]
+      },
+      "BB_06_1": {
+        "ports": [
+          "BB_06",
+          "com_side_wrapper_0/button_1"
+        ]
+      },
+      "BB_07_1": {
+        "ports": [
+          "BB_07",
+          "com_side_wrapper_0/button_2"
+        ]
+      },
+      "BB_08_1": {
+        "ports": [
+          "BB_08",
+          "com_side_wrapper_0/button_3"
+        ]
+      },
+      "BB_09_1": {
+        "ports": [
+          "BB_09",
+          "com_side_wrapper_0/rst"
+        ]
+      },
+      "CLK12_I_1": {
         "ports": [
           "CLK12_I",
           "com_side_wrapper_0/CLK12_I"
@@ -216,34 +251,10 @@
           "top_level_0/CLK25_I"
         ]
       },
-      "RX_I_0_1": {
+      "RX_I_1": {
         "ports": [
           "RX_I",
           "com_side_wrapper_0/RX_I"
-        ]
-      },
-      "button_0_0_1": {
-        "ports": [
-          "BB_05",
-          "com_side_wrapper_0/button_0"
-        ]
-      },
-      "button_1_0_1": {
-        "ports": [
-          "BB_06",
-          "com_side_wrapper_0/button_1"
-        ]
-      },
-      "button_2_0_1": {
-        "ports": [
-          "BB_07",
-          "com_side_wrapper_0/button_2"
-        ]
-      },
-      "button_3_0_1": {
-        "ports": [
-          "BB_08",
-          "com_side_wrapper_0/button_3"
         ]
       },
       "com_side_wrapper_0_TX_O": {
@@ -254,13 +265,13 @@
       },
       "com_side_wrapper_0_q_addr_o_0": {
         "ports": [
-          "com_side_wrapper_0/q_addr_o_0",
+          "com_side_wrapper_0/q_addr_o_1",
           "top_level_0/addra_i"
         ]
       },
       "com_side_wrapper_0_q_data_o_0": {
         "ports": [
-          "com_side_wrapper_0/q_data_o_0",
+          "com_side_wrapper_0/q_data_o_1",
           "top_level_0/dina_i"
         ]
       },
@@ -270,10 +281,10 @@
           "top_level_0/clk_qlink"
         ]
       },
-      "rst_0_1": {
+      "top_level_0_LED_O": {
         "ports": [
-          "BB_09",
-          "com_side_wrapper_0/rst"
+          "top_level_0/LED_O",
+          "LED_O"
         ]
       },
       "top_level_0_hdmi_blue_n": {

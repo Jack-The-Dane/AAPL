@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Mon May  4 11:33:08 2026
--- Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+-- Date        : Tue May  5 14:54:23 2026
+-- Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/block_test_inst_0_Sindri_QLink_top_0_0_stub.vhdl
+--               /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/block_test_inst_0_Sindri_QLink_top_0_0_stub.vhdl
 -- Design      : block_test_inst_0_Sindri_QLink_top_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s15ftgb196-1
@@ -23,7 +23,7 @@ entity block_test_inst_0_Sindri_QLink_top_0_0 is
     DATA_I : in STD_LOGIC_VECTOR ( 31 downto 0 );
     WEA_O : out STD_LOGIC_VECTOR ( 3 downto 0 );
     CLK_O : out STD_LOGIC;
-    ADDR_O : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    ADDR_O : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
 
   attribute CHECK_LICENSE_TYPE : string;
@@ -40,7 +40,7 @@ architecture stub of block_test_inst_0_Sindri_QLink_top_0_0 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "CLK12_I,TX_O,RX_I,LED_O[3:0],DATA_O[31:0],DATA_I[31:0],WEA_O[3:0],CLK_O,ADDR_O[7:0]";
+  attribute black_box_pad_pin of stub : architecture is "CLK12_I,TX_O,RX_I,LED_O[3:0],DATA_O[31:0],DATA_I[31:0],WEA_O[3:0],CLK_O,ADDR_O[31:0]";
   attribute x_core_info : string;
   attribute x_core_info of stub : architecture is "Sindri_QLink_top,Vivado 2025.2";
 begin

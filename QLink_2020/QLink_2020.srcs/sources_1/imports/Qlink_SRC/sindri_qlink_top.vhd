@@ -147,7 +147,7 @@ entity Sindri_QLink_top is
            DATA_I : in std_logic_vector(31 downto 0);
            WEA_O : out std_logic_vector(3 downto 0);
            CLK_O : out std_logic;
-           ADDR_O : out std_logic_vector(7 downto 0)
+           ADDR_O : out std_logic_vector(31 downto 0)
            );
 end Sindri_QLink_top;
 
@@ -177,7 +177,7 @@ end component;
 ---------------------- SIGNALS -------------------------
   signal sys_reset : std_logic;                           -- This connect to QLink RESET out
   signal clk48     : std_logic;                           -- This connect to QLink clk48 out
-  signal adr       : std_logic_vector(7 downto 0);        -- This connect to QLink address bus
+  signal adr       : std_logic_vector(31 downto 0);        -- This connect to QLink address bus
   signal data_w    : std_logic_vector(31 downto 0);       -- This connect to Qlink data out
   signal data_r    : std_logic_vector(31 downto 0);       -- This connect to Qlink data in
   signal wr,rd     : std_logic;                           -- This connect to QLink read and write outputs
@@ -199,7 +199,7 @@ QLINK1: QLinkMaster
          RX_I    => RX_I,                 -- This is the Sindri RX signal (from the PC)
          TX_O => TX_O,                    -- This is the Sindri TX signal (to the PC)
          CLK48_O => clk48,                -- This is the 48MHz we use as system clock
-         ADDR_B_O => adr,                 -- This is the 8 bit address vector 
+         ADDR_B_O => adr(7 downto 0),                 -- This is the 8 bit address vector 
          DATA_B_O => data_w,              -- This is the 32 bit data out vector
          DATA_B_I => data_r,              -- This is the 32 bit data in vector
          WR_O     => wr,                  -- This is the write signal
@@ -225,10 +225,12 @@ begin
       if wr='1' then                 --   If we are specifically in a write cycle:
         leds<=data_w(31 downto 24);  --     change the content of the 8-bit leds register to reflect the highest 8 bits written by the user
         DATA_O <= data_w;
+        ADDR_O <= adr(29 downto 0) & "00"; -- Multiply input address by 4, to get correct BRAM address
         WEA_O <= "1111";
       elsif rd='1' then              --   but if it is a read cycle
         WEA_O <= "0000";
-        leds<=adr;                   --     change the content of the 8-bit leds register to reflect the address read
+        ADDR_O <= adr(29 downto 0) & "00"; -- Multiply input address by 4, to get correct BRAM address
+        leds<=adr(7 downto 0);                   --     change the content of the 8-bit leds register to reflect the address read
       else                           --   if it was neither read nor write, keep the leds register as is
         leds<=leds;
         WEA_O <= "0000";

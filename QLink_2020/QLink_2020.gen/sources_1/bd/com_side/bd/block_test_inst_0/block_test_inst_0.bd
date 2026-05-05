@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCA704B83ACB82611",
+      "boundary_crc": "0xC2F370E9B4F3FEBB",
       "design_src": "/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.srcs/sources_1/bd/block_test/block_test.bd",
       "device": "xc7s15ftgb196-1",
       "name": "block_test_inst_0",
@@ -51,11 +51,16 @@
       },
       "q_addr_o": {
         "direction": "O",
-        "left": "7",
+        "left": "31",
         "right": "0"
       },
       "qlink_clk_o": {
         "direction": "O"
+      },
+      "q_data_o": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
       }
     },
     "components": {
@@ -106,7 +111,7 @@
           },
           "ADDR_O": {
             "direction": "O",
-            "left": "7",
+            "left": "31",
             "right": "0"
           }
         }
@@ -193,7 +198,8 @@
       "Sindri_QLink_top_0_DATA_O": {
         "ports": [
           "Sindri_QLink_top_0/DATA_O",
-          "blk_mem_gen_0/dina"
+          "blk_mem_gen_0/dina",
+          "q_data_o"
         ]
       },
       "Sindri_QLink_top_0_LED_O": {

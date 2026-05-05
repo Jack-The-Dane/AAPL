@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May  4 11:26:44 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May  5 14:53:42 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="com_side" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
@@ -53,12 +53,16 @@
         <CONNECTION INSTANCE="simple_button_fsm_2" PORT="button"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="7" NAME="q_addr_o_0" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_addr_o">
+    <PORT DIR="O" LEFT="31" NAME="q_addr_o_1" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_addr_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="block_test_0" PORT="q_addr_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="q_data_o_0" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="31" NAME="q_data_o_1" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_data_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="q_data_o"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="O" NAME="qlink_clk_o" SIGIS="undef" SIGNAME="block_test_0_qlink_clk_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk_o"/>
@@ -119,9 +123,14 @@
             <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="q_addr_o" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_addr_o">
+        <PORT DIR="O" LEFT="31" NAME="q_addr_o" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_addr_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="q_addr_o_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="q_addr_o_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="q_data_o" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_data_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="q_data_o_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="qlink_clk_o" SIGIS="undef" SIGNAME="block_test_0_qlink_clk_o">

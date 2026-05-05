@@ -86,7 +86,9 @@ module main_top_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire hdmi_clk_n,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire hdmi_red_p
+  output wire hdmi_red_p,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [3:0] LED_O
 );
 
   main_top inst (
@@ -106,7 +108,8 @@ module main_top_sv (
     .hdmi_red_n(hdmi_red_n),
     .hdmi_blue_p(hdmi_blue_p),
     .hdmi_clk_n(hdmi_clk_n),
-    .hdmi_red_p(hdmi_red_p)
+    .hdmi_red_p(hdmi_red_p),
+    .LED_O(LED_O)
   );
 
 endmodule

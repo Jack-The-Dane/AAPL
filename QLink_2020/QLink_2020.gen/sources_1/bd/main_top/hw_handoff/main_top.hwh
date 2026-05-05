@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May  4 12:31:08 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May  5 15:01:35 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="main_top" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
@@ -37,6 +37,11 @@
     <PORT DIR="I" NAME="CLK25_I" SIGIS="undef" SIGNAME="External_Ports_CLK25_I">
       <CONNECTIONS>
         <CONNECTION INSTANCE="top_level_0" PORT="CLK25_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef" SIGNAME="top_level_0_LED_O">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_level_0" PORT="LED_O"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="RX_I" SIGIS="undef" SIGNAME="External_Ports_RX_I">
@@ -97,7 +102,7 @@
     <MODULE COREREVISION="1" FULLNAME="/com_side_wrapper_0" HWVERSION="1.0" INSTANCE="com_side_wrapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="com_side_wrapper" VLNV="xilinx.com:module_ref:com_side_wrapper:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="main_top_com_side_wrapper_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_top_com_side_wrapper_0_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -142,12 +147,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="BB_08"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="q_addr_o_0" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_addr_o_0">
+        <PORT DIR="O" LEFT="31" NAME="q_addr_o_1" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_addr_o_1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_level_0" PORT="addra_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="q_data_o_0" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_data_o_0">
+        <PORT DIR="O" LEFT="31" NAME="q_data_o_1" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_data_o_1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_level_0" PORT="dina_i"/>
           </CONNECTIONS>
@@ -177,10 +182,14 @@
             <CONNECTION INSTANCE="External_Ports" PORT="CLK25_I"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="addra_i" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_addr_o_0">
+        <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef" SIGNAME="top_level_0_LED_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="com_side_wrapper_0" PORT="q_addr_o_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="addra_i" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_addr_o_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_wrapper_0" PORT="q_addr_o_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_qlink" SIGIS="clk" SIGNAME="com_side_wrapper_0_qlink_clk_o">
@@ -188,9 +197,9 @@
             <CONNECTION INSTANCE="com_side_wrapper_0" PORT="qlink_clk_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="dina_i" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_data_o_0">
+        <PORT DIR="I" LEFT="31" NAME="dina_i" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_data_o_1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="com_side_wrapper_0" PORT="q_data_o_0"/>
+            <CONNECTION INSTANCE="com_side_wrapper_0" PORT="q_data_o_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="hdmi_blue_n" SIGIS="undef" SIGNAME="top_level_0_hdmi_blue_n">
@@ -240,12 +249,12 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CONST_VAL" VALUE="0x00000001"/>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="31"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="main_top_xlconstant_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="30" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+        <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="com_side_wrapper_0" PORT="addrb_i"/>
           </CONNECTIONS>

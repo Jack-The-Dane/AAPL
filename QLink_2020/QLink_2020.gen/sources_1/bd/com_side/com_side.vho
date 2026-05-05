@@ -62,10 +62,10 @@ COMPONENT com_side
     RX_I : IN STD_LOGIC;
     TX_O : OUT STD_LOGIC;
     LED_1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    q_data_o_0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    q_addr_o_0 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     addrb_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    qlink_clk_o : OUT STD_LOGIC
+    qlink_clk_o : OUT STD_LOGIC;
+    q_addr_o_1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    q_data_o_1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -85,10 +85,10 @@ your_instance_name : com_side
     RX_I => RX_I,
     TX_O => TX_O,
     LED_1 => LED_1,
-    q_data_o_0 => q_data_o_0,
-    q_addr_o_0 => q_addr_o_0,
     addrb_i => addrb_i,
-    qlink_clk_o => qlink_clk_o
+    qlink_clk_o => qlink_clk_o,
+    q_addr_o_1 => q_addr_o_1,
+    q_data_o_1 => q_data_o_1
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

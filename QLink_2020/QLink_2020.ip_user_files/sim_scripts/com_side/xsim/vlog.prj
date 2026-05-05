@@ -1,4 +1,4 @@
-verilog xil_defaultlib -i "../../../../../../../Vivado/2025.2/data/rsb/busdef" \
+verilog xil_defaultlib -i "../../../../../../../../../../../tools/Xilinx/2025.2/data/rsb/busdef" \
 "../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_blk_mem_gen_0_0/sim/block_test_inst_0_blk_mem_gen_0_0.v" \
 "../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_enable_0_0/sim/block_test_inst_0_enable_0_0.v" \
 "../../../../QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_reset_0_0/sim/block_test_inst_0_reset_0_0.v" \
