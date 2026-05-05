@@ -1,14 +1,13 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA3D1C67555FC46E6",
+      "boundary_crc": "0xA3D1C675007D989F",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../frame_gen.gen/sources_1/bd/top_level",
       "name": "top_level",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.2",
-      "validated": "true"
+      "tool_version": "2025.2"
     },
     "design_tree": {
       "vga_gen_0": "",
@@ -42,24 +41,8 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "top_level_CLK25_I",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "25000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
           }
         }
       },
@@ -72,13 +55,7 @@
       "LED_O": {
         "direction": "O",
         "left": "3",
-        "right": "0",
-        "parameters": {
-          "PortWidth": {
-            "value": "4",
-            "value_src": "user_prop"
-          }
-        }
+        "right": "0"
       },
       "hdmi_red_n": {
         "direction": "O"
