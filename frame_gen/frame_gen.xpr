@@ -181,12 +181,55 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/decode_serial.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd"/>
+          <Attr Name="ImportTime" Val="1777626058"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/encode_serial.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd"/>
+          <Attr Name="ImportTime" Val="1777626058"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/mmcm48.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd"/>
+          <Attr Name="ImportTime" Val="1777626058"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/qlinkmaster.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd"/>
+          <Attr Name="ImportTime" Val="1777626058"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd"/>
+          <Attr Name="ImportTime" Val="1777626058"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/top_level/top_level.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_Sindri_QLink_top_0_0/top_level_Sindri_QLink_top_0_0.xci">
+          <Proxy FileSetName="top_level_Sindri_QLink_top_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_TMDS_encoder_0_0/top_level_TMDS_encoder_0_0.xci">
           <Proxy FileSetName="top_level_TMDS_encoder_0_0"/>
         </CompFileExtendedInfo>
@@ -409,6 +452,12 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="top_level_Sindri_QLink_top_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_Sindri_QLink_top_0_0" RelGenDir="$PGENDIR/top_level_Sindri_QLink_top_0_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_Sindri_QLink_top_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -605,6 +654,18 @@
     <Run Id="top_level_draw_box_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_draw_box_0_0" Part="xc7s15ftgb196-1" ConstrsSet="top_level_draw_box_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_draw_box_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_draw_box_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_draw_box_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_level_Sindri_QLink_top_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_Sindri_QLink_top_0_0" Part="xc7s15ftgb196-1" ConstrsSet="top_level_Sindri_QLink_top_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_Sindri_QLink_top_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_Sindri_QLink_top_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_Sindri_QLink_top_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -905,6 +966,25 @@
     <Run Id="top_level_draw_box_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s15ftgb196-1" ConstrsSet="top_level_draw_box_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_draw_box_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_draw_box_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_draw_box_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_level_Sindri_QLink_top_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s15ftgb196-1" ConstrsSet="top_level_Sindri_QLink_top_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_Sindri_QLink_top_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_level_Sindri_QLink_top_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_level_Sindri_QLink_top_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
