@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/tools/Xilinx/2025.2/Vitis/bin:/tools/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64:/tools/Xilinx/2025.2/Vivado/bin
+  PATH=/home/kasper-ubuntu/Vivado/2025.2/Vitis/bin:/home/kasper-ubuntu/Vivado/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/kasper-ubuntu/Vivado/2025.2/Vivado/bin
 else
-  PATH=/tools/Xilinx/2025.2/Vitis/bin:/tools/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64:/tools/Xilinx/2025.2/Vivado/bin:$PATH
+  PATH=/home/kasper-ubuntu/Vivado/2025.2/Vitis/bin:/home/kasper-ubuntu/Vivado/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/kasper-ubuntu/Vivado/2025.2/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/impl_1'
+HD_PWD='/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

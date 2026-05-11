@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Tue May  5 15:03:32 2026
-| Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
+| Date         : Mon May 11 10:16:47 2026
+| Host         : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_drc -file main_top_wrapper_drc_routed.rpt -pb main_top_wrapper_drc_routed.pb -rpx main_top_wrapper_drc_routed.rpx
 | Design       : main_top_wrapper
 | Device       : xc7s15ftgb196-1

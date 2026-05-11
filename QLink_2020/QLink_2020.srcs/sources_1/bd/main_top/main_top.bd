@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x54B9CB5C3827B7E2",
+      "boundary_crc": "0x7A80CB75023BB4AC",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/main_top",
       "name": "main_top",
@@ -19,16 +19,16 @@
       "RX_I": {
         "direction": "I"
       },
-      "BB_08": {
+      "BB_21": {
         "direction": "I"
       },
-      "BB_05": {
+      "BB_30": {
         "direction": "I"
       },
-      "BB_07": {
+      "BB_24": {
         "direction": "I"
       },
-      "BB_06": {
+      "BB_27": {
         "direction": "I"
       },
       "CLK12_I": {
@@ -131,6 +131,9 @@
         "inst_hier_path": "xlconstant_0",
         "has_run_ip_tcl": "true",
         "parameters": {
+          "CONST_VAL": {
+            "value": "200"
+          },
           "CONST_WIDTH": {
             "value": "32"
           }
@@ -211,25 +214,25 @@
     "nets": {
       "BB_05_1": {
         "ports": [
-          "BB_05",
+          "BB_30",
           "com_side_wrapper_0/button_0"
         ]
       },
       "BB_06_1": {
         "ports": [
-          "BB_06",
+          "BB_27",
           "com_side_wrapper_0/button_1"
         ]
       },
       "BB_07_1": {
         "ports": [
-          "BB_07",
+          "BB_24",
           "com_side_wrapper_0/button_2"
         ]
       },
       "BB_08_1": {
         "ports": [
-          "BB_08",
+          "BB_21",
           "com_side_wrapper_0/button_3"
         ]
       },

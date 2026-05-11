@@ -2,8 +2,8 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Tue May  5 15:01:35 2026
---Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
+--Date        : Mon May 11 10:15:41 2026
+--Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 --Command     : generate_target main_top.bd
 --Design      : main_top
 --Purpose     : IP block netlist
@@ -14,11 +14,11 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity main_top is
   port (
-    BB_05 : in STD_LOGIC;
-    BB_06 : in STD_LOGIC;
-    BB_07 : in STD_LOGIC;
-    BB_08 : in STD_LOGIC;
     BB_09 : in STD_LOGIC;
+    BB_21 : in STD_LOGIC;
+    BB_24 : in STD_LOGIC;
+    BB_27 : in STD_LOGIC;
+    BB_30 : in STD_LOGIC;
     CLK12_I : in STD_LOGIC;
     CLK25_I : in STD_LOGIC;
     LED_O : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -100,10 +100,10 @@ com_side_wrapper_0: component main_top_com_side_wrapper_0_2
       RX_I => RX_I,
       TX_O => TX_O,
       addrb_i(31 downto 0) => xlconstant_0_dout(31 downto 0),
-      button_0 => BB_05,
-      button_1 => BB_06,
-      button_2 => BB_07,
-      button_3 => BB_08,
+      button_0 => BB_30,
+      button_1 => BB_27,
+      button_2 => BB_24,
+      button_3 => BB_21,
       q_addr_o_1(31 downto 0) => com_side_wrapper_0_q_addr_o_0(31 downto 0),
       q_data_o_1(31 downto 0) => com_side_wrapper_0_q_data_o_0(31 downto 0),
       qlink_clk_o => com_side_wrapper_0_qlink_clk_o,

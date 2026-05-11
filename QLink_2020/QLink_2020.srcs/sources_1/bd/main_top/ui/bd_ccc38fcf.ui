@@ -1,55 +1,55 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-185,-47",
+   "Default View_TopLeft":"-130,-228",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_RX_I -pg 1 -lvl 0 -x -60 -y 60 -defaultsOSRD
-preplace port port-id_BB_08 -pg 1 -lvl 0 -x -60 -y 230 -defaultsOSRD
-preplace port port-id_BB_05 -pg 1 -lvl 0 -x -60 -y 140 -defaultsOSRD
-preplace port port-id_BB_07 -pg 1 -lvl 0 -x -60 -y 200 -defaultsOSRD
-preplace port port-id_BB_06 -pg 1 -lvl 0 -x -60 -y 170 -defaultsOSRD
-preplace port port-id_CLK12_I -pg 1 -lvl 0 -x -60 -y 30 -defaultsOSRD
-preplace port port-id_BB_09 -pg 1 -lvl 0 -x -60 -y 260 -defaultsOSRD
-preplace port port-id_CLK25_I -pg 1 -lvl 0 -x -60 -y 0 -defaultsOSRD
-preplace port port-id_TX_O -pg 1 -lvl 4 -x 1000 -y 40 -defaultsOSRD
-preplace port port-id_hdmi_clk_p -pg 1 -lvl 4 -x 1000 -y 200 -defaultsOSRD
-preplace port port-id_hdmi_green_n -pg 1 -lvl 4 -x 1000 -y 230 -defaultsOSRD
-preplace port port-id_hdmi_blue_n -pg 1 -lvl 4 -x 1000 -y 70 -defaultsOSRD
-preplace port port-id_hdmi_green_p -pg 1 -lvl 4 -x 1000 -y 260 -defaultsOSRD
-preplace port port-id_hdmi_red_n -pg 1 -lvl 4 -x 1000 -y 290 -defaultsOSRD
-preplace port port-id_hdmi_blue_p -pg 1 -lvl 4 -x 1000 -y 140 -defaultsOSRD
-preplace port port-id_hdmi_clk_n -pg 1 -lvl 4 -x 1000 -y 170 -defaultsOSRD
-preplace port port-id_hdmi_red_p -pg 1 -lvl 4 -x 1000 -y 320 -defaultsOSRD
-preplace portBus LED_O -pg 1 -lvl 4 -x 1000 -y 110 -defaultsOSRD
+preplace port port-id_RX_I -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_BB_21 -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_BB_30 -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_BB_24 -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_BB_27 -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_CLK12_I -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_BB_09 -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port port-id_CLK25_I -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_TX_O -pg 1 -lvl 4 -x 870 -y 60 -defaultsOSRD
+preplace port port-id_hdmi_clk_p -pg 1 -lvl 4 -x 870 -y 200 -defaultsOSRD
+preplace port port-id_hdmi_green_n -pg 1 -lvl 4 -x 870 -y 220 -defaultsOSRD
+preplace port port-id_hdmi_blue_n -pg 1 -lvl 4 -x 870 -y 140 -defaultsOSRD
+preplace port port-id_hdmi_green_p -pg 1 -lvl 4 -x 870 -y 240 -defaultsOSRD
+preplace port port-id_hdmi_red_n -pg 1 -lvl 4 -x 870 -y 260 -defaultsOSRD
+preplace port port-id_hdmi_blue_p -pg 1 -lvl 4 -x 870 -y 160 -defaultsOSRD
+preplace port port-id_hdmi_clk_n -pg 1 -lvl 4 -x 870 -y 180 -defaultsOSRD
+preplace port port-id_hdmi_red_p -pg 1 -lvl 4 -x 870 -y 280 -defaultsOSRD
+preplace portBus LED_O -pg 1 -lvl 4 -x 870 -y 120 -defaultsOSRD
 preplace inst xlconstant_0 -pg 1 -lvl 1 -x 130 -y 120 -defaultsOSRD
-preplace inst top_level_0 -pg 1 -lvl 3 -x 800 -y 190 -defaultsOSRD
-preplace inst com_side_wrapper_0 -pg 1 -lvl 2 -x 480 -y 150 -defaultsOSRD
-preplace netloc CLK25_I_1 1 0 3 NJ 0 NJ 0 660
-preplace netloc top_level_0_LED_O 1 3 1 N 110
-preplace netloc top_level_0_hdmi_blue_n 1 3 1 960 70n
-preplace netloc top_level_0_hdmi_blue_p 1 3 1 960 140n
-preplace netloc top_level_0_hdmi_clk_n 1 3 1 N 170
-preplace netloc top_level_0_hdmi_clk_p 1 3 1 960 190n
-preplace netloc top_level_0_hdmi_green_n 1 3 1 960 210n
-preplace netloc top_level_0_hdmi_green_p 1 3 1 950 230n
-preplace netloc top_level_0_hdmi_red_n 1 3 1 940 250n
-preplace netloc top_level_0_hdmi_red_p 1 3 1 930 270n
-preplace netloc com_side_wrapper_0_TX_O 1 2 2 650J 40 N
-preplace netloc com_side_wrapper_0_q_addr_o_0 1 2 1 650 150n
-preplace netloc com_side_wrapper_0_q_data_o_0 1 2 1 640 170n
-preplace netloc com_side_wrapper_0_qlink_clk_o 1 2 1 630 190n
-preplace netloc xlconstant_0_dout 1 1 1 N 120
-preplace netloc CLK12_I_1 1 0 2 NJ 30 240
-preplace netloc RX_I_1 1 0 2 NJ 60 230
-preplace netloc BB_05_1 1 0 2 -30J 180 230
-preplace netloc BB_06_1 1 0 2 -40J 190 240
-preplace netloc BB_07_1 1 0 2 NJ 200 250
-preplace netloc BB_08_1 1 0 2 NJ 230 260
-preplace netloc BB_09_1 1 0 2 NJ 260 270
-levelinfo -pg 1 -60 130 480 800 1000
-pagesize -pg 1 -db -bbox -sgen -170 -260 1150 450
+preplace inst top_level_0 -pg 1 -lvl 3 -x 720 -y 200 -defaultsOSRD
+preplace inst com_side_wrapper_0 -pg 1 -lvl 2 -x 420 -y 190 -defaultsOSRD
+preplace netloc BB_05_1 1 0 2 NJ 180 NJ
+preplace netloc BB_06_1 1 0 2 NJ 200 NJ
+preplace netloc BB_07_1 1 0 2 NJ 220 NJ
+preplace netloc BB_08_1 1 0 2 NJ 240 NJ
+preplace netloc BB_09_1 1 0 2 NJ 260 NJ
+preplace netloc CLK12_I_1 1 0 2 NJ 40 260J
+preplace netloc CLK25_I_1 1 0 3 NJ 20 NJ 20 590J
+preplace netloc RX_I_1 1 0 2 NJ 60 250J
+preplace netloc com_side_wrapper_0_TX_O 1 2 2 580J 60 NJ
+preplace netloc com_side_wrapper_0_q_addr_o_0 1 2 1 N 190
+preplace netloc com_side_wrapper_0_q_data_o_0 1 2 1 580 210n
+preplace netloc com_side_wrapper_0_qlink_clk_o 1 2 1 590 210n
+preplace netloc top_level_0_LED_O 1 3 1 NJ 120
+preplace netloc top_level_0_hdmi_blue_n 1 3 1 NJ 140
+preplace netloc top_level_0_hdmi_blue_p 1 3 1 NJ 160
+preplace netloc top_level_0_hdmi_clk_n 1 3 1 NJ 180
+preplace netloc top_level_0_hdmi_clk_p 1 3 1 NJ 200
+preplace netloc top_level_0_hdmi_green_n 1 3 1 NJ 220
+preplace netloc top_level_0_hdmi_green_p 1 3 1 NJ 240
+preplace netloc top_level_0_hdmi_red_n 1 3 1 NJ 260
+preplace netloc top_level_0_hdmi_red_p 1 3 1 NJ 280
+preplace netloc xlconstant_0_dout 1 1 1 240J 120n
+levelinfo -pg 1 0 130 420 720 870
+pagesize -pg 1 -db -bbox -sgen -110 0 1020 340
 "
 }
 0

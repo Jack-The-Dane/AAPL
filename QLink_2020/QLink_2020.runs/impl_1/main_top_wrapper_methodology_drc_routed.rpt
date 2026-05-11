@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Tue May  5 15:03:33 2026
-| Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
+| Date         : Mon May 11 10:16:48 2026
+| Host         : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_methodology -file main_top_wrapper_methodology_drc_routed.rpt -pb main_top_wrapper_methodology_drc_routed.pb -rpx main_top_wrapper_methodology_drc_routed.rpx
 | Design       : main_top_wrapper
 | Device       : xc7s15ftgb196-1
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 25
+             Checks found: 24
 +-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
 | Rule      | Severity | Description                                                                                           | Checks |
 +-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
 | CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads                                      | 1      |
 | TIMING-9  | Warning  | Unknown CDC Logic                                                                                     | 1      |
-| TIMING-16 | Warning  | Large setup violation                                                                                 | 8      |
+| TIMING-16 | Warning  | Large setup violation                                                                                 | 7      |
 | TIMING-18 | Warning  | Missing input or output delay                                                                         | 9      |
 | TIMING-47 | Warning  | False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks | 2      |
 | XDCC-4    | Warning  | User Clock constraint overwritten with the same name                                                  | 2      |
@@ -50,67 +50,62 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.079 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[5]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.088 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[1]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.079 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[6]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.088 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[2]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.079 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[7]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.088 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[3]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.079 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[8]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.088 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[4]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -1.084 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[1]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.209 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[10]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -1.084 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[2]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.209 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[11]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -1.084 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[3]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#8 Warning
-Large setup violation  
-There is a large setup violation of -1.084 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[4]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.209 ns between main_top_i/top_level_0/U0/color_fetcher_0/U0/plusOp/CLK (clocked by clock_pixel_unbuffered) and main_top_i/top_level_0/U0/color_fetcher_0/U0/square_counter_reg[9]/R (clocked by clock_pixel_unbuffered). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on BB_05 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An input delay is missing on BB_09 relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An input delay is missing on BB_06 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An input delay is missing on BB_21 relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An input delay is missing on BB_07 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An input delay is missing on BB_24 relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An input delay is missing on BB_08 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An input delay is missing on BB_27 relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An input delay is missing on BB_09 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An input delay is missing on BB_30 relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-18#6 Warning
@@ -146,29 +141,29 @@ Related violations: <none>
 XDCC-4#1 Warning
 User Clock constraint overwritten with the same name  
 A new clock constraint create_clock overrides a previous user clock constraint with the same name.
-New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
-Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 76))
+New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
+Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc (Line: 76))
 Related violations: <none>
 
 XDCC-4#2 Warning
 User Clock constraint overwritten with the same name  
 A new clock constraint create_clock overrides a previous user clock constraint with the same name.
-New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
-Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 69))
+New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
+Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc (Line: 69))
 Related violations: <none>
 
 XDCC-8#1 Warning
 User Clock constraint overwritten on the same source  
 A new clock constraint create_clock overrides a previous user clock constraint defined on the same source.
-New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
-Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 76))
+New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
+Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc (Line: 76))
 Related violations: <none>
 
 XDCC-8#2 Warning
 User Clock constraint overwritten on the same source  
 A new clock constraint create_clock overrides a previous user clock constraint defined on the same source.
-New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
-Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 69))
+New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
+Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc (Line: 69))
 Related violations: <none>
 
 

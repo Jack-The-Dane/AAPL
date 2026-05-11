@@ -1,5 +1,15 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="50012" HostCore="8" HostMemory="15739220">
+    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="6476" HostCore="6" HostMemory="16371332">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="8838" HostCore="6" HostMemory="16371332">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="19114" HostCore="6" HostMemory="16371332">
     </Process>
 </ProcessHandle>

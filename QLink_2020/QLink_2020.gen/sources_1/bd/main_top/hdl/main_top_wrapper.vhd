@@ -2,8 +2,8 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Tue May  5 15:01:35 2026
---Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
+--Date        : Mon May 11 10:15:41 2026
+--Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 --Command     : generate_target main_top_wrapper.bd
 --Design      : main_top_wrapper
 --Purpose     : IP block netlist
@@ -14,11 +14,11 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity main_top_wrapper is
   port (
-    BB_05 : in STD_LOGIC;
-    BB_06 : in STD_LOGIC;
-    BB_07 : in STD_LOGIC;
-    BB_08 : in STD_LOGIC;
     BB_09 : in STD_LOGIC;
+    BB_21 : in STD_LOGIC;
+    BB_24 : in STD_LOGIC;
+    BB_27 : in STD_LOGIC;
+    BB_30 : in STD_LOGIC;
     CLK12_I : in STD_LOGIC;
     CLK25_I : in STD_LOGIC;
     LED_O : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -39,10 +39,10 @@ architecture STRUCTURE of main_top_wrapper is
   component main_top is
   port (
     RX_I : in STD_LOGIC;
-    BB_08 : in STD_LOGIC;
-    BB_05 : in STD_LOGIC;
-    BB_07 : in STD_LOGIC;
-    BB_06 : in STD_LOGIC;
+    BB_21 : in STD_LOGIC;
+    BB_30 : in STD_LOGIC;
+    BB_24 : in STD_LOGIC;
+    BB_27 : in STD_LOGIC;
     CLK12_I : in STD_LOGIC;
     BB_09 : in STD_LOGIC;
     CLK25_I : in STD_LOGIC;
@@ -61,11 +61,11 @@ architecture STRUCTURE of main_top_wrapper is
 begin
 main_top_i: component main_top
      port map (
-      BB_05 => BB_05,
-      BB_06 => BB_06,
-      BB_07 => BB_07,
-      BB_08 => BB_08,
       BB_09 => BB_09,
+      BB_21 => BB_21,
+      BB_24 => BB_24,
+      BB_27 => BB_27,
+      BB_30 => BB_30,
       CLK12_I => CLK12_I,
       CLK25_I => CLK25_I,
       LED_O(3 downto 0) => LED_O(3 downto 0),

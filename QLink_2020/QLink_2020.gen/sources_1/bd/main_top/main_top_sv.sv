@@ -56,13 +56,13 @@ module main_top_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   input wire RX_I,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire BB_08,
+  input wire BB_21,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire BB_05,
+  input wire BB_30,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire BB_07,
+  input wire BB_24,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire BB_06,
+  input wire BB_27,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire CLK12_I,
   (* X_INTERFACE_IGNORE = "true" *)
@@ -93,10 +93,10 @@ module main_top_sv (
 
   main_top inst (
     .RX_I(RX_I),
-    .BB_08(BB_08),
-    .BB_05(BB_05),
-    .BB_07(BB_07),
-    .BB_06(BB_06),
+    .BB_21(BB_21),
+    .BB_30(BB_30),
+    .BB_24(BB_24),
+    .BB_27(BB_27),
     .CLK12_I(CLK12_I),
     .BB_09(BB_09),
     .CLK25_I(CLK25_I),
