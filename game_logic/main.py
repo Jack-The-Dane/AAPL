@@ -26,6 +26,13 @@ top_left_y = s_height - play_height - 50
 SERIAL_PORT = "/dev/ttyACM0"
 BAUDRATE = 115200
 
+BUTTON_ADDR = 0xC8
+
+BTN_LEFT   = 0x01
+BTN_RIGHT  = 0x04
+BTN_DOWN   = 0x10
+BTN_ROTATE = 0x40
+
 #fandt en som havde lavet farver til dem
 class colors:
     G = (138, 234, 40)
@@ -337,6 +344,8 @@ def draw_sidebar(surface, high_score, current_score, next_piece_name):
         "Next Piece",
         next_piece_name
     )
+
+    
 class QlinkSerial:
     def __init__(self, port=SERIAL_PORT, baud=BAUDRATE):
         self.ser = serial.Serial(port, baudrate=baud, timeout=1)
@@ -353,7 +362,30 @@ class QlinkSerial:
         """
         cmd = f"#w:{address:02X}{data:08X}"
         self.ser.write(cmd.encode("ascii"))
+        self.ser.flush()´
+
+    def read_word(self, address):
+        cmd = f"#r:{address:02X}" + "." * 10
+
+        self.ser.reset_input_buffer()
+        self.ser.write(cmd.encode("ascii"))
         self.ser.flush()
+
+        response = self.ser.read(12).decode("ascii", errors="ignore")
+
+        if len(response) != 12:
+            return None
+
+        if response[0] != "!":
+            return None
+
+        returned_address = int(response[1:3], 16)
+        data = int(response[4:12], 16)
+
+        if returned_address != address:
+            return None
+
+        return data
 
     def send_cell(self, cell_index, cell_value):
         """
@@ -384,7 +416,40 @@ class QlinkSerial:
     def close(self):
         self.ser.close()
 
+def handle_fpga_buttons(button_word, piece, mat):
+    if button_word is None:
+        return piece
 
+    if button_word & BTN_LEFT:
+        if mat.check_collision(piece, pygame.K_LEFT):
+            piece.move_left()
+
+    if button_word & BTN_RIGHT:
+        if mat.check_collision(piece, pygame.K_RIGHT):
+            piece.move_right()
+
+    if button_word & BTN_DOWN:
+        if mat.check_collision(piece, pygame.K_DOWN):
+            piece.move_down()
+
+    if button_word & BTN_ROTATE:
+        piece.rotate_self()
+
+        if not mat.check_rotation_collision(piece):
+            piece.rotate_self()
+            piece.rotate_self()
+            piece.rotate_self()
+
+        while piece.get_left_edge_x() < board_x:
+            piece.move_right()
+
+        while piece.get_right_edge_x() > board_x + play_width:
+            piece.move_left()
+
+        while piece.get_bottom_edge_y() > board_y + play_height:
+            piece.move_up()
+
+    return piece
 
 
 
@@ -454,6 +519,9 @@ while running:
                     piece.move_down()
                 side_move_counter = 0
 
+    # FPGA BUTTON INPUT
+    button_word = qlink.read_word(BUTTON_ADDR)
+    piece = handle_fpga_buttons(button_word, piece, mat)
 
     #Logik for at holde i bund
     keys = pygame.key.get_pressed()
