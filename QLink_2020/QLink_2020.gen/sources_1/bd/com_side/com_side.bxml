@@ -2,11 +2,11 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="com_side" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1778490141"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1778490141"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1778490141"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1778490141"/>
-    <Generation Name="INSTANTIATION_TEMPLATE" State="STALE" Timestamp="1778490141"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1778499935"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1778499935"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1778499935"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1778499935"/>
+    <Generation Name="INSTANTIATION_TEMPLATE" State="GENERATED" Timestamp="1778499935"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth/com_side.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -69,7 +69,7 @@
       </File>
     </FileCollection>
     <BlockContainerCollection>
-      <BlockContainer InstPath="/block_test_0" IsPR="false" State="Stale">
+      <BlockContainer InstPath="/block_test_0" IsPR="false" State="Generated">
         <ActiveVariantSynth FileName="bd/block_test_inst_0/block_test_inst_0.bd"/>
         <ActiveVariantSim FileName="bd/block_test_inst_0/block_test_inst_0.bd"/>
         <VariantsCollection>

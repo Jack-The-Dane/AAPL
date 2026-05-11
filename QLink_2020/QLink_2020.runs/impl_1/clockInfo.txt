@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.2
-| Date         : Mon May 11 10:59:17 2026
-| Host         : kasper-ubuntu-pc
+| Date         : Mon May 11 13:55:36 2026
+| Host         : Laptop
 | Design       : design_1
 | Device       : xc7s15-ftgb196-1--
 -------------------------------------

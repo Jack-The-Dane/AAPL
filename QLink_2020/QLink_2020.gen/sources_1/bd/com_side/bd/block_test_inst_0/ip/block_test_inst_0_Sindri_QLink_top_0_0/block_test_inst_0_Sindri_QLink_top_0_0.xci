@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "block_test_inst_0_Sindri_QLink_top_0_0",
-    "cell_name": "block_test_0/Sindri_QLink_top_0",
+    "cell_name": "Sindri_QLink_top_0",
     "component_reference": "xilinx.com:module_ref:Sindri_QLink_top:1.0",
     "ip_revision": "1",
     "gen_directory": ".",
@@ -48,5 +48,5 @@
       }
     }
   },
-  "checksum": "5e31044d"
+  "checksum": "9aa7b059"
 }

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7A80CB75FE4FBB00",
+      "boundary_crc": "0xA5C9F59CC1780D9C",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/main_top",
       "name": "main_top",
@@ -13,7 +13,8 @@
     "design_tree": {
       "xlconstant_0": "",
       "top_level_0": "",
-      "com_side_wrapper_0": ""
+      "com_side_wrapper_0": "",
+      "ilconstant_0": ""
     },
     "ports": {
       "RX_I": {
@@ -22,7 +23,7 @@
       "BB_21": {
         "direction": "I"
       },
-      "BB_30": {
+      "nBUTTON_I": {
         "direction": "I"
       },
       "BB_24": {
@@ -33,20 +34,6 @@
       },
       "CLK12_I": {
         "direction": "I"
-      },
-      "BB_09": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
       },
       "CLK25_I": {
         "direction": "I"
@@ -138,7 +125,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "CONST_VAL": {
-            "value": "200"
+            "value": "800"
           },
           "CONST_WIDTH": {
             "value": "32"
@@ -221,37 +208,24 @@
             "direction": "I"
           }
         }
+      },
+      "ilconstant_0": {
+        "vlnv": "xilinx.com:inline_hdl:ilconstant:1.0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
       }
     },
     "nets": {
-      "BB_09_1": {
-        "ports": [
-          "BB_09",
-          "com_side_wrapper_0/rst"
-        ]
-      },
-      "BB_21_1": {
-        "ports": [
-          "BB_21",
-          "com_side_wrapper_0/button_3"
-        ]
-      },
-      "BB_24_1": {
-        "ports": [
-          "BB_24",
-          "com_side_wrapper_0/button_2"
-        ]
-      },
-      "BB_27_1": {
-        "ports": [
-          "BB_27",
-          "com_side_wrapper_0/button_1"
-        ]
-      },
       "BB_30_1": {
         "ports": [
-          "BB_30",
-          "com_side_wrapper_0/button_0"
+          "nBUTTON_I",
+          "com_side_wrapper_0/button_0",
+          "com_side_wrapper_0/button_1",
+          "com_side_wrapper_0/button_2",
+          "com_side_wrapper_0/button_3"
         ]
       },
       "CLK12_I_1": {
@@ -300,6 +274,12 @@
         "ports": [
           "com_side_wrapper_0/qlink_clk_o",
           "top_level_0/clk_qlink"
+        ]
+      },
+      "ilconstant_0_dout": {
+        "ports": [
+          "ilconstant_0/dout",
+          "com_side_wrapper_0/rst"
         ]
       },
       "top_level_0_hdmi_blue_n": {

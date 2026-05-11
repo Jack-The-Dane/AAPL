@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Mon May 11 10:31:04 2026
--- Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+-- Date        : Mon May 11 13:54:37 2026
+-- Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_stub.vhdl
+--               /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_stub.vhdl
 -- Design      : main_top_com_side_wrapper_0_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s15ftgb196-1

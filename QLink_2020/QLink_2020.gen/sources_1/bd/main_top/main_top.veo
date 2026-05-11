@@ -56,11 +56,10 @@
 main_top your_instance_name (
   .RX_I(RX_I), // input wire RX_I
   .BB_21(BB_21), // input wire BB_21
-  .BB_30(BB_30), // input wire BB_30
+  .nBUTTON_I(nBUTTON_I), // input wire nBUTTON_I
   .BB_24(BB_24), // input wire BB_24
   .BB_27(BB_27), // input wire BB_27
   .CLK12_I(CLK12_I), // input wire CLK12_I
-  .BB_09(BB_09), // input wire BB_09
   .CLK25_I(CLK25_I), // input wire CLK25_I
   .TX_O(TX_O), // output wire TX_O
   .hdmi_clk_p(hdmi_clk_p), // output wire hdmi_clk_p

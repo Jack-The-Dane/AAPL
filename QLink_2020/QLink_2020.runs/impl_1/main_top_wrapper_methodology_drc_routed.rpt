@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon May 11 10:59:33 2026
-| Host         : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+| Date         : Mon May 11 13:55:55 2026
+| Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
 | Command      : report_methodology -file main_top_wrapper_methodology_drc_routed.rpt -pb main_top_wrapper_methodology_drc_routed.pb -rpx main_top_wrapper_methodology_drc_routed.rpx
 | Design       : main_top_wrapper
 | Device       : xc7s15ftgb196-1
@@ -49,27 +49,27 @@ Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on BB_09 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An input delay is missing on nBUTTON_I relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An input delay is missing on BB_21 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An output delay is missing on LED_O[0] relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An input delay is missing on BB_24 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An output delay is missing on LED_O[1] relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An input delay is missing on BB_27 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An output delay is missing on LED_O[2] relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An input delay is missing on BB_30 relative to the rising and/or falling clock edge(s) of CLK12_I.
+An output delay is missing on LED_O[3] relative to the rising and/or falling clock edge(s) of CLK12_I.
 Related violations: <none>
 
 TIMING-47#1 Warning
@@ -85,29 +85,29 @@ Related violations: <none>
 XDCC-4#1 Warning
 User Clock constraint overwritten with the same name  
 A new clock constraint create_clock overrides a previous user clock constraint with the same name.
-New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
-Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc (Line: 76))
+New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
+Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 76))
 Related violations: <none>
 
 XDCC-4#2 Warning
 User Clock constraint overwritten with the same name  
 A new clock constraint create_clock overrides a previous user clock constraint with the same name.
-New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
-Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc (Line: 69))
+New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
+Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 69))
 Related violations: <none>
 
 XDCC-8#1 Warning
 User Clock constraint overwritten on the same source  
 A new clock constraint create_clock overrides a previous user clock constraint defined on the same source.
-New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
-Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc (Line: 76))
+New: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 76))
+Previous: create_clock -period 40.000 -name CLK25_I -waveform {0.000 20.000} [get_ports CLK25_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 76))
 Related violations: <none>
 
 XDCC-8#2 Warning
 User Clock constraint overwritten on the same source  
 A new clock constraint create_clock overrides a previous user clock constraint defined on the same source.
-New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
-Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc (Line: 69))
+New: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc (Line: 69))
+Previous: create_clock -period 83.333 -name CLK12_I -waveform {0.000 41.166} [get_ports CLK12_I] (Source: /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc (Line: 69))
 Related violations: <none>
 
 

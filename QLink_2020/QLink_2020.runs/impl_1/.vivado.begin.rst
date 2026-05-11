@@ -1,40 +1,55 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="6476" HostCore="6" HostMemory="16371332">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="108347" HostCore="8" HostMemory="15739220">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="8838" HostCore="6" HostMemory="16371332">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="146321" HostCore="8" HostMemory="15739220">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="19114" HostCore="6" HostMemory="16371332">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="154860" HostCore="8" HostMemory="15739220">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="27317" HostCore="6" HostMemory="16371332">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="172878" HostCore="8" HostMemory="15739220">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="31387" HostCore="6" HostMemory="16371332">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="188902" HostCore="8" HostMemory="15739220">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="34801" HostCore="6" HostMemory="16371332">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="201845" HostCore="8" HostMemory="15739220">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="35589" HostCore="6" HostMemory="16371332">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="219467" HostCore="8" HostMemory="15739220">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="kasper-ubuntu" Host="kasper-ubuntu-pc" Pid="41296" HostCore="6" HostMemory="16371332">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="232492" HostCore="8" HostMemory="15739220">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="253149" HostCore="8" HostMemory="15739220">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="267511" HostCore="8" HostMemory="15739220">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="jacob" Host="Laptop" Pid="280785" HostCore="8" HostMemory="15739220">
     </Process>
 </ProcessHandle>

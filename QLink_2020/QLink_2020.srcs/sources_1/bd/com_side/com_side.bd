@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x55818E6C3A5CC13E",
+      "boundary_crc": "0x55818E6C36D74AA5",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/com_side",
       "name": "com_side",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.2"
+      "tool_version": "2025.2",
+      "validated": "true"
     },
     "design_tree": {
       "simple_button_fsm_0": "",
@@ -15,7 +16,8 @@
       "simple_button_fsm_2": "",
       "simple_button_fsm_3": "",
       "xlconcat_0": "",
-      "block_test_0": ""
+      "block_test_0": "",
+      "ilconcat_0": ""
     },
     "ports": {
       "button_0": {
@@ -32,7 +34,17 @@
       },
       "rst": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "CLK12_I": {
         "direction": "I"
@@ -46,7 +58,13 @@
       "LED_1": {
         "direction": "O",
         "left": "3",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "4",
+            "value_src": "user_prop"
+          }
+        }
       },
       "addrb_i": {
         "direction": "I",
@@ -272,6 +290,10 @@
           },
           "LOCK_PROPAGATE": {
             "value": "0"
+          },
+          "TRAINING_MODULE": {
+            "value": "block_test.bd",
+            "value_src": "auto"
           }
         },
         "ports": {
@@ -292,7 +314,13 @@
           "button_in": {
             "direction": "I",
             "left": "7",
-            "right": "0"
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "8",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "addrb_0": {
             "direction": "I",
@@ -326,6 +354,30 @@
             "active": "all"
           }
         }
+      },
+      "ilconcat_0": {
+        "vlnv": "xilinx.com:inline_hdl:ilconcat:1.0",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "2"
+          },
+          "IN1_WIDTH": {
+            "value": "2"
+          },
+          "IN2_WIDTH": {
+            "value": "1",
+            "value_src": "propagated",
+            "value_mode": "auto"
+          },
+          "IN3_WIDTH": {
+            "value": "1",
+            "value_src": "propagated",
+            "value_mode": "auto"
+          },
+          "NUM_PORTS": {
+            "value": "2"
+          }
+        }
       }
     },
     "nets": {
@@ -349,12 +401,6 @@
         "ports": [
           "addrb_i",
           "block_test_0/addrb_0"
-        ]
-      },
-      "block_test_0_LED_1": {
-        "ports": [
-          "block_test_0/LED_1",
-          "LED_1"
         ]
       },
       "block_test_0_TX_O": {
@@ -405,6 +451,12 @@
           "simple_button_fsm_2/button"
         ]
       },
+      "ilconcat_0_dout": {
+        "ports": [
+          "ilconcat_0/dout",
+          "LED_1"
+        ]
+      },
       "reset_0_1": {
         "ports": [
           "rst",
@@ -429,13 +481,15 @@
       "simple_button_fsm_2_button_out": {
         "ports": [
           "simple_button_fsm_2/button_out",
-          "xlconcat_0/In3"
+          "xlconcat_0/In3",
+          "ilconcat_0/In1"
         ]
       },
       "simple_button_fsm_3_button_out": {
         "ports": [
           "simple_button_fsm_3/button_out",
-          "xlconcat_0/In2"
+          "xlconcat_0/In2",
+          "ilconcat_0/In0"
         ]
       },
       "xlconcat_0_dout": {

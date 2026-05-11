@@ -2,8 +2,8 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Mon May 11 10:58:23 2026
---Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+--Date        : Mon May 11 13:45:56 2026
+--Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 --Command     : generate_target main_top.bd
 --Design      : main_top
 --Purpose     : IP block netlist
@@ -14,11 +14,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity main_top is
   port (
-    BB_09 : in STD_LOGIC;
     BB_21 : in STD_LOGIC;
     BB_24 : in STD_LOGIC;
     BB_27 : in STD_LOGIC;
-    BB_30 : in STD_LOGIC;
     CLK12_I : in STD_LOGIC;
     CLK25_I : in STD_LOGIC;
     LED_O : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -31,10 +29,11 @@ entity main_top is
     hdmi_green_n : out STD_LOGIC;
     hdmi_green_p : out STD_LOGIC;
     hdmi_red_n : out STD_LOGIC;
-    hdmi_red_p : out STD_LOGIC
+    hdmi_red_p : out STD_LOGIC;
+    nBUTTON_I : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of main_top : entity is "main_top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_top,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=3,numReposBlks=3,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=1,bdsource=USER,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of main_top : entity is "main_top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_top,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=4,numReposBlks=4,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=1,bdsource=USER,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of main_top : entity is "main_top.hwdef";
 end main_top;
@@ -82,13 +81,12 @@ architecture STRUCTURE of main_top is
   signal com_side_wrapper_0_q_addr_o_0 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal com_side_wrapper_0_q_data_o_0 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal com_side_wrapper_0_qlink_clk_o : STD_LOGIC;
+  signal ilconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_top_level_0_LED_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of BB_09 : signal is "xilinx.com:signal:reset:1.0 RST.BB_09 RST";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of BB_09 : signal is "XIL_INTERFACENAME RST.BB_09, INSERT_VIP 0, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of hdmi_clk_n : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_CLK_N CLK";
+  attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of hdmi_clk_n : signal is "XIL_INTERFACENAME CLK.HDMI_CLK_N, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of hdmi_clk_p : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_CLK_P CLK";
   attribute X_INTERFACE_PARAMETER of hdmi_clk_p : signal is "XIL_INTERFACENAME CLK.HDMI_CLK_P, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
@@ -100,15 +98,16 @@ com_side_wrapper_0: component main_top_com_side_wrapper_0_2
       RX_I => RX_I,
       TX_O => TX_O,
       addrb_i(31 downto 0) => xlconstant_0_dout(31 downto 0),
-      button_0 => BB_30,
-      button_1 => BB_27,
-      button_2 => BB_24,
-      button_3 => BB_21,
+      button_0 => nBUTTON_I,
+      button_1 => nBUTTON_I,
+      button_2 => nBUTTON_I,
+      button_3 => nBUTTON_I,
       q_addr_o_1(31 downto 0) => com_side_wrapper_0_q_addr_o_0(31 downto 0),
       q_data_o_1(31 downto 0) => com_side_wrapper_0_q_data_o_0(31 downto 0),
       qlink_clk_o => com_side_wrapper_0_qlink_clk_o,
-      rst => BB_09
+      rst => ilconstant_0_dout(0)
     );
+  ilconstant_0_dout <= B"0";
 top_level_0: component main_top_top_level_0_1
      port map (
       CLK25_I => CLK25_I,

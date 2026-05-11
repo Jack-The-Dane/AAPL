@@ -10,11 +10,11 @@
       "component_parameters": {
         "Component_Name": [ { "value": "main_top_xlconstant_0_0", "resolve_type": "user", "usage": "all" } ],
         "CONST_WIDTH": [ { "value": "32", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "CONST_VAL": [ { "value": "200", "value_src": "user", "resolve_type": "user", "usage": "all" } ]
+        "CONST_VAL": [ { "value": "800", "value_src": "user", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "CONST_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "CONST_VAL": [ { "value": "0x000000C8", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
+        "CONST_VAL": [ { "value": "0x00000320", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "spartan7", "resolve_type": "generated", "usage": "all" } ],
@@ -46,5 +46,5 @@
       }
     }
   },
-  "checksum": "e536b5dc"
+  "checksum": "e74c67ac"
 }
