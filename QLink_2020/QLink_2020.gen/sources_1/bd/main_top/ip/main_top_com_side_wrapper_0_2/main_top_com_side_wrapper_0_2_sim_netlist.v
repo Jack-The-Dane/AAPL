@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Tue May  5 15:02:17 2026
-// Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
+// Date        : Mon May 11 10:31:04 2026
+// Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_sim_netlist.v
+//               /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_sim_netlist.v
 // Design      : main_top_com_side_wrapper_0_2
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -145,7 +145,7 @@ module main_top_com_side_wrapper_0_2_block_test_inst_0
         .rstb(1'b0),
         .rstb_busy(NLW_blk_mem_gen_0_rstb_busy_UNCONNECTED),
         .wea(Sindri_QLink_top_0_WEA_O),
-        .web({1'b1,1'b0,1'b0,1'b0}));
+        .web({1'b1,1'b1,1'b1,1'b1}));
 endmodule
 
 (* CHECK_LICENSE_TYPE = "block_test_inst_0_Sindri_QLink_top_0_0,Sindri_QLink_top,{}" *) (* ORIG_REF_NAME = "block_test_inst_0_Sindri_QLink_top_0_0" *) 

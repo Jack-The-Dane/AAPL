@@ -2,8 +2,8 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Tue May  5 14:53:40 2026
---Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
+--Date        : Mon May 11 10:58:22 2026
+--Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 --Command     : generate_target com_side.bd
 --Design      : com_side
 --Purpose     : IP block netlist
@@ -77,10 +77,14 @@ architecture STRUCTURE of com_side is
   end component com_side_simple_button_fsm_2_0;
   component com_side_xlconcat_0_0 is
   port (
-    In0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    In1 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    In2 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    In3 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In6 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In7 : in STD_LOGIC_VECTOR ( 0 to 0 );
     dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component com_side_xlconcat_0_0;
@@ -97,19 +101,19 @@ architecture STRUCTURE of com_side is
     qlink_clk_o : out STD_LOGIC
   );
   end component block_test_inst_0;
-  signal simple_button_fsm_0_button_out : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal simple_button_fsm_1_button_out : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal simple_button_fsm_2_button_out : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal simple_button_fsm_3_button_out : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal simple_button_fsm_0_LSB : STD_LOGIC;
+  signal simple_button_fsm_0_MSB : STD_LOGIC;
+  signal simple_button_fsm_1_LSB : STD_LOGIC;
+  signal simple_button_fsm_1_MSB : STD_LOGIC;
+  signal simple_button_fsm_2_LSB : STD_LOGIC;
+  signal simple_button_fsm_2_MSB : STD_LOGIC;
+  signal simple_button_fsm_3_LSB : STD_LOGIC;
+  signal simple_button_fsm_3_MSB : STD_LOGIC;
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_simple_button_fsm_0_LSB_UNCONNECTED : STD_LOGIC;
-  signal NLW_simple_button_fsm_0_MSB_UNCONNECTED : STD_LOGIC;
-  signal NLW_simple_button_fsm_1_LSB_UNCONNECTED : STD_LOGIC;
-  signal NLW_simple_button_fsm_1_MSB_UNCONNECTED : STD_LOGIC;
-  signal NLW_simple_button_fsm_2_LSB_UNCONNECTED : STD_LOGIC;
-  signal NLW_simple_button_fsm_2_MSB_UNCONNECTED : STD_LOGIC;
-  signal NLW_simple_button_fsm_3_LSB_UNCONNECTED : STD_LOGIC;
-  signal NLW_simple_button_fsm_3_MSB_UNCONNECTED : STD_LOGIC;
+  signal NLW_simple_button_fsm_0_button_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_simple_button_fsm_1_button_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_simple_button_fsm_2_button_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_simple_button_fsm_3_button_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 RST.RST RST";
   attribute X_INTERFACE_PARAMETER : string;
@@ -129,46 +133,50 @@ block_test_0: component block_test_inst_0
     );
 simple_button_fsm_0: component com_side_simple_button_fsm_0_0
      port map (
-      LSB => NLW_simple_button_fsm_0_LSB_UNCONNECTED,
-      MSB => NLW_simple_button_fsm_0_MSB_UNCONNECTED,
+      LSB => simple_button_fsm_0_LSB,
+      MSB => simple_button_fsm_0_MSB,
       button => button_1,
-      button_out(1 downto 0) => simple_button_fsm_0_button_out(1 downto 0),
+      button_out(1 downto 0) => NLW_simple_button_fsm_0_button_out_UNCONNECTED(1 downto 0),
       clk => CLK12_I,
       reset => rst
     );
 simple_button_fsm_1: component com_side_simple_button_fsm_0_1
      port map (
-      LSB => NLW_simple_button_fsm_1_LSB_UNCONNECTED,
-      MSB => NLW_simple_button_fsm_1_MSB_UNCONNECTED,
+      LSB => simple_button_fsm_1_LSB,
+      MSB => simple_button_fsm_1_MSB,
       button => button_0,
-      button_out(1 downto 0) => simple_button_fsm_1_button_out(1 downto 0),
+      button_out(1 downto 0) => NLW_simple_button_fsm_1_button_out_UNCONNECTED(1 downto 0),
       clk => CLK12_I,
       reset => rst
     );
 simple_button_fsm_2: component com_side_simple_button_fsm_0_2
      port map (
-      LSB => NLW_simple_button_fsm_2_LSB_UNCONNECTED,
-      MSB => NLW_simple_button_fsm_2_MSB_UNCONNECTED,
+      LSB => simple_button_fsm_2_LSB,
+      MSB => simple_button_fsm_2_MSB,
       button => button_3,
-      button_out(1 downto 0) => simple_button_fsm_2_button_out(1 downto 0),
+      button_out(1 downto 0) => NLW_simple_button_fsm_2_button_out_UNCONNECTED(1 downto 0),
       clk => CLK12_I,
       reset => rst
     );
 simple_button_fsm_3: component com_side_simple_button_fsm_2_0
      port map (
-      LSB => NLW_simple_button_fsm_3_LSB_UNCONNECTED,
-      MSB => NLW_simple_button_fsm_3_MSB_UNCONNECTED,
+      LSB => simple_button_fsm_3_LSB,
+      MSB => simple_button_fsm_3_MSB,
       button => button_2,
-      button_out(1 downto 0) => simple_button_fsm_3_button_out(1 downto 0),
+      button_out(1 downto 0) => NLW_simple_button_fsm_3_button_out_UNCONNECTED(1 downto 0),
       clk => CLK12_I,
       reset => rst
     );
 xlconcat_0: component com_side_xlconcat_0_0
      port map (
-      In0(1 downto 0) => simple_button_fsm_0_button_out(1 downto 0),
-      In1(1 downto 0) => simple_button_fsm_1_button_out(1 downto 0),
-      In2(1 downto 0) => simple_button_fsm_3_button_out(1 downto 0),
-      In3(1 downto 0) => simple_button_fsm_2_button_out(1 downto 0),
+      In0(0) => simple_button_fsm_0_MSB,
+      In1(0) => simple_button_fsm_0_LSB,
+      In2(0) => simple_button_fsm_1_MSB,
+      In3(0) => simple_button_fsm_1_LSB,
+      In4(0) => simple_button_fsm_3_MSB,
+      In5(0) => simple_button_fsm_3_LSB,
+      In6(0) => simple_button_fsm_2_MSB,
+      In7(0) => simple_button_fsm_2_LSB,
       dout(7 downto 0) => xlconcat_0_dout(7 downto 0)
     );
 end STRUCTURE;

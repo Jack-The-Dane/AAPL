@@ -80,10 +80,14 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_in< sc_dt::sc_bv<2> > In0;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In1;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In2;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In0;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In1;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In2;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In4;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In5;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In6;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
   sc_core::sc_out< sc_dt::sc_bv<8> > dout;
 
   // Dummy Signals for IP Ports
@@ -112,10 +116,14 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_in< sc_dt::sc_bv<2> > In0;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In1;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In2;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In0;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In1;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In2;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In4;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In5;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In6;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
   sc_core::sc_out< sc_dt::sc_bv<8> > dout;
 
   // Dummy Signals for IP Ports
@@ -144,10 +152,14 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_in< sc_dt::sc_bv<2> > In0;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In1;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In2;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In0;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In1;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In2;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In4;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In5;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In6;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
   sc_core::sc_out< sc_dt::sc_bv<8> > dout;
 
   // Dummy Signals for IP Ports
@@ -176,10 +188,14 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_in< sc_dt::sc_bv<2> > In0;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In1;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In2;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In0;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In1;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In2;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In4;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In5;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In6;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
   sc_core::sc_out< sc_dt::sc_bv<8> > dout;
 
   // Dummy Signals for IP Ports
@@ -212,10 +228,14 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_in< sc_dt::sc_bv<2> > In0;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In1;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In2;
-  sc_core::sc_in< sc_dt::sc_bv<2> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In0;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In1;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In2;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In3;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In4;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In5;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In6;
+  sc_core::sc_in< sc_dt::sc_bv<1> > In7;
   sc_core::sc_out< sc_dt::sc_bv<8> > dout;
 
   // Dummy Signals for IP Ports

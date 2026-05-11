@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Mon May 11 10:15:41 2026
+--Date        : Mon May 11 10:58:23 2026
 --Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 --Command     : generate_target main_top.bd
 --Design      : main_top
@@ -83,7 +83,7 @@ architecture STRUCTURE of main_top is
   signal com_side_wrapper_0_q_data_o_0 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal com_side_wrapper_0_qlink_clk_o : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal NLW_com_side_wrapper_0_LED_1_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_top_level_0_LED_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of BB_09 : signal is "xilinx.com:signal:reset:1.0 RST.BB_09 RST";
   attribute X_INTERFACE_PARAMETER : string;
@@ -96,7 +96,7 @@ begin
 com_side_wrapper_0: component main_top_com_side_wrapper_0_2
      port map (
       CLK12_I => CLK12_I,
-      LED_1(3 downto 0) => NLW_com_side_wrapper_0_LED_1_UNCONNECTED(3 downto 0),
+      LED_1(3 downto 0) => LED_O(3 downto 0),
       RX_I => RX_I,
       TX_O => TX_O,
       addrb_i(31 downto 0) => xlconstant_0_dout(31 downto 0),
@@ -112,7 +112,7 @@ com_side_wrapper_0: component main_top_com_side_wrapper_0_2
 top_level_0: component main_top_top_level_0_1
      port map (
       CLK25_I => CLK25_I,
-      LED_O(3 downto 0) => LED_O(3 downto 0),
+      LED_O(3 downto 0) => NLW_top_level_0_LED_O_UNCONNECTED(3 downto 0),
       addra_i(31 downto 0) => com_side_wrapper_0_q_addr_o_0(31 downto 0),
       clk_qlink => com_side_wrapper_0_qlink_clk_o,
       dina_i(31 downto 0) => com_side_wrapper_0_q_data_o_0(31 downto 0),

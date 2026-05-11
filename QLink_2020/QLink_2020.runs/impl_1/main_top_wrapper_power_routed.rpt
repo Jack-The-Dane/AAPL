@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Mon May 11 10:16:49 2026
+| Date             : Mon May 11 10:59:34 2026
 | Host             : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 | Command          : report_power -file main_top_wrapper_power_routed.rpt -pb main_top_wrapper_power_summary_routed.pb -rpx main_top_wrapper_power_routed.rpx
 | Design           : main_top_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.373        |
+| Total On-Chip Power (W)  | 0.374        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.353        |
+| Dynamic (W)              | 0.354        |
 | Device Static (W)        | 0.020        |
 | Effective TJA (C/W)      | 3.4          |
 | Max Ambient (C)          | 83.7         |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.006 |        9 |       --- |             --- |
-| Slice Logic             |    <0.001 |     1243 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      454 |      8000 |            5.68 |
+| Slice Logic             |    <0.001 |     1184 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      443 |      8000 |            5.54 |
 |   LUT as Shift Register |    <0.001 |       23 |      2400 |            0.96 |
-|   CARRY4                |    <0.001 |       48 |      2000 |            2.40 |
-|   Register              |    <0.001 |      510 |     16000 |            3.19 |
+|   CARRY4                |    <0.001 |       37 |      2000 |            1.85 |
+|   Register              |    <0.001 |      477 |     16000 |            2.98 |
 |   Others                |     0.000 |       65 |       --- |             --- |
-| Signals                 |    <0.001 |     1004 |       --- |             --- |
-| Block RAM               |     0.004 |        3 |        10 |           30.00 |
+| Signals                 |    <0.001 |      965 |       --- |             --- |
+| Block RAM               |     0.005 |        3 |        10 |           30.00 |
 | MMCM                    |     0.200 |        2 |         2 |          100.00 |
 | DSPs                    |     0.001 |        2 |        20 |           10.00 |
 | I/O                     |     0.140 |       21 |       100 |           21.00 |
 | Static Power            |     0.020 |          |           |                 |
-| Total                   |     0.373 |          |           |                 |
+| Total                   |     0.374 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.021 |       0.017 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.022 |       0.018 |      0.004 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.118 |       0.110 |      0.007 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.042 |       0.041 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -148,10 +148,10 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| main_top_wrapper       |     0.353 |
+| main_top_wrapper       |     0.354 |
 |   main_top_i           |     0.353 |
-|     com_side_wrapper_0 |     0.109 |
-|       U0               |     0.109 |
+|     com_side_wrapper_0 |     0.110 |
+|       U0               |     0.110 |
 |     top_level_0        |     0.244 |
 |       U0               |     0.244 |
 +------------------------+-----------+

@@ -3,28 +3,28 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Tue May  5 14:53:54 2026
-# Process ID         : 44862
-# Current directory  : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1
+# Start of session at: Mon May 11 10:30:01 2026
+# Process ID         : 26638
+# Current directory  : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1
 # Command line       : vivado -log block_test_inst_0_Sindri_QLink_top_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_test_inst_0_Sindri_QLink_top_0_0.tcl
-# Log file           : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1/block_test_inst_0_Sindri_QLink_top_0_0.vds
-# Journal file       : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1/vivado.jou
-# Running On         : Laptop
+# Log file           : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1/block_test_inst_0_Sindri_QLink_top_0_0.vds
+# Journal file       : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1/vivado.jou
+# Running On         : kasper-ubuntu-pc
 # Platform           : Ubuntu
-# Operating System   : Ubuntu 24.04.4 LTS
-# Processor Detail   : AMD Ryzen 7 4700U with Radeon Graphics
-# CPU Frequency      : 1857.330 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 8
-# Host memory        : 16116 MB
-# Swap memory        : 17179 MB
-# Total Virtual      : 33296 MB
-# Available Virtual  : 24632 MB
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : AMD Ryzen 7 PRO 5850U with Radeon Graphics
+# CPU Frequency      : 1896.428 MHz
+# CPU Physical cores : 3
+# CPU Logical cores  : 6
+# Host memory        : 16764 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18911 MB
+# Available Virtual  : 15077 MB
 #-----------------------------------------------------------
 source block_test_inst_0_Sindri_QLink_top_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jacob/shared/Semester8/AAPL/project/IPs'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/kasper-ubuntu/Documents/APPL_project_tetris/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/kasper-ubuntu/Vivado/2025.2/data/ip'.
 Command: synth_design -top block_test_inst_0_Sindri_QLink_top_0_0 -part xc7s15ftgb196-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
@@ -32,19 +32,19 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
 INFO: [Device 21-403] Loading part xc7s15ftgb196-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 44976
+INFO: [Synth 8-7075] Helper process launched with PID 26692
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2158.168 ; gain = 485.156 ; free physical = 184 ; free virtual = 22561
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2163.824 ; gain = 482.188 ; free physical = 7597 ; free virtual = 13363
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:70]
-INFO: [Synth 8-3491] module 'Sindri_QLink_top' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:141' bound to instance 'U0' of component 'Sindri_QLink_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:95]
-INFO: [Synth 8-638] synthesizing module 'Sindri_QLink_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:70]
+INFO: [Synth 8-3491] module 'Sindri_QLink_top' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:141' bound to instance 'U0' of component 'Sindri_QLink_top' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'Sindri_QLink_top' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:155]
 	Parameter CLK_I_PERIOD bound to: 8.333333e+01 - type: double 
-INFO: [Synth 8-3491] module 'QLinkMaster' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:78' bound to instance 'QLINK1' of component 'QLinkMaster' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:193]
-INFO: [Synth 8-638] synthesizing module 'QLinkMaster' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:96]
+INFO: [Synth 8-3491] module 'QLinkMaster' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:78' bound to instance 'QLINK1' of component 'QLinkMaster' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'QLinkMaster' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:96]
 	Parameter CLK_I_PERIOD bound to: 8.333333e+01 - type: double 
-INFO: [Synth 8-3491] module 'mmcm48' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd:22' bound to instance 'MMCM48_INST' of component 'mmcm48' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:234]
-INFO: [Synth 8-638] synthesizing module 'mmcm48' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd:31]
+INFO: [Synth 8-3491] module 'mmcm48' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd:22' bound to instance 'MMCM48_INST' of component 'mmcm48' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:234]
+INFO: [Synth 8-638] synthesizing module 'mmcm48' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd:31]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 6.400000e+01 - type: double 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000e+00 - type: double 
@@ -54,46 +54,46 @@ INFO: [Synth 8-638] synthesizing module 'mmcm48' [/home/jacob/shared/Semester8/A
 	Parameter CLKOUT0_PHASE bound to: 0.000000e+00 - type: double 
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter STARTUP_WAIT bound to: 0 - type: bool 
-INFO: [Synth 8-113] binding component instance 'MMCME2_BASE_inst' to cell 'MMCME2_BASE' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'mmcm48' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd:31]
-INFO: [Synth 8-3491] module 'decode_serial' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:18' bound to instance 'U1' of component 'decode_serial' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:254]
-INFO: [Synth 8-638] synthesizing module 'decode_serial' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:26]
-WARNING: [Synth 8-614] signal 'bitcnt' is read in the process but is not in the sensitivity list [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:66]
-WARNING: [Synth 8-614] signal 'subcnt' is read in the process but is not in the sensitivity list [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:66]
-WARNING: [Synth 8-614] signal 'data' is read in the process but is not in the sensitivity list [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:66]
-INFO: [Synth 8-256] done synthesizing module 'decode_serial' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:26]
-INFO: [Synth 8-3491] module 'encode_serial' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd:19' bound to instance 'U2' of component 'encode_serial' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:262]
-INFO: [Synth 8-638] synthesizing module 'encode_serial' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'encode_serial' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd:29]
-INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
-INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
-INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
-INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
-INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
-INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
-INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
-INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
-INFO: [Synth 8-256] done synthesizing module 'QLinkMaster' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:96]
-INFO: [Synth 8-256] done synthesizing module 'Sindri_QLink_top' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:155]
-INFO: [Synth 8-256] done synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:70]
-WARNING: [Synth 8-6014] Unused sequential element data_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:44]
-WARNING: [Synth 8-6014] Unused sequential element bitcnt_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:54]
-WARNING: [Synth 8-6014] Unused sequential element bitcnt_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd:96]
-WARNING: [Synth 8-6014] Unused sequential element enc_data_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:265]
-WARNING: [Synth 8-6014] Unused sequential element char_cnt_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:474]
+INFO: [Synth 8-113] binding component instance 'MMCME2_BASE_inst' to cell 'MMCME2_BASE' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'mmcm48' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd:31]
+INFO: [Synth 8-3491] module 'decode_serial' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:18' bound to instance 'U1' of component 'decode_serial' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:254]
+INFO: [Synth 8-638] synthesizing module 'decode_serial' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:26]
+WARNING: [Synth 8-614] signal 'bitcnt' is read in the process but is not in the sensitivity list [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:66]
+WARNING: [Synth 8-614] signal 'subcnt' is read in the process but is not in the sensitivity list [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:66]
+WARNING: [Synth 8-614] signal 'data' is read in the process but is not in the sensitivity list [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'decode_serial' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:26]
+INFO: [Synth 8-3491] module 'encode_serial' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd:19' bound to instance 'U2' of component 'encode_serial' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:262]
+INFO: [Synth 8-638] synthesizing module 'encode_serial' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'encode_serial' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd:29]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
+INFO: [Synth 8-226] default block is never used [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
+INFO: [Synth 8-256] done synthesizing module 'QLinkMaster' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'Sindri_QLink_top' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:155]
+INFO: [Synth 8-256] done synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:70]
+WARNING: [Synth 8-6014] Unused sequential element data_reg was removed.  [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element bitcnt_reg was removed.  [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element bitcnt_reg was removed.  [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd:96]
+WARNING: [Synth 8-6014] Unused sequential element enc_data_reg was removed.  [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:265]
+WARNING: [Synth 8-6014] Unused sequential element char_cnt_reg was removed.  [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:474]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2252.137 ; gain = 579.125 ; free physical = 160 ; free virtual = 22465
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2256.793 ; gain = 575.156 ; free physical = 7494 ; free virtual = 13262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2258.074 ; gain = 585.062 ; free physical = 163 ; free virtual = 22469
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2262.730 ; gain = 581.094 ; free physical = 7494 ; free virtual = 13261
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2258.074 ; gain = 585.062 ; free physical = 163 ; free virtual = 22469
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2262.730 ; gain = 581.094 ; free physical = 7494 ; free virtual = 13261
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2261.043 ; gain = 0.000 ; free physical = 164 ; free virtual = 22469
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2265.699 ; gain = 0.000 ; free physical = 7502 ; free virtual = 13269
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -102,28 +102,28 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.812 ; gain = 0.000 ; free physical = 144 ; free virtual = 22462
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2383.469 ; gain = 0.000 ; free physical = 7506 ; free virtual = 13274
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2368.848 ; gain = 0.000 ; free physical = 144 ; free virtual = 22463
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2383.504 ; gain = 0.000 ; free physical = 7506 ; free virtual = 13274
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2368.848 ; gain = 695.836 ; free physical = 150 ; free virtual = 22473
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2383.504 ; gain = 701.867 ; free physical = 7538 ; free virtual = 13305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s15ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2376.816 ; gain = 703.805 ; free physical = 150 ; free virtual = 22473
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2391.473 ; gain = 709.836 ; free physical = 7538 ; free virtual = 13305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2376.816 ; gain = 703.805 ; free physical = 150 ; free virtual = 22473
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2391.473 ; gain = 709.836 ; free physical = 7538 ; free virtual = 13305
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'QLinkMaster'
 ---------------------------------------------------------------------------------------------------
@@ -151,7 +151,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'QL
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'one-hot' in module 'QLinkMaster'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2376.816 ; gain = 703.805 ; free physical = 146 ; free virtual = 22474
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2391.473 ; gain = 709.836 ; free physical = 7546 ; free virtual = 13314
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -201,20 +201,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2376.816 ; gain = 703.805 ; free physical = 165 ; free virtual = 22460
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2391.473 ; gain = 709.836 ; free physical = 7544 ; free virtual = 13314
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2376.816 ; gain = 703.805 ; free physical = 165 ; free virtual = 22460
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2391.473 ; gain = 709.836 ; free physical = 7544 ; free virtual = 13314
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2376.816 ; gain = 703.805 ; free physical = 169 ; free virtual = 22464
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2391.473 ; gain = 709.836 ; free physical = 7544 ; free virtual = 13314
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -232,37 +232,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.629 ; gain = 808.617 ; free physical = 172 ; free virtual = 22321
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2486.285 ; gain = 804.648 ; free physical = 7445 ; free virtual = 13215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.629 ; gain = 808.617 ; free physical = 172 ; free virtual = 22321
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2486.285 ; gain = 804.648 ; free physical = 7445 ; free virtual = 13215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.629 ; gain = 808.617 ; free physical = 172 ; free virtual = 22321
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2486.285 ; gain = 804.648 ; free physical = 7445 ; free virtual = 13215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.629 ; gain = 808.617 ; free physical = 172 ; free virtual = 22321
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2486.285 ; gain = 804.648 ; free physical = 7445 ; free virtual = 13215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.629 ; gain = 808.617 ; free physical = 172 ; free virtual = 22321
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2486.285 ; gain = 804.648 ; free physical = 7445 ; free virtual = 13215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.629 ; gain = 808.617 ; free physical = 172 ; free virtual = 22321
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2486.285 ; gain = 804.648 ; free physical = 7445 ; free virtual = 13215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -290,18 +290,18 @@ Report Cell Usage:
 |10    |FDSE        |    19|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.629 ; gain = 808.617 ; free physical = 172 ; free virtual = 22321
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2486.285 ; gain = 804.648 ; free physical = 7445 ; free virtual = 13215
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2481.629 ; gain = 697.844 ; free physical = 172 ; free virtual = 22321
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.637 ; gain = 808.617 ; free physical = 172 ; free virtual = 22321
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2486.285 ; gain = 683.875 ; free physical = 7445 ; free virtual = 13215
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2486.293 ; gain = 804.648 ; free physical = 7445 ; free virtual = 13215
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2481.637 ; gain = 0.000 ; free physical = 202 ; free virtual = 22339
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2486.293 ; gain = 0.000 ; free physical = 7429 ; free virtual = 13199
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2643.156 ; gain = 0.000 ; free physical = 252 ; free virtual = 22389
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2631.805 ; gain = 0.000 ; free physical = 7506 ; free virtual = 13276
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instance 
@@ -310,11 +310,11 @@ Synth Design complete | Checksum: 60849ff2
 INFO: [Common 17-83] Releasing license: Synthesis
 48 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 2643.191 ; gain = 1088.258 ; free physical = 252 ; free virtual = 22389
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1728.296; main = 1728.296; forked = 282.897
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3363.957; main = 2643.160; forked = 995.141
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 2631.840 ; gain = 1018.531 ; free physical = 7505 ; free virtual = 13275
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1732.707; main = 1732.707; forked = 283.029
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3378.391; main = 2631.809; forked = 994.918
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2667.168 ; gain = 0.000 ; free physical = 251 ; free virtual = 22388
-INFO: [Common 17-1381] The checkpoint '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1/block_test_inst_0_Sindri_QLink_top_0_0.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2655.816 ; gain = 0.000 ; free physical = 7505 ; free virtual = 13275
+INFO: [Common 17-1381] The checkpoint '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1/block_test_inst_0_Sindri_QLink_top_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file block_test_inst_0_Sindri_QLink_top_0_0_utilization_synth.rpt -pb block_test_inst_0_Sindri_QLink_top_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May  5 14:54:23 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon May 11 10:30:29 2026...

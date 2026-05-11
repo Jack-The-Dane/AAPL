@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 11 10:15:41 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 11 10:58:23 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="main_top" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
@@ -39,9 +39,9 @@
         <CONNECTION INSTANCE="top_level_0" PORT="CLK25_I"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef" SIGNAME="top_level_0_LED_O">
+    <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_LED_1">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="top_level_0" PORT="LED_O"/>
+        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="LED_1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="RX_I" SIGIS="undef" SIGNAME="External_Ports_RX_I">
@@ -111,7 +111,11 @@
             <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="LED_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="LED_1" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_LED_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED_O"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="RX_I" SIGIS="undef" SIGNAME="External_Ports_RX_I">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="RX_I"/>
@@ -182,11 +186,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="CLK25_I"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef" SIGNAME="top_level_0_LED_O">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="LED_O"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="31" NAME="addra_i" RIGHT="0" SIGIS="undef" SIGNAME="com_side_wrapper_0_q_addr_o_1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="com_side_wrapper_0" PORT="q_addr_o_1"/>

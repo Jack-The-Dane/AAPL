@@ -54,7 +54,7 @@
 #include "systemc.h"
 class block_test_inst_0_write_enable_0 : public sc_module {
   public:
-xlconstant_v1_1_10<4,8> mod;
+xlconstant_v1_1_10<4,b1111> mod;
   sc_out< sc_bv<4> > dout;
 block_test_inst_0_write_enable_0 (sc_core::sc_module_name name);
   };

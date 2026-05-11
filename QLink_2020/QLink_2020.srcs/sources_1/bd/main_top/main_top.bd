@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7A80CB75023BB4AC",
+      "boundary_crc": "0x7A80CB75FE4FBB00",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/main_top",
       "name": "main_top",
@@ -119,7 +119,13 @@
       "LED_O": {
         "direction": "O",
         "left": "3",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "4",
+            "value_src": "ip_prop"
+          }
+        }
       }
     },
     "components": {
@@ -166,7 +172,13 @@
           "LED_1": {
             "direction": "O",
             "left": "3",
-            "right": "0"
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "4",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "RX_I": {
             "direction": "I"
@@ -212,34 +224,34 @@
       }
     },
     "nets": {
-      "BB_05_1": {
+      "BB_09_1": {
         "ports": [
-          "BB_30",
-          "com_side_wrapper_0/button_0"
+          "BB_09",
+          "com_side_wrapper_0/rst"
         ]
       },
-      "BB_06_1": {
-        "ports": [
-          "BB_27",
-          "com_side_wrapper_0/button_1"
-        ]
-      },
-      "BB_07_1": {
-        "ports": [
-          "BB_24",
-          "com_side_wrapper_0/button_2"
-        ]
-      },
-      "BB_08_1": {
+      "BB_21_1": {
         "ports": [
           "BB_21",
           "com_side_wrapper_0/button_3"
         ]
       },
-      "BB_09_1": {
+      "BB_24_1": {
         "ports": [
-          "BB_09",
-          "com_side_wrapper_0/rst"
+          "BB_24",
+          "com_side_wrapper_0/button_2"
+        ]
+      },
+      "BB_27_1": {
+        "ports": [
+          "BB_27",
+          "com_side_wrapper_0/button_1"
+        ]
+      },
+      "BB_30_1": {
+        "ports": [
+          "BB_30",
+          "com_side_wrapper_0/button_0"
         ]
       },
       "CLK12_I_1": {
@@ -258,6 +270,12 @@
         "ports": [
           "RX_I",
           "com_side_wrapper_0/RX_I"
+        ]
+      },
+      "com_side_wrapper_0_LED_1": {
+        "ports": [
+          "com_side_wrapper_0/LED_1",
+          "LED_O"
         ]
       },
       "com_side_wrapper_0_TX_O": {
@@ -282,12 +300,6 @@
         "ports": [
           "com_side_wrapper_0/qlink_clk_o",
           "top_level_0/clk_qlink"
-        ]
-      },
-      "top_level_0_LED_O": {
-        "ports": [
-          "top_level_0/LED_O",
-          "LED_O"
         ]
       },
       "top_level_0_hdmi_blue_n": {

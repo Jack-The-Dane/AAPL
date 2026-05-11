@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-142,-14",
+   "Default View_TopLeft":"-252,-107",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
@@ -20,21 +20,21 @@ preplace inst enable_0 -pg 1 -lvl 1 -x 170 -y 280 -defaultsOSRD
 preplace inst reset_0 -pg 1 -lvl 1 -x 170 -y 380 -defaultsOSRD
 preplace inst write_enable -pg 1 -lvl 1 -x 170 -y 560 -defaultsOSRD
 preplace netloc CLK12_I_1 1 0 1 20J 80n
-preplace netloc Net 1 1 2 400 -20 N
+preplace netloc Net 1 1 2 390 -20 N
 preplace netloc RX_I_0_1 1 0 1 NJ 110
-preplace netloc Sindri_QLink_top_0_CLK_O 1 1 2 390 110 N
-preplace netloc Sindri_QLink_top_0_DATA_O 1 1 2 380 170 N
+preplace netloc Sindri_QLink_top_0_CLK_O 1 1 2 380 110 N
+preplace netloc Sindri_QLink_top_0_DATA_O 1 1 2 370 170 N
 preplace netloc Sindri_QLink_top_0_LED_O 1 1 2 NJ 80 NJ
-preplace netloc Sindri_QLink_top_0_TX_O 1 1 2 370J 50 NJ
-preplace netloc Sindri_QLink_top_0_WEA_O 1 1 1 370 120n
+preplace netloc Sindri_QLink_top_0_TX_O 1 1 2 380J 50 NJ
+preplace netloc Sindri_QLink_top_0_WEA_O 1 1 1 360 120n
 preplace netloc addrb_0_1 1 0 2 10J 450 NJ
-preplace netloc blk_mem_gen_0_douta 1 0 2 30 440 360J
-preplace netloc dinb_0_1 1 0 2 NJ 480 340J
-preplace netloc enable_1_dout 1 1 1 330 380n
-preplace netloc reset_1_dout 1 1 1 380J 550n
-preplace netloc xlconstant_0_dout 1 1 1 350 280n
+preplace netloc blk_mem_gen_0_douta 1 0 2 20 440 350J
+preplace netloc dinb_0_1 1 0 2 NJ 480 330J
+preplace netloc enable_1_dout 1 1 1 320 380n
+preplace netloc reset_1_dout 1 1 1 390J 550n
+preplace netloc xlconstant_0_dout 1 1 1 340 280n
 levelinfo -pg 1 -10 170 520 670
-pagesize -pg 1 -db -bbox -sgen -170 -40 820 640
+pagesize -pg 1 -db -bbox -sgen -170 -40 830 640
 "
 }
 0

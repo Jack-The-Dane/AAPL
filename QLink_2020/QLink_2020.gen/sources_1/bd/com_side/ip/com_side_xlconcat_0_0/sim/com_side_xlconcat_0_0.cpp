@@ -61,7 +61,7 @@
 
 
 #ifdef XILINX_SIMULATOR
-com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm), In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
+com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm), In0("In0"), In1("In1"), In2("In2"), In3("In3"), In4("In4"), In5("In5"), In6("In6"), In7("In7"), dout("dout")
 {
 
   // initialize pins
@@ -69,6 +69,10 @@ com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) 
   mp_impl->In1(In1);
   mp_impl->In2(In2);
   mp_impl->In3(In3);
+  mp_impl->In4(In4);
+  mp_impl->In5(In5);
+  mp_impl->In6(In6);
+  mp_impl->In7(In7);
   mp_impl->dout(dout);
 
 }
@@ -83,7 +87,7 @@ void com_side_xlconcat_0_0::before_end_of_elaboration()
 
 
 #ifdef XM_SYSTEMC
-com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm), In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
+com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm), In0("In0"), In1("In1"), In2("In2"), In3("In3"), In4("In4"), In5("In5"), In6("In6"), In7("In7"), dout("dout")
 {
 
   // initialize pins
@@ -91,6 +95,10 @@ com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) 
   mp_impl->In1(In1);
   mp_impl->In2(In2);
   mp_impl->In3(In3);
+  mp_impl->In4(In4);
+  mp_impl->In5(In5);
+  mp_impl->In6(In6);
+  mp_impl->In7(In7);
   mp_impl->dout(dout);
 
 }
@@ -105,7 +113,7 @@ void com_side_xlconcat_0_0::before_end_of_elaboration()
 
 
 #ifdef RIVIERA
-com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm), In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
+com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm), In0("In0"), In1("In1"), In2("In2"), In3("In3"), In4("In4"), In5("In5"), In6("In6"), In7("In7"), dout("dout")
 {
 
   // initialize pins
@@ -113,6 +121,10 @@ com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) 
   mp_impl->In1(In1);
   mp_impl->In2(In2);
   mp_impl->In3(In3);
+  mp_impl->In4(In4);
+  mp_impl->In5(In5);
+  mp_impl->In6(In6);
+  mp_impl->In7(In7);
   mp_impl->dout(dout);
 
 }
@@ -127,13 +139,17 @@ void com_side_xlconcat_0_0::before_end_of_elaboration()
 
 
 #ifdef VCSSYSTEMC
-com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm),  In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
+com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm),  In0("In0"), In1("In1"), In2("In2"), In3("In3"), In4("In4"), In5("In5"), In6("In6"), In7("In7"), dout("dout")
 {
   // initialize pins
   mp_impl->In0(In0);
   mp_impl->In1(In1);
   mp_impl->In2(In2);
   mp_impl->In3(In3);
+  mp_impl->In4(In4);
+  mp_impl->In5(In5);
+  mp_impl->In6(In6);
+  mp_impl->In7(In7);
   mp_impl->dout(dout);
 
   // Instantiate Socket Stubs
@@ -151,13 +167,17 @@ void com_side_xlconcat_0_0::before_end_of_elaboration()
 
 
 #ifdef MTI_SYSTEMC
-com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm),  In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
+com_side_xlconcat_0_0::com_side_xlconcat_0_0(const sc_core::sc_module_name& nm) : com_side_xlconcat_0_0_sc(nm),  In0("In0"), In1("In1"), In2("In2"), In3("In3"), In4("In4"), In5("In5"), In6("In6"), In7("In7"), dout("dout")
 {
   // initialize pins
   mp_impl->In0(In0);
   mp_impl->In1(In1);
   mp_impl->In2(In2);
   mp_impl->In3(In3);
+  mp_impl->In4(In4);
+  mp_impl->In5(In5);
+  mp_impl->In6(In6);
+  mp_impl->In7(In7);
   mp_impl->dout(dout);
 
   // Instantiate Socket Stubs

@@ -13,11 +13,11 @@
 #include <systemc.h>
 #include "properties.h"
 
-#define IN0_WIDTH 2
-#define IN0_WIDTH 2
-#define IN1_WIDTH 2
-#define IN2_WIDTH 2
-#define IN3_WIDTH 2
+#define IN0_WIDTH 1
+#define IN0_WIDTH 1
+#define IN1_WIDTH 1
+#define IN2_WIDTH 1
+#define IN3_WIDTH 1
 #define IN4_WIDTH 1
 #define IN5_WIDTH 1
 #define IN6_WIDTH 1
@@ -153,6 +153,10 @@ class com_side_xlconcat_0_0_core : public sc_module
               , In1    ( "In1" )
               , In2    ( "In2" )
               , In3    ( "In3" )
+              , In4    ( "In4" )
+              , In5    ( "In5" )
+              , In6    ( "In6" )
+              , In7    ( "In7" )
               , dout   ( "dout" )
     {
         SC_HAS_PROCESS(com_side_xlconcat_0_0_core);
@@ -160,7 +164,11 @@ class com_side_xlconcat_0_0_core : public sc_module
             sensitive << In0 
                       << In1 
                       << In2 
-                      << In3 ;
+                      << In3 
+                      << In4 
+                      << In5 
+                      << In6 
+                      << In7 ;
         dont_initialize();
     }
 
@@ -173,6 +181,10 @@ class com_side_xlconcat_0_0_core : public sc_module
             portConcateVal.range(1,1) =  In1.read();
             portConcateVal.range(2,2) =  In2.read();
             portConcateVal.range(3,3) =  In3.read();
+            portConcateVal.range(4,4) =  In4.read();
+            portConcateVal.range(5,5) =  In5.read();
+            portConcateVal.range(6,6) =  In6.read();
+            portConcateVal.range(7,7) =  In7.read();
         dout.write(portConcateVal);
     }
     public: 
@@ -180,6 +192,10 @@ class com_side_xlconcat_0_0_core : public sc_module
         sc_in< sc_bv<IN1_WIDTH> >   In1;
         sc_in< sc_bv<IN2_WIDTH> >   In2;
         sc_in< sc_bv<IN3_WIDTH> >   In3;
+        sc_in< sc_bv<IN4_WIDTH> >   In4;
+        sc_in< sc_bv<IN5_WIDTH> >   In5;
+        sc_in< sc_bv<IN6_WIDTH> >   In6;
+        sc_in< sc_bv<IN7_WIDTH> >   In7;
         sc_out< sc_bv <8> >  dout;
 
 };

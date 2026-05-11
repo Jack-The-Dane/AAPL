@@ -2,8 +2,8 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Tue May  5 14:53:40 2026
---Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
+--Date        : Mon May 11 10:58:22 2026
+--Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 --Command     : generate_target com_side_wrapper.bd
 --Design      : com_side_wrapper
 --Purpose     : IP block netlist

@@ -152,7 +152,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "CONST_VAL": {
-            "value": "8"
+            "value": "b1111"
           },
           "CONST_WIDTH": {
             "value": "4"
