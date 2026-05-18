@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Mon May 11 10:58:23 2026
+--Date        : Mon May 18 12:22:50 2026
 --Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 --Command     : generate_target main_top.bd
 --Design      : main_top
@@ -34,7 +34,7 @@ entity main_top is
     hdmi_red_p : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of main_top : entity is "main_top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_top,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=3,numReposBlks=3,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=1,bdsource=USER,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of main_top : entity is "main_top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_top,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=4,numReposBlks=4,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=1,bdsource=USER,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of main_top : entity is "main_top.hwdef";
 end main_top;
@@ -79,10 +79,16 @@ architecture STRUCTURE of main_top is
     rst : in STD_LOGIC
   );
   end component main_top_com_side_wrapper_0_2;
+  component main_top_xlconstant_1_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component main_top_xlconstant_1_0;
   signal com_side_wrapper_0_q_addr_o_0 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal com_side_wrapper_0_q_data_o_0 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal com_side_wrapper_0_qlink_clk_o : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_top_level_0_LED_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of BB_09 : signal is "xilinx.com:signal:reset:1.0 RST.BB_09 RST";
@@ -107,7 +113,7 @@ com_side_wrapper_0: component main_top_com_side_wrapper_0_2
       q_addr_o_1(31 downto 0) => com_side_wrapper_0_q_addr_o_0(31 downto 0),
       q_data_o_1(31 downto 0) => com_side_wrapper_0_q_data_o_0(31 downto 0),
       qlink_clk_o => com_side_wrapper_0_qlink_clk_o,
-      rst => BB_09
+      rst => xlconstant_1_dout(0)
     );
 top_level_0: component main_top_top_level_0_1
      port map (
@@ -128,5 +134,9 @@ top_level_0: component main_top_top_level_0_1
 xlconstant_0: component main_top_xlconstant_0_0
      port map (
       dout(31 downto 0) => xlconstant_0_dout(31 downto 0)
+    );
+xlconstant_1: component main_top_xlconstant_1_0
+     port map (
+      dout(0) => xlconstant_1_dout(0)
     );
 end STRUCTURE;

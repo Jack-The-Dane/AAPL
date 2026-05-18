@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Mon May  4 11:27:52 2026
+// Date        : Mon May 18 12:23:37 2026
 // Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_simple_button_fsm_0_0/com_side_simple_button_fsm_0_0_sim_netlist.v
@@ -69,7 +69,7 @@ module com_side_simple_button_fsm_0_0_simple_button_fsm
   wire reset;
 
   LUT5 #(
-    .INIT(32'hFFFFFF10)) 
+    .INIT(32'hFFFFFF40)) 
     \FSM_onehot_state[0]_i_1 
        (.I0(\FSM_onehot_state_reg[1]_0 ),
         .I1(button),
@@ -79,7 +79,7 @@ module com_side_simple_button_fsm_0_0_simple_button_fsm
         .O(\FSM_onehot_state[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'h0000F0E8)) 
+    .INIT(32'h0000F0B2)) 
     \FSM_onehot_state[1]_i_1 
        (.I0(\FSM_onehot_state_reg[1]_0 ),
         .I1(button),
@@ -89,7 +89,7 @@ module com_side_simple_button_fsm_0_0_simple_button_fsm
         .O(\FSM_onehot_state[1]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'h0000AAA2)) 
+    .INIT(32'h0000AAA8)) 
     \FSM_onehot_state[2]_i_1 
        (.I0(\FSM_onehot_state_reg[1]_0 ),
         .I1(button),

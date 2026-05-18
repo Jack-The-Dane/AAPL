@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC2F370E9B4F3FEBB",
+      "boundary_crc": "0xC2F370E9214E35D1",
       "design_src": "/home/kasper-ubuntu/Documents/AAPL_project/QLink_2020/QLink_2020.srcs/sources_1/bd/block_test/block_test.bd",
       "device": "xc7s15ftgb196-1",
       "name": "block_test_inst_0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2025.2",
+      "validated": "true",
       "variant": "true"
     },
     "design_tree": {

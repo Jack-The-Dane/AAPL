@@ -189,6 +189,11 @@ set_property IOSTANDARD LVCMOS33  [get_ports BB_29]
 set_property PACKAGE_PIN D3       [get_ports BB_30]   
 set_property IOSTANDARD LVCMOS33  [get_ports BB_30]
 
+set_property PULLUP true [get_ports BB_30]
+set_property PULLUP true [get_ports BB_27]
+set_property PULLUP true [get_ports BB_24]
+set_property PULLUP true [get_ports BB_21]
+
 ### HDMI Pins
 ## Red pins
 # D2+

@@ -40,6 +40,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_si
 # IP: /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/bd/com_side/ip/com_side_xlconcat_0_0/com_side_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_0_0 || ORIG_REF_NAME==com_side_xlconcat_0_0} -quiet] -quiet
 
+# IP: /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/bd/com_side/ip/com_side_xlconcat_1_0/com_side_xlconcat_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_1_0 || ORIG_REF_NAME==com_side_xlconcat_1_0} -quiet] -quiet
+
 # XDC: /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/block_test_inst_0_ooc.xdc
 
 # XDC: /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/com_side_ooc.xdc
@@ -82,6 +85,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xl
 
 # IP: /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/bd/com_side/ip/com_side_xlconcat_0_0/com_side_xlconcat_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_0_0 || ORIG_REF_NAME==com_side_xlconcat_0_0} -quiet] -quiet
+
+# IP: /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/bd/com_side/ip/com_side_xlconcat_1_0/com_side_xlconcat_1_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_1_0 || ORIG_REF_NAME==com_side_xlconcat_1_0} -quiet] -quiet
 
 # XDC: /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/block_test_inst_0_ooc.xdc
 

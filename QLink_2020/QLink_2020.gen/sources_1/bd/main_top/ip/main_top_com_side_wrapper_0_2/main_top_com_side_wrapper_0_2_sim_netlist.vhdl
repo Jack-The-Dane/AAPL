@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Mon May 11 10:31:04 2026
+-- Date        : Mon May 18 12:24:16 2026
 -- Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_sim_netlist.vhdl
@@ -45,6 +45,35 @@ begin
   \^in3\(1 downto 0) <= In3(1 downto 0);
   dout(7 downto 6) <= \^in3\(1 downto 0);
   dout(5 downto 4) <= \^in2\(1 downto 0);
+  dout(3 downto 2) <= \^in1\(1 downto 0);
+  dout(1 downto 0) <= \^in0\(1 downto 0);
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0 is
+  port (
+    In0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    In1 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  attribute CHECK_LICENSE_TYPE : string;
+  attribute CHECK_LICENSE_TYPE of main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0 : entity is "com_side_xlconcat_1_0,xlconcat_v2_1_7_xlconcat,{}";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0 : entity is "com_side_xlconcat_1_0";
+  attribute downgradeipidentifiedwarnings : string;
+  attribute downgradeipidentifiedwarnings of main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0 : entity is "yes";
+  attribute x_core_info : string;
+  attribute x_core_info of main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0 : entity is "xlconcat_v2_1_7_xlconcat,Vivado 2025.2";
+end main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0;
+
+architecture STRUCTURE of main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0 is
+  signal \^in0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \^in1\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+begin
+  \^in0\(1 downto 0) <= In0(1 downto 0);
+  \^in1\(1 downto 0) <= In1(1 downto 0);
   dout(3 downto 2) <= \^in1\(1 downto 0);
   dout(1 downto 0) <= \^in0\(1 downto 0);
 end STRUCTURE;
@@ -104,7 +133,12 @@ architecture STRUCTURE of main_top_com_side_wrapper_0_2_block_test_inst_0 is
     rstb_busy : out STD_LOGIC
   );
   end component main_top_com_side_wrapper_0_2_block_test_inst_0_blk_mem_gen_0_0;
+  signal \<const0>\ : STD_LOGIC;
   signal Sindri_QLink_top_0_WEA_O : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal Sindri_QLink_top_0_n_1 : STD_LOGIC;
+  signal Sindri_QLink_top_0_n_2 : STD_LOGIC;
+  signal Sindri_QLink_top_0_n_3 : STD_LOGIC;
+  signal Sindri_QLink_top_0_n_4 : STD_LOGIC;
   signal blk_mem_gen_0_douta : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^q_addr_o\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^q_data_o\ : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -127,9 +161,17 @@ architecture STRUCTURE of main_top_com_side_wrapper_0_2_block_test_inst_0 is
   attribute X_CORE_INFO of blk_mem_gen_0 : label is "blk_mem_gen_v8_4_12,Vivado 2025.2";
   attribute syn_black_box of blk_mem_gen_0 : label is "TRUE";
 begin
+  LED_1(3) <= \<const0>\;
+  LED_1(2) <= \<const0>\;
+  LED_1(1) <= \<const0>\;
+  LED_1(0) <= \<const0>\;
   q_addr_o(31 downto 0) <= \^q_addr_o\(31 downto 0);
   q_data_o(31 downto 0) <= \^q_data_o\(31 downto 0);
   qlink_clk_o <= \^qlink_clk_o\;
+GND: unisim.vcomponents.GND
+     port map (
+      G => \<const0>\
+    );
 Sindri_QLink_top_0: component main_top_com_side_wrapper_0_2_block_test_inst_0_Sindri_QLink_top_0_0
      port map (
       ADDR_O(31 downto 0) => \^q_addr_o\(31 downto 0),
@@ -137,7 +179,10 @@ Sindri_QLink_top_0: component main_top_com_side_wrapper_0_2_block_test_inst_0_Si
       CLK_O => \^qlink_clk_o\,
       DATA_I(31 downto 0) => blk_mem_gen_0_douta(31 downto 0),
       DATA_O(31 downto 0) => \^q_data_o\(31 downto 0),
-      LED_O(3 downto 0) => LED_1(3 downto 0),
+      LED_O(3) => Sindri_QLink_top_0_n_1,
+      LED_O(2) => Sindri_QLink_top_0_n_2,
+      LED_O(1) => Sindri_QLink_top_0_n_3,
+      LED_O(0) => Sindri_QLink_top_0_n_4,
       RX_I => RX_I,
       TX_O => TX_O,
       WEA_O(3 downto 0) => Sindri_QLink_top_0_WEA_O(3 downto 0)
@@ -230,11 +275,13 @@ architecture STRUCTURE of main_top_com_side_wrapper_0_2_com_side is
     LSB : out STD_LOGIC
   );
   end component main_top_com_side_wrapper_0_2_com_side_simple_button_fsm_2_0;
-  signal simple_button_fsm_0_button_out : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal simple_button_fsm_1_button_out : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \^qlink_clk_o\ : STD_LOGIC;
+  signal simple_button_fsm_0_button_out_0 : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal simple_button_fsm_1_button_out_0 : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal simple_button_fsm_2_button_out : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal simple_button_fsm_3_button_out : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal NLW_block_test_0_LED_1_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_simple_button_fsm_0_LSB_UNCONNECTED : STD_LOGIC;
   signal NLW_simple_button_fsm_0_MSB_UNCONNECTED : STD_LOGIC;
   signal NLW_simple_button_fsm_1_LSB_UNCONNECTED : STD_LOGIC;
@@ -272,30 +319,34 @@ architecture STRUCTURE of main_top_com_side_wrapper_0_2_com_side is
   attribute CHECK_LICENSE_TYPE of xlconcat_0 : label is "com_side_xlconcat_0_0,xlconcat_v2_1_7_xlconcat,{}";
   attribute DowngradeIPIdentifiedWarnings of xlconcat_0 : label is "yes";
   attribute X_CORE_INFO of xlconcat_0 : label is "xlconcat_v2_1_7_xlconcat,Vivado 2025.2";
+  attribute CHECK_LICENSE_TYPE of xlconcat_1 : label is "com_side_xlconcat_1_0,xlconcat_v2_1_7_xlconcat,{}";
+  attribute DowngradeIPIdentifiedWarnings of xlconcat_1 : label is "yes";
+  attribute X_CORE_INFO of xlconcat_1 : label is "xlconcat_v2_1_7_xlconcat,Vivado 2025.2";
   attribute x_interface_info : string;
   attribute x_interface_info of rst : signal is "xilinx.com:signal:reset:1.0 RST.RST RST";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of rst : signal is "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW";
 begin
+  qlink_clk_o <= \^qlink_clk_o\;
 block_test_0: entity work.main_top_com_side_wrapper_0_2_block_test_inst_0
      port map (
       CLK12 => CLK12_I,
-      LED_1(3 downto 0) => LED_1(3 downto 0),
+      LED_1(3 downto 0) => NLW_block_test_0_LED_1_UNCONNECTED(3 downto 0),
       RX_I => RX_I,
       TX_O => TX_O,
       addrb_0(31 downto 0) => addrb_i(31 downto 0),
       button_in(7 downto 0) => xlconcat_0_dout(7 downto 0),
       q_addr_o(31 downto 0) => q_addr_o_1(31 downto 0),
       q_data_o(31 downto 0) => q_data_o_1(31 downto 0),
-      qlink_clk_o => qlink_clk_o
+      qlink_clk_o => \^qlink_clk_o\
     );
 simple_button_fsm_0: component main_top_com_side_wrapper_0_2_com_side_simple_button_fsm_0_0
      port map (
       LSB => NLW_simple_button_fsm_0_LSB_UNCONNECTED,
       MSB => NLW_simple_button_fsm_0_MSB_UNCONNECTED,
       button => button_1,
-      button_out(1 downto 0) => simple_button_fsm_0_button_out(1 downto 0),
-      clk => CLK12_I,
+      button_out(1 downto 0) => simple_button_fsm_0_button_out_0(1 downto 0),
+      clk => \^qlink_clk_o\,
       reset => rst
     );
 simple_button_fsm_1: component main_top_com_side_wrapper_0_2_com_side_simple_button_fsm_0_1
@@ -303,8 +354,8 @@ simple_button_fsm_1: component main_top_com_side_wrapper_0_2_com_side_simple_but
       LSB => NLW_simple_button_fsm_1_LSB_UNCONNECTED,
       MSB => NLW_simple_button_fsm_1_MSB_UNCONNECTED,
       button => button_0,
-      button_out(1 downto 0) => simple_button_fsm_1_button_out(1 downto 0),
-      clk => CLK12_I,
+      button_out(1 downto 0) => simple_button_fsm_1_button_out_0(1 downto 0),
+      clk => \^qlink_clk_o\,
       reset => rst
     );
 simple_button_fsm_2: component main_top_com_side_wrapper_0_2_com_side_simple_button_fsm_0_2
@@ -313,7 +364,7 @@ simple_button_fsm_2: component main_top_com_side_wrapper_0_2_com_side_simple_but
       MSB => NLW_simple_button_fsm_2_MSB_UNCONNECTED,
       button => button_3,
       button_out(1 downto 0) => simple_button_fsm_2_button_out(1 downto 0),
-      clk => CLK12_I,
+      clk => \^qlink_clk_o\,
       reset => rst
     );
 simple_button_fsm_3: component main_top_com_side_wrapper_0_2_com_side_simple_button_fsm_2_0
@@ -322,16 +373,22 @@ simple_button_fsm_3: component main_top_com_side_wrapper_0_2_com_side_simple_but
       MSB => NLW_simple_button_fsm_3_MSB_UNCONNECTED,
       button => button_2,
       button_out(1 downto 0) => simple_button_fsm_3_button_out(1 downto 0),
-      clk => CLK12_I,
+      clk => \^qlink_clk_o\,
       reset => rst
     );
 xlconcat_0: entity work.main_top_com_side_wrapper_0_2_com_side_xlconcat_0_0
      port map (
-      In0(1 downto 0) => simple_button_fsm_0_button_out(1 downto 0),
-      In1(1 downto 0) => simple_button_fsm_1_button_out(1 downto 0),
+      In0(1 downto 0) => simple_button_fsm_0_button_out_0(1 downto 0),
+      In1(1 downto 0) => simple_button_fsm_1_button_out_0(1 downto 0),
       In2(1 downto 0) => simple_button_fsm_3_button_out(1 downto 0),
       In3(1 downto 0) => simple_button_fsm_2_button_out(1 downto 0),
       dout(7 downto 0) => xlconcat_0_dout(7 downto 0)
+    );
+xlconcat_1: entity work.main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0
+     port map (
+      In0(1 downto 0) => simple_button_fsm_0_button_out_0(1 downto 0),
+      In1(1 downto 0) => simple_button_fsm_1_button_out_0(1 downto 0),
+      dout(3 downto 0) => LED_1(3 downto 0)
     );
 end STRUCTURE;
 library IEEE;

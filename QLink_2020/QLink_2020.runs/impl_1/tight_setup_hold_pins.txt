@@ -1,6 +1,7 @@
 +========================+========================+==================================================================+
 | Launch Setup Clock     | Launch Hold Clock      | Pin                                                              |
 +========================+========================+==================================================================+
+| clock_pixel_unbuffered | clock_pixel_unbuffered | main_top_i/top_level_0/U0/color_fetcher_0/U0/color_code_reg[0]/D |
 | clock_pixel_unbuffered | clock_pixel_unbuffered | main_top_i/top_level_0/U0/color_fetcher_0/U0/color_code_reg[2]/D |
 | clock_pixel_unbuffered | clock_pixel_unbuffered | main_top_i/top_level_0/U0/color_fetcher_0/U0/color_code_reg[1]/D |
 +------------------------+------------------------+------------------------------------------------------------------+

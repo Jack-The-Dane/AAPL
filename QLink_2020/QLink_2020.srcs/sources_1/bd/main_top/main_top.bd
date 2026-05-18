@@ -13,7 +13,8 @@
     "design_tree": {
       "xlconstant_0": "",
       "top_level_0": "",
-      "com_side_wrapper_0": ""
+      "com_side_wrapper_0": "",
+      "xlconstant_1": ""
     },
     "ports": {
       "RX_I": {
@@ -138,7 +139,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "CONST_VAL": {
-            "value": "200"
+            "value": "800"
           },
           "CONST_WIDTH": {
             "value": "32"
@@ -221,15 +222,22 @@
             "direction": "I"
           }
         }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "main_top_xlconstant_1_0",
+        "xci_path": "ip/main_top_xlconstant_1_0/main_top_xlconstant_1_0.xci",
+        "inst_hier_path": "xlconstant_1",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
       }
     },
     "nets": {
-      "BB_09_1": {
-        "ports": [
-          "BB_09",
-          "com_side_wrapper_0/rst"
-        ]
-      },
       "BB_21_1": {
         "ports": [
           "BB_21",
@@ -354,6 +362,12 @@
         "ports": [
           "xlconstant_0/dout",
           "com_side_wrapper_0/addrb_i"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "com_side_wrapper_0/rst"
         ]
       }
     }

@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon May 11 10:58:25 2026
-# Process ID         : 41067
+# Start of session at: Mon May 18 12:24:18 2026
+# Process ID         : 65526
 # Current directory  : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1
 # Command line       : vivado -log main_top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_top_wrapper.tcl
 # Log file           : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/main_top_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 22.04.5 LTS
 # Processor Detail   : AMD Ryzen 7 PRO 5850U with Radeon Graphics
-# CPU Frequency      : 1896.428 MHz
+# CPU Frequency      : 1896.437 MHz
 # CPU Physical cores : 3
 # CPU Logical cores  : 6
 # Host memory        : 16764 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 18911 MB
-# Available Virtual  : 15120 MB
+# Available Virtual  : 14791 MB
 #-----------------------------------------------------------
 source main_top_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -30,6 +30,7 @@ It is recommended to migrate these utility IPs to inline hdl  using the command 
 More information on inline hdl is available in UG994.
 Utility IP Component Instances:
  main_top_xlconstant_0_0
+main_top_xlconstant_1_0
 Command: read_checkpoint -auto_incremental -incremental /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/utils_1/imports/synth_1/receiver_top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/utils_1/imports/synth_1/receiver_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -42,37 +43,43 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 41179
+INFO: [Synth 8-7075] Helper process launched with PID 65581
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2165.953 ; gain = 485.125 ; free physical = 7390 ; free virtual = 13240
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2166.277 ; gain = 485.125 ; free physical = 4713 ; free virtual = 12724
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main_top_wrapper' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd:38]
 INFO: [Synth 8-3491] module 'main_top' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:15' bound to instance 'main_top_i' of component 'main_top' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd:62]
 INFO: [Synth 8-638] synthesizing module 'main_top' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:42]
-INFO: [Synth 8-3491] module 'main_top_com_side_wrapper_0_2' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-41067-kasper-ubuntu-pc/realtime/main_top_com_side_wrapper_0_2_stub.vhdl:6' bound to instance 'com_side_wrapper_0' of component 'main_top_com_side_wrapper_0_2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:96]
-INFO: [Synth 8-638] synthesizing module 'main_top_com_side_wrapper_0_2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-41067-kasper-ubuntu-pc/realtime/main_top_com_side_wrapper_0_2_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'main_top_top_level_0_1' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-41067-kasper-ubuntu-pc/realtime/main_top_top_level_0_1_stub.vhdl:6' bound to instance 'top_level_0' of component 'main_top_top_level_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:112]
-INFO: [Synth 8-638] synthesizing module 'main_top_top_level_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-41067-kasper-ubuntu-pc/realtime/main_top_top_level_0_1_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'main_top_xlconstant_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_0_0/synth/main_top_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'main_top_xlconstant_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:128]
+INFO: [Synth 8-3491] module 'main_top_com_side_wrapper_0_2' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-65526-kasper-ubuntu-pc/realtime/main_top_com_side_wrapper_0_2_stub.vhdl:6' bound to instance 'com_side_wrapper_0' of component 'main_top_com_side_wrapper_0_2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'main_top_com_side_wrapper_0_2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-65526-kasper-ubuntu-pc/realtime/main_top_com_side_wrapper_0_2_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'main_top_top_level_0_1' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-65526-kasper-ubuntu-pc/realtime/main_top_top_level_0_1_stub.vhdl:6' bound to instance 'top_level_0' of component 'main_top_top_level_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'main_top_top_level_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/.Xil/Vivado-65526-kasper-ubuntu-pc/realtime/main_top_top_level_0_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'main_top_xlconstant_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_0_0/synth/main_top_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'main_top_xlconstant_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:134]
 INFO: [Synth 8-6157] synthesizing module 'main_top_xlconstant_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_0_0/synth/main_top_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'main_top_xlconstant_0_0' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_0_0/synth/main_top_xlconstant_0_0.v:53]
+INFO: [Synth 8-3491] module 'main_top_xlconstant_1_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_1_0/synth/main_top_xlconstant_1_0.v:53' bound to instance 'xlconstant_1' of component 'main_top_xlconstant_1_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:138]
+INFO: [Synth 8-6157] synthesizing module 'main_top_xlconstant_1_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_1_0/synth/main_top_xlconstant_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'main_top_xlconstant_1_0' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_xlconstant_1_0/synth/main_top_xlconstant_1_0.v:53]
 INFO: [Synth 8-256] done synthesizing module 'main_top' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/synth/main_top.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'main_top_wrapper' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd:38]
+WARNING: [Synth 8-7129] Port BB_09 in module main_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2254.922 ; gain = 574.094 ; free physical = 7296 ; free virtual = 13147
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2255.246 ; gain = 574.094 ; free physical = 4644 ; free virtual = 12655
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2263.828 ; gain = 583.000 ; free physical = 7295 ; free virtual = 13146
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2267.121 ; gain = 585.969 ; free physical = 4644 ; free virtual = 12655
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2263.828 ; gain = 583.000 ; free physical = 7295 ; free virtual = 13146
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2267.121 ; gain = 585.969 ; free physical = 4644 ; free virtual = 12655
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2263.828 ; gain = 0.000 ; free physical = 7295 ; free virtual = 13146
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2267.121 ; gain = 0.000 ; free physical = 4644 ; free virtual = 12655
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -201,31 +208,31 @@ Parsing XDC File [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/Q
 Finished Parsing XDC File [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2312.754 ; gain = 0.000 ; free physical = 7296 ; free virtual = 13147
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2316.047 ; gain = 0.000 ; free physical = 4660 ; free virtual = 12671
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2312.789 ; gain = 0.000 ; free physical = 7296 ; free virtual = 13147
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2316.082 ; gain = 0.000 ; free physical = 4660 ; free virtual = 12671
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2312.789 ; gain = 631.961 ; free physical = 7345 ; free virtual = 13197
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2316.082 ; gain = 634.930 ; free physical = 4750 ; free virtual = 12761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s15ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2320.758 ; gain = 639.930 ; free physical = 7345 ; free virtual = 13197
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2324.051 ; gain = 642.898 ; free physical = 4750 ; free virtual = 12761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2320.758 ; gain = 639.930 ; free physical = 7345 ; free virtual = 13197
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2324.051 ; gain = 642.898 ; free physical = 4742 ; free virtual = 12754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2320.758 ; gain = 639.930 ; free physical = 7360 ; free virtual = 13212
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2324.051 ; gain = 642.898 ; free physical = 4742 ; free virtual = 12753
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -246,8 +253,9 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port BB_09 in module main_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2320.758 ; gain = 639.930 ; free physical = 7366 ; free virtual = 13223
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2324.051 ; gain = 642.898 ; free physical = 4754 ; free virtual = 12769
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -255,19 +263,19 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-565] redefining clock 'CLK12_I'
 WARNING: [Synth 8-565] redefining clock 'CLK25_I'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2416.758 ; gain = 735.930 ; free physical = 7311 ; free virtual = 13167
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2419.051 ; gain = 737.898 ; free physical = 4696 ; free virtual = 12712
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2416.758 ; gain = 735.930 ; free physical = 7311 ; free virtual = 13167
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2419.051 ; gain = 737.898 ; free physical = 4696 ; free virtual = 12712
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2426.773 ; gain = 745.945 ; free physical = 7303 ; free virtual = 13159
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2429.066 ; gain = 747.914 ; free physical = 4689 ; free virtual = 12704
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -285,37 +293,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2613.586 ; gain = 932.758 ; free physical = 7154 ; free virtual = 13011
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2614.879 ; gain = 933.727 ; free physical = 4541 ; free virtual = 12557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2613.586 ; gain = 932.758 ; free physical = 7154 ; free virtual = 13011
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2614.879 ; gain = 933.727 ; free physical = 4541 ; free virtual = 12557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2613.586 ; gain = 932.758 ; free physical = 7154 ; free virtual = 13011
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2614.879 ; gain = 933.727 ; free physical = 4541 ; free virtual = 12557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2613.586 ; gain = 932.758 ; free physical = 7154 ; free virtual = 13011
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2614.879 ; gain = 933.727 ; free physical = 4541 ; free virtual = 12557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2613.586 ; gain = 932.758 ; free physical = 7154 ; free virtual = 13011
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2614.879 ; gain = 933.727 ; free physical = 4541 ; free virtual = 12557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2613.586 ; gain = 932.758 ; free physical = 7154 ; free virtual = 13011
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2614.879 ; gain = 933.727 ; free physical = 4541 ; free virtual = 12557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -335,31 +343,31 @@ Report Cell Usage:
 +------+-----------------------------------+------+
 |1     |main_top_com_side_wrapper_0_2_bbox |     1|
 |2     |main_top_top_level_0_1_bbox        |     1|
-|3     |IBUF                               |     8|
+|3     |IBUF                               |     7|
 |4     |OBUF                               |     5|
 +------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2613.586 ; gain = 932.758 ; free physical = 7154 ; free virtual = 13011
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2614.879 ; gain = 933.727 ; free physical = 4541 ; free virtual = 12557
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2613.586 ; gain = 883.797 ; free physical = 7154 ; free virtual = 13011
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2613.594 ; gain = 932.758 ; free physical = 7155 ; free virtual = 13011
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2614.879 ; gain = 884.766 ; free physical = 4541 ; free virtual = 12557
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2614.887 ; gain = 933.727 ; free physical = 4541 ; free virtual = 12557
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2613.594 ; gain = 0.000 ; free physical = 7155 ; free virtual = 13011
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2614.887 ; gain = 0.000 ; free physical = 4541 ; free virtual = 12557
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2613.594 ; gain = 0.000 ; free physical = 7330 ; free virtual = 13187
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2614.887 ; gain = 0.000 ; free physical = 4730 ; free virtual = 12746
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: a18985e0
+Synth Design complete | Checksum: 290b419
 INFO: [Common 17-83] Releasing license: Synthesis
-39 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+44 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 2613.621 ; gain = 1053.871 ; free physical = 7332 ; free virtual = 13189
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1751.492; main = 1751.492; forked = 283.220
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3307.676; main = 2613.590; forked = 994.918
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2637.598 ; gain = 0.000 ; free physical = 7332 ; free virtual = 13189
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 2614.914 ; gain = 1001.121 ; free physical = 4730 ; free virtual = 12746
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1919.545; main = 1748.630; forked = 281.848
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3533.992; main = 2614.883; forked = 994.922
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2638.891 ; gain = 0.000 ; free physical = 4730 ; free virtual = 12746
 INFO: [Common 17-1381] The checkpoint '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/main_top_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file main_top_wrapper_utilization_synth.rpt -pb main_top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May 11 10:58:56 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon May 18 12:24:51 2026...

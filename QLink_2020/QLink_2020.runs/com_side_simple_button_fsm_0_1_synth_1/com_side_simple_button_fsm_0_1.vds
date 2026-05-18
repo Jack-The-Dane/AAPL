@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon May  4 11:26:56 2026
-# Process ID         : 23377
+# Start of session at: Mon May 18 12:22:55 2026
+# Process ID         : 64729
 # Current directory  : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/com_side_simple_button_fsm_0_1_synth_1
 # Command line       : vivado -log com_side_simple_button_fsm_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source com_side_simple_button_fsm_0_1.tcl
 # Log file           : /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/com_side_simple_button_fsm_0_1_synth_1/com_side_simple_button_fsm_0_1.vds
@@ -13,18 +13,18 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 22.04.5 LTS
 # Processor Detail   : AMD Ryzen 7 PRO 5850U with Radeon Graphics
-# CPU Frequency      : 1896.434 MHz
+# CPU Frequency      : 1896.437 MHz
 # CPU Physical cores : 3
 # CPU Logical cores  : 6
 # Host memory        : 16764 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 18911 MB
-# Available Virtual  : 15028 MB
+# Available Virtual  : 14232 MB
 #-----------------------------------------------------------
 source com_side_simple_button_fsm_0_1.tcl -notrace
-create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1560.367 ; gain = 71.055 ; free physical = 10512 ; free virtual = 12405
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1613.836 ; gain = 64.055 ; free physical = 4227 ; free virtual = 12240
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/kasper-ubuntu/Documents/APPL_project_tetris/IPs'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/kasper-ubuntu/Vivado/2025.2/data/ip'.
 Command: synth_design -top com_side_simple_button_fsm_0_1 -part xc7s15ftgb196-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -33,9 +33,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
 INFO: [Device 21-403] Loading part xc7s15ftgb196-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 23553
+INFO: [Synth 8-7075] Helper process launched with PID 64989
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2164.352 ; gain = 484.875 ; free physical = 6706 ; free virtual = 8600
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2164.008 ; gain = 481.844 ; free physical = 1135 ; free virtual = 9147
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'com_side_simple_button_fsm_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_simple_button_fsm_0_1/synth/com_side_simple_button_fsm_0_1.vhd:67]
 INFO: [Synth 8-3491] module 'simple_button_fsm' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/new/simple_FSM.vhd:4' bound to instance 'U0' of component 'simple_button_fsm' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_simple_button_fsm_0_1/synth/com_side_simple_button_fsm_0_1.vhd:98]
@@ -43,45 +43,45 @@ INFO: [Synth 8-638] synthesizing module 'simple_button_fsm' [/home/kasper-ubuntu
 INFO: [Synth 8-256] done synthesizing module 'simple_button_fsm' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/imports/new/simple_FSM.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'com_side_simple_button_fsm_0_1' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_simple_button_fsm_0_1/synth/com_side_simple_button_fsm_0_1.vhd:67]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2251.289 ; gain = 571.812 ; free physical = 7516 ; free virtual = 9415
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2251.977 ; gain = 569.812 ; free physical = 788 ; free virtual = 8804
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2266.133 ; gain = 586.656 ; free physical = 7515 ; free virtual = 9414
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2260.883 ; gain = 578.719 ; free physical = 780 ; free virtual = 8796
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2266.133 ; gain = 586.656 ; free physical = 7515 ; free virtual = 9414
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2260.883 ; gain = 578.719 ; free physical = 780 ; free virtual = 8796
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2266.133 ; gain = 0.000 ; free physical = 7515 ; free virtual = 9414
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2260.883 ; gain = 0.000 ; free physical = 780 ; free virtual = 8796
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2325.965 ; gain = 0.000 ; free physical = 7503 ; free virtual = 9401
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2319.715 ; gain = 0.000 ; free physical = 776 ; free virtual = 8791
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2326.000 ; gain = 0.000 ; free physical = 7503 ; free virtual = 9401
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2319.750 ; gain = 0.000 ; free physical = 775 ; free virtual = 8790
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 2326.000 ; gain = 646.523 ; free physical = 7523 ; free virtual = 9477
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2319.750 ; gain = 637.586 ; free physical = 777 ; free virtual = 8796
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s15ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 2333.969 ; gain = 654.492 ; free physical = 7523 ; free virtual = 9477
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2327.719 ; gain = 645.555 ; free physical = 777 ; free virtual = 8796
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 2333.969 ; gain = 654.492 ; free physical = 7523 ; free virtual = 9477
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2327.719 ; gain = 645.555 ; free physical = 777 ; free virtual = 8796
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'simple_button_fsm'
 ---------------------------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'simpl
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'simple_button_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 2333.969 ; gain = 654.492 ; free physical = 7521 ; free virtual = 9477
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2327.719 ; gain = 645.555 ; free physical = 774 ; free virtual = 8795
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -119,20 +119,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2333.969 ; gain = 654.492 ; free physical = 7523 ; free virtual = 9480
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2327.719 ; gain = 645.555 ; free physical = 755 ; free virtual = 8774
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2333.969 ; gain = 654.492 ; free physical = 7523 ; free virtual = 9480
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2327.719 ; gain = 645.555 ; free physical = 755 ; free virtual = 8774
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2333.969 ; gain = 654.492 ; free physical = 7523 ; free virtual = 9480
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2327.719 ; gain = 645.555 ; free physical = 755 ; free virtual = 8774
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -150,37 +150,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2473.781 ; gain = 794.305 ; free physical = 7298 ; free virtual = 9256
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2473.531 ; gain = 791.367 ; free physical = 372 ; free virtual = 8391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2473.781 ; gain = 794.305 ; free physical = 7298 ; free virtual = 9256
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2473.531 ; gain = 791.367 ; free physical = 372 ; free virtual = 8391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2473.781 ; gain = 794.305 ; free physical = 7298 ; free virtual = 9256
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2473.531 ; gain = 791.367 ; free physical = 369 ; free virtual = 8387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2473.781 ; gain = 794.305 ; free physical = 7298 ; free virtual = 9256
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2473.531 ; gain = 791.367 ; free physical = 369 ; free virtual = 8387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2473.781 ; gain = 794.305 ; free physical = 7298 ; free virtual = 9256
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2473.531 ; gain = 791.367 ; free physical = 369 ; free virtual = 8387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2473.781 ; gain = 794.305 ; free physical = 7298 ; free virtual = 9256
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2473.531 ; gain = 791.367 ; free physical = 369 ; free virtual = 8387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -200,16 +200,16 @@ Report Cell Usage:
 |2     |FDRE |     3|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2473.781 ; gain = 794.305 ; free physical = 7298 ; free virtual = 9256
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2473.531 ; gain = 791.367 ; free physical = 369 ; free virtual = 8387
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 2473.781 ; gain = 734.438 ; free physical = 7298 ; free virtual = 9256
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2473.789 ; gain = 794.305 ; free physical = 7298 ; free virtual = 9256
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2473.531 ; gain = 732.500 ; free physical = 369 ; free virtual = 8387
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2473.539 ; gain = 791.367 ; free physical = 369 ; free virtual = 8387
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2488.625 ; gain = 0.000 ; free physical = 7283 ; free virtual = 9241
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2489.375 ; gain = 0.000 ; free physical = 519 ; free virtual = 8538
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2618.270 ; gain = 0.000 ; free physical = 7214 ; free virtual = 9172
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2618.020 ; gain = 0.000 ; free physical = 478 ; free virtual = 8497
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -217,10 +217,10 @@ Synth Design complete | Checksum: 9b4d43f8
 INFO: [Common 17-83] Releasing license: Synthesis
 23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2618.305 ; gain = 1057.938 ; free physical = 7169 ; free virtual = 9127
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1554.102; main = 1542.850; forked = 206.664
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3382.891; main = 2618.273; forked = 994.918
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2642.281 ; gain = 0.000 ; free physical = 7165 ; free virtual = 9122
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:29 . Memory (MB): peak = 2618.055 ; gain = 1004.219 ; free physical = 436 ; free virtual = 8455
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1533.509; main = 1533.509; forked = 205.795
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3322.641; main = 2618.023; forked = 994.918
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2642.031 ; gain = 0.000 ; free physical = 433 ; free virtual = 8452
 INFO: [Common 17-1381] The checkpoint '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/com_side_simple_button_fsm_0_1_synth_1/com_side_simple_button_fsm_0_1.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file com_side_simple_button_fsm_0_1_utilization_synth.rpt -pb com_side_simple_button_fsm_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May  4 11:27:52 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon May 18 12:23:37 2026...

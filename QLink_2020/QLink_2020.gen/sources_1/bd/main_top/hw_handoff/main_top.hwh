@@ -1,14 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 11 10:58:23 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 18 12:22:50 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="main_top" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="BB_09" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_BB_09">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="rst"/>
-      </CONNECTIONS>
-    </PORT>
+    <PORT DIR="I" NAME="BB_09" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
     <PORT DIR="I" NAME="BB_21" SIGIS="undef" SIGNAME="External_Ports_BB_21">
       <CONNECTIONS>
         <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_3"/>
@@ -166,9 +162,9 @@
             <CONNECTION INSTANCE="top_level_0" PORT="clk_qlink"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_BB_09">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="BB_09"/>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -248,7 +244,7 @@
     <MODULE COREREVISION="10" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x000000C8"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x00000320"/>
         <PARAMETER NAME="CONST_WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="main_top_xlconstant_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -257,6 +253,23 @@
         <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="com_side_wrapper_0" PORT="addrb_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="10" FULLNAME="/xlconstant_1" HWVERSION="1.1" INSTANCE="xlconstant_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_top_xlconstant_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_wrapper_0" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

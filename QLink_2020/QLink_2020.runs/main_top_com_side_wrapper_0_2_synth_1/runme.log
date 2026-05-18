@@ -7,7 +7,7 @@
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Mon May 11 10:30:31 2026
+  **** Start of session at: Mon May 18 12:23:39 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -27,6 +27,7 @@ It is recommended to migrate these utility IPs to inline hdl  using the command 
 More information on inline hdl is available in UG994.
 Utility IP Component Instances:
  com_side_xlconcat_0_0
+com_side_xlconcat_1_0
 Command: synth_design -top main_top_com_side_wrapper_0_2 -part xc7s15ftgb196-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
@@ -34,21 +35,21 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
 INFO: [Device 21-403] Loading part xc7s15ftgb196-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26966
+INFO: [Synth 8-7075] Helper process launched with PID 65359
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2166.699 ; gain = 439.168 ; free physical = 7588 ; free virtual = 13358
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2167.969 ; gain = 481.844 ; free physical = 4696 ; free virtual = 12709
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main_top_com_side_wrapper_0_2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/synth/main_top_com_side_wrapper_0_2.vhd:74]
 INFO: [Synth 8-3491] module 'com_side_wrapper' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/hdl/com_side_wrapper.vhd:15' bound to instance 'U0' of component 'com_side_wrapper' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/synth/main_top_com_side_wrapper_0_2.vhd:109]
 INFO: [Synth 8-638] synthesizing module 'com_side_wrapper' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/hdl/com_side_wrapper.vhd:33]
 INFO: [Synth 8-3491] module 'com_side' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:15' bound to instance 'com_side_i' of component 'com_side' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/hdl/com_side_wrapper.vhd:52]
 INFO: [Synth 8-638] synthesizing module 'com_side' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:37]
-INFO: [Synth 8-3491] module 'block_test_inst_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/synth/block_test_inst_0.vhd:15' bound to instance 'block_test_0' of component 'block_test_inst_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:118]
+INFO: [Synth 8-3491] module 'block_test_inst_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/synth/block_test_inst_0.vhd:15' bound to instance 'block_test_0' of component 'block_test_inst_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:128]
 INFO: [Synth 8-638] synthesizing module 'block_test_inst_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/synth/block_test_inst_0.vhd:33]
-INFO: [Synth 8-3491] module 'block_test_inst_0_Sindri_QLink_top_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/block_test_inst_0_Sindri_QLink_top_0_0_stub.vhdl:6' bound to instance 'Sindri_QLink_top_0' of component 'block_test_inst_0_Sindri_QLink_top_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/synth/block_test_inst_0.vhd:97]
-INFO: [Synth 8-638] synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/block_test_inst_0_Sindri_QLink_top_0_0_stub.vhdl:29]
-INFO: [Synth 8-3491] module 'block_test_inst_0_blk_mem_gen_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/block_test_inst_0_blk_mem_gen_0_0_stub.vhdl:6' bound to instance 'blk_mem_gen_0' of component 'block_test_inst_0_blk_mem_gen_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/synth/block_test_inst_0.vhd:109]
-INFO: [Synth 8-638] synthesizing module 'block_test_inst_0_blk_mem_gen_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/block_test_inst_0_blk_mem_gen_0_0_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'block_test_inst_0_Sindri_QLink_top_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/block_test_inst_0_Sindri_QLink_top_0_0_stub.vhdl:6' bound to instance 'Sindri_QLink_top_0' of component 'block_test_inst_0_Sindri_QLink_top_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/synth/block_test_inst_0.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/block_test_inst_0_Sindri_QLink_top_0_0_stub.vhdl:29]
+INFO: [Synth 8-3491] module 'block_test_inst_0_blk_mem_gen_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/block_test_inst_0_blk_mem_gen_0_0_stub.vhdl:6' bound to instance 'blk_mem_gen_0' of component 'block_test_inst_0_blk_mem_gen_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/synth/block_test_inst_0.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'block_test_inst_0_blk_mem_gen_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/block_test_inst_0_blk_mem_gen_0_0_stub.vhdl:34]
 INFO: [Synth 8-3491] module 'block_test_inst_0_enable_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_enable_0_0/synth/block_test_inst_0_enable_0_0.v:53' bound to instance 'enable_0' of component 'block_test_inst_0_enable_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/synth/block_test_inst_0.vhd:129]
 INFO: [Synth 8-6157] synthesizing module 'block_test_inst_0_enable_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_enable_0_0/synth/block_test_inst_0_enable_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
@@ -65,136 +66,141 @@ INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant__paramet
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized1' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'block_test_inst_0_write_enable_0' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_write_enable_0/synth/block_test_inst_0_write_enable_0.v:53]
 INFO: [Synth 8-256] done synthesizing module 'block_test_inst_0' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/synth/block_test_inst_0.vhd:33]
-INFO: [Synth 8-3491] module 'com_side_simple_button_fsm_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_0_stub.vhdl:6' bound to instance 'simple_button_fsm_0' of component 'com_side_simple_button_fsm_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:130]
-INFO: [Synth 8-638] synthesizing module 'com_side_simple_button_fsm_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_0_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'com_side_simple_button_fsm_0_1' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_1_stub.vhdl:6' bound to instance 'simple_button_fsm_1' of component 'com_side_simple_button_fsm_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:139]
-INFO: [Synth 8-638] synthesizing module 'com_side_simple_button_fsm_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_1_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'com_side_simple_button_fsm_0_2' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_2_stub.vhdl:6' bound to instance 'simple_button_fsm_2' of component 'com_side_simple_button_fsm_0_2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:148]
-INFO: [Synth 8-638] synthesizing module 'com_side_simple_button_fsm_0_2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_2_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'com_side_simple_button_fsm_2_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_2_0_stub.vhdl:6' bound to instance 'simple_button_fsm_3' of component 'com_side_simple_button_fsm_2_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:157]
-INFO: [Synth 8-638] synthesizing module 'com_side_simple_button_fsm_2_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-26884-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_2_0_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'com_side_xlconcat_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_xlconcat_0_0/synth/com_side_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'com_side_xlconcat_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:166]
+INFO: [Synth 8-3491] module 'com_side_simple_button_fsm_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_0_stub.vhdl:6' bound to instance 'simple_button_fsm_0' of component 'com_side_simple_button_fsm_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'com_side_simple_button_fsm_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_0_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'com_side_simple_button_fsm_0_1' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_1_stub.vhdl:6' bound to instance 'simple_button_fsm_1' of component 'com_side_simple_button_fsm_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'com_side_simple_button_fsm_0_1' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_1_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'com_side_simple_button_fsm_0_2' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_2_stub.vhdl:6' bound to instance 'simple_button_fsm_2' of component 'com_side_simple_button_fsm_0_2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'com_side_simple_button_fsm_0_2' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_0_2_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'com_side_simple_button_fsm_2_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_2_0_stub.vhdl:6' bound to instance 'simple_button_fsm_3' of component 'com_side_simple_button_fsm_2_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'com_side_simple_button_fsm_2_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/.Xil/Vivado-65283-kasper-ubuntu-pc/realtime/com_side_simple_button_fsm_2_0_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'com_side_xlconcat_0_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_xlconcat_0_0/synth/com_side_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'com_side_xlconcat_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:176]
 INFO: [Synth 8-6157] synthesizing module 'com_side_xlconcat_0_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_xlconcat_0_0/synth/com_side_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_7_xlconcat' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_7_xlconcat' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'com_side_xlconcat_0_0' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_xlconcat_0_0/synth/com_side_xlconcat_0_0.v:53]
+INFO: [Synth 8-3491] module 'com_side_xlconcat_1_0' declared at '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_xlconcat_1_0/synth/com_side_xlconcat_1_0.v:53' bound to instance 'xlconcat_1' of component 'com_side_xlconcat_1_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:184]
+INFO: [Synth 8-6157] synthesizing module 'com_side_xlconcat_1_0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_xlconcat_1_0/synth/com_side_xlconcat_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_7_xlconcat__parameterized0' [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_7_xlconcat__parameterized0' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'com_side_xlconcat_1_0' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/ip/com_side_xlconcat_1_0/synth/com_side_xlconcat_1_0.v:53]
 INFO: [Synth 8-256] done synthesizing module 'com_side' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/synth/com_side.vhd:37]
 INFO: [Synth 8-256] done synthesizing module 'com_side_wrapper' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/hdl/com_side_wrapper.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'main_top_com_side_wrapper_0_2' (0#1) [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/synth/main_top_com_side_wrapper_0_2.vhd:74]
-INFO: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
-INFO: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+INFO: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_7_xlconcat__parameterized0 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2257.668 ; gain = 530.137 ; free physical = 7495 ; free virtual = 13265
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2258.906 ; gain = 572.781 ; free physical = 4607 ; free virtual = 12621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2269.543 ; gain = 542.012 ; free physical = 7494 ; free virtual = 13264
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2270.781 ; gain = 584.656 ; free physical = 4605 ; free virtual = 12619
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2269.543 ; gain = 542.012 ; free physical = 7494 ; free virtual = 13264
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2270.781 ; gain = 584.656 ; free physical = 4605 ; free virtual = 12619
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2269.543 ; gain = 0.000 ; free physical = 7494 ; free virtual = 13264
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2270.781 ; gain = 0.000 ; free physical = 4605 ; free virtual = 12619
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -215,30 +221,30 @@ Parsing XDC File [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/Q
 Finished Parsing XDC File [/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2318.469 ; gain = 0.000 ; free physical = 7495 ; free virtual = 13265
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2319.707 ; gain = 0.000 ; free physical = 4643 ; free virtual = 12657
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2318.504 ; gain = 0.000 ; free physical = 7495 ; free virtual = 13265
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2319.742 ; gain = 0.000 ; free physical = 4643 ; free virtual = 12657
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2318.504 ; gain = 590.973 ; free physical = 7534 ; free virtual = 13304
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2319.742 ; gain = 633.617 ; free physical = 4741 ; free virtual = 12752
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s15ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2326.473 ; gain = 598.941 ; free physical = 7534 ; free virtual = 13304
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2327.711 ; gain = 641.586 ; free physical = 4741 ; free virtual = 12752
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2326.473 ; gain = 598.941 ; free physical = 7534 ; free virtual = 13304
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2327.711 ; gain = 641.586 ; free physical = 4741 ; free virtual = 12752
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2326.473 ; gain = 598.941 ; free physical = 7534 ; free virtual = 13305
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2327.711 ; gain = 641.586 ; free physical = 4741 ; free virtual = 12753
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -260,25 +266,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2326.473 ; gain = 598.941 ; free physical = 7542 ; free virtual = 13313
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2327.711 ; gain = 641.586 ; free physical = 4753 ; free virtual = 12765
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2416.473 ; gain = 688.941 ; free physical = 7508 ; free virtual = 13279
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2417.711 ; gain = 731.586 ; free physical = 4715 ; free virtual = 12727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2416.473 ; gain = 688.941 ; free physical = 7508 ; free virtual = 13279
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2417.711 ; gain = 731.586 ; free physical = 4715 ; free virtual = 12727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2426.488 ; gain = 698.957 ; free physical = 7493 ; free virtual = 13264
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2427.727 ; gain = 741.602 ; free physical = 4707 ; free virtual = 12719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -296,37 +302,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2612.301 ; gain = 884.770 ; free physical = 7330 ; free virtual = 13101
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2613.539 ; gain = 927.414 ; free physical = 4555 ; free virtual = 12567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2612.301 ; gain = 884.770 ; free physical = 7330 ; free virtual = 13101
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2613.539 ; gain = 927.414 ; free physical = 4555 ; free virtual = 12567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2612.301 ; gain = 884.770 ; free physical = 7330 ; free virtual = 13101
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2613.539 ; gain = 927.414 ; free physical = 4555 ; free virtual = 12567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2612.301 ; gain = 884.770 ; free physical = 7330 ; free virtual = 13101
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2613.539 ; gain = 927.414 ; free physical = 4555 ; free virtual = 12567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2612.301 ; gain = 884.770 ; free physical = 7330 ; free virtual = 13101
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2613.539 ; gain = 927.414 ; free physical = 4555 ; free virtual = 12567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2612.301 ; gain = 884.770 ; free physical = 7330 ; free virtual = 13101
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2613.539 ; gain = 927.414 ; free physical = 4555 ; free virtual = 12567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -356,27 +362,27 @@ Report Cell Usage:
 |6     |com_side_simple_button_fsm_2_0_bbox         |     1|
 +------+--------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2612.301 ; gain = 884.770 ; free physical = 7330 ; free virtual = 13101
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2613.539 ; gain = 927.414 ; free physical = 4555 ; free virtual = 12567
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2612.301 ; gain = 835.809 ; free physical = 7331 ; free virtual = 13102
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2612.309 ; gain = 884.770 ; free physical = 7331 ; free virtual = 13102
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2613.539 ; gain = 878.453 ; free physical = 4555 ; free virtual = 12567
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2613.547 ; gain = 927.414 ; free physical = 4555 ; free virtual = 12567
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2612.309 ; gain = 0.000 ; free physical = 7331 ; free virtual = 13102
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2613.547 ; gain = 0.000 ; free physical = 4555 ; free virtual = 12567
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2612.309 ; gain = 0.000 ; free physical = 7495 ; free virtual = 13266
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2613.547 ; gain = 0.000 ; free physical = 4729 ; free virtual = 12740
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: efea328
+Synth Design complete | Checksum: 4a55e5cf
 INFO: [Common 17-83] Releasing license: Synthesis
-162 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+167 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 2612.336 ; gain = 1004.797 ; free physical = 7495 ; free virtual = 13266
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1975.166; main = 1750.785; forked = 283.079
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3607.227; main = 2612.305; forked = 994.922
-INFO: [Coretcl 2-1174] Renamed 10 cell refs.
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 2613.574 ; gain = 991.773 ; free physical = 4730 ; free virtual = 12742
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1899.348; main = 1741.149; forked = 281.966
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3518.648; main = 2613.543; forked = 994.918
+INFO: [Coretcl 2-1174] Renamed 11 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1/main_top_com_side_wrapper_0_2.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file main_top_com_side_wrapper_0_2_utilization_synth.rpt -pb main_top_com_side_wrapper_0_2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May 11 10:31:04 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon May 18 12:24:16 2026...

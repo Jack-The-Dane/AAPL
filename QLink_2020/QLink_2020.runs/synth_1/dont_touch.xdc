@@ -23,6 +23,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_si
 # IP: bd/com_side/ip/com_side_xlconcat_0_0/com_side_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_0_0 || ORIG_REF_NAME==com_side_xlconcat_0_0} -quiet] -quiet
 
+# IP: bd/com_side/ip/com_side_xlconcat_1_0/com_side_xlconcat_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_1_0 || ORIG_REF_NAME==com_side_xlconcat_1_0} -quiet] -quiet
+
 # Block Designs: bd/main_top/main_top.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_top || ORIG_REF_NAME==main_top} -quiet] -quiet
 
@@ -70,6 +73,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_
 
 # IP: bd/com_side/ip/com_side_xlconcat_0_0/com_side_xlconcat_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_0_0 || ORIG_REF_NAME==com_side_xlconcat_0_0} -quiet] -quiet
+
+# IP: bd/com_side/ip/com_side_xlconcat_1_0/com_side_xlconcat_1_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_1_0 || ORIG_REF_NAME==com_side_xlconcat_1_0} -quiet] -quiet
+
+# IP: bd/main_top/ip/main_top_xlconstant_1_0/main_top_xlconstant_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_top_xlconstant_1_0 || ORIG_REF_NAME==main_top_xlconstant_1_0} -quiet] -quiet
 
 # XDC: /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/com_side_ooc.xdc
 

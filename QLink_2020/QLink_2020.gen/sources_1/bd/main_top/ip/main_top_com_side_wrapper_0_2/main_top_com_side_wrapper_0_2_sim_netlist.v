@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-// Date        : Mon May 11 10:31:04 2026
+// Date        : Mon May 18 12:24:16 2026
 // Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_sim_netlist.v
@@ -95,10 +95,14 @@ module main_top_com_side_wrapper_0_2_block_test_inst_0
   output [31:0]q_data_o;
   output qlink_clk_o;
 
+  wire \<const0> ;
   wire CLK12;
-  wire [3:0]LED_1;
   wire RX_I;
   wire [3:0]Sindri_QLink_top_0_WEA_O;
+  wire Sindri_QLink_top_0_n_1;
+  wire Sindri_QLink_top_0_n_2;
+  wire Sindri_QLink_top_0_n_3;
+  wire Sindri_QLink_top_0_n_4;
   wire TX_O;
   wire [31:0]addrb_0;
   wire [31:0]blk_mem_gen_0_douta;
@@ -110,6 +114,12 @@ module main_top_com_side_wrapper_0_2_block_test_inst_0
   wire NLW_blk_mem_gen_0_rstb_busy_UNCONNECTED;
   wire [31:0]NLW_blk_mem_gen_0_doutb_UNCONNECTED;
 
+  assign LED_1[3] = \<const0> ;
+  assign LED_1[2] = \<const0> ;
+  assign LED_1[1] = \<const0> ;
+  assign LED_1[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
   (* CHECK_LICENSE_TYPE = "block_test_inst_0_Sindri_QLink_top_0_0,Sindri_QLink_top,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "Sindri_QLink_top,Vivado 2025.2" *) 
@@ -121,7 +131,7 @@ module main_top_com_side_wrapper_0_2_block_test_inst_0
         .CLK_O(qlink_clk_o),
         .DATA_I(blk_mem_gen_0_douta),
         .DATA_O(q_data_o),
-        .LED_O(LED_1),
+        .LED_O({Sindri_QLink_top_0_n_1,Sindri_QLink_top_0_n_2,Sindri_QLink_top_0_n_3,Sindri_QLink_top_0_n_4}),
         .RX_I(RX_I),
         .TX_O(TX_O),
         .WEA_O(Sindri_QLink_top_0_WEA_O));
@@ -252,11 +262,12 @@ module main_top_com_side_wrapper_0_2_com_side
   wire [31:0]q_data_o_1;
   wire qlink_clk_o;
   wire rst;
-  wire [1:0]simple_button_fsm_0_button_out;
-  wire [1:0]simple_button_fsm_1_button_out;
+  wire [1:0]simple_button_fsm_0_button_out_0;
+  wire [1:0]simple_button_fsm_1_button_out_0;
   wire [1:0]simple_button_fsm_2_button_out;
   wire [1:0]simple_button_fsm_3_button_out;
   wire [7:0]xlconcat_0_dout;
+  wire [3:0]NLW_block_test_0_LED_1_UNCONNECTED;
   wire NLW_simple_button_fsm_0_LSB_UNCONNECTED;
   wire NLW_simple_button_fsm_0_MSB_UNCONNECTED;
   wire NLW_simple_button_fsm_1_LSB_UNCONNECTED;
@@ -269,7 +280,7 @@ module main_top_com_side_wrapper_0_2_com_side
   (* hw_handoff = "block_test_inst_0.hwdef" *) 
   main_top_com_side_wrapper_0_2_block_test_inst_0 block_test_0
        (.CLK12(CLK12_I),
-        .LED_1(LED_1),
+        .LED_1(NLW_block_test_0_LED_1_UNCONNECTED[3:0]),
         .RX_I(RX_I),
         .TX_O(TX_O),
         .addrb_0(addrb_i),
@@ -286,8 +297,8 @@ module main_top_com_side_wrapper_0_2_com_side
        (.LSB(NLW_simple_button_fsm_0_LSB_UNCONNECTED),
         .MSB(NLW_simple_button_fsm_0_MSB_UNCONNECTED),
         .button(button_1),
-        .button_out(simple_button_fsm_0_button_out),
-        .clk(CLK12_I),
+        .button_out(simple_button_fsm_0_button_out_0),
+        .clk(qlink_clk_o),
         .reset(rst));
   (* CHECK_LICENSE_TYPE = "com_side_simple_button_fsm_0_1,simple_button_fsm,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
@@ -298,8 +309,8 @@ module main_top_com_side_wrapper_0_2_com_side
        (.LSB(NLW_simple_button_fsm_1_LSB_UNCONNECTED),
         .MSB(NLW_simple_button_fsm_1_MSB_UNCONNECTED),
         .button(button_0),
-        .button_out(simple_button_fsm_1_button_out),
-        .clk(CLK12_I),
+        .button_out(simple_button_fsm_1_button_out_0),
+        .clk(qlink_clk_o),
         .reset(rst));
   (* CHECK_LICENSE_TYPE = "com_side_simple_button_fsm_0_2,simple_button_fsm,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
@@ -311,7 +322,7 @@ module main_top_com_side_wrapper_0_2_com_side
         .MSB(NLW_simple_button_fsm_2_MSB_UNCONNECTED),
         .button(button_3),
         .button_out(simple_button_fsm_2_button_out),
-        .clk(CLK12_I),
+        .clk(qlink_clk_o),
         .reset(rst));
   (* CHECK_LICENSE_TYPE = "com_side_simple_button_fsm_2_0,simple_button_fsm,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
@@ -323,17 +334,24 @@ module main_top_com_side_wrapper_0_2_com_side
         .MSB(NLW_simple_button_fsm_3_MSB_UNCONNECTED),
         .button(button_2),
         .button_out(simple_button_fsm_3_button_out),
-        .clk(CLK12_I),
+        .clk(qlink_clk_o),
         .reset(rst));
   (* CHECK_LICENSE_TYPE = "com_side_xlconcat_0_0,xlconcat_v2_1_7_xlconcat,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "xlconcat_v2_1_7_xlconcat,Vivado 2025.2" *) 
   main_top_com_side_wrapper_0_2_com_side_xlconcat_0_0 xlconcat_0
-       (.In0(simple_button_fsm_0_button_out),
-        .In1(simple_button_fsm_1_button_out),
+       (.In0(simple_button_fsm_0_button_out_0),
+        .In1(simple_button_fsm_1_button_out_0),
         .In2(simple_button_fsm_3_button_out),
         .In3(simple_button_fsm_2_button_out),
         .dout(xlconcat_0_dout));
+  (* CHECK_LICENSE_TYPE = "com_side_xlconcat_1_0,xlconcat_v2_1_7_xlconcat,{}" *) 
+  (* DowngradeIPIdentifiedWarnings = "yes" *) 
+  (* X_CORE_INFO = "xlconcat_v2_1_7_xlconcat,Vivado 2025.2" *) 
+  main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0 xlconcat_1
+       (.In0(simple_button_fsm_0_button_out_0),
+        .In1(simple_button_fsm_1_button_out_0),
+        .dout(LED_1));
 endmodule
 
 (* CHECK_LICENSE_TYPE = "com_side_simple_button_fsm_0_0,simple_button_fsm,{}" *) (* ORIG_REF_NAME = "com_side_simple_button_fsm_0_0" *) 
@@ -489,6 +507,23 @@ module main_top_com_side_wrapper_0_2_com_side_xlconcat_0_0
 
   assign dout[7:6] = In3;
   assign dout[5:4] = In2;
+  assign dout[3:2] = In1;
+  assign dout[1:0] = In0;
+endmodule
+
+(* CHECK_LICENSE_TYPE = "com_side_xlconcat_1_0,xlconcat_v2_1_7_xlconcat,{}" *) (* ORIG_REF_NAME = "com_side_xlconcat_1_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* x_core_info = "xlconcat_v2_1_7_xlconcat,Vivado 2025.2" *) 
+module main_top_com_side_wrapper_0_2_com_side_xlconcat_1_0
+   (In0,
+    In1,
+    dout);
+  input [1:0]In0;
+  input [1:0]In1;
+  output [3:0]dout;
+
+  wire [1:0]In0;
+  wire [1:0]In1;
+
   assign dout[3:2] = In1;
   assign dout[1:0] = In0;
 endmodule

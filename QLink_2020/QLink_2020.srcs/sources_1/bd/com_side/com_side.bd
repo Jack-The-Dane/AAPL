@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x55818E6C3A5CC13E",
+      "boundary_crc": "0x55818E6C36D74AA5",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/com_side",
       "name": "com_side",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.2"
+      "tool_version": "2025.2",
+      "validated": "true"
     },
     "design_tree": {
       "simple_button_fsm_0": "",
@@ -15,7 +16,8 @@
       "simple_button_fsm_2": "",
       "simple_button_fsm_3": "",
       "xlconcat_0": "",
-      "block_test_0": ""
+      "block_test_0": "",
+      "xlconcat_1": ""
     },
     "ports": {
       "button_0": {
@@ -32,7 +34,17 @@
       },
       "rst": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "CLK12_I": {
         "direction": "I"
@@ -46,7 +58,13 @@
       "LED_1": {
         "direction": "O",
         "left": "3",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "4",
+            "value_src": "ip_prop"
+          }
+        }
       },
       "addrb_i": {
         "direction": "I",
@@ -272,6 +290,10 @@
           },
           "LOCK_PROPAGATE": {
             "value": "0"
+          },
+          "TRAINING_MODULE": {
+            "value": "block_test.bd",
+            "value_src": "auto"
           }
         },
         "ports": {
@@ -292,7 +314,13 @@
           "button_in": {
             "direction": "I",
             "left": "7",
-            "right": "0"
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "8",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "addrb_0": {
             "direction": "I",
@@ -326,16 +354,20 @@
             "active": "all"
           }
         }
+      },
+      "xlconcat_1": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "7",
+        "xci_name": "com_side_xlconcat_1_0",
+        "xci_path": "ip/com_side_xlconcat_1_0/com_side_xlconcat_1_0.xci",
+        "inst_hier_path": "xlconcat_1",
+        "has_run_ip_tcl": "true"
       }
     },
     "nets": {
       "CLK12_I_0_1": {
         "ports": [
           "CLK12_I",
-          "simple_button_fsm_0/clk",
-          "simple_button_fsm_1/clk",
-          "simple_button_fsm_3/clk",
-          "simple_button_fsm_2/clk",
           "block_test_0/CLK12"
         ]
       },
@@ -349,12 +381,6 @@
         "ports": [
           "addrb_i",
           "block_test_0/addrb_0"
-        ]
-      },
-      "block_test_0_LED_1": {
-        "ports": [
-          "block_test_0/LED_1",
-          "LED_1"
         ]
       },
       "block_test_0_TX_O": {
@@ -378,7 +404,11 @@
       "block_test_0_qlink_clk_o": {
         "ports": [
           "block_test_0/qlink_clk_o",
-          "qlink_clk_o"
+          "qlink_clk_o",
+          "simple_button_fsm_0/clk",
+          "simple_button_fsm_1/clk",
+          "simple_button_fsm_2/clk",
+          "simple_button_fsm_3/clk"
         ]
       },
       "button_0_1": {
@@ -408,22 +438,24 @@
       "reset_0_1": {
         "ports": [
           "rst",
-          "simple_button_fsm_2/reset",
+          "simple_button_fsm_0/reset",
           "simple_button_fsm_1/reset",
-          "simple_button_fsm_3/reset",
-          "simple_button_fsm_0/reset"
+          "simple_button_fsm_2/reset",
+          "simple_button_fsm_3/reset"
         ]
       },
       "simple_button_fsm_0_button_out": {
         "ports": [
           "simple_button_fsm_0/button_out",
-          "xlconcat_0/In0"
+          "xlconcat_0/In0",
+          "xlconcat_1/In0"
         ]
       },
       "simple_button_fsm_1_button_out": {
         "ports": [
           "simple_button_fsm_1/button_out",
-          "xlconcat_0/In1"
+          "xlconcat_0/In1",
+          "xlconcat_1/In1"
         ]
       },
       "simple_button_fsm_2_button_out": {
@@ -442,6 +474,12 @@
         "ports": [
           "xlconcat_0/dout",
           "block_test_0/button_in"
+        ]
+      },
+      "xlconcat_1_dout": {
+        "ports": [
+          "xlconcat_1/dout",
+          "LED_1"
         ]
       }
     }

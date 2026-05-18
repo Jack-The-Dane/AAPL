@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Mon May 11 10:59:34 2026
+| Date             : Mon May 18 12:25:29 2026
 | Host             : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
 | Command          : report_power -file main_top_wrapper_power_routed.rpt -pb main_top_wrapper_power_summary_routed.pb -rpx main_top_wrapper_power_routed.rpx
 | Design           : main_top_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.374        |
+| Total On-Chip Power (W)  | 0.375        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.354        |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.006 |        9 |       --- |             --- |
-| Slice Logic             |    <0.001 |     1184 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      443 |      8000 |            5.54 |
+| Slice Logic             |    <0.001 |     1159 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      430 |      8000 |            5.38 |
 |   LUT as Shift Register |    <0.001 |       23 |      2400 |            0.96 |
 |   CARRY4                |    <0.001 |       37 |      2000 |            1.85 |
-|   Register              |    <0.001 |      477 |     16000 |            2.98 |
+|   Register              |    <0.001 |      467 |     16000 |            2.92 |
 |   Others                |     0.000 |       65 |       --- |             --- |
-| Signals                 |    <0.001 |      965 |       --- |             --- |
+| Signals                 |    <0.001 |      944 |       --- |             --- |
 | Block RAM               |     0.005 |        3 |        10 |           30.00 |
 | MMCM                    |     0.200 |        2 |         2 |          100.00 |
 | DSPs                    |     0.001 |        2 |        20 |           10.00 |
-| I/O                     |     0.140 |       21 |       100 |           21.00 |
+| I/O                     |     0.141 |       20 |       100 |           20.00 |
 | Static Power            |     0.020 |          |           |                 |
-| Total                   |     0.374 |          |           |                 |
+| Total                   |     0.375 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,8 +76,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.022 |       0.018 |      0.004 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.118 |       0.110 |      0.007 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.042 |       0.041 |      0.001 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.118 |       0.111 |      0.007 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.043 |       0.042 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
