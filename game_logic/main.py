@@ -23,8 +23,8 @@ play_height = row * block_size     # 20 rows
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height - 50
 
-SERIAL_PORT = "/dev/ttyACM0"
-BAUDRATE = 115200
+SERIAL_PORT = "/dev/ttyUSB1"
+BAUDRATE = 3000000
 
 BUTTON_ADDR = 0xC8
 
@@ -362,30 +362,21 @@ class QlinkSerial:
         """
         cmd = f"#w:{address:02X}{data:08X}"
         self.ser.write(cmd.encode("ascii"))
-        self.ser.flush()´
+        self.ser.flush()
 
     def read_word(self, address):
+
         cmd = f"#r:{address:02X}" + "." * 10
 
         self.ser.reset_input_buffer()
+
         self.ser.write(cmd.encode("ascii"))
         self.ser.flush()
 
-        response = self.ser.read(12).decode("ascii", errors="ignore")
+        response = self.ser.read(12)
 
-        if len(response) != 12:
-            return None
-
-        if response[0] != "!":
-            return None
-
-        returned_address = int(response[1:3], 16)
-        data = int(response[4:12], 16)
-
-        if returned_address != address:
-            return None
-
-        return data
+        print(repr(response))
+        return response
 
     def send_cell(self, cell_index, cell_value):
         """
@@ -420,19 +411,19 @@ def handle_fpga_buttons(button_word, piece, mat):
     if button_word is None:
         return piece
 
-    if button_word & BTN_LEFT:
+    if button_word == BTN_LEFT:
         if mat.check_collision(piece, pygame.K_LEFT):
             piece.move_left()
 
-    if button_word & BTN_RIGHT:
+    if button_word == BTN_RIGHT:
         if mat.check_collision(piece, pygame.K_RIGHT):
             piece.move_right()
 
-    if button_word & BTN_DOWN:
+    if button_word == BTN_DOWN:
         if mat.check_collision(piece, pygame.K_DOWN):
             piece.move_down()
 
-    if button_word & BTN_ROTATE:
+    if button_word == BTN_ROTATE:
         piece.rotate_self()
 
         if not mat.check_rotation_collision(piece):
