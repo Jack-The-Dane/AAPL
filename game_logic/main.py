@@ -43,13 +43,13 @@ class colors:
 
 COLOR_TO_ID = {
     0: 0,
-    colors.C: 1,
-    colors.Y: 2,
-    colors.P: 3,
-    colors.G: 4,
-    colors.R: 5,
-    colors.B: 6,
-    colors.O: 7,
+    colors.C: 4,
+    colors.Y: 6,
+    colors.P: 7,
+    colors.G: 2,
+    colors.R: 1,
+    colors.B: 3,
+    colors.O: 5,
 }
 
 
@@ -236,80 +236,167 @@ def get_board_for_fpga(mat, piece):
 
     return fpga_board.flatten()
 
+import threading
 
 class QlinkSerial:
     def __init__(self, port=SERIAL_PORT, baud=BAUDRATE):
-        self.ser = serial.Serial(port, baudrate=baud, timeout=1)
+        self.ser = serial.Serial(port, baudrate=baud, timeout=0.01) # Low timeout
         self.ser.dtr = True
         time.sleep(0.1)
+        
+        # Thread safety and storage
+        self.lock = threading.Lock()
+        self.latest_button_state = None
+        self.running = True
+        
+        # Start background reader thread
+        self.read_thread = threading.Thread(target=self._read_loop, daemon=True)
+        self.read_thread.start()
+
+    def _read_loop(self):
+        """Background thread that constantly reads responses from the FPGA."""
+        buffer = ""
+        while self.running:
+            try:
+                if self.ser.in_waiting > 0:
+                    # Read available data and decode
+                    data = self.ser.read(self.ser.in_waiting).decode("ascii", errors="ignore")
+                    buffer += data
+                    
+                    # Process complete lines wrapped in \n
+                    while len(buffer) > 12:
+                        line, buffer = buffer.split("!", 1)
+                        line = line.strip('\r')
+                        #print(line, flush=True)
+                        # Parse response format "!AA:XXXXXXXX"
+                        if line.startswith("C8") and ":" in line:
+                            parts = line.split(":")
+                            #print(parts, flush=True)
+                            if len(parts) >= 2:
+                                addr_str = parts[0] # Extract address if needed
+                                #print(addr_str, flush=True)
+                                data_str = parts[1]
+                                try:
+                                    value = int(data_str, 16)
+                                    # print(value, flush=True)
+                                    # If this is the button register, update it safely
+                                    # Assuming BUTTON_ADDR hex format matches your FPGA output (e.g., "C8")
+                                    if addr_str == f"{BUTTON_ADDR:02X}":
+                                        with self.lock:
+                                            #print(value, flush=True)
+                                            self.latest_button_state = value
+                                except ValueError:
+                                    continue
+            except Exception as e:
+                print(f"Serial read error: {e}")
+            
+            time.sleep(0.001) # Tiny sleep to prevent 100% CPU usage
 
     def write_word(self, address, data):
-        """Write 32-bit value to FPGA register (for writable addresses only)"""
+        """Write 32-bit value to FPGA register."""
         cmd = f"#w:{address:02X}{data:08X}"
-        self.ser.write(cmd.encode("ascii"))
-        # No flush - let it transmit naturally
-
-    def read_word(self, address):
-        """Read 32-bit value from FPGA register
-
-        Returns parsed integer value or None if no valid response.
-
-        IMPORTANT: Does NOT clear input buffer before reading.
-        This allows responses to accumulate and be read in order.
-        """
-        cmd = f"#r:{address:02X}" + "." * 10
-
-        self.ser.write(cmd.encode("ascii"))
-
-        # Wait for FPGA to respond - CRITICAL timing!
-        time.sleep(0.05)
-
-        # Read ONLY the next complete response line, don't clear buffer first
-        if self.ser.in_waiting > 0:
-            response = self.ser.readline()
-
-            # Parse response format "!AA:XXXXXXXX\r"
-            try:
-                decoded = response.decode("ascii").strip("\r\n")
-                parts = decoded.split(":")
-
-                if len(parts) >= 2 and parts[0].startswith("!"):
-                    data_str = parts[1]
-                    return int(data_str, 16)
-            except Exception as e:
-                print(f"Parse error: {e}")
-
-            return None
-
-        return None
-
-    def send_cell(self, cell_index, cell_value):
-        """Send one Tetris cell to the FPGA (addresses 0x00-0xC7)"""
-        self.write_word(cell_index, cell_value)
-
-    def send_board(self, board_bytes):
-        """Sends the entire board state to FPGA
-
-        IMPORTANT: This is a WRITE-only operation. Do not call read_word()
-        immediately after this as responses may be in the buffer.
-
-        Addresses 0x00-0xC7 = 200 cells (10 columns × 20 rows)
-        Address 0xC8 is READ-ONLY button register - never write to it!
-        """
-        board_bytes = list(board_bytes)
-
-        for cell_index, cell_value in enumerate(board_bytes):
-            self.send_cell(cell_index, int(cell_value))
-
-        # Wait for all writes to complete before any reads
-        time.sleep(0.1)
+        with self.lock:
+            self.ser.write(cmd.encode("ascii"))
 
     def read_button_state(self):
-        """Read current physical button states from FPGA (READ-ONLY register 0xC8)"""
-        return self.read_word(BUTTON_ADDR)
+        """Instantly returns the latest button state fetched by the background thread."""
+        with self.lock:
+            return self.latest_button_state
+
+    def send_board(self, board_bytes):
+        """Sends the entire board state to FPGA without artificial delays."""
+        # Batch the commands into one big payload string to reduce I/O overhead
+        payload = ""
+        for cell_index, cell_value in enumerate(board_bytes):
+            payload += f"#w:{cell_index:02X}{int(cell_value):08X}"
+        payload += ("#r:C8" + "."*10)
+        with self.lock:
+            self.ser.write(payload.encode("ascii"))
 
     def close(self):
+        self.running = False
+        if self.read_thread.is_alive():
+            self.read_thread.join(timeout=1.0)
         self.ser.close()
+
+# class QlinkSerial:
+#     def __init__(self, port=SERIAL_PORT, baud=BAUDRATE):
+#         self.ser = serial.Serial(port, baudrate=baud, timeout=1)
+#         self.ser.dtr = True
+#         time.sleep(0.1)
+
+#     def get_cmd(self, address, data):
+#         """Write 32-bit value to FPGA register (for writable addresses only)"""
+#         cmd = f"#w:{address:02X}{data:08X}"
+#         return cmd
+#         #self.ser.write(cmd.encode("ascii"))
+#         # No flush - let it transmit naturally
+
+#     def read_word(self, address):
+#         """Read 32-bit value from FPGA register
+
+#         Returns parsed integer value or None if no valid response.
+
+#         IMPORTANT: Does NOT clear input buffer before reading.
+#         This allows responses to accumulate and be read in order.
+#         """
+#         cmd = f"#r:{address:02X}" #+ "." * 10
+
+#         self.ser.write(cmd.encode("ascii"))
+
+#         # Wait for FPGA to respond - CRITICAL timing!
+#         time.sleep(0.05)
+
+#         # Read ONLY the next complete response line, don't clear buffer first
+#         if self.ser.in_waiting > 0:
+#             response = self.ser.readline()
+
+#             # Parse response format "!AA:XXXXXXXX\r"
+#             try:
+#                 decoded = response.decode("ascii").strip("\r\n")
+#                 parts = decoded.split(":")
+
+#                 if len(parts) >= 2 and parts[0].startswith("!"):
+#                     data_str = parts[1]
+#                     return int(data_str, 16)
+#             except Exception as e:
+#                 print(f"Parse error: {e}")
+
+#             return None
+
+#         return None
+
+#     def send_cmd(self, cmd:str):
+#         """Send one Tetris cell to the FPGA (addresses 0x00-0xC7)"""
+#         self.ser.write(cmd.encode("ascii"))
+
+#     def send_board(self, board_bytes):
+#         """Sends the entire board state to FPGA
+
+#         IMPORTANT: This is a WRITE-only operation. Do not call read_word()
+#         immediately after this as responses may be in the buffer.
+
+#         Addresses 0x00-0xC7 = 200 cells (10 columns × 20 rows)
+#         Address 0xC8 is READ-ONLY button register - never write to it!
+#         """
+#         board_bytes = list(board_bytes)
+#         write_str = ""
+#         for cell_index, cell_value in enumerate(board_bytes):
+#             write_str += self.get_cmd(cell_index, int(cell_value))
+#         read_str = f"#r:C8"
+#         self.send_cmd(write_str + read_str)
+#         self.ser.read_until(b"!")
+#         print(self.ser.read(11).decode("ascii"))
+
+#         # Wait for all writes to complete before any reads
+#         #time.sleep(0.1)
+
+#     def read_button_state(self):
+#         """Read current physical button states from FPGA (READ-ONLY register 0xC8)"""
+#         return self.read_word(BUTTON_ADDR)
+
+#     def close(self):
+#         self.ser.close()
 
 
 def handle_fpga_buttons(button_word, piece, mat):
@@ -319,7 +406,7 @@ def handle_fpga_buttons(button_word, piece, mat):
     Returns modified piece after applying any button actions
     """
     if button_word is None or button_word == 0:
-        return piece
+        return (piece, False)
 
     # Check each button bit and apply corresponding action
     if button_word & BTN_LEFT:
@@ -350,7 +437,7 @@ def handle_fpga_buttons(button_word, piece, mat):
         while piece.get_bottom_edge_y() > board_y + play_height:
             piece.move_up()
 
-    return piece
+    return (piece, True)
 
 
 def draw_piece(surface, piece: Piece):
@@ -455,93 +542,121 @@ current_score = 0
 next_piece_name = "T"
 
 side_move_counter = 0
-side_move_delay = 6
+side_move_delay = 30
 
 # Track if board was just updated to avoid redundant sends
 board_just_updated = False
 
+print(qlink.read_button_state())
+first = True
 while running:
+    key_down = False
+    key_up = False
+    key_left = False
+    key_right = False
+    key_respawn = False
+    # Read fpga button
+    fpga_button = qlink.read_button_state()
+    if fpga_button:
+        print(fpga_button)
+        key_down = fpga_button & BTN_DOWN
+        key_up = fpga_button & BTN_ROTATE
+        key_left = fpga_button & BTN_LEFT
+        key_right = fpga_button & BTN_RIGHT
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-        # Handle keyboard input (for testing without FPGA)
+        # Read keyboard button
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
-                piece.rotate_self()
-                if not mat.check_rotation_collision(piece):
-                    piece.rotate_self()
-                    piece.rotate_self()
-                    piece.rotate_self()
-
-                while piece.get_left_edge_x() < board_x:
-                    piece.move_right()
-                while piece.get_right_edge_x() > board_x + play_width:
-                    piece.move_left()
-                while piece.get_bottom_edge_y() > board_y + play_height:
-                    piece.move_up()
-
-                # Mark that game state changed - need to update FPGA
-                board_just_updated = True
-
-            elif event.key == pygame.K_r:
-                piece = Piece(
-                    x=board_x + 4 * BLOCK,
-                    y=board_y,
-                    shape=shapes[random.choice(letter_list)],
-                )
-                board_just_updated = True
-
-            elif event.key == pygame.K_RIGHT:
-                if mat.check_collision(piece, pygame.K_RIGHT):
-                    piece.move_right()
-                side_move_counter = 0
-                board_just_updated = True
-
-            elif event.key == pygame.K_LEFT:
-                if mat.check_collision(piece, pygame.K_LEFT):
-                    piece.move_left()
-                side_move_counter = 0
-                board_just_updated = True
-
+                key_up = True
             elif event.key == pygame.K_DOWN:
-                if mat.check_collision(piece, pygame.K_DOWN):
-                    piece.move_down()
-                side_move_counter = 0
-                board_just_updated = True
+                key_down = True
+            elif event.key == pygame.K_RIGHT:
+                key_right = True
+            elif event.key == pygame.K_LEFT:
+                key_left = True
+            elif event.key == pygame.K_r:
+                key_respawn = True
+
+    if key_up and side_move_counter == 0:
+        piece.rotate_self()
+        if not mat.check_rotation_collision(piece):
+            piece.rotate_self()
+            piece.rotate_self()
+            piece.rotate_self()
+
+        while piece.get_left_edge_x() < board_x:
+            piece.move_right()
+        while piece.get_right_edge_x() > board_x + play_width:
+            piece.move_left()
+        while piece.get_bottom_edge_y() > board_y + play_height:
+            piece.move_up()
+
+        # Mark that game state changed - need to update FPGA
+        board_just_updated = True
+
+    elif key_respawn and side_move_counter == 0:
+        piece = Piece(
+            x=board_x + 4 * BLOCK,
+            y=board_y,
+            shape=shapes[random.choice(letter_list)],
+        )
+        board_just_updated = True
+
+    elif key_right and side_move_counter == 0:
+        if mat.check_collision(piece, pygame.K_RIGHT):
+            piece.move_right()
+        side_move_counter = 0
+        board_just_updated = True
+
+    elif key_left and side_move_counter == 0:
+        if mat.check_collision(piece, pygame.K_LEFT):
+            piece.move_left()
+        side_move_counter = 0
+        board_just_updated = True
+
+    elif key_down and side_move_counter == 0:
+        if mat.check_collision(piece, pygame.K_DOWN):
+            piece.move_down()
+        side_move_counter = 0
+        board_just_updated = True
 
     # READ button state from FPGA FIRST (before any writes)
     # This is critical - read before write to avoid buffer contamination
-    button_word = qlink.read_button_state()
+    # button_word = qlink.read_button_state()
 
     # Debug: Uncomment to see button values during gameplay
     # if button_word:
     #     print(f"Button word: 0x{button_word:08X}")
 
-    piece = handle_fpga_buttons(button_word, piece, mat)
-
+    # piece, fpga_update = handle_fpga_buttons(button_word, piece, mat)
+    # board_just_updated |= fpga_update
     # Handle keyboard hold-to-move logic
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_RIGHT] or keys[pygame.K_LEFT] or keys[pygame.K_DOWN]:
+    #keys = pygame.key.get_pressed()
+
+    if key_right or key_left or key_down or key_up:
         side_move_counter += 1
     else:
         side_move_counter = 0
-
+    #print(side_move_counter)
     if side_move_counter >= side_move_delay:
-        if keys[pygame.K_RIGHT]:
-            if mat.check_collision(piece, pygame.K_RIGHT):
-                piece.move_right()
-                board_just_updated = True
+        # if key_right:
+        #     if mat.check_collision(piece, pygame.K_RIGHT):
+        #         piece.move_right()
+        #         board_just_updated = True
 
-        elif keys[pygame.K_LEFT]:
-            if mat.check_collision(piece, pygame.K_LEFT):
-                piece.move_left()
-                board_just_updated = True
+        # elif key_left:
+        #     if mat.check_collision(piece, pygame.K_LEFT):
+        #         piece.move_left()
+        #         board_just_updated = True
 
-        elif keys[pygame.K_DOWN]:
-            if mat.check_collision(piece, pygame.K_DOWN):
-                piece.move_down()
-                board_just_updated = True
+        # elif key_down:
+        #     if mat.check_collision(piece, pygame.K_DOWN):
+        #         piece.move_down()
+        #         board_just_updated = True
 
         side_move_counter = 0
 
@@ -550,7 +665,7 @@ while running:
         piece
     ):
         piece.counter += 1
-    if piece.counter > FRAME_RATE:
+    if piece.counter > FRAME_RATE: # 1 Second landing time wait
         rows_affected = mat.place_piece(piece)
         mat.clear_row(rows_affected)
         piece = Piece(
@@ -568,10 +683,11 @@ while running:
 
     # Only send board to FPGA if something changed - reduces serial traffic!
     # This prevents flooding the serial buffer and causing read issues
-    if board_just_updated:
+    if board_just_updated or first:
         fpga_data = get_board_for_fpga(mat, piece)
         qlink.send_board(fpga_data)
-        board_just_updated = False
+        board_just_updated = True
+        first = False
 
     pygame.display.flip()
     clock.tick(FRAME_RATE)
