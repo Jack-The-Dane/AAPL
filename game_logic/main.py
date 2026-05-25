@@ -6,8 +6,6 @@ import serial
 import time
 
 
-
-
 # global variables
 
 col = 10
@@ -17,8 +15,8 @@ s_width = 1920
 s_height = 1080
 
 block_size = 40
-play_width = col * block_size      # 10 columns
-play_height = row * block_size     # 20 rows
+play_width = col * block_size  # 10 columns
+play_height = row * block_size  # 20 rows
 
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height - 50
@@ -28,12 +26,13 @@ BAUDRATE = 3000000
 
 BUTTON_ADDR = 0xC8
 
-BTN_LEFT   = 0x01
-BTN_RIGHT  = 0x04
-BTN_DOWN   = 0x10
+BTN_LEFT = 0x01
+BTN_RIGHT = 0x04
+BTN_DOWN = 0x10
 BTN_ROTATE = 0x40
 
-#fandt en som havde lavet farver til dem
+
+# fandt en som havde lavet farver til dem
 class colors:
     G = (138, 234, 40)
     R = (207, 54, 22)
@@ -56,24 +55,19 @@ COLOR_TO_ID = {
 }
 
 
-#shapes in matrix form, list with each shape and their chosen color
+# shapes in matrix form, list with each shape and their chosen color
 Shape = collections.namedtuple("Shape", ["shape", "color"])
 
-#shape = (shape, color)
-shapes = {   
-    "I": Shape([[1,1,1,1]], colors.C),
-    "O":Shape([[1,1], [1,1]], colors.Y),
-    "T":Shape([[1,1,1], [0,1,0]], colors.P),
-    "S":Shape([[0,1,1], [1,1,0]], colors.G),
-    "Z":Shape([[1,1,0], [0,1,1]], colors.R),
-    "J":Shape([[1,1,1], [0,0,1]], colors.B),
-    "L":Shape([[0,0,1], [1,1,1]], colors.O)
-    }
-
-
-
-
-
+# shape = (shape, color)
+shapes = {
+    "I": Shape([[1, 1, 1, 1]], colors.C),
+    "O": Shape([[1, 1], [1, 1]], colors.Y),
+    "T": Shape([[1, 1, 1], [0, 1, 0]], colors.P),
+    "S": Shape([[0, 1, 1], [1, 1, 0]], colors.G),
+    "Z": Shape([[1, 1, 0], [0, 1, 1]], colors.R),
+    "J": Shape([[1, 1, 1], [0, 0, 1]], colors.B),
+    "L": Shape([[0, 0, 1], [1, 1, 1]], colors.O),
+}
 
 
 # shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
@@ -92,22 +86,23 @@ sidebar_width = 250
 box_height = 120
 box_gap = 30
 
+
 class Piece:
-    def __init__(self, x:int, y:int, shape: Shape):
+    def __init__(self, x: int, y: int, shape: Shape):
         self.x = x
         self.y = y
-        self.shape: (list[list[int]]) = shape.shape
+        self.shape: list[list[int]] = shape.shape
         self.color = shape.color
         self.rotation = 0
         self.block_size = BLOCK
         self.counter = 0
-    
+
     def get_left_edge_x(self):
         return self.x
-    
+
     def get_right_edge_x(self):
         return self.x + self.block_size * len(self.shape[0])
-    
+
     def get_bottom_edge_y(self):
         return self.y + self.block_size * len(self.shape)
 
@@ -123,27 +118,28 @@ class Piece:
                     s += " 1 "
                 else:
                     s += "   "
-            s += '\n'
+            s += "\n"
         return s
-    
+
     def move_right(self):
         self.x += self.block_size
-    
+
     def move_left(self):
         self.x -= self.block_size
-    
+
     def move_down(self):
         self.y += self.block_size
 
     def move_up(self):
         self.y -= self.block_size
-    
+
+
 class GameMat:
     def __init__(self, size_x, size_y):
         self.size_x = size_x
         self.size_y = size_y
         self.mat = numpy.zeros((size_x, size_y), dtype=object)
-    
+
     def place_piece(self, piece: Piece):
         affected_cols = []
         for i, r in enumerate(piece.shape):
@@ -153,13 +149,12 @@ class GameMat:
                     y = int((piece.y - board_y) / piece.block_size) + i
                     affected_cols.append(y)
 
-
                     print("x: ", x)
                     print("y: ", y)
-                    self.mat[y,x] = piece.color
-        
+                    self.mat[y, x] = piece.color
+
         return list(dict.fromkeys(affected_cols))
-    
+
     def draw(self, surface):
         for r, row in enumerate(self.mat):
             for c, val in enumerate(row):
@@ -169,29 +164,26 @@ class GameMat:
                     pygame.draw.rect(surface, val, (x, y, BLOCK, BLOCK))
                     pygame.draw.rect(surface, (0, 0, 0), (x, y, BLOCK, BLOCK), 2)
 
-
-
-    def check_collision(self, piece:Piece, event):
+    def check_collision(self, piece: Piece, event):
         for i, r in enumerate(piece.shape):
             for j, c in enumerate(r):
                 if c == 1:
                     x = int((piece.x - board_x) / piece.block_size) + j
                     y = int((piece.y - board_y) / piece.block_size) + i
-                    
-                    if event == pygame.K_DOWN and y == self.mat.shape[0]-1:
+
+                    if event == pygame.K_DOWN and y == self.mat.shape[0] - 1:
                         return False
-                    if event == pygame.K_RIGHT and x == self.mat.shape[1]-1:
+                    if event == pygame.K_RIGHT and x == self.mat.shape[1] - 1:
                         return False
                     if event == pygame.K_LEFT and x == 0:
                         return False
-                    if event == pygame.K_LEFT and (self.mat[y, x-1] != 0):
+                    if event == pygame.K_LEFT and (self.mat[y, x - 1] != 0):
                         return False
-                    if event == pygame.K_RIGHT and (self.mat[y, x+1] != 0):
+                    if event == pygame.K_RIGHT and (self.mat[y, x + 1] != 0):
                         return False
-                    if event == pygame.K_DOWN and (self.mat[y+1, x] != 0):
+                    if event == pygame.K_DOWN and (self.mat[y + 1, x] != 0):
                         return False
         return True
-    
 
     def check_collision_down(self, piece: Piece):
         for i, row in enumerate(piece.shape):
@@ -200,12 +192,11 @@ class GameMat:
                     x = int((piece.x - board_x) / piece.block_size) + j
                     y = int((piece.y - board_y) / piece.block_size) + i
 
-                 
                     if self.mat[y + 1, x] != 0:
-                        return True 
+                        return True
 
-        return False 
-    
+        return False
+
     def clear_row(self, row_list):
         rows_to_clear = []
 
@@ -216,11 +207,11 @@ class GameMat:
 
         # clear rows og move alt ned
         for row in rows_to_clear:
-            self.mat[1:row+1] = self.mat[0:row]
+            self.mat[1 : row + 1] = self.mat[0:row]
             self.mat[0] = 0
 
         return len(rows_to_clear)
-    
+
     def check_rotation_collision(self, piece: Piece):
         for i, r in enumerate(piece.shape):
             for j, c in enumerate(r):
@@ -236,7 +227,8 @@ class GameMat:
                         return False
 
         return True
-                                                        
+
+
 def get_board_for_fpga(mat, piece):
     fpga_board = numpy.zeros((row, col), dtype=numpy.uint8)
 
@@ -258,8 +250,7 @@ def get_board_for_fpga(mat, piece):
     return fpga_board.flatten()
 
 
-
-test = Piece(3,2,shapes["T"])
+test = Piece(3, 2, shapes["T"])
 print(test)
 test.rotate_self()
 print(test)
@@ -267,8 +258,6 @@ test.rotate_self()
 print(test)
 test.rotate_self()
 print(test)
-        
-
 
 
 def draw_piece(surface, piece: Piece):
@@ -281,21 +270,26 @@ def draw_piece(surface, piece: Piece):
                 pygame.draw.rect(surface, piece.color, (x, y, BLOCK, BLOCK))
                 pygame.draw.rect(surface, (0, 0, 0), (x, y, BLOCK, BLOCK), 2)  # outline
 
+
 def draw_border(surface):
-    border_color = (50, 50, 50)   # dark gray
+    border_color = (50, 50, 50)  # dark gray
     border_thickness = 4
 
     pygame.draw.rect(
         surface,
         border_color,
-        (board_x, board_y, play_width, play_height), border_thickness)
+        (board_x, board_y, play_width, play_height),
+        border_thickness,
+    )
+
 
 def draw_board_background(surface):
     pygame.draw.rect(
         surface,
         (220, 220, 220),  # light gray
-        (board_x, board_y, play_width, play_height)
+        (board_x, board_y, play_width, play_height),
     )
+
 
 def draw_info_box(surface, x, y, width, height, title, value):
     box_color = (230, 230, 230)
@@ -314,6 +308,7 @@ def draw_info_box(surface, x, y, width, height, title, value):
     surface.blit(title_surf, (x + 15, y + 15))
     surface.blit(value_surf, (x + 15, y + 60))
 
+
 def draw_sidebar(surface, high_score, current_score, next_piece_name):
     draw_info_box(
         surface,
@@ -322,7 +317,7 @@ def draw_sidebar(surface, high_score, current_score, next_piece_name):
         sidebar_width,
         box_height,
         "High Score",
-        high_score
+        high_score,
     )
 
     draw_info_box(
@@ -332,7 +327,7 @@ def draw_sidebar(surface, high_score, current_score, next_piece_name):
         sidebar_width,
         box_height,
         "Score",
-        current_score
+        current_score,
     )
 
     draw_info_box(
@@ -342,10 +337,10 @@ def draw_sidebar(surface, high_score, current_score, next_piece_name):
         sidebar_width,
         box_height,
         "Next Piece",
-        next_piece_name
+        next_piece_name,
     )
 
-    
+
 class QlinkSerial:
     def __init__(self, port=SERIAL_PORT, baud=BAUDRATE):
         self.ser = serial.Serial(port, baudrate=baud, timeout=1)
@@ -353,79 +348,94 @@ class QlinkSerial:
         time.sleep(0.1)
 
     def write_word(self, address, data):
-        """
-        Format:
-        #w:AADDDDDDDD
-
-        AA       = 2 hex digit address
-        DDDDDDDD = 8 hex digit data word
-        """
+        """Write 32-bit value to FPGA register (for writable addresses only)"""
         cmd = f"#w:{address:02X}{data:08X}"
         self.ser.write(cmd.encode("ascii"))
-        self.ser.flush()
+        # No flush - let it transmit naturally
 
     def read_word(self, address):
+        """Read 32-bit value from FPGA register
 
+        Returns parsed integer value or None if no valid response
+        """
         cmd = f"#r:{address:02X}" + "." * 10
 
-        self.ser.reset_input_buffer()
-
         self.ser.write(cmd.encode("ascii"))
-        self.ser.flush()
 
-        response = self.ser.read(12)
+        # Wait for FPGA to respond - CRITICAL timing!
+        time.sleep(0.05)
 
-        print(repr(response))
-        return response
+        # Read ONLY the next complete response line, don't clear buffer first
+        if self.ser.in_waiting > 0:
+            response = self.ser.readline()
+
+            # Parse response format "!AA:XXXXXXXX\r"
+            try:
+                decoded = response.decode("ascii").strip("\r\n")
+                parts = decoded.split(":")
+
+                if len(parts) >= 2 and parts[0].startswith("!"):
+                    data_str = parts[1]
+                    return int(data_str, 16)
+            except Exception as e:
+                print(f"Parse error: {e}")
+
+            return None
+
+        return None
 
     def send_cell(self, cell_index, cell_value):
-        """
-        Send one Tetris cell to the FPGA.
-
-        cell_index:
-            0 to 199
-
-        cell_value:
-            0 to 7
-        """
+        """Send one Tetris cell to the FPGA (addresses 0x00-0xC7)"""
         self.write_word(cell_index, cell_value)
 
     def send_board(self, board_bytes):
-        """
-        Sends the board one cell at a time.
+        """Sends the entire board state to FPGA
 
-        Address 00 = cell 0
-        Address 01 = cell 1
-        ...
-        Address C7 = cell 199
+        IMPORTANT: This is a WRITE-only operation. Do not call read_word()
+        immediately after this as responses may be in the buffer.
         """
         board_bytes = list(board_bytes)
 
         for cell_index, cell_value in enumerate(board_bytes):
             self.send_cell(cell_index, int(cell_value))
 
+        # Wait for all writes to complete before any reads
+        time.sleep(0.1)
+
+    def read_button_state(self):
+        """Read current physical button states from FPGA (READ-ONLY register 0xC8)"""
+        return self.read_word(BUTTON_ADDR)
+
     def close(self):
         self.ser.close()
 
+
 def handle_fpga_buttons(button_word, piece, mat):
-    if button_word is None:
+    """Handle button inputs from FPGA
+
+    button_word: integer value read from address 0xC8 (or None/0 if no response)
+    Returns modified piece after applying any button actions
+    """
+    if button_word is None or button_word == 0:
         return piece
 
-    if button_word == BTN_LEFT:
+    # Check each button bit and apply corresponding action
+    if button_word & BTN_LEFT:
         if mat.check_collision(piece, pygame.K_LEFT):
             piece.move_left()
 
-    if button_word == BTN_RIGHT:
+    if button_word & BTN_RIGHT:
         if mat.check_collision(piece, pygame.K_RIGHT):
             piece.move_right()
 
-    if button_word == BTN_DOWN:
+    if button_word & BTN_DOWN:
         if mat.check_collision(piece, pygame.K_DOWN):
             piece.move_down()
 
-    if button_word == BTN_ROTATE:
+    if button_word & BTN_ROTATE:
         piece.rotate_self()
 
+        # Collision recovery for rotation
         if not mat.check_rotation_collision(piece):
             piece.rotate_self()
             piece.rotate_self()
@@ -433,27 +443,102 @@ def handle_fpga_buttons(button_word, piece, mat):
 
         while piece.get_left_edge_x() < board_x:
             piece.move_right()
-
         while piece.get_right_edge_x() > board_x + play_width:
             piece.move_left()
-
         while piece.get_bottom_edge_y() > board_y + play_height:
             piece.move_up()
 
     return piece
 
 
+def draw_piece(surface, piece: Piece):
+    mat = piece.shape
+    for r, row in enumerate(mat):
+        for c, val in enumerate(row):
+            if val:
+                x = piece.x + c * BLOCK
+                y = piece.y + r * BLOCK
+                pygame.draw.rect(surface, piece.color, (x, y, BLOCK, BLOCK))
+                pygame.draw.rect(surface, (0, 0, 0), (x, y, BLOCK, BLOCK), 2)
 
 
+def draw_border(surface):
+    border_color = (50, 50, 50)
+    border_thickness = 4
 
-#game loop
+    pygame.draw.rect(
+        surface,
+        border_color,
+        (board_x, board_y, play_width, play_height),
+        border_thickness,
+    )
+
+
+def draw_board_background(surface):
+    pygame.draw.rect(
+        surface,
+        (220, 220, 220),
+        (board_x, board_y, play_width, play_height),
+    )
+
+
+def draw_info_box(surface, x, y, width, height, title, value):
+    box_color = (230, 230, 230)
+    border_color = (50, 50, 50)
+    text_color = (20, 20, 20)
+
+    pygame.draw.rect(surface, box_color, (x, y, width, height))
+    pygame.draw.rect(surface, border_color, (x, y, width, height), 3)
+
+    title_font = pygame.font.SysFont("arial", 28, bold=True)
+    value_font = pygame.font.SysFont("arial", 24)
+
+    title_surf = title_font.render(title, True, text_color)
+    value_surf = value_font.render(str(value), True, text_color)
+
+    surface.blit(title_surf, (x + 15, y + 15))
+    surface.blit(value_surf, (x + 15, y + 60))
+
+
+def draw_sidebar(surface, high_score, current_score, next_piece_name):
+    draw_info_box(
+        surface,
+        sidebar_x,
+        sidebar_y,
+        sidebar_width,
+        box_height,
+        "High Score",
+        high_score,
+    )
+
+    draw_info_box(
+        surface,
+        sidebar_x,
+        sidebar_y + box_height + box_gap,
+        sidebar_width,
+        box_height,
+        "Score",
+        current_score,
+    )
+
+    draw_info_box(
+        surface,
+        sidebar_x,
+        sidebar_y + 2 * (box_height + box_gap),
+        sidebar_width,
+        box_height,
+        "Next Piece",
+        next_piece_name,
+    )
+
+
+# Game loop
 pygame.init()
 
 screen = pygame.display.set_mode((WINDOW_SIZE_X, WINDOW_SIZE_Y))
-pygame.display.set_caption("test game")
+pygame.display.set_caption("Tetris with FPGA")
 
-# Spawn one piece in the middle-ish
-letter_list = 'IOTSZJL'
+letter_list = "IOTSZJL"
 shape_letter = random.choice(letter_list)
 piece = Piece(x=board_x + 4 * BLOCK, y=board_y, shape=shapes[shape_letter])
 mat = GameMat(row, col)
@@ -470,11 +555,15 @@ next_piece_name = "T"
 side_move_counter = 0
 side_move_delay = 6
 
+# Track if board was just updated to avoid redundant sends
+board_just_updated = False
+
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
+        # Handle keyboard input (for testing without FPGA)
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
                 piece.rotate_self()
@@ -490,31 +579,40 @@ while running:
                 while piece.get_bottom_edge_y() > board_y + play_height:
                     piece.move_up()
 
+                # Mark that game state changed - need to update FPGA
+                board_just_updated = True
 
-            #logik for at trykke 1 gang
             elif event.key == pygame.K_r:
-                piece = Piece(x=board_x + 4 * BLOCK, y=board_y, shape=shapes[random.choice(letter_list)])
+                piece = Piece(
+                    x=board_x + 4 * BLOCK,
+                    y=board_y,
+                    shape=shapes[random.choice(letter_list)],
+                )
+                board_just_updated = True
 
             elif event.key == pygame.K_RIGHT:
                 if mat.check_collision(piece, pygame.K_RIGHT):
                     piece.move_right()
                 side_move_counter = 0
+                board_just_updated = True
 
             elif event.key == pygame.K_LEFT:
                 if mat.check_collision(piece, pygame.K_LEFT):
                     piece.move_left()
                 side_move_counter = 0
+                board_just_updated = True
 
             elif event.key == pygame.K_DOWN:
                 if mat.check_collision(piece, pygame.K_DOWN):
                     piece.move_down()
                 side_move_counter = 0
+                board_just_updated = True
 
-    # FPGA BUTTON INPUT
-    button_word = qlink.read_word(BUTTON_ADDR)
+    # READ button state from FPGA FIRST (before any writes)
+    button_word = qlink.read_button_state()
     piece = handle_fpga_buttons(button_word, piece, mat)
 
-    #Logik for at holde i bund
+    # Handle keyboard hold-to-move logic
     keys = pygame.key.get_pressed()
     if keys[pygame.K_RIGHT] or keys[pygame.K_LEFT] or keys[pygame.K_DOWN]:
         side_move_counter += 1
@@ -525,24 +623,34 @@ while running:
         if keys[pygame.K_RIGHT]:
             if mat.check_collision(piece, pygame.K_RIGHT):
                 piece.move_right()
+                board_just_updated = True
 
         elif keys[pygame.K_LEFT]:
             if mat.check_collision(piece, pygame.K_LEFT):
                 piece.move_left()
+                board_just_updated = True
 
         elif keys[pygame.K_DOWN]:
             if mat.check_collision(piece, pygame.K_DOWN):
                 piece.move_down()
+                board_just_updated = True
 
         side_move_counter = 0
 
-    if piece.get_bottom_edge_y() >= board_y + play_height or mat.check_collision_down(piece):
+    # Piece landing and line clearing logic
+    if piece.get_bottom_edge_y() >= board_y + play_height or mat.check_collision_down(
+        piece
+    ):
         piece.counter += 1
     if piece.counter > FRAME_RATE:
         rows_affected = mat.place_piece(piece)
         mat.clear_row(rows_affected)
-        piece = Piece(x=board_x + 4 * BLOCK, y=board_y, shape=shapes[random.choice(letter_list)])
+        piece = Piece(
+            x=board_x + 4 * BLOCK, y=board_y, shape=shapes[random.choice(letter_list)]
+        )
+        board_just_updated = True
 
+    # Rendering
     screen.fill((255, 255, 255))
     draw_board_background(screen)
     draw_piece(screen, piece)
@@ -550,11 +658,14 @@ while running:
     draw_border(screen)
     draw_sidebar(screen, high_score, current_score, next_piece_name)
 
-    fpga_data = get_board_for_fpga(mat, piece)
-    qlink.send_board(fpga_data)
+    # Only send board to FPGA if something changed - reduces serial traffic!
+    if board_just_updated:
+        fpga_data = get_board_for_fpga(mat, piece)
+        qlink.send_board(fpga_data)
+        board_just_updated = False
 
     pygame.display.flip()
     clock.tick(FRAME_RATE)
 
-qlink.close()   
+qlink.close()
 pygame.quit()
