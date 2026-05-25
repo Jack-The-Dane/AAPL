@@ -6,8 +6,7 @@ import serial
 import time
 
 
-# global variables
-
+# Global variables
 col = 10
 row = 20
 
@@ -15,8 +14,8 @@ s_width = 1920
 s_height = 1080
 
 block_size = 40
-play_width = col * block_size  # 10 columns
-play_height = row * block_size  # 20 rows
+play_width = col * block_size
+play_height = row * block_size
 
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height - 50
@@ -32,7 +31,6 @@ BTN_DOWN = 0x10
 BTN_ROTATE = 0x40
 
 
-# fandt en som havde lavet farver til dem
 class colors:
     G = (138, 234, 40)
     R = (207, 54, 22)
@@ -55,10 +53,8 @@ COLOR_TO_ID = {
 }
 
 
-# shapes in matrix form, list with each shape and their chosen color
 Shape = collections.namedtuple("Shape", ["shape", "color"])
 
-# shape = (shape, color)
 shapes = {
     "I": Shape([[1, 1, 1, 1]], colors.C),
     "O": Shape([[1, 1], [1, 1]], colors.Y),
@@ -69,8 +65,6 @@ shapes = {
     "L": Shape([[0, 0, 1], [1, 1, 1]], colors.O),
 }
 
-
-# shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
 
 BLOCK = block_size
 WINDOW_SIZE_X = s_width
@@ -148,9 +142,6 @@ class GameMat:
                     x = int((piece.x - board_x) / piece.block_size) + j
                     y = int((piece.y - board_y) / piece.block_size) + i
                     affected_cols.append(y)
-
-                    print("x: ", x)
-                    print("y: ", y)
                     self.mat[y, x] = piece.color
 
         return list(dict.fromkeys(affected_cols))
@@ -200,12 +191,10 @@ class GameMat:
     def clear_row(self, row_list):
         rows_to_clear = []
 
-        # hvilke rows er full
         for row in row_list:
             if numpy.all(self.mat[row] != 0):
                 rows_to_clear.append(row)
 
-        # clear rows og move alt ned
         for row in rows_to_clear:
             self.mat[1 : row + 1] = self.mat[0:row]
             self.mat[0] = 0
@@ -232,12 +221,10 @@ class GameMat:
 def get_board_for_fpga(mat, piece):
     fpga_board = numpy.zeros((row, col), dtype=numpy.uint8)
 
-    # Add placed blocks
     for y in range(row):
         for x in range(col):
             fpga_board[y, x] = COLOR_TO_ID.get(mat.mat[y, x], 0)
 
-    # Add falling piece
     for i, r in enumerate(piece.shape):
         for j, c in enumerate(r):
             if c == 1:
@@ -248,97 +235,6 @@ def get_board_for_fpga(mat, piece):
                     fpga_board[y, x] = COLOR_TO_ID[piece.color]
 
     return fpga_board.flatten()
-
-
-test = Piece(3, 2, shapes["T"])
-print(test)
-test.rotate_self()
-print(test)
-test.rotate_self()
-print(test)
-test.rotate_self()
-print(test)
-
-
-def draw_piece(surface, piece: Piece):
-    mat = piece.shape
-    for r, row in enumerate(mat):
-        for c, val in enumerate(row):
-            if val:
-                x = piece.x + c * BLOCK
-                y = piece.y + r * BLOCK
-                pygame.draw.rect(surface, piece.color, (x, y, BLOCK, BLOCK))
-                pygame.draw.rect(surface, (0, 0, 0), (x, y, BLOCK, BLOCK), 2)  # outline
-
-
-def draw_border(surface):
-    border_color = (50, 50, 50)  # dark gray
-    border_thickness = 4
-
-    pygame.draw.rect(
-        surface,
-        border_color,
-        (board_x, board_y, play_width, play_height),
-        border_thickness,
-    )
-
-
-def draw_board_background(surface):
-    pygame.draw.rect(
-        surface,
-        (220, 220, 220),  # light gray
-        (board_x, board_y, play_width, play_height),
-    )
-
-
-def draw_info_box(surface, x, y, width, height, title, value):
-    box_color = (230, 230, 230)
-    border_color = (50, 50, 50)
-    text_color = (20, 20, 20)
-
-    pygame.draw.rect(surface, box_color, (x, y, width, height))
-    pygame.draw.rect(surface, border_color, (x, y, width, height), 3)
-
-    title_font = pygame.font.SysFont("arial", 28, bold=True)
-    value_font = pygame.font.SysFont("arial", 24)
-
-    title_surf = title_font.render(title, True, text_color)
-    value_surf = value_font.render(str(value), True, text_color)
-
-    surface.blit(title_surf, (x + 15, y + 15))
-    surface.blit(value_surf, (x + 15, y + 60))
-
-
-def draw_sidebar(surface, high_score, current_score, next_piece_name):
-    draw_info_box(
-        surface,
-        sidebar_x,
-        sidebar_y,
-        sidebar_width,
-        box_height,
-        "High Score",
-        high_score,
-    )
-
-    draw_info_box(
-        surface,
-        sidebar_x,
-        sidebar_y + box_height + box_gap,
-        sidebar_width,
-        box_height,
-        "Score",
-        current_score,
-    )
-
-    draw_info_box(
-        surface,
-        sidebar_x,
-        sidebar_y + 2 * (box_height + box_gap),
-        sidebar_width,
-        box_height,
-        "Next Piece",
-        next_piece_name,
-    )
 
 
 class QlinkSerial:
@@ -356,7 +252,10 @@ class QlinkSerial:
     def read_word(self, address):
         """Read 32-bit value from FPGA register
 
-        Returns parsed integer value or None if no valid response
+        Returns parsed integer value or None if no valid response.
+
+        IMPORTANT: Does NOT clear input buffer before reading.
+        This allows responses to accumulate and be read in order.
         """
         cmd = f"#r:{address:02X}" + "." * 10
 
@@ -393,6 +292,9 @@ class QlinkSerial:
 
         IMPORTANT: This is a WRITE-only operation. Do not call read_word()
         immediately after this as responses may be in the buffer.
+
+        Addresses 0x00-0xC7 = 200 cells (10 columns × 20 rows)
+        Address 0xC8 is READ-ONLY button register - never write to it!
         """
         board_bytes = list(board_bytes)
 
@@ -609,7 +511,13 @@ while running:
                 board_just_updated = True
 
     # READ button state from FPGA FIRST (before any writes)
+    # This is critical - read before write to avoid buffer contamination
     button_word = qlink.read_button_state()
+
+    # Debug: Uncomment to see button values during gameplay
+    # if button_word:
+    #     print(f"Button word: 0x{button_word:08X}")
+
     piece = handle_fpga_buttons(button_word, piece, mat)
 
     # Handle keyboard hold-to-move logic
@@ -659,6 +567,7 @@ while running:
     draw_sidebar(screen, high_score, current_score, next_piece_name)
 
     # Only send board to FPGA if something changed - reduces serial traffic!
+    # This prevents flooding the serial buffer and causing read issues
     if board_just_updated:
         fpga_data = get_board_for_fpga(mat, piece)
         qlink.send_board(fpga_data)
