@@ -17,21 +17,21 @@ preplace inst enable_0 -pg 1 -lvl 1 -x 170 -y 280 -defaultsOSRD
 preplace inst enable_1 -pg 1 -lvl 1 -x 170 -y 580 -defaultsOSRD
 preplace inst reset_0 -pg 1 -lvl 1 -x 170 -y 380 -defaultsOSRD
 preplace netloc CLK12_I_1 1 0 1 20J 80n
-preplace netloc Net 1 1 1 370 160n
+preplace netloc Net 1 1 1 340 150n
 preplace netloc RX_I_0_1 1 0 1 NJ 110
-preplace netloc Sindri_QLink_top_0_CLK_O 1 1 1 340 140n
-preplace netloc Sindri_QLink_top_0_DATA_O 1 1 1 380 100n
-preplace netloc Sindri_QLink_top_0_LED_O 1 1 2 NJ 80 NJ
-preplace netloc Sindri_QLink_top_0_TX_O 1 1 2 320J 50 NJ
-preplace netloc Sindri_QLink_top_0_WEA_O 1 1 1 350 120n
+preplace netloc Sindri_QLink_top_0_CLK_O 1 1 1 330 130n
+preplace netloc Sindri_QLink_top_0_DATA_O 1 1 1 370 90n
+preplace netloc Sindri_QLink_top_0_LED_O 1 1 2 310J 80 NJ
+preplace netloc Sindri_QLink_top_0_TX_O 1 1 2 NJ 50 NJ
+preplace netloc Sindri_QLink_top_0_WEA_O 1 1 1 350 110n
 preplace netloc addrb_0_1 1 0 2 NJ 440 350J
-preplace netloc blk_mem_gen_0_douta 1 0 2 30 220 310
+preplace netloc blk_mem_gen_0_douta 1 0 2 30 450 340
 preplace netloc blk_mem_gen_0_doutb 1 1 2 380 520 NJ
 preplace netloc enable_1_dout 1 1 1 370 290n
-preplace netloc enable_1_dout2 1 1 1 310J 450n
+preplace netloc enable_1_dout2 1 1 1 360J 450n
 preplace netloc xlconstant_0_dout 1 1 1 360 270n
 levelinfo -pg 1 0 170 500 650
-pagesize -pg 1 -db -bbox -sgen -150 0 800 640
+pagesize -pg 1 -db -bbox -sgen -150 -10 800 640
 "
 }
 0

@@ -63,10 +63,13 @@ com_side your_instance_name (
   .RX_I(RX_I), // input wire RX_I
   .TX_O(TX_O), // output wire TX_O
   .LED_1(LED_1), // output wire [3:0] LED_1
-  .addrb_i(addrb_i), // input wire [31:0] addrb_i
-  .qlink_clk_o(qlink_clk_o), // output wire qlink_clk_o
-  .q_addr_o_1(q_addr_o_1), // output wire [31:0] q_addr_o_1
-  .q_data_o_1(q_data_o_1) // output wire [31:0] q_data_o_1
+  .BRAM_PORTB_0_0_addr(BRAM_PORTB_0_0_addr), // input wire [31:0] BRAM_PORTB_0_0_addr
+  .BRAM_PORTB_0_0_clk(BRAM_PORTB_0_0_clk), // input wire BRAM_PORTB_0_0_clk
+  .BRAM_PORTB_0_0_din(BRAM_PORTB_0_0_din), // input wire [31:0] BRAM_PORTB_0_0_din
+  .BRAM_PORTB_0_0_dout(BRAM_PORTB_0_0_dout), // output wire [31:0] BRAM_PORTB_0_0_dout
+  .BRAM_PORTB_0_0_en(BRAM_PORTB_0_0_en), // input wire BRAM_PORTB_0_0_en
+  .BRAM_PORTB_0_0_rst(BRAM_PORTB_0_0_rst), // input wire BRAM_PORTB_0_0_rst
+  .BRAM_PORTB_0_0_we(BRAM_PORTB_0_0_we) // input wire [3:0] BRAM_PORTB_0_0_we
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

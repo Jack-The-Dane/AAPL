@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Mon May 18 12:24:16 2026
--- Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+-- Date        : Wed May 27 16:55:07 2026
+-- Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_stub.vhdl
+--               /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_com_side_wrapper_0_2/main_top_com_side_wrapper_0_2_stub.vhdl
 -- Design      : main_top_com_side_wrapper_0_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s15ftgb196-1
@@ -15,18 +15,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity main_top_com_side_wrapper_0_2 is
   Port ( 
+    BRAM_PORTB_0_0_addr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    BRAM_PORTB_0_0_clk : in STD_LOGIC;
+    BRAM_PORTB_0_0_din : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    BRAM_PORTB_0_0_dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    BRAM_PORTB_0_0_en : in STD_LOGIC;
+    BRAM_PORTB_0_0_rst : in STD_LOGIC;
+    BRAM_PORTB_0_0_we : in STD_LOGIC_VECTOR ( 3 downto 0 );
     CLK12_I : in STD_LOGIC;
     LED_1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
     RX_I : in STD_LOGIC;
     TX_O : out STD_LOGIC;
-    addrb_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
     button_0 : in STD_LOGIC;
     button_1 : in STD_LOGIC;
     button_2 : in STD_LOGIC;
     button_3 : in STD_LOGIC;
-    q_addr_o_1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    q_data_o_1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    qlink_clk_o : out STD_LOGIC;
     rst : in STD_LOGIC
   );
 
@@ -44,12 +47,18 @@ architecture stub of main_top_com_side_wrapper_0_2 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "CLK12_I,LED_1[3:0],RX_I,TX_O,addrb_i[31:0],button_0,button_1,button_2,button_3,q_addr_o_1[31:0],q_data_o_1[31:0],qlink_clk_o,rst";
+  attribute black_box_pad_pin of stub : architecture is "BRAM_PORTB_0_0_addr[31:0],BRAM_PORTB_0_0_clk,BRAM_PORTB_0_0_din[31:0],BRAM_PORTB_0_0_dout[31:0],BRAM_PORTB_0_0_en,BRAM_PORTB_0_0_rst,BRAM_PORTB_0_0_we[3:0],CLK12_I,LED_1[3:0],RX_I,TX_O,button_0,button_1,button_2,button_3,rst";
   attribute x_interface_info : string;
-  attribute x_interface_info of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
+  attribute x_interface_info of BRAM_PORTB_0_0_clk : signal is "xilinx.com:signal:clock:1.0 BRAM_PORTB_0_0_clk CLK";
   attribute x_interface_mode : string;
-  attribute x_interface_mode of rst : signal is "slave rst";
+  attribute x_interface_mode of BRAM_PORTB_0_0_clk : signal is "slave BRAM_PORTB_0_0_clk";
   attribute x_interface_parameter : string;
+  attribute x_interface_parameter of BRAM_PORTB_0_0_clk : signal is "XIL_INTERFACENAME BRAM_PORTB_0_0_clk, ASSOCIATED_RESET BRAM_PORTB_0_0_rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
+  attribute x_interface_info of BRAM_PORTB_0_0_rst : signal is "xilinx.com:signal:reset:1.0 BRAM_PORTB_0_0_rst RST";
+  attribute x_interface_mode of BRAM_PORTB_0_0_rst : signal is "slave BRAM_PORTB_0_0_rst";
+  attribute x_interface_parameter of BRAM_PORTB_0_0_rst : signal is "XIL_INTERFACENAME BRAM_PORTB_0_0_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute x_interface_info of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
+  attribute x_interface_mode of rst : signal is "slave rst";
   attribute x_interface_parameter of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_core_info : string;
   attribute x_core_info of stub : architecture is "com_side_wrapper,Vivado 2025.2";

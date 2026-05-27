@@ -66,8 +66,6 @@ module main_top_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   input wire CLK12_I,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire BB_09,
-  (* X_INTERFACE_IGNORE = "true" *)
   input wire CLK25_I,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire TX_O,
@@ -98,7 +96,6 @@ module main_top_sv (
     .BB_24(BB_24),
     .BB_27(BB_27),
     .CLK12_I(CLK12_I),
-    .BB_09(BB_09),
     .CLK25_I(CLK25_I),
     .TX_O(TX_O),
     .hdmi_clk_p(hdmi_clk_p),

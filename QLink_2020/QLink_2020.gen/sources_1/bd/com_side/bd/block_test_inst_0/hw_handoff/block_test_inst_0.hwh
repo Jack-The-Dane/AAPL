@@ -1,9 +1,44 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 18 12:22:49 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 27 16:53:14 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="block_test_inst_0" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addrb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addrb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BRAM_PORTB_0_clk" SIGIS="clk" SIGNAME="blk_mem_gen_0_clkb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_din" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_dinb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dinb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="BRAM_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="doutb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BRAM_PORTB_0_en" SIGIS="undef" SIGNAME="blk_mem_gen_0_enb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="enb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BRAM_PORTB_0_rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="blk_mem_gen_0_rstb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="rstb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="BRAM_PORTB_0_we" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_web">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="web"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="CLK12" SIGIS="undef" SIGNAME="External_Ports_CLK12">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="CLK12_I"/>
@@ -24,34 +59,43 @@
         <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="TX_O"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="31" NAME="addrb_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addrb_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addrb"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" LEFT="7" NAME="button_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_button_in">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dinb"/>
+        <CONNECTION INSTANCE="mux_data" PORT="t"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="q_addr_o" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_ADDR_O">
+    <PORT DIR="I" LEFT="31" NAME="buttons_addr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_buttons_addr">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="ADDR_O"/>
+        <CONNECTION INSTANCE="mux_addr" PORT="t"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="q_data_o" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_DATA_O">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="DATA_O"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="qlink_clk_o" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_CLK_O">
+    <PORT DIR="O" NAME="qlink_clk" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_CLK_O">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="CLK_O"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
 
-  <EXTERNALINTERFACES/>
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTB_0" NAME="BRAM_PORTB_0" TYPE="TARGET">
+      <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+      <PARAMETER NAME="MEM_ADDRESS_MODE"/>
+      <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+      <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+      <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM_PORTB_0_addr"/>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM_PORTB_0_clk"/>
+        <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM_PORTB_0_din"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM_PORTB_0_dout"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="BRAM_PORTB_0_en"/>
+        <PORTMAP LOGICAL="RST" PHYSICAL="BRAM_PORTB_0_rst"/>
+        <PORTMAP LOGICAL="WE" PHYSICAL="BRAM_PORTB_0_we"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
 
   <MODULES>
     <MODULE COREREVISION="1" FULLNAME="/Sindri_QLink_top_0" HWVERSION="1.0" INSTANCE="Sindri_QLink_top_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Sindri_QLink_top" VLNV="xilinx.com:module_ref:Sindri_QLink_top:1.0">
@@ -63,8 +107,7 @@
       <PORTS>
         <PORT DIR="O" LEFT="31" NAME="ADDR_O" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_ADDR_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="q_addr_o"/>
+            <CONNECTION INSTANCE="mux_addr" PORT="f"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="CLK12_I" SIGIS="undef" SIGNAME="External_Ports_CLK12">
@@ -75,8 +118,7 @@
         <PORT DIR="O" NAME="CLK_O" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_CLK_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="qlink_clk_o"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="qlink_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="DATA_I" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
@@ -86,8 +128,7 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="DATA_O" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_DATA_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dina"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="q_data_o"/>
+            <CONNECTION INSTANCE="mux_data" PORT="f"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="LED_O" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_LED_O">
@@ -107,7 +148,14 @@
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="WEA_O" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_WEA_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="wea"/>
+            <CONNECTION INSTANCE="mux_wen" PORT="f"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="idle" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mux_addr" PORT="condition"/>
+            <CONNECTION INSTANCE="mux_data" PORT="condition"/>
+            <CONNECTION INSTANCE="mux_wen" PORT="condition"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -268,14 +316,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="31" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_ADDR_O">
+        <PORT DIR="I" LEFT="31" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="mux_addr_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="ADDR_O"/>
+            <CONNECTION INSTANCE="mux_addr" PORT="O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addrb_0">
+        <PORT DIR="I" LEFT="31" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_addrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="addrb_0"/>
+            <CONNECTION INSTANCE="block_test_inst_0_imp" PORT="BRAM_PORTB_0_addr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="Sindri_QLink_top_0_CLK_O">
@@ -283,19 +331,19 @@
             <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="CLK_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="Sindri_QLink_top_0_CLK_O">
+        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="blk_mem_gen_0_clkb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="CLK_O"/>
+            <CONNECTION INSTANCE="block_test_inst_0_imp" PORT="BRAM_PORTB_0_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_DATA_O">
+        <PORT DIR="I" LEFT="31" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="mux_data_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="DATA_O"/>
+            <CONNECTION INSTANCE="mux_data" PORT="O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_button_in">
+        <PORT DIR="I" LEFT="31" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_dinb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button_in"/>
+            <CONNECTION INSTANCE="block_test_inst_0_imp" PORT="BRAM_PORTB_0_din"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
@@ -303,15 +351,19 @@
             <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="DATA_I"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="block_test_inst_0_imp" PORT="BRAM_PORTB_0_dout"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="enable_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="enable_0_dout">
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="blk_mem_gen_0_enb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_0" PORT="dout"/>
+            <CONNECTION INSTANCE="block_test_inst_0_imp" PORT="BRAM_PORTB_0_en"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rsta" SIGIS="rst" SIGNAME="reset_0_dout">
@@ -320,20 +372,20 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="rsta_busy" SIGIS="undef"/>
-        <PORT DIR="I" NAME="rstb" SIGIS="rst" SIGNAME="reset_0_dout">
+        <PORT DIR="I" NAME="rstb" SIGIS="rst" SIGNAME="blk_mem_gen_0_rstb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="reset_0" PORT="dout"/>
+            <CONNECTION INSTANCE="block_test_inst_0_imp" PORT="BRAM_PORTB_0_rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="rstb_busy" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_WEA_O">
+        <PORT DIR="I" LEFT="3" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="mux_wen_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="WEA_O"/>
+            <CONNECTION INSTANCE="mux_wen" PORT="O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="write_enable_dout">
+        <PORT DIR="I" LEFT="3" NAME="web" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_web">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="write_enable" PORT="dout"/>
+            <CONNECTION INSTANCE="block_test_inst_0_imp" PORT="BRAM_PORTB_0_we"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -356,7 +408,7 @@
             <PORTMAP LOGICAL="WE" PHYSICAL="wea"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTB_0" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
           <PARAMETER NAME="MEM_ADDRESS_MODE" VALUE="BYTE_ADDRESS"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
@@ -388,7 +440,99 @@
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="enable_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="ena"/>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="enb"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/mux_addr" HWVERSION="1.0" INSTANCE="mux_addr" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="or_gate" VLNV="xilinx.com:module_ref:or_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="width" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="block_test_inst_0_mux_addr_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="31" NAME="O" RIGHT="0" SIGIS="undef" SIGNAME="mux_addr_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="condition" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="idle"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="f" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_ADDR_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="ADDR_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="t" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_buttons_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="buttons_addr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/mux_data" HWVERSION="1.0" INSTANCE="mux_data" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="or_gate" VLNV="xilinx.com:module_ref:or_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="width" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="block_test_inst_0_mux_data_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="31" NAME="O" RIGHT="0" SIGIS="undef" SIGNAME="mux_data_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dina"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="condition" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="idle"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="f" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="DATA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="t" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_button_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="button_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/mux_wen" HWVERSION="1.0" INSTANCE="mux_wen" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="or_gate" VLNV="xilinx.com:module_ref:or_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="width" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="block_test_inst_0_mux_wen_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="3" NAME="O" RIGHT="0" SIGIS="undef" SIGNAME="mux_wen_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="wea"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="condition" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="idle"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="f" RIGHT="0" SIGIS="undef" SIGNAME="Sindri_QLink_top_0_WEA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sindri_QLink_top_0" PORT="WEA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="t" RIGHT="0" SIGIS="undef" SIGNAME="write_enable_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="write_enable" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -406,7 +550,6 @@
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="reset_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="rsta"/>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="rstb"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -423,7 +566,7 @@
       <PORTS>
         <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="write_enable_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="blk_mem_gen_0" PORT="web"/>
+            <CONNECTION INSTANCE="mux_wen" PORT="t"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

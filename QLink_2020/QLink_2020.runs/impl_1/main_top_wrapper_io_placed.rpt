@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date                      : Mon May 18 12:25:20 2026
-| Host                      : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+| Date                      : Wed May 27 16:56:16 2026
+| Host                      : Laptop running 64-bit Ubuntu 24.04.4 LTS
 | Command                   : report_io -file main_top_wrapper_io_placed.rpt
 | Design                    : main_top_wrapper
 | Device                    : xc7s15
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            21 |
+|            20 |
 +---------------+
 
 
@@ -229,7 +229,7 @@ Table of Contents
 | P10        | LED_O[0]     | High Range | IO_L24P_T3_D17_14            | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P11        |              | High Range | IO_L24N_T3_D16_14            | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | P12        |              | High Range | IO_L22P_T3_D21_14            | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| P13        | BB_09        | High Range | IO_L22N_T3_D20_14            | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| P13        |              | High Range | IO_L22N_T3_D20_14            | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | P14        |              |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 +------------+--------------+------------+------------------------------+---------------+-------------+---------+------------+------+---------------------+----------------------+---------+------------+-----------+----------+------+------------------+--------------+-------------------+--------------+
 * Default value

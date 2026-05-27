@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7A80CB75FE4FBB00",
+      "boundary_crc": "0x45FDD260CECF86A",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/main_top",
       "name": "main_top",
@@ -11,10 +11,12 @@
       "validated": "true"
     },
     "design_tree": {
-      "xlconstant_0": "",
       "top_level_0": "",
       "com_side_wrapper_0": "",
-      "xlconstant_1": ""
+      "xlconstant_1": "",
+      "ilconstant_0": "",
+      "ilconstant_1": "",
+      "ilconstant_2": ""
     },
     "ports": {
       "RX_I": {
@@ -34,20 +36,6 @@
       },
       "CLK12_I": {
         "direction": "I"
-      },
-      "BB_09": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
       },
       "CLK25_I": {
         "direction": "I"
@@ -130,22 +118,6 @@
       }
     },
     "components": {
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "ip_revision": "10",
-        "xci_name": "main_top_xlconstant_0_0",
-        "xci_path": "ip/main_top_xlconstant_0_0/main_top_xlconstant_0_0.xci",
-        "inst_hier_path": "xlconstant_0",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "800"
-          },
-          "CONST_WIDTH": {
-            "value": "32"
-          }
-        }
-      },
       "top_level_0": {
         "vlnv": "user.org:user:top_level:1.0",
         "ip_revision": "2",
@@ -167,6 +139,43 @@
           "boundary_crc": "0x0"
         },
         "ports": {
+          "BRAM_PORTB_0_0_addr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "BRAM_PORTB_0_0_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "BRAM_PORTB_0_0_rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "BRAM_PORTB_0_0_din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "BRAM_PORTB_0_0_dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "BRAM_PORTB_0_0_en": {
+            "direction": "I"
+          },
+          "BRAM_PORTB_0_0_rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "BRAM_PORTB_0_0_we": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
           "CLK12_I": {
             "direction": "I"
           },
@@ -187,11 +196,6 @@
           "TX_O": {
             "direction": "O"
           },
-          "addrb_i": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
           "button_0": {
             "direction": "I"
           },
@@ -203,19 +207,6 @@
           },
           "button_3": {
             "direction": "I"
-          },
-          "q_addr_o_1": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "q_data_o_1": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "qlink_clk_o": {
-            "direction": "O"
           },
           "rst": {
             "type": "rst",
@@ -233,6 +224,31 @@
         "parameters": {
           "CONST_VAL": {
             "value": "0"
+          }
+        }
+      },
+      "ilconstant_0": {
+        "vlnv": "xilinx.com:inline_hdl:ilconstant:1.0"
+      },
+      "ilconstant_1": {
+        "vlnv": "xilinx.com:inline_hdl:ilconstant:1.0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "ilconstant_2": {
+        "vlnv": "xilinx.com:inline_hdl:ilconstant:1.0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "32"
           }
         }
       }
@@ -280,6 +296,12 @@
           "com_side_wrapper_0/RX_I"
         ]
       },
+      "com_side_wrapper_0_BRAM_PORTB_0_0_dout": {
+        "ports": [
+          "com_side_wrapper_0/BRAM_PORTB_0_0_dout",
+          "top_level_0/data_in_0"
+        ]
+      },
       "com_side_wrapper_0_LED_1": {
         "ports": [
           "com_side_wrapper_0/LED_1",
@@ -292,22 +314,28 @@
           "TX_O"
         ]
       },
-      "com_side_wrapper_0_q_addr_o_0": {
+      "ilconstant_0_dout": {
         "ports": [
-          "com_side_wrapper_0/q_addr_o_1",
-          "top_level_0/addra_i"
+          "ilconstant_0/dout",
+          "com_side_wrapper_0/BRAM_PORTB_0_0_en"
         ]
       },
-      "com_side_wrapper_0_q_data_o_0": {
+      "ilconstant_1_dout": {
         "ports": [
-          "com_side_wrapper_0/q_data_o_1",
-          "top_level_0/dina_i"
+          "ilconstant_1/dout",
+          "com_side_wrapper_0/BRAM_PORTB_0_0_we"
         ]
       },
-      "com_side_wrapper_0_qlink_clk_o": {
+      "ilconstant_2_dout": {
         "ports": [
-          "com_side_wrapper_0/qlink_clk_o",
-          "top_level_0/clk_qlink"
+          "ilconstant_2/dout",
+          "com_side_wrapper_0/BRAM_PORTB_0_0_din"
+        ]
+      },
+      "top_level_0_bram_clk": {
+        "ports": [
+          "top_level_0/bram_clk",
+          "com_side_wrapper_0/BRAM_PORTB_0_0_clk"
         ]
       },
       "top_level_0_hdmi_blue_n": {
@@ -358,15 +386,16 @@
           "hdmi_red_p"
         ]
       },
-      "xlconstant_0_dout": {
+      "top_level_0_read_addr_0": {
         "ports": [
-          "xlconstant_0/dout",
-          "com_side_wrapper_0/addrb_i"
+          "top_level_0/read_addr_0",
+          "com_side_wrapper_0/BRAM_PORTB_0_0_addr"
         ]
       },
       "xlconstant_1_dout": {
         "ports": [
           "xlconstant_1/dout",
+          "com_side_wrapper_0/BRAM_PORTB_0_0_rst",
           "com_side_wrapper_0/rst"
         ]
       }

@@ -2,8 +2,8 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Mon May 18 12:22:50 2026
---Host        : kasper-ubuntu-pc running 64-bit Ubuntu 22.04.5 LTS
+--Date        : Wed May 27 16:54:22 2026
+--Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 --Command     : generate_target main_top_wrapper.bd
 --Design      : main_top_wrapper
 --Purpose     : IP block netlist
@@ -14,7 +14,6 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity main_top_wrapper is
   port (
-    BB_09 : in STD_LOGIC;
     BB_21 : in STD_LOGIC;
     BB_24 : in STD_LOGIC;
     BB_27 : in STD_LOGIC;
@@ -44,7 +43,6 @@ architecture STRUCTURE of main_top_wrapper is
     BB_24 : in STD_LOGIC;
     BB_27 : in STD_LOGIC;
     CLK12_I : in STD_LOGIC;
-    BB_09 : in STD_LOGIC;
     CLK25_I : in STD_LOGIC;
     TX_O : out STD_LOGIC;
     hdmi_clk_p : out STD_LOGIC;
@@ -61,7 +59,6 @@ architecture STRUCTURE of main_top_wrapper is
 begin
 main_top_i: component main_top
      port map (
-      BB_09 => BB_09,
       BB_21 => BB_21,
       BB_24 => BB_24,
       BB_27 => BB_27,

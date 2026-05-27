@@ -147,7 +147,8 @@ entity Sindri_QLink_top is
            DATA_I : in std_logic_vector(31 downto 0);
            WEA_O : out std_logic_vector(3 downto 0);
            CLK_O : out std_logic;
-           ADDR_O : out std_logic_vector(31 downto 0)
+           ADDR_O : out std_logic_vector(31 downto 0);
+           idle : out std_logic
            );
 end Sindri_QLink_top;
 
@@ -227,13 +228,16 @@ begin
         DATA_O <= data_w;
         ADDR_O <= adr(29 downto 0) & "00"; -- Multiply input address by 4, to get correct BRAM address
         WEA_O <= "1111";
+        idle <= '0';
       elsif rd='1' then              --   but if it is a read cycle
         WEA_O <= "0000";
         ADDR_O <= adr(29 downto 0) & "00"; -- Multiply input address by 4, to get correct BRAM address
-        leds<=adr(7 downto 0);                   --     change the content of the 8-bit leds register to reflect the address read
+        leds<=adr(7 downto 0);
+        idle <= '0';                   --     change the content of the 8-bit leds register to reflect the address read
       else                           --   if it was neither read nor write, keep the leds register as is
         leds<=leds;
         WEA_O <= "0000";
+        idle <= '1';
       end if;
     end if; -- sys_reset
 

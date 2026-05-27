@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed May 27 16:53:22 2026
+# Process ID         : 323727
+# Current directory  : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_mux_addr_0_synth_1
+# Command line       : vivado -log block_test_inst_0_mux_addr_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_test_inst_0_mux_addr_0.tcl
+# Log file           : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_mux_addr_0_synth_1/block_test_inst_0_mux_addr_0.vds
+# Journal file       : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_mux_addr_0_synth_1/vivado.jou
+# Running On         : Laptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 7 4700U with Radeon Graphics
+# CPU Frequency      : 3388.401 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16116 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 33296 MB
+# Available Virtual  : 18597 MB
+#-----------------------------------------------------------
+source block_test_inst_0_mux_addr_0.tcl -notrace

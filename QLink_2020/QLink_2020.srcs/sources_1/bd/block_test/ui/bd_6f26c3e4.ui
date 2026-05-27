@@ -1,40 +1,47 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-252,-107",
+   "Default View_ScaleFactor":"0.746439",
+   "Default View_TopLeft":"-151,421",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_CLK12 -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
-preplace port port-id_RX_I -pg 1 -lvl 0 -x -10 -y 110 -defaultsOSRD
-preplace port port-id_TX_O -pg 1 -lvl 3 -x 670 -y 50 -defaultsOSRD
-preplace port port-id_qlink_clk_o -pg 1 -lvl 3 -x 670 -y 110 -defaultsOSRD
-preplace portBus LED_1 -pg 1 -lvl 3 -x 670 -y 80 -defaultsOSRD
-preplace portBus button_in -pg 1 -lvl 0 -x -10 -y 480 -defaultsOSRD
-preplace portBus addrb_0 -pg 1 -lvl 0 -x -10 -y 440 -defaultsOSRD
-preplace portBus q_addr_o -pg 1 -lvl 3 -x 670 -y -20 -defaultsOSRD
-preplace portBus q_data_o -pg 1 -lvl 3 -x 670 -y 170 -defaultsOSRD
-preplace inst Sindri_QLink_top_0 -pg 1 -lvl 1 -x 170 -y 110 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 520 -y 410 -defaultsOSRD
-preplace inst enable_0 -pg 1 -lvl 1 -x 170 -y 280 -defaultsOSRD
-preplace inst reset_0 -pg 1 -lvl 1 -x 170 -y 380 -defaultsOSRD
-preplace inst write_enable -pg 1 -lvl 1 -x 170 -y 560 -defaultsOSRD
-preplace netloc CLK12_I_1 1 0 1 20J 80n
-preplace netloc Net 1 1 2 390 -20 N
-preplace netloc RX_I_0_1 1 0 1 NJ 110
-preplace netloc Sindri_QLink_top_0_CLK_O 1 1 2 380 110 N
-preplace netloc Sindri_QLink_top_0_DATA_O 1 1 2 370 170 N
-preplace netloc Sindri_QLink_top_0_LED_O 1 1 2 NJ 80 NJ
-preplace netloc Sindri_QLink_top_0_TX_O 1 1 2 380J 50 NJ
-preplace netloc Sindri_QLink_top_0_WEA_O 1 1 1 360 120n
-preplace netloc addrb_0_1 1 0 2 10J 450 NJ
-preplace netloc blk_mem_gen_0_douta 1 0 2 20 440 350J
-preplace netloc dinb_0_1 1 0 2 NJ 480 330J
-preplace netloc enable_1_dout 1 1 1 320 380n
-preplace netloc reset_1_dout 1 1 1 390J 550n
-preplace netloc xlconstant_0_dout 1 1 1 340 280n
-levelinfo -pg 1 -10 170 520 670
-pagesize -pg 1 -db -bbox -sgen -170 -40 830 640
+preplace port BRAM_PORTB_0 -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
+preplace port port-id_CLK12 -pg 1 -lvl 0 -x 0 -y 820 -defaultsOSRD
+preplace port port-id_RX_I -pg 1 -lvl 0 -x 0 -y 880 -defaultsOSRD
+preplace port port-id_TX_O -pg 1 -lvl 4 -x 940 -y 790 -defaultsOSRD
+preplace port port-id_qlink_clk -pg 1 -lvl 4 -x 940 -y 870 -defaultsOSRD
+preplace portBus LED_1 -pg 1 -lvl 4 -x 940 -y 820 -defaultsOSRD
+preplace portBus button_in -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace portBus buttons_addr -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace inst Sindri_QLink_top_0 -pg 1 -lvl 2 -x 410 -y 860 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 760 -y 320 -defaultsOSRD
+preplace inst enable_0 -pg 1 -lvl 2 -x 410 -y 380 -defaultsOSRD
+preplace inst reset_0 -pg 1 -lvl 2 -x 410 -y 480 -defaultsOSRD
+preplace inst write_enable -pg 1 -lvl 1 -x 120 -y 540 -defaultsOSRD
+preplace inst mux_addr -pg 1 -lvl 2 -x 410 -y 80 -defaultsOSRD
+preplace inst mux_data -pg 1 -lvl 2 -x 410 -y 240 -defaultsOSRD
+preplace inst mux_wen -pg 1 -lvl 2 -x 410 -y 620 -defaultsOSRD
+preplace netloc CLK12_I_1 1 0 2 NJ 820 220J
+preplace netloc Net 1 1 2 260 -10 580
+preplace netloc RX_I_0_1 1 0 2 NJ 880 220J
+preplace netloc Sindri_QLink_top_0_CLK_O 1 2 2 630 870 N
+preplace netloc Sindri_QLink_top_0_DATA_O 1 1 2 270 0 550
+preplace netloc Sindri_QLink_top_0_LED_O 1 2 2 NJ 820 NJ
+preplace netloc Sindri_QLink_top_0_TX_O 1 2 2 640J 790 NJ
+preplace netloc Sindri_QLink_top_0_WEA_O 1 1 2 270 700 570
+preplace netloc Sindri_QLink_top_0_idle 1 1 2 250 710 560
+preplace netloc addrb_0_1 1 0 2 NJ 80 N
+preplace netloc blk_mem_gen_0_douta 1 1 2 260 160 610
+preplace netloc dinb_0_1 1 0 2 NJ 240 N
+preplace netloc enable_1_dout 1 2 1 610 360n
+preplace netloc or_gate_0_O 1 2 1 620 80n
+preplace netloc or_gate_1_O 1 2 1 590 240n
+preplace netloc or_gate_2_O 1 2 1 640 380n
+preplace netloc write_enable_dout 1 1 1 220 540n
+preplace netloc xlconstant_0_dout 1 2 1 600 340n
+preplace netloc BRAM_PORTB_0_1 1 0 3 20J 320 NJ 320 590J
+levelinfo -pg 1 0 120 410 760 940
+pagesize -pg 1 -db -bbox -sgen -180 -20 1090 980
 "
 }
 0

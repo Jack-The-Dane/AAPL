@@ -2,11 +2,11 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="com_side" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1779099769"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1779099769"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1779099769"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1779099769"/>
-    <Generation Name="INSTANTIATION_TEMPLATE" State="GENERATED" Timestamp="1779099769"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1779893596"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1779893596"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1779893596"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1779893596"/>
+    <Generation Name="INSTANTIATION_TEMPLATE" State="GENERATED" Timestamp="1779893596"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="com_side.vho" Type="VhdlTemplate">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -86,6 +86,7 @@
           <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd"/>
           <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd"/>
           <File Name="../../../../QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd"/>
+          <File Name="../../../../QLink_2020.srcs/sources_1/new/or_gate.vhd"/>
           <File Name="../../../../QLink_2020.srcs/sources_1/bd/block_test/block_test.bd"/>
         </FileCollection>
       </ModuleReference>

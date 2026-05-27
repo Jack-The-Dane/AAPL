@@ -1,71 +1,47 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.701819",
-   "Default View_TopLeft":"-570,-74",
-   "ExpandedHierarchyInLayout":"/block_test_0",
+   "Default View_ScaleFactor":"0.836527",
+   "Default View_TopLeft":"-196,-49",
+   "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_button_0 -pg 1 -lvl 0 -x -50 -y 240 -defaultsOSRD
-preplace port port-id_button_1 -pg 1 -lvl 0 -x -50 -y 100 -defaultsOSRD
-preplace port port-id_button_2 -pg 1 -lvl 0 -x -50 -y 460 -defaultsOSRD
-preplace port port-id_button_3 -pg 1 -lvl 0 -x -50 -y 600 -defaultsOSRD
-preplace port port-id_rst -pg 1 -lvl 0 -x -50 -y 360 -defaultsOSRD
-preplace port port-id_CLK12_I -pg 1 -lvl 0 -x -50 -y 330 -defaultsOSRD
-preplace port port-id_RX_I -pg 1 -lvl 0 -x -50 -y 300 -defaultsOSRD
-preplace port port-id_TX_O -pg 1 -lvl 5 -x 1700 -y 280 -defaultsOSRD
-preplace port port-id_qlink_clk_o -pg 1 -lvl 5 -x 1700 -y 790 -defaultsOSRD
-preplace portBus LED_1 -pg 1 -lvl 5 -x 1700 -y 310 -defaultsOSRD
-preplace portBus addrb_i -pg 1 -lvl 0 -x -50 -y 660 -defaultsOSRD
-preplace portBus q_addr_o_1 -pg 1 -lvl 5 -x 1700 -y 360 -defaultsOSRD
-preplace portBus q_data_o_1 -pg 1 -lvl 5 -x 1700 -y 820 -defaultsOSRD
+preplace port BRAM_PORTB_0_0 -pg 1 -lvl 0 -x -70 -y 150 -defaultsOSRD
+preplace port port-id_button_0 -pg 1 -lvl 0 -x -70 -y 240 -defaultsOSRD
+preplace port port-id_button_1 -pg 1 -lvl 0 -x -70 -y 100 -defaultsOSRD
+preplace port port-id_button_2 -pg 1 -lvl 0 -x -70 -y 460 -defaultsOSRD
+preplace port port-id_button_3 -pg 1 -lvl 0 -x -70 -y 600 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -70 -y 360 -defaultsOSRD
+preplace port port-id_CLK12_I -pg 1 -lvl 0 -x -70 -y 330 -defaultsOSRD
+preplace port port-id_RX_I -pg 1 -lvl 0 -x -70 -y 300 -defaultsOSRD
+preplace port port-id_TX_O -pg 1 -lvl 5 -x 1220 -y 280 -defaultsOSRD
+preplace portBus LED_1 -pg 1 -lvl 5 -x 1220 -y 310 -defaultsOSRD
 preplace inst simple_button_fsm_0 -pg 1 -lvl 1 -x 120 -y 80 -defaultsOSRD
 preplace inst simple_button_fsm_1 -pg 1 -lvl 1 -x 120 -y 220 -defaultsOSRD
 preplace inst simple_button_fsm_2 -pg 1 -lvl 1 -x 120 -y 580 -defaultsOSRD
 preplace inst simple_button_fsm_3 -pg 1 -lvl 1 -x 120 -y 440 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 2 -x 370 -y 410 -defaultsOSRD
-preplace inst block_test_0 -pg 1 -lvl 4 -x 960 -y 332 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -x 380 -y 410 -defaultsOSRD
+preplace inst block_test_0 -pg 1 -lvl 4 -x 1020 -y 190 -defaultsOSRD
 preplace inst xlconcat_1 -pg 1 -lvl 3 -x 590 -y 170 -defaultsOSRD
-preplace inst block_test_0|Sindri_QLink_top_0 -pg 1 -lvl 1 -x 1010 -y 372 -defaultsOSRD
-preplace inst block_test_0|blk_mem_gen_0 -pg 1 -lvl 2 -x 1380 -y 542 -defaultsOSRD
-preplace inst block_test_0|enable_0 -pg 1 -lvl 1 -x 1010 -y 542 -defaultsOSRD
-preplace inst block_test_0|reset_0 -pg 1 -lvl 1 -x 1010 -y 642 -defaultsOSRD
-preplace inst block_test_0|write_enable -pg 1 -lvl 1 -x 1010 -y 742 -defaultsOSRD
-preplace netloc CLK12_I_0_1 1 0 4 -20 320 NJ 320 NJ 320 700
-preplace netloc RX_I_0_1 1 0 4 NJ 300 NJ 300 NJ 300 710
-preplace netloc addrb_0_0_1 1 0 4 NJ 660 NJ 660 NJ 660 700
-preplace netloc block_test_0_TX_O 1 4 1 1670J 280n
-preplace netloc block_test_0_q_addr_o 1 4 1 1670 342n
-preplace netloc block_test_0_q_data_o 1 4 1 1680 820n
-preplace netloc block_test_0_qlink_clk_o 1 0 5 -10 860 N 860 N 860 N 860 1670
+preplace inst buttons_addr -pg 1 -lvl 3 -x 590 -y 500 -defaultsOSRD
+preplace netloc CLK12_I_0_1 1 0 4 -50 -20 NJ -20 NJ -20 720
+preplace netloc RX_I_0_1 1 0 4 -40J -10 NJ -10 NJ -10 710
+preplace netloc block_test_0_TX_O 1 4 1 1180J 170n
+preplace netloc block_test_0_qlink_clk_o 1 0 5 -10 0 N 0 N 0 N 0 1170
 preplace netloc button_0_1 1 0 1 NJ 240
+preplace netloc button_1_1 1 0 1 N 100
 preplace netloc button_2_1 1 0 1 NJ 460
 preplace netloc button_3_1 1 0 1 NJ 600
-preplace netloc reset_0_1 1 0 1 -30 80n
-preplace netloc xlconcat_0_dout 1 2 2 N 410 710
-preplace netloc button_1_1 1 0 1 N 100
+preplace netloc reset_0_1 1 0 1 -20 80n
+preplace netloc simple_button_fsm_0_button_out 1 1 2 270 160 N
+preplace netloc simple_button_fsm_1_button_out 1 1 2 280 180 N
 preplace netloc simple_button_fsm_2_button_out 1 1 1 250 440n
 preplace netloc simple_button_fsm_3_button_out 1 1 1 N 420
-preplace netloc simple_button_fsm_1_button_out 1 1 2 260 180 N
-preplace netloc simple_button_fsm_0_button_out 1 1 2 250 160 N
-preplace netloc xlconcat_1_dout 1 3 2 NJ 170 1680
-preplace netloc block_test_0|CLK12_I_1 1 0 1 N 352
-preplace netloc block_test_0|Net 1 1 2 1240 342 NJ
-preplace netloc block_test_0|RX_I_0_1 1 0 1 N 372
-preplace netloc block_test_0|Sindri_QLink_top_0_CLK_O 1 1 2 1190 802 NJ
-preplace netloc block_test_0|Sindri_QLink_top_0_DATA_O 1 1 2 1250 332 1510J
-preplace netloc block_test_0|Sindri_QLink_top_0_LED_O 1 1 2 1210 322 NJ
-preplace netloc block_test_0|Sindri_QLink_top_0_TX_O 1 1 2 1170 302 NJ
-preplace netloc block_test_0|Sindri_QLink_top_0_WEA_O 1 1 1 1230 382n
-preplace netloc block_test_0|addrb_0_1 1 0 2 NJ 822 1200
-preplace netloc block_test_0|blk_mem_gen_0_douta 1 0 2 860 482 N
-preplace netloc block_test_0|dinb_0_1 1 0 2 NJ 802 1160
-preplace netloc block_test_0|enable_1_dout 1 1 1 1210 522n
-preplace netloc block_test_0|reset_1_dout 1 1 1 1250J 682n
-preplace netloc block_test_0|xlconstant_0_dout 1 1 1 1220 502n
-levelinfo -pg 1 -50 120 370 590 960 1700
-levelinfo -hier block_test_0 * 1010 1380 *
-pagesize -pg 1 -db -bbox -sgen -200 -20 1880 890
-pagesize -hier block_test_0 -db -bbox -sgen 830 262 1540 832
+preplace netloc xlconcat_0_dout 1 2 2 480 290 710
+preplace netloc xlconcat_1_dout 1 3 2 690J 310 N
+preplace netloc ilconstant_0_dout 1 3 1 720 230n
+preplace netloc BRAM_PORTB_0_0_1 1 0 4 -30J 300 NJ 300 NJ 300 700J
+levelinfo -pg 1 -70 120 380 590 1020 1220
+pagesize -pg 1 -db -bbox -sgen -250 -30 2140 1310
 "
 }
 0

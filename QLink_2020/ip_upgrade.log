@@ -1,0 +1,81 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Wed May 27 16:51:46 2026
+| Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7s15ftgb196-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_top_top_level_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the update of main_top_top_level_0_1 (user.org:user:top_level:1.0 (Rev. 2)) to current project options.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'main_top_top_level_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'addra_0'
+
+-Upgrade has removed port 'clka_0'
+
+-Upgrade has removed port 'dina_0'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Wed May 27 16:12:20 2026
+| Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7s15ftgb196-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'main_top_top_level_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the update of main_top_top_level_0_1 (user.org:user:top_level:1.0 (Rev. 2)) to current project options.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'main_top_top_level_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'LED_O'
+
+-Upgrade has removed port 'addra_i'
+
+-Upgrade has removed port 'clk_qlink'
+
+-Upgrade has removed port 'dina_i'
+
+-Upgrade has added port 'addra_0'
+
+-Upgrade has added port 'bram_clk'
+
+-Upgrade has added port 'clka_0'
+
+-Upgrade has added port 'data_in_0'
+
+-Upgrade has added port 'dina_0'
+
+-Upgrade has added port 'read_addr_0'
+
+

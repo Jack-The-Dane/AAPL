@@ -1,9 +1,44 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 18 12:22:49 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 27 16:53:15 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="com_side" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_addr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BRAM_PORTB_0_0_clk" SIGIS="clk" SIGNAME="block_test_0_BRAM_PORTB_0_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_0_din" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_din">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_din"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="BRAM_PORTB_0_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BRAM_PORTB_0_0_en" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_en">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_en"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BRAM_PORTB_0_0_rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="block_test_0_BRAM_PORTB_0_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="BRAM_PORTB_0_0_we" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_we">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_we"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="CLK12_I" SIGIS="undef" SIGNAME="External_Ports_CLK12_I">
       <CONNECTIONS>
         <CONNECTION INSTANCE="block_test_0" PORT="CLK12"/>
@@ -22,11 +57,6 @@
     <PORT DIR="O" NAME="TX_O" SIGIS="undef" SIGNAME="block_test_0_TX_O">
       <CONNECTIONS>
         <CONNECTION INSTANCE="block_test_0" PORT="TX_O"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="31" NAME="addrb_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addrb_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="block_test_0" PORT="addrb_0"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="button_0" SIGIS="undef" SIGNAME="External_Ports_button_0">
@@ -49,21 +79,6 @@
         <CONNECTION INSTANCE="simple_button_fsm_2" PORT="button"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="q_addr_o_1" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_addr_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="block_test_0" PORT="q_addr_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="31" NAME="q_data_o_1" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_data_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="block_test_0" PORT="q_data_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="qlink_clk_o" SIGIS="undef" SIGNAME="block_test_0_qlink_clk_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk_o"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
       <CONNECTIONS>
         <CONNECTION INSTANCE="simple_button_fsm_0" PORT="reset"/>
@@ -74,7 +89,26 @@
     </PORT>
   </EXTERNALPORTS>
 
-  <EXTERNALINTERFACES/>
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTB_0_0" NAME="BRAM_PORTB_0_0" TYPE="TARGET">
+      <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+      <PARAMETER NAME="MEM_ADDRESS_MODE"/>
+      <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+      <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+      <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM_PORTB_0_0_addr"/>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM_PORTB_0_0_clk"/>
+        <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM_PORTB_0_0_din"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM_PORTB_0_0_dout"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="BRAM_PORTB_0_0_en"/>
+        <PORTMAP LOGICAL="RST" PHYSICAL="BRAM_PORTB_0_0_rst"/>
+        <PORTMAP LOGICAL="WE" PHYSICAL="BRAM_PORTB_0_0_we"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
 
   <MODULES>
     <MODULE BD="block_test_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/block_test_0" INSTANCE="block_test_0" IS_ENABLE="1">
@@ -89,6 +123,41 @@
         <PARAMETER NAME="TRAINING_MODULE" VALUE="block_test.bd"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BRAM_PORTB_0_clk" SIGIS="clk" SIGNAME="block_test_0_BRAM_PORTB_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_din" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_din">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="BRAM_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BRAM_PORTB_0_en" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BRAM_PORTB_0_rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="block_test_0_BRAM_PORTB_0_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="BRAM_PORTB_0_we" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_we">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_we"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="CLK12" SIGIS="undef" SIGNAME="External_Ports_CLK12_I">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
@@ -105,33 +174,58 @@
             <CONNECTION INSTANCE="External_Ports" PORT="TX_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="addrb_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addrb_i">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="addrb_i"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="7" NAME="button_in" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="q_addr_o" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_addr_o">
+        <PORT DIR="I" LEFT="31" NAME="buttons_addr" RIGHT="0" SIGIS="undef" SIGNAME="buttons_addr_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="q_addr_o_1"/>
+            <CONNECTION INSTANCE="buttons_addr" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="q_data_o" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_data_o">
+        <PORT DIR="O" NAME="qlink_clk" SIGIS="undef" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="q_data_o_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="qlink_clk_o" SIGIS="undef" SIGNAME="block_test_0_qlink_clk_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="qlink_clk_o"/>
             <CONNECTION INSTANCE="simple_button_fsm_0" PORT="clk"/>
             <CONNECTION INSTANCE="simple_button_fsm_1" PORT="clk"/>
             <CONNECTION INSTANCE="simple_button_fsm_2" PORT="clk"/>
             <CONNECTION INSTANCE="simple_button_fsm_3" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTB_0_0" NAME="BRAM_PORTB_0" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+          <PARAMETER NAME="MEM_ADDRESS_MODE"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM_PORTB_0_addr"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM_PORTB_0_clk"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM_PORTB_0_din"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM_PORTB_0_dout"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="BRAM_PORTB_0_en"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="BRAM_PORTB_0_rst"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="BRAM_PORTB_0_we"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="0" FULLNAME="/buttons_addr" HWVERSION="2.0" INSTANCE="buttons_addr" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x00000320"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="com_side_ilconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="buttons_addr_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="block_test_0" PORT="buttons_addr"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -157,9 +251,9 @@
             <CONNECTION INSTANCE="xlconcat_1" PORT="In0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk_o">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk_o"/>
+            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
@@ -190,9 +284,9 @@
             <CONNECTION INSTANCE="xlconcat_1" PORT="In1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk_o">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk_o"/>
+            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
@@ -222,9 +316,9 @@
             <CONNECTION INSTANCE="xlconcat_0" PORT="In3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk_o">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk_o"/>
+            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
@@ -254,9 +348,9 @@
             <CONNECTION INSTANCE="xlconcat_0" PORT="In2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk_o">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk_o"/>
+            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">

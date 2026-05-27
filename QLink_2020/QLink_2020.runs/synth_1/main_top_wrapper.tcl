@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.runs/synth_1/main_top_wrapper.tcl"
+  variable script "/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/main_top_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -58,7 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param bd.open.in_stealth_mode 1
 set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 1
+set_param chipscope.maxJobs 2
 set_param general.usePosixSpawnForFork 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s15ftgb196-1
@@ -67,22 +67,21 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.cache/wt [current_project]
-set_property parent.project_path /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.xpr [current_project]
+set_property webtalk.parent_dir /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.cache/wt [current_project]
+set_property parent.project_path /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_repo_paths /home/kasper-ubuntu/Documents/APPL_project_tetris/IPs [current_project]
+set_property ip_repo_paths /home/jacob/shared/Semester8/AAPL/project/IPs [current_project]
 update_ip_catalog
-set_property ip_output_repo /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.cache/ip [current_project]
+set_property ip_output_repo /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd
-add_files /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/sources_1/bd/main_top/main_top.bd
-set_property used_in_implementation false [get_files -all /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/src/top_level_blk_mem_gen_0_0/top_level_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/src/top_level_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/main_top_ooc.xdc]
+read_vhdl -library xil_defaultlib /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd
+add_files /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/bd/main_top/main_top.bd
+set_property used_in_implementation false [get_files -all /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/src/top_level_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/main_top_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -93,17 +92,17 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc
-set_property used_in_implementation false [get_files /home/kasper-ubuntu/Documents/APPL_project_tetris/vhdl/sindri_constraints.xdc]
+read_xdc /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc
+set_property used_in_implementation false [get_files /home/jacob/shared/Semester8/AAPL/project/vhdl/sindri_constraints.xdc]
 
-read_xdc /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc
-set_property used_in_implementation false [get_files /home/kasper-ubuntu/Documents/APPL_project_tetris/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc]
+read_xdc /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc
+set_property used_in_implementation false [get_files /home/jacob/shared/Semester8/AAPL/project/frame_gen/frame_gen.srcs/constrs_1/imports/vhdl/sindri_constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.srcs/utils_1/imports/synth_1/receiver_top.dcp
+read_checkpoint -auto_incremental -incremental /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/utils_1/imports/synth_1/receiver_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -1,0 +1,607 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed May 27 16:53:22 2026
+# Process ID         : 323745
+# Current directory  : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/main_top_top_level_0_1_synth_1
+# Command line       : vivado -log main_top_top_level_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_top_top_level_0_1.tcl
+# Log file           : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/main_top_top_level_0_1_synth_1/main_top_top_level_0_1.vds
+# Journal file       : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/main_top_top_level_0_1_synth_1/vivado.jou
+# Running On         : Laptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 7 4700U with Radeon Graphics
+# CPU Frequency      : 3393.333 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16116 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 33296 MB
+# Available Virtual  : 18689 MB
+#-----------------------------------------------------------
+ERROR: [Common 17-1257] Failed to create directory '/home/jacob/.Xilinx/Vivado/tclapp'.
+source main_top_top_level_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1617.512 ; gain = 64.059 ; free physical = 5335 ; free virtual = 15861
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jacob/shared/Semester8/AAPL/project/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+Command: synth_design -top main_top_top_level_0_1 -part xc7s15ftgb196-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 324109
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2158.090 ; gain = 484.188 ; free physical = 1783 ; free virtual = 12334
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main_top_top_level_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/synth/main_top_top_level_0_1.vhd:73]
+INFO: [Synth 8-3491] module 'top_level' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:19' bound to instance 'U0' of component 'top_level' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/synth/main_top_top_level_0_1.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'top_level' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:40]
+INFO: [Synth 8-3491] module 'top_level_TMDS_encoder_0_2' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_2.vhd:56' bound to instance 'TMDS_BLUE' of component 'top_level_TMDS_encoder_0_2' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'top_level_TMDS_encoder_0_2' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_2.vhd:66]
+INFO: [Synth 8-3491] module 'TMDS_encoder' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/TMDS_encoder.vhd:35' bound to instance 'U0' of component 'TMDS_encoder' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_2.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'TMDS_encoder' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/TMDS_encoder.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_encoder' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/TMDS_encoder.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'top_level_TMDS_encoder_0_2' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_2.vhd:66]
+INFO: [Synth 8-3491] module 'top_level_TMDS_encoder_0_1' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_1.vhd:56' bound to instance 'TMDS_GREEN' of component 'top_level_TMDS_encoder_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'top_level_TMDS_encoder_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_1.vhd:66]
+INFO: [Synth 8-3491] module 'TMDS_encoder' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/TMDS_encoder.vhd:35' bound to instance 'U0' of component 'TMDS_encoder' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_1.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'top_level_TMDS_encoder_0_1' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_1.vhd:66]
+INFO: [Synth 8-3491] module 'top_level_TMDS_encoder_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_0.vhd:56' bound to instance 'TMDS_RED' of component 'top_level_TMDS_encoder_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:232]
+INFO: [Synth 8-638] synthesizing module 'top_level_TMDS_encoder_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'TMDS_encoder' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/TMDS_encoder.vhd:35' bound to instance 'U0' of component 'TMDS_encoder' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_0.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'top_level_TMDS_encoder_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_TMDS_encoder_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'top_level_clocking_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_clocking_0_0.vhd:56' bound to instance 'clocking_0' of component 'top_level_clocking_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'top_level_clocking_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_clocking_0_0.vhd:66]
+	Parameter in_mul bound to: 30 - type: integer 
+	Parameter pix_div bound to: 5 - type: integer 
+	Parameter pix5x_div bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'clocking' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/clocking.vhd:12' bound to instance 'U0' of component 'clocking' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_clocking_0_0.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'clocking' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/clocking.vhd:27]
+	Parameter CLKFBOUT_MULT bound to: 30 - type: integer 
+	Parameter CLKIN_PERIOD bound to: 1.000000e+01 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 5 - type: integer 
+	Parameter CLKOUT0_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_PHASE bound to: 1.800000e+02 - type: double 
+	Parameter CLK_FEEDBACK bound to: CLKFBOUT - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'PLL_BASE_inst' to cell 'PLL_BASE' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/clocking.vhd:39]
+INFO: [Synth 8-113] binding component instance 'BUFG_clk' to cell 'BUFG' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/clocking.vhd:70]
+INFO: [Synth 8-113] binding component instance 'BUFG_pclock' to cell 'BUFG' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/clocking.vhd:76]
+INFO: [Synth 8-113] binding component instance 'BUFG_pclockx5' to cell 'BUFG' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/clocking.vhd:82]
+INFO: [Synth 8-113] binding component instance 'BUFG_pclockx5_180' to cell 'BUFG' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/clocking.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'clocking' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/clocking.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'top_level_clocking_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_clocking_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'top_level_color_fetcher_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_color_fetcher_0_0.vhd:56' bound to instance 'color_fetcher_0' of component 'top_level_color_fetcher_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'top_level_color_fetcher_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_color_fetcher_0_0.vhd:65]
+	Parameter tetris_block_pixel_width bound to: 45 - type: integer 
+	Parameter left_edge_pixel bound to: 601 - type: integer 
+	Parameter num_tetris_cols bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'color_fetcher' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/color_fetcher.vhd:34' bound to instance 'U0' of component 'color_fetcher' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_color_fetcher_0_0.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'color_fetcher' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/color_fetcher.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'color_fetcher' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/color_fetcher.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'top_level_color_fetcher_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_color_fetcher_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'top_level_color_lookup_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_color_lookup_0_0.vhd:56' bound to instance 'color_lookup_0' of component 'top_level_color_lookup_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'top_level_color_lookup_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_color_lookup_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'color_lookup' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/color_lookup.vhd:34' bound to instance 'U0' of component 'color_lookup' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_color_lookup_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'color_lookup' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/color_lookup.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'color_lookup' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/color_lookup.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'top_level_color_lookup_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_color_lookup_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'top_level_draw_box_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_draw_box_0_0.vhd:56' bound to instance 'draw_box_0' of component 'top_level_draw_box_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:262]
+INFO: [Synth 8-638] synthesizing module 'top_level_draw_box_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_draw_box_0_0.vhd:70]
+INFO: [Synth 8-3491] module 'draw_box' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/draw_box.vhd:34' bound to instance 'U0' of component 'draw_box' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_draw_box_0_0.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'draw_box' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/draw_box.vhd:46]
+WARNING: [Synth 8-614] signal 'red_in' is read in the process but is not in the sensitivity list [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/draw_box.vhd:109]
+WARNING: [Synth 8-614] signal 'green_in' is read in the process but is not in the sensitivity list [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/draw_box.vhd:109]
+WARNING: [Synth 8-614] signal 'blue_in' is read in the process but is not in the sensitivity list [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/draw_box.vhd:109]
+INFO: [Synth 8-256] done synthesizing module 'draw_box' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/draw_box.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'top_level_draw_box_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_draw_box_0_0.vhd:70]
+INFO: [Synth 8-3491] module 'top_level_output_diff_0_2' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_2.vhd:56' bound to instance 'output_BLUE' of component 'top_level_output_diff_0_2' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:276]
+INFO: [Synth 8-638] synthesizing module 'top_level_output_diff_0_2' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_2.vhd:64]
+INFO: [Synth 8-3491] module 'output_diff' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/output_diff.vhd:34' bound to instance 'U0' of component 'output_diff' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_2.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'output_diff' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/output_diff.vhd:40]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:113534]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:113534]
+INFO: [Synth 8-256] done synthesizing module 'output_diff' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/output_diff.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'top_level_output_diff_0_2' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_2.vhd:64]
+INFO: [Synth 8-3491] module 'top_level_output_diff_0_1' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_1.vhd:56' bound to instance 'output_GREEN' of component 'top_level_output_diff_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:282]
+INFO: [Synth 8-638] synthesizing module 'top_level_output_diff_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_1.vhd:64]
+INFO: [Synth 8-3491] module 'output_diff' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/output_diff.vhd:34' bound to instance 'U0' of component 'output_diff' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_1.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'top_level_output_diff_0_1' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_1.vhd:64]
+INFO: [Synth 8-3491] module 'top_level_output_diff_0_3' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_3.vhd:56' bound to instance 'output_PIX_CLK' of component 'top_level_output_diff_0_3' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:288]
+INFO: [Synth 8-638] synthesizing module 'top_level_output_diff_0_3' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_3.vhd:64]
+INFO: [Synth 8-3491] module 'output_diff' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/output_diff.vhd:34' bound to instance 'U0' of component 'output_diff' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_3.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'top_level_output_diff_0_3' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_3.vhd:64]
+INFO: [Synth 8-3491] module 'top_level_output_diff_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_0.vhd:56' bound to instance 'output_RED' of component 'top_level_output_diff_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:294]
+INFO: [Synth 8-638] synthesizing module 'top_level_output_diff_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_0.vhd:64]
+INFO: [Synth 8-3491] module 'output_diff' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/output_diff.vhd:34' bound to instance 'U0' of component 'output_diff' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_0.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'top_level_output_diff_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_output_diff_0_0.vhd:64]
+INFO: [Synth 8-3491] module 'top_level_row_fetcher_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_row_fetcher_0_0.vhd:56' bound to instance 'row_fetcher_0' of component 'top_level_row_fetcher_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:300]
+INFO: [Synth 8-638] synthesizing module 'top_level_row_fetcher_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_row_fetcher_0_0.vhd:67]
+	Parameter start_address bound to: 32'b00000000000000000000000000000000 
+	Parameter num_tetris_cols bound to: 10 - type: integer 
+	Parameter num_tetris_rows bound to: 20 - type: integer 
+	Parameter num_pixel_rows bound to: 45 - type: integer 
+	Parameter first_pixel_row bound to: 91 - type: integer 
+INFO: [Synth 8-3491] module 'row_fetcher' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/row_fetcher.vhd:38' bound to instance 'U0' of component 'row_fetcher' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_row_fetcher_0_0.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'row_fetcher' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/row_fetcher.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'row_fetcher' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/row_fetcher.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'top_level_row_fetcher_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_row_fetcher_0_0.vhd:67]
+INFO: [Synth 8-3491] module 'top_level_serialiser_1_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_1_0.vhd:56' bound to instance 'serialiser_BLUE' of component 'top_level_serialiser_1_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'top_level_serialiser_1_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_1_0.vhd:65]
+INFO: [Synth 8-3491] module 'serialiser' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/serialiser.vhd:34' bound to instance 'U0' of component 'serialiser' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_1_0.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'serialiser' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/serialiser.vhd:41]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'OSERDESE2_master' to cell 'OSERDESE2' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/serialiser.vhd:53]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'OSERDESE2_slave' to cell 'OSERDESE2' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/serialiser.vhd:104]
+INFO: [Synth 8-256] done synthesizing module 'serialiser' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/serialiser.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'top_level_serialiser_1_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_1_0.vhd:65]
+INFO: [Synth 8-3491] module 'top_level_serialiser_0_1' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_0_1.vhd:56' bound to instance 'serialiser_GREEN' of component 'top_level_serialiser_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:316]
+INFO: [Synth 8-638] synthesizing module 'top_level_serialiser_0_1' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_0_1.vhd:65]
+INFO: [Synth 8-3491] module 'serialiser' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/serialiser.vhd:34' bound to instance 'U0' of component 'serialiser' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_0_1.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'top_level_serialiser_0_1' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_0_1.vhd:65]
+INFO: [Synth 8-3491] module 'top_level_serialiser_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_0_0.vhd:56' bound to instance 'serialiser_RED' of component 'top_level_serialiser_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:323]
+INFO: [Synth 8-638] synthesizing module 'top_level_serialiser_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'serialiser' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/serialiser.vhd:34' bound to instance 'U0' of component 'serialiser' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_0_0.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'top_level_serialiser_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_serialiser_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'top_level_vga_gen_0_0' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_vga_gen_0_0.vhd:56' bound to instance 'vga_gen_0' of component 'top_level_vga_gen_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:330]
+INFO: [Synth 8-638] synthesizing module 'top_level_vga_gen_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_vga_gen_0_0.vhd:70]
+	Parameter hRez bound to: 1920 - type: integer 
+	Parameter hStartSync bound to: 2008 - type: integer 
+	Parameter hEndSync bound to: 2052 - type: integer 
+	Parameter hMaxCount bound to: 2200 - type: integer 
+	Parameter hsyncActive bound to: 1'b0 
+	Parameter vRez bound to: 1080 - type: integer 
+	Parameter vStartSync bound to: 1084 - type: integer 
+	Parameter vEndSync bound to: 1089 - type: integer 
+	Parameter vMaxCount bound to: 1125 - type: integer 
+	Parameter vsyncActive bound to: 1'b1 
+	Parameter prefetch_idx bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'vga_gen' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:15' bound to instance 'U0' of component 'vga_gen' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_vga_gen_0_0.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'vga_gen' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'vga_gen' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'top_level_vga_gen_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level_vga_gen_0_0.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/top_level.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'main_top_top_level_0_1' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/synth/main_top_top_level_0_1.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[15][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[15][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[15][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[14][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[14][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[14][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[13][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[13][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[13][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[12][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[12][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[12][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[11][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[11][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[11][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[10][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[10][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[10][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[9][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[9][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[9][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[8][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[8][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[8][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[7][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[7][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[7][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[6][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[6][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[6][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[5][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[5][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[5][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[4][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[4][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[4][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[3][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[3][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[3][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[2][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[2][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[2][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[1][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[1][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[1][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[0][red] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[0][green] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+WARNING: [Synth 8-6014] Unused sequential element queue_reg[0][blue] was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ipshared/6501/src/vga_gen.vhd:126]
+INFO: [Synth 8-7129] Port data_in[31] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[30] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[29] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[28] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[27] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[26] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[25] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[24] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[23] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[22] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[21] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[20] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[19] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[18] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[17] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[16] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[15] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[14] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[13] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[12] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[11] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[10] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[9] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[8] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[7] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[6] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[5] in module row_fetcher is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[4] in module row_fetcher is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2251.059 ; gain = 577.156 ; free physical = 1240 ; free virtual = 11798
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2259.965 ; gain = 586.062 ; free physical = 1214 ; free virtual = 11772
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2259.965 ; gain = 586.062 ; free physical = 1214 ; free virtual = 11772
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2262.934 ; gain = 0.000 ; free physical = 1174 ; free virtual = 11732
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/src/top_level_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/src/top_level_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/main_top_top_level_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/main_top_top_level_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.703 ; gain = 0.000 ; free physical = 920 ; free virtual = 11488
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  PLL_BASE => MMCME2_ADV: 1 instance 
+
+INFO: [Timing 38-2] Deriving generated clocks
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2375.738 ; gain = 0.000 ; free physical = 920 ; free virtual = 11488
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2375.738 ; gain = 701.836 ; free physical = 889 ; free virtual = 11468
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2383.707 ; gain = 709.805 ; free physical = 889 ; free virtual = 11468
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2383.707 ; gain = 709.805 ; free physical = 889 ; free virtual = 11468
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'row_fetcher'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    idle |                              000 |                              000
+                   issue |                              001 |                              001
+               wait_data |                              010 |                              101
+                 capture |                              011 |                              010
+                    hold |                              100 |                              100
+                   latch |                              101 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'row_fetcher'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2383.707 ; gain = 709.805 ; free physical = 876 ; free virtual = 11474
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   8 Input    4 Bit       Adders := 3     
+	   9 Input    4 Bit       Adders := 3     
+	  11 Input    4 Bit       Adders := 3     
+	   4 Input    4 Bit       Adders := 3     
+	  10 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               30 Bit    Registers := 2     
+	               12 Bit    Registers := 34    
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 48    
++---Muxes : 
+	   7 Input   32 Bit        Muxes := 1     
+	   7 Input   30 Bit        Muxes := 1     
+	   5 Input   10 Bit        Muxes := 6     
+	   4 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 9     
+	   2 Input    9 Bit        Muxes := 6     
+	   8 Input    8 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 6     
+	   7 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 9     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 4     
+	   7 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP U0/plusOp, operation Mode is: (C:0x259)+A2*(B:0x2d).
+DSP Report: register U0/square_counter_reg is absorbed into DSP U0/plusOp.
+DSP Report: operator U0/plusOp is absorbed into DSP U0/plusOp.
+DSP Report: operator U0/multOp is absorbed into DSP U0/plusOp.
+DSP Report: Generating DSP U0/plusOp, operation Mode is: (C:0x5b)+A2*(B:0x2d).
+DSP Report: register U0/plusOp is absorbed into DSP U0/plusOp.
+DSP Report: operator U0/plusOp is absorbed into DSP U0/plusOp.
+DSP Report: operator U0/multOp is absorbed into DSP U0/plusOp.
+INFO: [Synth 8-7129] Port data_in[31] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[30] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[29] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[28] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[27] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[26] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[25] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[24] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[23] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[22] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[21] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[20] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[19] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[18] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[17] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[16] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[15] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[14] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[13] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[12] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[11] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[10] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[9] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[8] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[7] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[6] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[5] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_in[4] in module top_level_row_fetcher_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2383.707 ; gain = 709.805 ; free physical = 4638 ; free virtual = 15250
+---------------------------------------------------------------------------------
+ Sort Area is  U0/plusOp_0 : 0 0 : 222 222 : Used 1 time 0
+ Sort Area is  U0/plusOp_2 : 0 0 : 222 222 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++--------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name               | DSP Mapping           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|color_fetcher             | (C:0x259)+A2*(B:0x2d) | 12     | 6      | 10     | -      | 18     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|top_level_row_fetcher_0_0 | (C:0x5b)+A2*(B:0x2d)  | 12     | 6      | 7      | -      | 18     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
++--------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3321] create_generated_clock : Empty source list for constraint at line  of auto generated constraint. [auto generated constraint:]
+WARNING: [Synth 8-3321] create_generated_clock : Empty source list for constraint at line  of auto generated constraint. [auto generated constraint:]
+WARNING: [Synth 8-3321] create_generated_clock : Empty source list for constraint at line  of auto generated constraint. [auto generated constraint:]
+WARNING: [Synth 8-3321] create_generated_clock : Empty source list for constraint at line  of auto generated constraint. [auto generated constraint:]
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2471.707 ; gain = 797.805 ; free physical = 5543 ; free virtual = 16161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2578.785 ; gain = 904.883 ; free physical = 5753 ; free virtual = 16375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2578.785 ; gain = 904.883 ; free physical = 5753 ; free virtual = 16375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2677.598 ; gain = 1003.695 ; free physical = 5723 ; free virtual = 16348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2677.598 ; gain = 1003.695 ; free physical = 5723 ; free virtual = 16348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2677.598 ; gain = 1003.695 ; free physical = 5723 ; free virtual = 16348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2677.598 ; gain = 1003.695 ; free physical = 5723 ; free virtual = 16348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2677.598 ; gain = 1003.695 ; free physical = 5723 ; free virtual = 16348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2677.598 ; gain = 1003.695 ; free physical = 5722 ; free virtual = 16347
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_level   | vga_gen_0/U0/queue_reg[15][hCounter][11] | 15     | 24    | NO           | NO                 | YES               | 24     | 0       | 
+|top_level   | vga_gen_0/U0/queue_reg[15][blank]        | 16     | 3     | NO           | NO                 | YES               | 3      | 0       | 
++------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name               | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|color_fetcher             | C+A'*B      | 12     | 6      | 10     | -      | 18     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|top_level_row_fetcher_0_0 | C+A'*B      | 5      | 6      | 7      | -      | 18     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
++--------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     4|
+|2     |CARRY4    |    34|
+|3     |DSP48E1   |     2|
+|4     |LUT1      |     7|
+|5     |LUT2      |    78|
+|6     |LUT3      |    43|
+|7     |LUT4      |    26|
+|8     |LUT5      |    25|
+|9     |LUT6      |    58|
+|10    |OSERDESE2 |     6|
+|12    |PLL_BASE  |     1|
+|13    |SRL16E    |    27|
+|14    |FDRE      |   231|
+|15    |OBUFDS    |     4|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2677.598 ; gain = 1003.695 ; free physical = 5722 ; free virtual = 16347
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 2677.598 ; gain = 887.922 ; free physical = 5715 ; free virtual = 16340
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2677.605 ; gain = 1003.695 ; free physical = 5714 ; free virtual = 16339
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.605 ; gain = 0.000 ; free physical = 5681 ; free virtual = 16306
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.625 ; gain = 0.000 ; free physical = 5623 ; free virtual = 16249
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  PLL_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: 5cfa4183
+INFO: [Common 17-83] Releasing license: Synthesis
+175 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:46 . Memory (MB): peak = 2733.660 ; gain = 1116.148 ; free physical = 5633 ; free virtual = 16259
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2040.070; main = 1915.346; forked = 297.293
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3573.930; main = 2733.629; forked = 995.141
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2757.637 ; gain = 0.000 ; free physical = 5633 ; free virtual = 16259
+INFO: [Common 17-1381] The checkpoint '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/main_top_top_level_0_1_synth_1/main_top_top_level_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_top_top_level_0_1, cache-ID = 1f3aae5cbef62124
+INFO: [Coretcl 2-1174] Renamed 31 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2757.637 ; gain = 0.000 ; free physical = 5616 ; free virtual = 16246
+INFO: [Common 17-1381] The checkpoint '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/main_top_top_level_0_1_synth_1/main_top_top_level_0_1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file main_top_top_level_0_1_utilization_synth.rpt -pb main_top_top_level_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May 27 16:54:19 2026...
