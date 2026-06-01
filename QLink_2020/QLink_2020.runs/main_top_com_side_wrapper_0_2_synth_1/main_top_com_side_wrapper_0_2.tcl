@@ -87,6 +87,7 @@ read_vhdl -library xil_defaultlib {
   /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd
   /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd
   /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd
+  /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/new/or_gate.vhd
   /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/hdl/com_side_wrapper.vhd
 }
 add_files /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/block_test_inst_0.bd

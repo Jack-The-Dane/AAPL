@@ -23,11 +23,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_si
 # IP: bd/com_side/ip/com_side_xlconcat_0_0/com_side_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_0_0 || ORIG_REF_NAME==com_side_xlconcat_0_0} -quiet] -quiet
 
+# IP: bd/com_side/ip/com_side_xlconcat_1_0/com_side_xlconcat_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_1_0 || ORIG_REF_NAME==com_side_xlconcat_1_0} -quiet] -quiet
+
 # Block Designs: bd/main_top/main_top.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_top || ORIG_REF_NAME==main_top} -quiet] -quiet
-
-# IP: bd/main_top/ip/main_top_xlconstant_0_0/main_top_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_top_xlconstant_0_0 || ORIG_REF_NAME==main_top_xlconstant_0_0} -quiet] -quiet
 
 # IP: bd/main_top/ip/main_top_top_level_0_1/main_top_top_level_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_top_top_level_0_1 || ORIG_REF_NAME==main_top_top_level_0_1} -quiet] -quiet
@@ -53,6 +53,15 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_
 # IP: /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_write_enable_0/block_test_inst_0_write_enable_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_inst_0_write_enable_0 || ORIG_REF_NAME==block_test_inst_0_write_enable_0} -quiet] -quiet
 
+# IP: /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_mux_addr_0/block_test_inst_0_mux_addr_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_inst_0_mux_addr_0 || ORIG_REF_NAME==block_test_inst_0_mux_addr_0} -quiet] -quiet
+
+# IP: /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_mux_data_0/block_test_inst_0_mux_data_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_inst_0_mux_data_0 || ORIG_REF_NAME==block_test_inst_0_mux_data_0} -quiet] -quiet
+
+# IP: /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_mux_wen_0/block_test_inst_0_mux_wen_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_inst_0_mux_wen_0 || ORIG_REF_NAME==block_test_inst_0_mux_wen_0} -quiet] -quiet
+
 # Block Designs: bd/com_side/com_side.bd
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side || ORIG_REF_NAME==com_side} -quiet] -quiet
 
@@ -70,6 +79,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_test_
 
 # IP: bd/com_side/ip/com_side_xlconcat_0_0/com_side_xlconcat_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_0_0 || ORIG_REF_NAME==com_side_xlconcat_0_0} -quiet] -quiet
+
+# IP: bd/com_side/ip/com_side_xlconcat_1_0/com_side_xlconcat_1_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==com_side_xlconcat_1_0 || ORIG_REF_NAME==com_side_xlconcat_1_0} -quiet] -quiet
+
+# IP: bd/main_top/ip/main_top_xlconstant_1_0/main_top_xlconstant_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_top_xlconstant_1_0 || ORIG_REF_NAME==main_top_xlconstant_1_0} -quiet] -quiet
 
 # XDC: /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/com_side_ooc.xdc
 

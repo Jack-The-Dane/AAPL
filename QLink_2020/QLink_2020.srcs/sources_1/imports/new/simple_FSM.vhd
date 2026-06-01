@@ -36,12 +36,12 @@ begin
                 case state is
 
                     when IDLE =>
-                        if button = '1' then
+                        if button = '0' then
                             state <= PRESS;
                         end if;
 
                     when PRESS =>
-                        if button = '0' then
+                        if button = '1' then
                             state <= RELEASE;
                         end if;
 

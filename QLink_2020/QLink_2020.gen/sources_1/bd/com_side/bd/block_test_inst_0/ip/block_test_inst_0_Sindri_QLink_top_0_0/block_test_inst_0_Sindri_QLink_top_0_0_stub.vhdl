@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Mon May 11 13:53:59 2026
+-- Date        : Wed May 27 16:54:03 2026
 -- Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/block_test_inst_0_Sindri_QLink_top_0_0_stub.vhdl
@@ -23,7 +23,8 @@ entity block_test_inst_0_Sindri_QLink_top_0_0 is
     DATA_I : in STD_LOGIC_VECTOR ( 31 downto 0 );
     WEA_O : out STD_LOGIC_VECTOR ( 3 downto 0 );
     CLK_O : out STD_LOGIC;
-    ADDR_O : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    ADDR_O : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    idle : out STD_LOGIC
   );
 
   attribute CHECK_LICENSE_TYPE : string;
@@ -40,7 +41,7 @@ architecture stub of block_test_inst_0_Sindri_QLink_top_0_0 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "CLK12_I,TX_O,RX_I,LED_O[3:0],DATA_O[31:0],DATA_I[31:0],WEA_O[3:0],CLK_O,ADDR_O[31:0]";
+  attribute black_box_pad_pin of stub : architecture is "CLK12_I,TX_O,RX_I,LED_O[3:0],DATA_O[31:0],DATA_I[31:0],WEA_O[3:0],CLK_O,ADDR_O[31:0],idle";
   attribute x_core_info : string;
   attribute x_core_info of stub : architecture is "Sindri_QLink_top,Vivado 2025.2";
 begin

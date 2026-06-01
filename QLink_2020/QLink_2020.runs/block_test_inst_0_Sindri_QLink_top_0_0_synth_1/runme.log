@@ -7,11 +7,12 @@
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Mon May 11 13:53:30 2026
+  **** Start of session at: Wed May 27 16:53:21 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source block_test_inst_0_Sindri_QLink_top_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1606.980 ; gain = 64.059 ; free physical = 5337 ; free virtual = 15863
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jacob/shared/Semester8/AAPL/project/IPs'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
@@ -22,15 +23,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
 INFO: [Device 21-403] Loading part xc7s15ftgb196-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 279187
+INFO: [Synth 8-7075] Helper process launched with PID 324487
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2157.891 ; gain = 480.906 ; free physical = 956 ; free virtual = 21480
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2158.184 ; gain = 481.875 ; free physical = 1220 ; free virtual = 11778
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:70]
-INFO: [Synth 8-3491] module 'Sindri_QLink_top' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:141' bound to instance 'U0' of component 'Sindri_QLink_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:95]
-INFO: [Synth 8-638] synthesizing module 'Sindri_QLink_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:71]
+INFO: [Synth 8-3491] module 'Sindri_QLink_top' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:141' bound to instance 'U0' of component 'Sindri_QLink_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'Sindri_QLink_top' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:156]
 	Parameter CLK_I_PERIOD bound to: 8.333333e+01 - type: double 
-INFO: [Synth 8-3491] module 'QLinkMaster' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:78' bound to instance 'QLINK1' of component 'QLinkMaster' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:193]
+INFO: [Synth 8-3491] module 'QLinkMaster' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:78' bound to instance 'QLINK1' of component 'QLinkMaster' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:194]
 INFO: [Synth 8-638] synthesizing module 'QLinkMaster' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:96]
 	Parameter CLK_I_PERIOD bound to: 8.333333e+01 - type: double 
 INFO: [Synth 8-3491] module 'mmcm48' declared at '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/mmcm48.vhd:22' bound to instance 'MMCM48_INST' of component 'mmcm48' [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:234]
@@ -64,26 +65,26 @@ INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AA
 INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
 INFO: [Synth 8-226] default block is never used [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:149]
 INFO: [Synth 8-256] done synthesizing module 'QLinkMaster' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:96]
-INFO: [Synth 8-256] done synthesizing module 'Sindri_QLink_top' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:155]
-INFO: [Synth 8-256] done synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'Sindri_QLink_top' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/sindri_qlink_top.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'block_test_inst_0_Sindri_QLink_top_0_0' (0#1) [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/com_side/bd/block_test_inst_0/ip/block_test_inst_0_Sindri_QLink_top_0_0/synth/block_test_inst_0_Sindri_QLink_top_0_0.vhd:71]
 WARNING: [Synth 8-6014] Unused sequential element data_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:44]
 WARNING: [Synth 8-6014] Unused sequential element bitcnt_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/decode_serial.vhd:54]
 WARNING: [Synth 8-6014] Unused sequential element bitcnt_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/encode_serial.vhd:96]
 WARNING: [Synth 8-6014] Unused sequential element enc_data_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:265]
 WARNING: [Synth 8-6014] Unused sequential element char_cnt_reg was removed.  [/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/imports/Qlink_SRC/qlinkmaster.vhd:474]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2251.859 ; gain = 574.875 ; free physical = 918 ; free virtual = 21447
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2252.152 ; gain = 575.844 ; free physical = 915 ; free virtual = 11489
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2257.797 ; gain = 580.812 ; free physical = 919 ; free virtual = 21448
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2261.059 ; gain = 584.750 ; free physical = 905 ; free virtual = 11479
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2257.797 ; gain = 580.812 ; free physical = 919 ; free virtual = 21448
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2261.059 ; gain = 584.750 ; free physical = 905 ; free virtual = 11479
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2263.734 ; gain = 0.000 ; free physical = 918 ; free virtual = 21447
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2264.027 ; gain = 0.000 ; free physical = 905 ; free virtual = 11478
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -92,28 +93,28 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.535 ; gain = 0.000 ; free physical = 922 ; free virtual = 21451
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2370.859 ; gain = 0.000 ; free physical = 883 ; free virtual = 11457
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2368.570 ; gain = 0.000 ; free physical = 922 ; free virtual = 21451
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2370.895 ; gain = 0.000 ; free physical = 885 ; free virtual = 11459
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2368.570 ; gain = 691.586 ; free physical = 927 ; free virtual = 21458
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2370.895 ; gain = 694.586 ; free physical = 862 ; free virtual = 11467
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s15ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2376.539 ; gain = 699.555 ; free physical = 927 ; free virtual = 21458
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2378.863 ; gain = 702.555 ; free physical = 862 ; free virtual = 11467
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2376.539 ; gain = 699.555 ; free physical = 929 ; free virtual = 21460
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2378.863 ; gain = 702.555 ; free physical = 862 ; free virtual = 11467
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'QLinkMaster'
 ---------------------------------------------------------------------------------------------------
@@ -141,7 +142,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'QL
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'one-hot' in module 'QLinkMaster'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2376.539 ; gain = 699.555 ; free physical = 909 ; free virtual = 21446
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2378.863 ; gain = 702.555 ; free physical = 844 ; free virtual = 11454
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -159,7 +160,7 @@ Detailed RTL Component Info :
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 4     
-	                1 Bit    Registers := 14    
+	                1 Bit    Registers := 15    
 +---Muxes : 
 	  19 Input   32 Bit        Muxes := 2     
 	  19 Input   19 Bit        Muxes := 1     
@@ -169,7 +170,7 @@ Detailed RTL Component Info :
 	  19 Input    8 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 18    
+	   2 Input    1 Bit        Muxes := 19    
 	   3 Input    1 Bit        Muxes := 1     
 	   5 Input    1 Bit        Muxes := 2     
 	  19 Input    1 Bit        Muxes := 3     
@@ -191,20 +192,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2376.539 ; gain = 699.555 ; free physical = 871 ; free virtual = 21408
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2378.863 ; gain = 702.555 ; free physical = 451 ; free virtual = 11065
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2376.539 ; gain = 699.555 ; free physical = 873 ; free virtual = 21410
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2378.863 ; gain = 702.555 ; free physical = 440 ; free virtual = 11054
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2376.539 ; gain = 699.555 ; free physical = 873 ; free virtual = 21410
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2378.863 ; gain = 702.555 ; free physical = 426 ; free virtual = 11040
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -222,37 +223,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.352 ; gain = 804.367 ; free physical = 743 ; free virtual = 21280
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2480.676 ; gain = 804.367 ; free physical = 4534 ; free virtual = 15146
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.352 ; gain = 804.367 ; free physical = 743 ; free virtual = 21280
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2480.676 ; gain = 804.367 ; free physical = 4538 ; free virtual = 15150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.352 ; gain = 804.367 ; free physical = 743 ; free virtual = 21280
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2480.676 ; gain = 804.367 ; free physical = 4538 ; free virtual = 15150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.352 ; gain = 804.367 ; free physical = 743 ; free virtual = 21280
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2480.676 ; gain = 804.367 ; free physical = 4538 ; free virtual = 15150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.352 ; gain = 804.367 ; free physical = 743 ; free virtual = 21280
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2480.676 ; gain = 804.367 ; free physical = 4538 ; free virtual = 15150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.352 ; gain = 804.367 ; free physical = 743 ; free virtual = 21280
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2480.676 ; gain = 804.367 ; free physical = 4538 ; free virtual = 15150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -270,41 +271,43 @@ Report Cell Usage:
 +------+------------+------+
 |1     |CARRY4      |     8|
 |2     |LUT1        |     6|
-|3     |LUT2        |    39|
-|4     |LUT3        |    65|
-|5     |LUT4        |    39|
-|6     |LUT5        |    75|
-|7     |LUT6        |   123|
+|3     |LUT2        |    32|
+|4     |LUT3        |    48|
+|5     |LUT4        |    42|
+|6     |LUT5        |    83|
+|7     |LUT6        |   120|
 |8     |MMCME2_BASE |     1|
-|9     |FDRE        |   242|
-|10    |FDSE        |    19|
+|9     |MUXF7       |    11|
+|10    |MUXF8       |     1|
+|11    |FDRE        |   243|
+|12    |FDSE        |    19|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.352 ; gain = 804.367 ; free physical = 743 ; free virtual = 21280
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2480.676 ; gain = 804.367 ; free physical = 4538 ; free virtual = 15150
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2481.352 ; gain = 693.594 ; free physical = 743 ; free virtual = 21280
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.359 ; gain = 804.367 ; free physical = 743 ; free virtual = 21280
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2480.676 ; gain = 694.531 ; free physical = 4538 ; free virtual = 15150
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2480.684 ; gain = 804.367 ; free physical = 4546 ; free virtual = 15158
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2481.359 ; gain = 0.000 ; free physical = 735 ; free virtual = 21272
-INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2480.684 ; gain = 0.000 ; free physical = 4538 ; free virtual = 15150
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2642.910 ; gain = 0.000 ; free physical = 810 ; free virtual = 21347
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2642.203 ; gain = 0.000 ; free physical = 4582 ; free virtual = 15195
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instance 
 
-Synth Design complete | Checksum: 60849ff2
+Synth Design complete | Checksum: 646f8cd2
 INFO: [Common 17-83] Releasing license: Synthesis
 48 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:25 . Memory (MB): peak = 2642.945 ; gain = 1090.008 ; free physical = 810 ; free virtual = 21347
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1858.088; main = 1722.167; forked = 289.778
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3490.355; main = 2642.914; forked = 995.141
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 2642.238 ; gain = 1035.258 ; free physical = 4582 ; free virtual = 15195
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1618.640; main = 1618.640; forked = 199.720
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3374.008; main = 2642.207; forked = 995.141
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2666.922 ; gain = 0.000 ; free physical = 810 ; free virtual = 21347
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2666.215 ; gain = 0.000 ; free physical = 4582 ; free virtual = 15195
 INFO: [Common 17-1381] The checkpoint '/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1/block_test_inst_0_Sindri_QLink_top_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file block_test_inst_0_Sindri_QLink_top_0_0_utilization_synth.rpt -pb block_test_inst_0_Sindri_QLink_top_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May 11 13:53:59 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed May 27 16:54:03 2026...

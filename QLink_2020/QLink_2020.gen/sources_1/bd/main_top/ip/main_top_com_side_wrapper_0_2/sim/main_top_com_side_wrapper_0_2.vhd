@@ -55,18 +55,21 @@ USE ieee.numeric_std.ALL;
 
 ENTITY main_top_com_side_wrapper_0_2 IS
   PORT (
+    BRAM_PORTB_0_0_addr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    BRAM_PORTB_0_0_clk : IN STD_LOGIC;
+    BRAM_PORTB_0_0_din : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    BRAM_PORTB_0_0_dout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    BRAM_PORTB_0_0_en : IN STD_LOGIC;
+    BRAM_PORTB_0_0_rst : IN STD_LOGIC;
+    BRAM_PORTB_0_0_we : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     CLK12_I : IN STD_LOGIC;
     LED_1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     RX_I : IN STD_LOGIC;
     TX_O : OUT STD_LOGIC;
-    addrb_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     button_0 : IN STD_LOGIC;
     button_1 : IN STD_LOGIC;
     button_2 : IN STD_LOGIC;
     button_3 : IN STD_LOGIC;
-    q_addr_o_1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    q_data_o_1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    qlink_clk_o : OUT STD_LOGIC;
     rst : IN STD_LOGIC
   );
 END main_top_com_side_wrapper_0_2;
@@ -76,42 +79,54 @@ ARCHITECTURE main_top_com_side_wrapper_0_2_arch OF main_top_com_side_wrapper_0_2
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF main_top_com_side_wrapper_0_2_arch: ARCHITECTURE IS "yes";
   COMPONENT com_side_wrapper IS
     PORT (
+      BRAM_PORTB_0_0_addr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      BRAM_PORTB_0_0_clk : IN STD_LOGIC;
+      BRAM_PORTB_0_0_din : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      BRAM_PORTB_0_0_dout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      BRAM_PORTB_0_0_en : IN STD_LOGIC;
+      BRAM_PORTB_0_0_rst : IN STD_LOGIC;
+      BRAM_PORTB_0_0_we : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       CLK12_I : IN STD_LOGIC;
       LED_1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       RX_I : IN STD_LOGIC;
       TX_O : OUT STD_LOGIC;
-      addrb_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       button_0 : IN STD_LOGIC;
       button_1 : IN STD_LOGIC;
       button_2 : IN STD_LOGIC;
       button_3 : IN STD_LOGIC;
-      q_addr_o_1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      q_data_o_1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      qlink_clk_o : OUT STD_LOGIC;
       rst : IN STD_LOGIC
     );
   END COMPONENT com_side_wrapper;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_MODE : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_INFO OF BRAM_PORTB_0_0_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 BRAM_PORTB_0_0_clk CLK";
+  ATTRIBUTE X_INTERFACE_MODE OF BRAM_PORTB_0_0_clk: SIGNAL IS "slave BRAM_PORTB_0_0_clk";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF BRAM_PORTB_0_0_clk: SIGNAL IS "XIL_INTERFACENAME BRAM_PORTB_0_0_clk, ASSOCIATED_RESET BRAM_PORTB_0_0_rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF BRAM_PORTB_0_0_rst: SIGNAL IS "xilinx.com:signal:reset:1.0 BRAM_PORTB_0_0_rst RST";
+  ATTRIBUTE X_INTERFACE_MODE OF BRAM_PORTB_0_0_rst: SIGNAL IS "slave BRAM_PORTB_0_0_rst";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF BRAM_PORTB_0_0_rst: SIGNAL IS "XIL_INTERFACENAME BRAM_PORTB_0_0_rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF rst: SIGNAL IS "xilinx.com:signal:reset:1.0 rst RST";
   ATTRIBUTE X_INTERFACE_MODE OF rst: SIGNAL IS "slave rst";
   ATTRIBUTE X_INTERFACE_PARAMETER OF rst: SIGNAL IS "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 BEGIN
   U0 : com_side_wrapper
     PORT MAP (
+      BRAM_PORTB_0_0_addr => BRAM_PORTB_0_0_addr,
+      BRAM_PORTB_0_0_clk => BRAM_PORTB_0_0_clk,
+      BRAM_PORTB_0_0_din => BRAM_PORTB_0_0_din,
+      BRAM_PORTB_0_0_dout => BRAM_PORTB_0_0_dout,
+      BRAM_PORTB_0_0_en => BRAM_PORTB_0_0_en,
+      BRAM_PORTB_0_0_rst => BRAM_PORTB_0_0_rst,
+      BRAM_PORTB_0_0_we => BRAM_PORTB_0_0_we,
       CLK12_I => CLK12_I,
       LED_1 => LED_1,
       RX_I => RX_I,
       TX_O => TX_O,
-      addrb_i => addrb_i,
       button_0 => button_0,
       button_1 => button_1,
       button_2 => button_2,
       button_3 => button_3,
-      q_addr_o_1 => q_addr_o_1,
-      q_data_o_1 => q_data_o_1,
-      qlink_clk_o => qlink_clk_o,
       rst => rst
     );
 END main_top_com_side_wrapper_0_2_arch;

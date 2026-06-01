@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x104AD3F5104AD3F5",
+      "boundary_crc": "0x8F50DD94157183A9",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/block_test",
       "name": "block_test",
@@ -15,7 +15,85 @@
       "blk_mem_gen_0": "",
       "enable_0": "",
       "reset_0": "",
-      "write_enable": ""
+      "write_enable": "",
+      "mux_addr": "",
+      "mux_data": "",
+      "mux_wen": ""
+    },
+    "interface_ports": {
+      "BRAM_PORTB_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "BRAM_CTRL"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "BRAM_PORTB_0_addr",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "BRAM_PORTB_0_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "BRAM_PORTB_0_din",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "DOUT": {
+            "physical_name": "BRAM_PORTB_0_dout",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "BRAM_PORTB_0_en",
+            "direction": "I"
+          },
+          "RST": {
+            "physical_name": "BRAM_PORTB_0_rst",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "BRAM_PORTB_0_we",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
     },
     "ports": {
       "CLK12": {
@@ -37,23 +115,13 @@
         "left": "31",
         "right": "0"
       },
-      "addrb_0": {
+      "buttons_addr": {
         "direction": "I",
         "left": "31",
         "right": "0"
       },
-      "q_addr_o": {
-        "direction": "O",
-        "left": "31",
-        "right": "0"
-      },
-      "qlink_clk_o": {
+      "qlink_clk": {
         "direction": "O"
-      },
-      "q_data_o": {
-        "direction": "O",
-        "left": "31",
-        "right": "0"
       }
     },
     "components": {
@@ -106,6 +174,9 @@
             "direction": "O",
             "left": "31",
             "right": "0"
+          },
+          "idle": {
+            "direction": "O"
           }
         }
       },
@@ -158,6 +229,118 @@
             "value": "4"
           }
         }
+      },
+      "mux_addr": {
+        "vlnv": "xilinx.com:module_ref:or_gate:1.0",
+        "ip_revision": "1",
+        "xci_name": "block_test_or_gate_0_0",
+        "xci_path": "ip/block_test_or_gate_0_0/block_test_or_gate_0_0.xci",
+        "inst_hier_path": "mux_addr",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "or_gate",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "condition": {
+            "direction": "I"
+          },
+          "t": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "f": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "O": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mux_data": {
+        "vlnv": "xilinx.com:module_ref:or_gate:1.0",
+        "ip_revision": "1",
+        "xci_name": "block_test_or_gate_1_0",
+        "xci_path": "ip/block_test_or_gate_1_0/block_test_or_gate_1_0.xci",
+        "inst_hier_path": "mux_data",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "or_gate",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "condition": {
+            "direction": "I"
+          },
+          "t": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "f": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "O": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "mux_wen": {
+        "vlnv": "xilinx.com:module_ref:or_gate:1.0",
+        "ip_revision": "1",
+        "xci_name": "block_test_or_gate_2_0",
+        "xci_path": "ip/block_test_or_gate_2_0/block_test_or_gate_2_0.xci",
+        "inst_hier_path": "mux_wen",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "width": {
+            "value": "4"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "or_gate",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "condition": {
+            "direction": "I"
+          },
+          "t": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "f": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "O": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "BRAM_PORTB_0_1": {
+        "interface_ports": [
+          "BRAM_PORTB_0",
+          "blk_mem_gen_0/BRAM_PORTB"
+        ]
       }
     },
     "nets": {
@@ -170,8 +353,7 @@
       "Net": {
         "ports": [
           "Sindri_QLink_top_0/ADDR_O",
-          "blk_mem_gen_0/addra",
-          "q_addr_o"
+          "mux_addr/f"
         ]
       },
       "RX_I_0_1": {
@@ -184,15 +366,13 @@
         "ports": [
           "Sindri_QLink_top_0/CLK_O",
           "blk_mem_gen_0/clka",
-          "blk_mem_gen_0/clkb",
-          "qlink_clk_o"
+          "qlink_clk"
         ]
       },
       "Sindri_QLink_top_0_DATA_O": {
         "ports": [
           "Sindri_QLink_top_0/DATA_O",
-          "blk_mem_gen_0/dina",
-          "q_data_o"
+          "mux_data/f"
         ]
       },
       "Sindri_QLink_top_0_LED_O": {
@@ -210,13 +390,21 @@
       "Sindri_QLink_top_0_WEA_O": {
         "ports": [
           "Sindri_QLink_top_0/WEA_O",
-          "blk_mem_gen_0/wea"
+          "mux_wen/f"
+        ]
+      },
+      "Sindri_QLink_top_0_idle": {
+        "ports": [
+          "Sindri_QLink_top_0/idle",
+          "mux_addr/condition",
+          "mux_data/condition",
+          "mux_wen/condition"
         ]
       },
       "addrb_0_1": {
         "ports": [
-          "addrb_0",
-          "blk_mem_gen_0/addrb"
+          "buttons_addr",
+          "mux_addr/t"
         ]
       },
       "blk_mem_gen_0_douta": {
@@ -228,27 +416,43 @@
       "dinb_0_1": {
         "ports": [
           "button_in",
-          "blk_mem_gen_0/dinb"
+          "mux_data/t"
         ]
       },
       "enable_1_dout": {
         "ports": [
           "reset_0/dout",
-          "blk_mem_gen_0/rsta",
-          "blk_mem_gen_0/rstb"
+          "blk_mem_gen_0/rsta"
         ]
       },
-      "reset_1_dout": {
+      "or_gate_0_O": {
+        "ports": [
+          "mux_addr/O",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "or_gate_1_O": {
+        "ports": [
+          "mux_data/O",
+          "blk_mem_gen_0/dina"
+        ]
+      },
+      "or_gate_2_O": {
+        "ports": [
+          "mux_wen/O",
+          "blk_mem_gen_0/wea"
+        ]
+      },
+      "write_enable_dout": {
         "ports": [
           "write_enable/dout",
-          "blk_mem_gen_0/web"
+          "mux_wen/t"
         ]
       },
       "xlconstant_0_dout": {
         "ports": [
           "enable_0/dout",
-          "blk_mem_gen_0/ena",
-          "blk_mem_gen_0/enb"
+          "blk_mem_gen_0/ena"
         ]
       }
     }

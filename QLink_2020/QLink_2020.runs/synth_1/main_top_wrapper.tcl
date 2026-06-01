@@ -56,9 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param bd.open.in_stealth_mode 1
-set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 2
 set_param general.usePosixSpawnForFork 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s15ftgb196-1
@@ -80,7 +77,6 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/hdl/main_top_wrapper.vhd
 add_files /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.srcs/sources_1/bd/main_top/main_top.bd
-set_property used_in_implementation false [get_files -all /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/src/top_level_blk_mem_gen_0_0/top_level_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/ip/main_top_top_level_0_1/src/top_level_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.gen/sources_1/bd/main_top/main_top_ooc.xdc]
 

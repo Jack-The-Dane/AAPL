@@ -92,6 +92,9 @@
             "direction": "O",
             "left": "31",
             "right": "0"
+          },
+          "idle": {
+            "direction": "O"
           }
         }
       },

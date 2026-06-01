@@ -1,12 +1,29 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
-	<Run Id="main_top_com_side_wrapper_0_2_synth_1" LaunchDir="/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="main_top_com_side_wrapper_0_2_synth_1" LaunchDir="/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/main_top_com_side_wrapper_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="block_test_inst_0_or_gate_2_0_synth_1"/>
+		<Parent Id="block_test_inst_0_or_gate_1_0_synth_1"/>
+		<Parent Id="block_test_inst_0_or_gate_0_0_synth_1"/>
+		<Parent Id="block_test_inst_0_Sindri_QLink_top_0_0_synth_1"/>
+	</Run>
+	<Run Id="block_test_inst_0_or_gate_2_0_synth_1" LaunchDir="/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_or_gate_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="block_test_inst_0_or_gate_1_0_synth_1" LaunchDir="/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_or_gate_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="block_test_inst_0_or_gate_0_0_synth_1" LaunchDir="/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_or_gate_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="block_test_inst_0_Sindri_QLink_top_0_0_synth_1" LaunchDir="/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/block_test_inst_0_Sindri_QLink_top_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="synth_1" LaunchDir="/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
 		<Parent Id="main_top_com_side_wrapper_0_2_synth_1"/>
+		<Parent Id="block_test_inst_0_or_gate_2_0_synth_1"/>
+		<Parent Id="block_test_inst_0_or_gate_1_0_synth_1"/>
+		<Parent Id="block_test_inst_0_or_gate_0_0_synth_1"/>
+		<Parent Id="block_test_inst_0_Sindri_QLink_top_0_0_synth_1"/>
 	</Run>
 	<Run Id="impl_1" LaunchDir="/home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
 		<Parent Id="synth_1"/>
 		<Parent Id="main_top_com_side_wrapper_0_2_synth_1"/>
+		<Parent Id="block_test_inst_0_or_gate_2_0_synth_1"/>
+		<Parent Id="block_test_inst_0_or_gate_1_0_synth_1"/>
+		<Parent Id="block_test_inst_0_or_gate_0_0_synth_1"/>
+		<Parent Id="block_test_inst_0_Sindri_QLink_top_0_0_synth_1"/>
 	</Run>
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>

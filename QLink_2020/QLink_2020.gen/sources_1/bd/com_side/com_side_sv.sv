@@ -72,13 +72,19 @@ module com_side_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [3:0] LED_1,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire [31:0] addrb_i,
+  input wire [31:0] BRAM_PORTB_0_0_addr,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire qlink_clk_o,
+  input wire BRAM_PORTB_0_0_clk,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [31:0] q_addr_o_1,
+  input wire [31:0] BRAM_PORTB_0_0_din,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [31:0] q_data_o_1
+  output wire [31:0] BRAM_PORTB_0_0_dout,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire BRAM_PORTB_0_0_en,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire BRAM_PORTB_0_0_rst,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [3:0] BRAM_PORTB_0_0_we
 );
 
   com_side inst (
@@ -91,10 +97,13 @@ module com_side_sv (
     .RX_I(RX_I),
     .TX_O(TX_O),
     .LED_1(LED_1),
-    .addrb_i(addrb_i),
-    .qlink_clk_o(qlink_clk_o),
-    .q_addr_o_1(q_addr_o_1),
-    .q_data_o_1(q_data_o_1)
+    .BRAM_PORTB_0_0_addr(BRAM_PORTB_0_0_addr),
+    .BRAM_PORTB_0_0_clk(BRAM_PORTB_0_0_clk),
+    .BRAM_PORTB_0_0_din(BRAM_PORTB_0_0_din),
+    .BRAM_PORTB_0_0_dout(BRAM_PORTB_0_0_dout),
+    .BRAM_PORTB_0_0_en(BRAM_PORTB_0_0_en),
+    .BRAM_PORTB_0_0_rst(BRAM_PORTB_0_0_rst),
+    .BRAM_PORTB_0_0_we(BRAM_PORTB_0_0_we)
   );
 
 endmodule

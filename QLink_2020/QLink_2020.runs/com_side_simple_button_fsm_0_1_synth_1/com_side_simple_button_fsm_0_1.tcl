@@ -57,6 +57,8 @@ if {$::dispatch::connected} {
 
 OPTRACE "com_side_simple_button_fsm_0_1_synth_1" START { ROLLUP_AUTO }
 set_param bd.open.in_stealth_mode 1
+set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 1
 set_param general.usePosixSpawnForFork 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
@@ -72,6 +74,7 @@ set_property parent.project_path /home/kasper-ubuntu/Documents/APPL_project_tetr
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
+set_property ip_repo_paths /home/kasper-ubuntu/Documents/APPL_project_tetris/IPs [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/kasper-ubuntu/Documents/APPL_project_tetris/QLink_2020/QLink_2020.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

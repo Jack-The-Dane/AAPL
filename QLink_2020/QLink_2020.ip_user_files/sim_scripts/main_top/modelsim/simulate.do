@@ -1,7 +1,7 @@
 onbreak {quit -f}
 onerror {quit -f}
 
-vsim -voptargs="+acc"  -L xil_defaultlib -L xpm -L xlconstant_v1_1_10 -L blk_mem_gen_v8_4_12 -L unisims_ver -L unimacro_ver -L secureip -lib xil_defaultlib xil_defaultlib.main_top xil_defaultlib.glbl
+vsim -voptargs="+acc"  -L xil_defaultlib -L xpm -L xlconstant_v1_1_10 -L unisims_ver -L unimacro_ver -L secureip -lib xil_defaultlib xil_defaultlib.main_top xil_defaultlib.glbl
 
 set NumericStdNoWarnings 1
 set StdArithNoWarnings 1

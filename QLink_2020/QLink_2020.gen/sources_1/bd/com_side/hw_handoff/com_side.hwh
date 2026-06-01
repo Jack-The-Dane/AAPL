@@ -1,21 +1,52 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 11 13:45:35 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 27 16:53:15 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="com_side" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_addr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BRAM_PORTB_0_0_clk" SIGIS="clk" SIGNAME="block_test_0_BRAM_PORTB_0_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_0_din" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_din">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_din"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="BRAM_PORTB_0_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BRAM_PORTB_0_0_en" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_en">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_en"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BRAM_PORTB_0_0_rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="block_test_0_BRAM_PORTB_0_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="BRAM_PORTB_0_0_we" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_we">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="block_test_0" PORT="BRAM_PORTB_0_we"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="CLK12_I" SIGIS="undef" SIGNAME="External_Ports_CLK12_I">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="simple_button_fsm_0" PORT="clk"/>
-        <CONNECTION INSTANCE="simple_button_fsm_1" PORT="clk"/>
-        <CONNECTION INSTANCE="simple_button_fsm_3" PORT="clk"/>
-        <CONNECTION INSTANCE="simple_button_fsm_2" PORT="clk"/>
         <CONNECTION INSTANCE="block_test_0" PORT="CLK12"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="LED_1" RIGHT="0" SIGIS="undef" SIGNAME="ilconcat_0_dout">
+    <PORT DIR="O" LEFT="3" NAME="LED_1" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_1_dout">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ilconcat_0" PORT="dout"/>
+        <CONNECTION INSTANCE="xlconcat_1" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="RX_I" SIGIS="undef" SIGNAME="External_Ports_RX_I">
@@ -26,11 +57,6 @@
     <PORT DIR="O" NAME="TX_O" SIGIS="undef" SIGNAME="block_test_0_TX_O">
       <CONNECTIONS>
         <CONNECTION INSTANCE="block_test_0" PORT="TX_O"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="31" NAME="addrb_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addrb_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="block_test_0" PORT="addrb_0"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="button_0" SIGIS="undef" SIGNAME="External_Ports_button_0">
@@ -53,32 +79,36 @@
         <CONNECTION INSTANCE="simple_button_fsm_2" PORT="button"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="q_addr_o_1" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_addr_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="block_test_0" PORT="q_addr_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="31" NAME="q_data_o_1" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_data_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="block_test_0" PORT="q_data_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="qlink_clk_o" SIGIS="undef" SIGNAME="block_test_0_qlink_clk_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk_o"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="simple_button_fsm_2" PORT="reset"/>
-        <CONNECTION INSTANCE="simple_button_fsm_1" PORT="reset"/>
-        <CONNECTION INSTANCE="simple_button_fsm_3" PORT="reset"/>
         <CONNECTION INSTANCE="simple_button_fsm_0" PORT="reset"/>
+        <CONNECTION INSTANCE="simple_button_fsm_1" PORT="reset"/>
+        <CONNECTION INSTANCE="simple_button_fsm_2" PORT="reset"/>
+        <CONNECTION INSTANCE="simple_button_fsm_3" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
 
-  <EXTERNALINTERFACES/>
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTB_0_0" NAME="BRAM_PORTB_0_0" TYPE="TARGET">
+      <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+      <PARAMETER NAME="MEM_ADDRESS_MODE"/>
+      <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+      <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+      <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM_PORTB_0_0_addr"/>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM_PORTB_0_0_clk"/>
+        <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM_PORTB_0_0_din"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM_PORTB_0_0_dout"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="BRAM_PORTB_0_0_en"/>
+        <PORTMAP LOGICAL="RST" PHYSICAL="BRAM_PORTB_0_0_rst"/>
+        <PORTMAP LOGICAL="WE" PHYSICAL="BRAM_PORTB_0_0_we"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
 
   <MODULES>
     <MODULE BD="block_test_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/block_test_0" INSTANCE="block_test_0" IS_ENABLE="1">
@@ -93,6 +123,41 @@
         <PARAMETER NAME="TRAINING_MODULE" VALUE="block_test.bd"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BRAM_PORTB_0_clk" SIGIS="clk" SIGNAME="block_test_0_BRAM_PORTB_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="BRAM_PORTB_0_din" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_din">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="BRAM_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BRAM_PORTB_0_en" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BRAM_PORTB_0_rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="block_test_0_BRAM_PORTB_0_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="BRAM_PORTB_0_we" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_BRAM_PORTB_0_we">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="com_side_imp" PORT="BRAM_PORTB_0_0_we"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="CLK12" SIGIS="undef" SIGNAME="External_Ports_CLK12_I">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
@@ -109,190 +174,64 @@
             <CONNECTION INSTANCE="External_Ports" PORT="TX_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="addrb_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_addrb_i">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="addrb_i"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="7" NAME="button_in" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="q_addr_o" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_addr_o">
+        <PORT DIR="I" LEFT="31" NAME="buttons_addr" RIGHT="0" SIGIS="undef" SIGNAME="buttons_addr_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="q_addr_o_1"/>
+            <CONNECTION INSTANCE="buttons_addr" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="q_data_o" RIGHT="0" SIGIS="undef" SIGNAME="block_test_0_q_data_o">
+        <PORT DIR="O" NAME="qlink_clk" SIGIS="undef" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="q_data_o_1"/>
+            <CONNECTION INSTANCE="simple_button_fsm_0" PORT="clk"/>
+            <CONNECTION INSTANCE="simple_button_fsm_1" PORT="clk"/>
+            <CONNECTION INSTANCE="simple_button_fsm_2" PORT="clk"/>
+            <CONNECTION INSTANCE="simple_button_fsm_3" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="qlink_clk_o" SIGIS="undef" SIGNAME="block_test_0_qlink_clk_o">
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="External_Interface_BRAM_PORTB_0_0" NAME="BRAM_PORTB_0" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+          <PARAMETER NAME="MEM_ADDRESS_MODE"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM_PORTB_0_addr"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM_PORTB_0_clk"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM_PORTB_0_din"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM_PORTB_0_dout"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="BRAM_PORTB_0_en"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="BRAM_PORTB_0_rst"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="BRAM_PORTB_0_we"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="0" FULLNAME="/buttons_addr" HWVERSION="2.0" INSTANCE="buttons_addr" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x00000320"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="com_side_ilconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="buttons_addr_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="qlink_clk_o"/>
+            <CONNECTION INSTANCE="block_test_0" PORT="buttons_addr"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
     <MODULE COREREVISION="0" FULLNAME="/ilconcat_0" HWVERSION="2.0" INSTANCE="ilconcat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="IN0_WIDTH" VALUE="2"/>
-        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN1_WIDTH" VALUE="2"/>
-        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
-        <PARAMETER NAME="dout_width" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="com_side_ilconcat_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="1" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="simple_button_fsm_3_button_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="simple_button_fsm_3" PORT="button_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="simple_button_fsm_2_button_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="simple_button_fsm_2" PORT="button_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="ilconcat_0_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="LED_1"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/simple_button_fsm_0" HWVERSION="1.0" INSTANCE="simple_button_fsm_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="simple_button_fsm" VLNV="xilinx.com:module_ref:simple_button_fsm:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="com_side_simple_button_fsm_0_0"/>
@@ -309,11 +248,12 @@
         <PORT DIR="O" LEFT="1" NAME="button_out" RIGHT="0" SIGIS="undef" SIGNAME="simple_button_fsm_0_button_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="In0"/>
+            <CONNECTION INSTANCE="xlconcat_1" PORT="In0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK12_I">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
+            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
@@ -341,11 +281,12 @@
         <PORT DIR="O" LEFT="1" NAME="button_out" RIGHT="0" SIGIS="undef" SIGNAME="simple_button_fsm_1_button_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="In1"/>
+            <CONNECTION INSTANCE="xlconcat_1" PORT="In1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK12_I">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
+            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
@@ -373,12 +314,11 @@
         <PORT DIR="O" LEFT="1" NAME="button_out" RIGHT="0" SIGIS="undef" SIGNAME="simple_button_fsm_2_button_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="In3"/>
-            <CONNECTION INSTANCE="ilconcat_0" PORT="In1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK12_I">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
+            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
@@ -406,12 +346,11 @@
         <PORT DIR="O" LEFT="1" NAME="button_out" RIGHT="0" SIGIS="undef" SIGNAME="simple_button_fsm_3_button_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="In2"/>
-            <CONNECTION INSTANCE="ilconcat_0" PORT="In0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_CLK12_I">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="block_test_0_qlink_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="CLK12_I"/>
+            <CONNECTION INSTANCE="block_test_0" PORT="qlink_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
@@ -582,6 +521,161 @@
         <PORT DIR="O" LEFT="7" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="block_test_0" PORT="button_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconcat_1" HWVERSION="2.1" INSTANCE="xlconcat_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IN0_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN1_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
+        <PARAMETER NAME="dout_width" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="com_side_xlconcat_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="simple_button_fsm_0_button_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="simple_button_fsm_0" PORT="button_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="simple_button_fsm_1_button_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="simple_button_fsm_1" PORT="button_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED_1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

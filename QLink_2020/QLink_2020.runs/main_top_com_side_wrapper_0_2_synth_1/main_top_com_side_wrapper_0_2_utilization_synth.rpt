@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon May 11 13:54:37 2026
+| Date         : Wed May 27 16:55:06 2026
 | Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
 | Command      : report_utilization -file main_top_com_side_wrapper_0_2_utilization_synth.rpt -pb main_top_com_side_wrapper_0_2_utilization_synth.pb
 | Design       : main_top_com_side_wrapper_0_2
@@ -160,6 +160,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | main_top_com_side_wrapper_0_2_com_side_simple_button_fsm_0_2         |    1 |
 | main_top_com_side_wrapper_0_2_com_side_simple_button_fsm_0_1         |    1 |
 | main_top_com_side_wrapper_0_2_com_side_simple_button_fsm_0_0         |    1 |
+| main_top_com_side_wrapper_0_2_block_test_inst_0_mux_wen_0            |    1 |
+| main_top_com_side_wrapper_0_2_block_test_inst_0_mux_data_0           |    1 |
+| main_top_com_side_wrapper_0_2_block_test_inst_0_mux_addr_0           |    1 |
 | main_top_com_side_wrapper_0_2_block_test_inst_0_blk_mem_gen_0_0      |    1 |
 | main_top_com_side_wrapper_0_2_block_test_inst_0_Sindri_QLink_top_0_0 |    1 |
 +----------------------------------------------------------------------+------+

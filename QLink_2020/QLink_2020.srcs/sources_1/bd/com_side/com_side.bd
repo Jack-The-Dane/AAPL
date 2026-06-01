@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x55818E6C36D74AA5",
+      "boundary_crc": "0x1E4E5D7B1CCA3359",
       "device": "xc7s15ftgb196-1",
       "gen_directory": "../../../../QLink_2020.gen/sources_1/bd/com_side",
       "name": "com_side",
@@ -17,7 +17,83 @@
       "simple_button_fsm_3": "",
       "xlconcat_0": "",
       "block_test_0": "",
-      "ilconcat_0": ""
+      "xlconcat_1": "",
+      "buttons_addr": ""
+    },
+    "interface_ports": {
+      "BRAM_PORTB_0_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "BRAM_CTRL"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "BRAM_PORTB_0_0_addr",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "BRAM_PORTB_0_0_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "BRAM_PORTB_0_0_din",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "DOUT": {
+            "physical_name": "BRAM_PORTB_0_0_dout",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "BRAM_PORTB_0_0_en",
+            "direction": "I"
+          },
+          "RST": {
+            "physical_name": "BRAM_PORTB_0_0_rst",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "BRAM_PORTB_0_0_we",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
     },
     "ports": {
       "button_0": {
@@ -62,27 +138,9 @@
         "parameters": {
           "PortWidth": {
             "value": "4",
-            "value_src": "user_prop"
+            "value_src": "ip_prop"
           }
         }
-      },
-      "addrb_i": {
-        "direction": "I",
-        "left": "31",
-        "right": "0"
-      },
-      "qlink_clk_o": {
-        "direction": "O"
-      },
-      "q_addr_o_1": {
-        "direction": "O",
-        "left": "31",
-        "right": "0"
-      },
-      "q_data_o_1": {
-        "direction": "O",
-        "left": "31",
-        "right": "0"
       }
     },
     "components": {
@@ -296,6 +354,83 @@
             "value_src": "auto"
           }
         },
+        "interface_ports": {
+          "BRAM_PORTB_0": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+            "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+            "parameters": {
+              "MASTER_TYPE": {
+                "value": "BRAM_CTRL",
+                "value_src": "strong"
+              },
+              "MEM_ECC": {
+                "value": "NONE",
+                "value_src": "default_prop"
+              },
+              "MEM_SIZE": {
+                "value": "8192",
+                "value_src": "default_prop"
+              },
+              "MEM_WIDTH": {
+                "value": "32",
+                "value_src": "default_prop"
+              },
+              "READ_LATENCY": {
+                "value": "1",
+                "value_src": "default_prop"
+              },
+              "READ_WRITE_MODE": {
+                "value": "READ_WRITE",
+                "value_src": "strong"
+              }
+            },
+            "hdl_attributes": {
+              "LOCKED": {
+                "value": "FALSE",
+                "value_src": "default"
+              }
+            },
+            "port_maps": {
+              "ADDR": {
+                "physical_name": "BRAM_PORTB_0_addr",
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "CLK": {
+                "physical_name": "BRAM_PORTB_0_clk",
+                "direction": "I"
+              },
+              "DIN": {
+                "physical_name": "BRAM_PORTB_0_din",
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "DOUT": {
+                "physical_name": "BRAM_PORTB_0_dout",
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "EN": {
+                "physical_name": "BRAM_PORTB_0_en",
+                "direction": "I"
+              },
+              "RST": {
+                "physical_name": "BRAM_PORTB_0_rst",
+                "direction": "I"
+              },
+              "WE": {
+                "physical_name": "BRAM_PORTB_0_we",
+                "direction": "I",
+                "left": "3",
+                "right": "0"
+              }
+            }
+          }
+        },
         "ports": {
           "CLK12": {
             "direction": "I"
@@ -322,23 +457,13 @@
               }
             }
           },
-          "addrb_0": {
+          "buttons_addr": {
             "direction": "I",
             "left": "31",
             "right": "0"
           },
-          "q_addr_o": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "qlink_clk_o": {
+          "qlink_clk": {
             "direction": "O"
-          },
-          "q_data_o": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
           }
         },
         "post_compiled_compname": "block_test_inst_0",
@@ -346,7 +471,7 @@
         "variant_info": {
           "block_test.bd": {
             "scoped_diagram": "block_test_inst_0.bd",
-            "design_checksum": "0x25D40172104AD3F5",
+            "design_checksum": "0x79F99CBE8F50DD94",
             "ref_name": "block_test",
             "ref_subinst_path": "com_side_block_test_0",
             "ref_type": "Block Design",
@@ -355,39 +480,38 @@
           }
         }
       },
-      "ilconcat_0": {
-        "vlnv": "xilinx.com:inline_hdl:ilconcat:1.0",
+      "xlconcat_1": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "7",
+        "xci_name": "com_side_xlconcat_1_0",
+        "xci_path": "ip/com_side_xlconcat_1_0/com_side_xlconcat_1_0.xci",
+        "inst_hier_path": "xlconcat_1",
+        "has_run_ip_tcl": "true"
+      },
+      "buttons_addr": {
+        "vlnv": "xilinx.com:inline_hdl:ilconstant:1.0",
         "parameters": {
-          "IN0_WIDTH": {
-            "value": "2"
+          "CONST_VAL": {
+            "value": "800"
           },
-          "IN1_WIDTH": {
-            "value": "2"
-          },
-          "IN2_WIDTH": {
-            "value": "1",
-            "value_src": "propagated",
-            "value_mode": "auto"
-          },
-          "IN3_WIDTH": {
-            "value": "1",
-            "value_src": "propagated",
-            "value_mode": "auto"
-          },
-          "NUM_PORTS": {
-            "value": "2"
+          "CONST_WIDTH": {
+            "value": "32"
           }
         }
+      }
+    },
+    "interface_nets": {
+      "BRAM_PORTB_0_0_1": {
+        "interface_ports": [
+          "BRAM_PORTB_0_0",
+          "block_test_0/BRAM_PORTB_0"
+        ]
       }
     },
     "nets": {
       "CLK12_I_0_1": {
         "ports": [
           "CLK12_I",
-          "simple_button_fsm_0/clk",
-          "simple_button_fsm_1/clk",
-          "simple_button_fsm_3/clk",
-          "simple_button_fsm_2/clk",
           "block_test_0/CLK12"
         ]
       },
@@ -397,34 +521,19 @@
           "block_test_0/RX_I"
         ]
       },
-      "addrb_0_0_1": {
-        "ports": [
-          "addrb_i",
-          "block_test_0/addrb_0"
-        ]
-      },
       "block_test_0_TX_O": {
         "ports": [
           "block_test_0/TX_O",
           "TX_O"
         ]
       },
-      "block_test_0_q_addr_o": {
-        "ports": [
-          "block_test_0/q_addr_o",
-          "q_addr_o_1"
-        ]
-      },
-      "block_test_0_q_data_o": {
-        "ports": [
-          "block_test_0/q_data_o",
-          "q_data_o_1"
-        ]
-      },
       "block_test_0_qlink_clk_o": {
         "ports": [
-          "block_test_0/qlink_clk_o",
-          "qlink_clk_o"
+          "block_test_0/qlink_clk",
+          "simple_button_fsm_0/clk",
+          "simple_button_fsm_1/clk",
+          "simple_button_fsm_2/clk",
+          "simple_button_fsm_3/clk"
         ]
       },
       "button_0_1": {
@@ -451,31 +560,33 @@
           "simple_button_fsm_2/button"
         ]
       },
-      "ilconcat_0_dout": {
+      "ilconstant_0_dout": {
         "ports": [
-          "ilconcat_0/dout",
-          "LED_1"
+          "buttons_addr/dout",
+          "block_test_0/buttons_addr"
         ]
       },
       "reset_0_1": {
         "ports": [
           "rst",
-          "simple_button_fsm_2/reset",
+          "simple_button_fsm_0/reset",
           "simple_button_fsm_1/reset",
-          "simple_button_fsm_3/reset",
-          "simple_button_fsm_0/reset"
+          "simple_button_fsm_2/reset",
+          "simple_button_fsm_3/reset"
         ]
       },
       "simple_button_fsm_0_button_out": {
         "ports": [
           "simple_button_fsm_0/button_out",
-          "xlconcat_0/In0"
+          "xlconcat_0/In0",
+          "xlconcat_1/In0"
         ]
       },
       "simple_button_fsm_1_button_out": {
         "ports": [
           "simple_button_fsm_1/button_out",
-          "xlconcat_0/In1"
+          "xlconcat_0/In1",
+          "xlconcat_1/In1"
         ]
       },
       "simple_button_fsm_2_button_out": {
@@ -496,6 +607,12 @@
         "ports": [
           "xlconcat_0/dout",
           "block_test_0/button_in"
+        ]
+      },
+      "xlconcat_1_dout": {
+        "ports": [
+          "xlconcat_1/dout",
+          "LED_1"
         ]
       }
     }

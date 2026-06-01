@@ -56,10 +56,8 @@ USE ieee.numeric_std.ALL;
 ENTITY main_top_top_level_0_1 IS
   PORT (
     CLK25_I : IN STD_LOGIC;
-    LED_O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    addra_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    clk_qlink : IN STD_LOGIC;
-    dina_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    bram_clk : OUT STD_LOGIC;
+    data_in_0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     hdmi_blue_n : OUT STD_LOGIC;
     hdmi_blue_p : OUT STD_LOGIC;
     hdmi_clk_n : OUT STD_LOGIC;
@@ -67,7 +65,8 @@ ENTITY main_top_top_level_0_1 IS
     hdmi_green_n : OUT STD_LOGIC;
     hdmi_green_p : OUT STD_LOGIC;
     hdmi_red_n : OUT STD_LOGIC;
-    hdmi_red_p : OUT STD_LOGIC
+    hdmi_red_p : OUT STD_LOGIC;
+    read_addr_0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END main_top_top_level_0_1;
 
@@ -77,10 +76,8 @@ ARCHITECTURE main_top_top_level_0_1_arch OF main_top_top_level_0_1 IS
   COMPONENT top_level IS
     PORT (
       CLK25_I : IN STD_LOGIC;
-      LED_O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      addra_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      clk_qlink : IN STD_LOGIC;
-      dina_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      bram_clk : OUT STD_LOGIC;
+      data_in_0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       hdmi_blue_n : OUT STD_LOGIC;
       hdmi_blue_p : OUT STD_LOGIC;
       hdmi_clk_n : OUT STD_LOGIC;
@@ -88,7 +85,8 @@ ARCHITECTURE main_top_top_level_0_1_arch OF main_top_top_level_0_1 IS
       hdmi_green_n : OUT STD_LOGIC;
       hdmi_green_p : OUT STD_LOGIC;
       hdmi_red_n : OUT STD_LOGIC;
-      hdmi_red_p : OUT STD_LOGIC
+      hdmi_red_p : OUT STD_LOGIC;
+      read_addr_0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT top_level;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -103,17 +101,12 @@ ARCHITECTURE main_top_top_level_0_1_arch OF main_top_top_level_0_1 IS
   ATTRIBUTE X_INTERFACE_INFO OF CLK25_I: SIGNAL IS "xilinx.com:signal:clock:1.0 CLK.CLK25_I CLK";
   ATTRIBUTE X_INTERFACE_MODE OF CLK25_I: SIGNAL IS "slave CLK.CLK25_I";
   ATTRIBUTE X_INTERFACE_PARAMETER OF CLK25_I: SIGNAL IS "XIL_INTERFACENAME CLK.CLK25_I, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF clk_qlink: SIGNAL IS "xilinx.com:signal:clock:1.0 CLK.CLK_QLINK CLK";
-  ATTRIBUTE X_INTERFACE_MODE OF clk_qlink: SIGNAL IS "slave CLK.CLK_QLINK";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk_qlink: SIGNAL IS "XIL_INTERFACENAME CLK.CLK_QLINK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
 BEGIN
   U0 : top_level
     PORT MAP (
       CLK25_I => CLK25_I,
-      LED_O => LED_O,
-      addra_i => addra_i,
-      clk_qlink => clk_qlink,
-      dina_i => dina_i,
+      bram_clk => bram_clk,
+      data_in_0 => data_in_0,
       hdmi_blue_n => hdmi_blue_n,
       hdmi_blue_p => hdmi_blue_p,
       hdmi_clk_n => hdmi_clk_n,
@@ -121,6 +114,7 @@ BEGIN
       hdmi_green_n => hdmi_green_n,
       hdmi_green_p => hdmi_green_p,
       hdmi_red_n => hdmi_red_n,
-      hdmi_red_p => hdmi_red_p
+      hdmi_red_p => hdmi_red_p,
+      read_addr_0 => read_addr_0
     );
 END main_top_top_level_0_1_arch;
