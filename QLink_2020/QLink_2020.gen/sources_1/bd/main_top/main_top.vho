@@ -55,7 +55,7 @@ COMPONENT main_top
   PORT (
     RX_I : IN STD_LOGIC;
     BB_21 : IN STD_LOGIC;
-    nBUTTON_I : IN STD_LOGIC;
+    BB_30 : IN STD_LOGIC;
     BB_24 : IN STD_LOGIC;
     BB_27 : IN STD_LOGIC;
     CLK12_I : IN STD_LOGIC;
@@ -82,7 +82,7 @@ your_instance_name : main_top
   PORT MAP (
     RX_I => RX_I,
     BB_21 => BB_21,
-    nBUTTON_I => nBUTTON_I,
+    BB_30 => BB_30,
     BB_24 => BB_24,
     BB_27 => BB_27,
     CLK12_I => CLK12_I,

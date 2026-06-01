@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Fri May 29 09:09:54 2026
+| Date         : Mon Jun  1 11:07:45 2026
 | Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
 | Command      : report_utilization -file main_top_wrapper_utilization_placed.rpt -pb main_top_wrapper_utilization_placed.pb
 | Design       : main_top_wrapper
@@ -199,7 +199,6 @@ Table of Contents
 | OSERDESE2  |    6 |                  IO |
 | OBUF       |    5 |                  IO |
 | OBUFDS     |    4 |                  IO |
-| IBUF       |    4 |                  IO |
 | BUFG       |    4 |               Clock |
 | RAMB36E1   |    2 |        Block Memory |
 | MMCME2_ADV |    2 |               Clock |

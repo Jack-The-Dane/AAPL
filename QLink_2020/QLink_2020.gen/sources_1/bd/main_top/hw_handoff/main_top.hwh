@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 27 16:54:22 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  1 11:06:21 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="main_top" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
 
@@ -89,14 +89,6 @@
         <CONNECTION INSTANCE="top_level_0" PORT="hdmi_red_p"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="nBUTTON_I" SIGIS="undef" SIGNAME="External_Ports_nBUTTON_I">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_0"/>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_1"/>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_2"/>
-        <CONNECTION INSTANCE="com_side_wrapper_0" PORT="button_3"/>
-      </CONNECTIONS>
-    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
@@ -166,22 +158,22 @@
         </PORT>
         <PORT DIR="I" NAME="button_0" SIGIS="undef" SIGNAME="External_Ports_BB_30">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="nBUTTON_I"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_30"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_1" SIGIS="undef" SIGNAME="External_Ports_nBUTTON_I">
+        <PORT DIR="I" NAME="button_1" SIGIS="undef" SIGNAME="External_Ports_BB_27">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="nBUTTON_I"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_27"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_2" SIGIS="undef" SIGNAME="External_Ports_nBUTTON_I">
+        <PORT DIR="I" NAME="button_2" SIGIS="undef" SIGNAME="External_Ports_BB_24">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="nBUTTON_I"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_24"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button_3" SIGIS="undef" SIGNAME="External_Ports_nBUTTON_I">
+        <PORT DIR="I" NAME="button_3" SIGIS="undef" SIGNAME="External_Ports_BB_21">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="nBUTTON_I"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="BB_21"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xlconstant_1_dout">

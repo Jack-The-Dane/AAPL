@@ -25,7 +25,7 @@
       "BB_21": {
         "direction": "I"
       },
-      "nBUTTON_I": {
+      "BB_30": {
         "direction": "I"
       },
       "BB_24": {
@@ -274,11 +274,8 @@
       },
       "BB_30_1": {
         "ports": [
-          "nBUTTON_I",
-          "com_side_wrapper_0/button_0",
-          "com_side_wrapper_0/button_1",
-          "com_side_wrapper_0/button_2",
-          "com_side_wrapper_0/button_3"
+          "BB_30",
+          "com_side_wrapper_0/button_0"
         ]
       },
       "CLK12_I_1": {
@@ -339,12 +336,6 @@
         "ports": [
           "top_level_0/bram_clk",
           "com_side_wrapper_0/BRAM_PORTB_0_0_clk"
-        ]
-      },
-      "ilconstant_0_dout": {
-        "ports": [
-          "ilconstant_0/dout",
-          "com_side_wrapper_0/rst"
         ]
       },
       "top_level_0_hdmi_blue_n": {

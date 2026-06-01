@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Wed May 27 16:54:22 2026
+--Date        : Mon Jun  1 11:06:21 2026
 --Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 --Command     : generate_target main_top.bd
 --Design      : main_top
@@ -17,6 +17,7 @@ entity main_top is
     BB_21 : in STD_LOGIC;
     BB_24 : in STD_LOGIC;
     BB_27 : in STD_LOGIC;
+    BB_30 : in STD_LOGIC;
     CLK12_I : in STD_LOGIC;
     CLK25_I : in STD_LOGIC;
     LED_O : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -29,8 +30,7 @@ entity main_top is
     hdmi_green_n : out STD_LOGIC;
     hdmi_green_p : out STD_LOGIC;
     hdmi_red_n : out STD_LOGIC;
-    hdmi_red_p : out STD_LOGIC;
-    nBUTTON_I : in STD_LOGIC
+    hdmi_red_p : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
   attribute CORE_GENERATION_INFO of main_top : entity is "main_top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_top,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=6,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=1,bdsource=USER,synth_mode=Hierarchical}";

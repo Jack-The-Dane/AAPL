@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
---Date        : Wed May 27 16:54:22 2026
+--Date        : Mon Jun  1 11:06:21 2026
 --Host        : Laptop running 64-bit Ubuntu 24.04.4 LTS
 --Command     : generate_target main_top_wrapper.bd
 --Design      : main_top_wrapper
@@ -17,6 +17,7 @@ entity main_top_wrapper is
     BB_21 : in STD_LOGIC;
     BB_24 : in STD_LOGIC;
     BB_27 : in STD_LOGIC;
+    BB_30 : in STD_LOGIC;
     CLK12_I : in STD_LOGIC;
     CLK25_I : in STD_LOGIC;
     LED_O : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -29,8 +30,7 @@ entity main_top_wrapper is
     hdmi_green_n : out STD_LOGIC;
     hdmi_green_p : out STD_LOGIC;
     hdmi_red_n : out STD_LOGIC;
-    hdmi_red_p : out STD_LOGIC;
-    nBUTTON_I : in STD_LOGIC
+    hdmi_red_p : out STD_LOGIC
   );
 end main_top_wrapper;
 
@@ -39,7 +39,7 @@ architecture STRUCTURE of main_top_wrapper is
   port (
     RX_I : in STD_LOGIC;
     BB_21 : in STD_LOGIC;
-    nBUTTON_I : in STD_LOGIC;
+    BB_30 : in STD_LOGIC;
     BB_24 : in STD_LOGIC;
     BB_27 : in STD_LOGIC;
     CLK12_I : in STD_LOGIC;
@@ -62,6 +62,7 @@ main_top_i: component main_top
       BB_21 => BB_21,
       BB_24 => BB_24,
       BB_27 => BB_27,
+      BB_30 => BB_30,
       CLK12_I => CLK12_I,
       CLK25_I => CLK25_I,
       LED_O(3 downto 0) => LED_O(3 downto 0),
@@ -74,7 +75,6 @@ main_top_i: component main_top
       hdmi_green_n => hdmi_green_n,
       hdmi_green_p => hdmi_green_p,
       hdmi_red_n => hdmi_red_n,
-      hdmi_red_p => hdmi_red_p,
-      nBUTTON_I => nBUTTON_I
+      hdmi_red_p => hdmi_red_p
     );
 end STRUCTURE;

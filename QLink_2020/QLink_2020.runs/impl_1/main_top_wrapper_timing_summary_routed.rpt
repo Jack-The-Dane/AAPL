@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Fri May 29 09:10:03 2026
+| Date         : Mon Jun  1 11:07:55 2026
 | Host         : Laptop running 64-bit Ubuntu 24.04.4 LTS
 | Command      : report_timing_summary -max_paths 10 -file main_top_wrapper_timing_summary_routed.rpt -pb main_top_wrapper_timing_summary_routed.pb -rpx main_top_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : main_top_wrapper
@@ -2443,8 +2443,6 @@ Slack (MET) :             0.178ns  (arrival time - required time)
                             (rising edge-triggered cell FDRE clocked by CLK25_I  {rise@0.000ns fall@20.000ns period=40.000ns})
   Destination:            main_top_i/top_level_0/U0/row_fetcher_0/U0/read_addr_reg[9]/D
                             (rising edge-triggered cell FDRE clocked by CLK25_I  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            main_top_i/top_level_0/U0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/ADDRBWRADDR[7]
-                            (rising edge-triggered cell RAMB36E1 clocked by CLK25_I  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             CLK25_I
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (CLK25_I rise@0.000ns - CLK25_I rise@0.000ns)
