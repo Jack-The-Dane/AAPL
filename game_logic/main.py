@@ -542,7 +542,7 @@ current_score = 0
 next_piece_name = "T"
 
 side_move_counter = 0
-side_move_delay = 30
+side_move_delay = 15
 
 # Track if board was just updated to avoid redundant sends
 board_just_updated = False
