@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Wed May 27 16:55:08 2026
-# Process ID         : 327149
+# Start of session at: Fri May 29 09:08:48 2026
+# Process ID         : 7678
 # Current directory  : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1
 # Command line       : vivado -log main_top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_top_wrapper.tcl
 # Log file           : /home/jacob/shared/Semester8/AAPL/project/QLink_2020/QLink_2020.runs/synth_1/main_top_wrapper.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.4 LTS
 # Processor Detail   : AMD Ryzen 7 4700U with Radeon Graphics
-# CPU Frequency      : 4103.808 MHz
+# CPU Frequency      : 1396.199 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 8
 # Host memory        : 16116 MB
 # Swap memory        : 17179 MB
 # Total Virtual      : 33296 MB
-# Available Virtual  : 18995 MB
+# Available Virtual  : 30102 MB
 #-----------------------------------------------------------
 source main_top_wrapper.tcl -notrace
